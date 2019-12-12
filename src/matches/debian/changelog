@@ -1,3 +1,9 @@
+rust-matches (0.1.8-1~bpo10+pve1) proxmox-rust; urgency=medium
+
+  * Backport to Debian Buster / Proxmox 6.x products
+
+ -- Proxmox Support Team <support@proxmox.com>  Thu, 12 Dec 2019 15:53:36 +0100
+
 rust-matches (0.1.8-1) unstable; urgency=medium
 
   * Package matches 0.1.8 from crates.io using debcargo 2.2.6
