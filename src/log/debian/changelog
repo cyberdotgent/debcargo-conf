@@ -1,3 +1,9 @@
+rust-log (0.4.8-2~bpo10+pve1) proxmox-rust; urgency=medium
+
+  * Backport to Debian Buster / Proxmox 6.x products
+
+ -- Proxmox Support Team <support@proxmox.com>  Thu, 12 Dec 2019 17:23:36 +0100
+
 rust-log (0.4.8-2) unstable; urgency=medium
 
   * Package log 0.4.8 from crates.io using debcargo 2.2.10
