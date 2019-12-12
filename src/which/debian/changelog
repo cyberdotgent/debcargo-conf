@@ -1,3 +1,9 @@
+rust-which (3.0.0-2~bpo10+pve1) proxmox-rust; urgency=medium
+
+  * Backport to Debian Buster / Proxmox 6.x products
+
+ -- Proxmox Support Team <support@proxmox.com>  Thu, 12 Dec 2019 13:00:07 +0100
+
 rust-which (3.0.0-2) unstable; urgency=medium
 
   [ Sylvestre Ledru ]
