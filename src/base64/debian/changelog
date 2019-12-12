@@ -4,6 +4,12 @@ rust-base64 (0.11.0-1) unstable; urgency=medium
 
  -- kpcyrd <git@rxv.cc>  Tue, 31 Dec 2019 02:23:36 +0100
 
+rust-base64 (0.10.1-1~bpo10+pve1) proxmox-rust; urgency=medium
+
+  * Backport to Debian Buster / Proxmox 6.x products
+
+ -- Proxmox Support Team <support@proxmox.com>  Thu, 12 Dec 2019 14:54:37 +0100
+
 rust-base64 (0.10.1-1) unstable; urgency=medium
 
   * Team upload.
