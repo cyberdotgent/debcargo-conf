@@ -1,3 +1,9 @@
+rust-lazy-static (1.4.0-1~bpo10+pve1) proxmox-rust; urgency=medium
+
+  * Backport to Debian Buster / Proxmox 6.x products
+
+ -- Proxmox Support Team <support@proxmox.com>  Thu, 12 Dec 2019 15:00:03 +0100
+
 rust-lazy-static (1.4.0-1) unstable; urgency=medium
 
   * Package lazy_static 1.4.0 from crates.io using debcargo 2.4.0
