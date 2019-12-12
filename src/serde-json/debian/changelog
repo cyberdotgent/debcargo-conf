@@ -1,3 +1,9 @@
+rust-serde-json (1.0.41-1~bpo10+pve1) proxmox-rust; urgency=medium
+
+  * Backport to Debian Buster / Proxmox 6.x products
+
+ -- Proxmox Support Team <support@proxmox.com>  Thu, 12 Dec 2019 17:12:29 +0100
+
 rust-serde-json (1.0.41-1) unstable; urgency=medium
 
   * Package serde_json 1.0.41 from crates.io using debcargo 2.4.0
