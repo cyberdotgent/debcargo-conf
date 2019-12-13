@@ -1,0 +1,5 @@
+overlay = "."
+uploaders = ["Fabian Grünbichler <f.gruenbichler@proxmox.com>"]
+
+[packages.lib]
+depends = ["libpam-dev"]
