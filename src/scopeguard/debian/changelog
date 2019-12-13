@@ -1,3 +1,9 @@
+rust-scopeguard (1.0.0-2~bpo10+pve1) proxmox-rust; urgency=medium
+
+  * Backport to Debian Buster / Proxmox 6.x products
+
+ -- Proxmox Support Team <support@proxmox.com>  Fri, 13 Dec 2019 08:41:23 +0100
+
 rust-scopeguard (1.0.0-2) unstable; urgency=medium
 
   * Source-only re-upload for migration to testing
