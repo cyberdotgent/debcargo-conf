@@ -1,3 +1,9 @@
+rust-mio-uds (0.6.7-1~bpo10+pve1) proxmox-rust; urgency=medium
+
+  * Backport to Debian Buster / Proxmox 6.x products
+
+ -- Proxmox Support Team <support@proxmox.com>  Fri, 13 Dec 2019 08:56:01 +0100
+
 rust-mio-uds (0.6.7-1) unstable; urgency=medium
 
   * Package mio-uds 0.6.7 from crates.io using debcargo 2.2.8
