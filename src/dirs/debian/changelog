@@ -5,6 +5,12 @@ rust-dirs (2.0.2-1) unstable; urgency=medium
 
  -- Ximin Luo <infinity0@debian.org>  Tue, 24 Dec 2019 14:33:30 +0000
 
+rust-dirs (2.0.1-1~bpo10+pve1) proxmox-rust; urgency=medium
+
+  * Backport to Debian Buster / Proxmox 6.x products
+
+ -- Proxmox Support Team <support@proxmox.com>  Fri, 13 Dec 2019 08:30:13 +0100
+
 rust-dirs (2.0.1-1) unstable; urgency=medium
 
   * Package dirs 2.0.1 from crates.io using debcargo 2.2.10
