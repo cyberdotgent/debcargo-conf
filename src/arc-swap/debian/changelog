@@ -1,3 +1,9 @@
+rust-arc-swap (0.4.3-1~bpo10+pve1) proxmox-rust; urgency=medium
+
+  * Backport to Debian Buster / Proxmox 6.x products
+
+ -- Proxmox Support Team <support@proxmox.com>  Fri, 13 Dec 2019 08:36:43 +0100
+
 rust-arc-swap (0.4.3-1) unstable; urgency=medium
 
   * Package arc-swap 0.4.3 from crates.io using debcargo 2.4.0
