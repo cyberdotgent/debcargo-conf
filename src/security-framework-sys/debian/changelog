@@ -1,3 +1,9 @@
+rust-security-framework-sys (0.3.1-2~bpo10+pve1) proxmox-rust; urgency=medium
+
+  * Backport to Debian Buster / Proxmox 6.x products
+
+ -- Proxmox Support Team <support@proxmox.com>  Fri, 13 Dec 2019 09:00:47 +0100
+
 rust-security-framework-sys (0.3.1-2) unstable; urgency=medium
 
   * Team upload.
