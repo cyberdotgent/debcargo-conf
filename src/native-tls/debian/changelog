@@ -1,3 +1,9 @@
+rust-native-tls (0.2.3-1~bpo10+pve1) proxmox-rust; urgency=medium
+
+  * Backport to Debian Buster / Proxmox 6.x products
+
+ -- Proxmox Support Team <support@proxmox.com>  Fri, 13 Dec 2019 08:59:40 +0100
+
 rust-native-tls (0.2.3-1) unstable; urgency=medium
 
   * Package native-tls 0.2.3 from crates.io using debcargo 2.4.0
