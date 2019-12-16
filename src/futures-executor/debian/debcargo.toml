@@ -1,5 +1,6 @@
 overlay = "."
 uploaders = ["Fabian Grünbichler <f.gruenbichler@proxmox.com>"]
+summary = "Executors for async tasks using the futures library"
 
 [packages.lib]
 test_is_broken = true
