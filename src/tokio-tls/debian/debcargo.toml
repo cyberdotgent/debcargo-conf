@@ -1,2 +1,3 @@
 overlay = "."
 uploaders = ["Fabian Grünbichler <f.gruenbichler@proxmox.com>"]
+summary = "Implementation of TLS/SSL streams for Tokio"
