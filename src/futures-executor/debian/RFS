@@ -1,0 +1,9 @@
+NEW
+
+upload to experimental, part of futures/tokio/hyper transition - see TODO.rst
+
+needs futures-core, futures-task, futures-util 0.3.1
+
+direct rdeps that need updating afterwards:
+futures to 0.3.1
+glib to 0.9.0
