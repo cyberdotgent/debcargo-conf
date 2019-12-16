@@ -1,0 +1,21 @@
+upload to experimental, part of futures/tokio/hyper transition - see TODO.rst
+
+needs futures-core 0.3.4
+needs iovec 0.1.4
+needs tokio-macros 0.2.4
+needs mio 0.6.20
+needs mio-named-pipes 0.2.6
+needs mio-uds 0.6.5
+needs bytes 0.5
+needs pin-project-lite 0.1.1
+
+direct rdeps that need updating afterwards:
+h2 to 0.2.1
+hyper to 0.13.2
+hyper-tls to 0.4.0
+
+new direct rdeps that can be uploaded afterwards:
+tokio-tls 0.3.0
+tokio-util 0.2.0
+
+some rdeps that need to be dropped, see TODO.rst

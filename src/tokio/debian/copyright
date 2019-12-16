@@ -1,6 +1,6 @@
 Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
 Upstream-Name: tokio
-Upstream-Contact: Carl Lerche <me@carllerche.com>
+Upstream-Contact: Tokio Contributors <team@tokio.rs>
 Source: https://github.com/tokio-rs/tokio
 
 Files: *
