@@ -1,0 +1,13 @@
+basically everything that depends on futures 0.1, directly or indirectly:
+
+tokio
+hyper
+h2
+bufstream
+bzip2
+flate2
+gstreamer
+pcap
+reqwest
+signal-hook
+want

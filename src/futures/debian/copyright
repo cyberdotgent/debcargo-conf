@@ -7,10 +7,6 @@ Files: *
 Copyright: 2018-2019 Alex Crichton <alex@alexcrichton.com>
 License: MIT or Apache-2.0
 
-Files: ./src/sync/mpsc/queue.rs
-Copyright: 2010-2011 Dmitry Vyukov
-License: BSD-2-clause
-
 Files: debian/*
 Copyright:
  2018-2019 Debian Rust Maintainers <pkg-rust-maintainers@alioth-lists.debian.net>
