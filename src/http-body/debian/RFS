@@ -1,0 +1,7 @@
+upload to experimental, part of futures/tokio/hyper transition - see TODO.rst
+
+needs bytes 0.5
+needs http 0.2
+
+direct rdeps that need updating afterwards:
+hyper to 0.13.2
