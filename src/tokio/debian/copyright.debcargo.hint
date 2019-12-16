@@ -1,10 +1,10 @@
 Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
 Upstream-Name: tokio
-Upstream-Contact: Carl Lerche <me@carllerche.com>
+Upstream-Contact: Tokio Contributors <team@tokio.rs>
 Source: https://github.com/tokio-rs/tokio
 
 Files: *
-Copyright: FIXME (overlay) UNKNOWN-YEARS Carl Lerche <me@carllerche.com>
+Copyright: FIXME (overlay) UNKNOWN-YEARS Tokio Contributors <team@tokio.rs>
 License: MIT
 Comment:
  FIXME (overlay): Since upstream copyright years are not available in
