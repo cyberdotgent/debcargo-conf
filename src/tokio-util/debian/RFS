@@ -1,0 +1,13 @@
+NEW
+
+upload to experimental, part of futures/tokio/hyper transition - see TODO.rst
+
+needs tokio 0.2
+needs bytes 0.5
+needs futures-core, futures-sink 0.3
+needs pin-project-lite 0.1
+
+direct rdeps that need updating afterwards:
+h2 to 0.2.1
+
+new direct rdeps that can be uploaded afterwards:
