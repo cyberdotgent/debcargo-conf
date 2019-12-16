@@ -1,0 +1,14 @@
+upload to experimental, part of futures/tokio/hyper transition - see TODO.rst
+
+needs tokio 0.2
+needs bytes 0.5
+needs futures-core, futures-util 0.3
+needs h2 0.2.1
+needs http 0.2
+needs http-body 0.3.1
+needs pin-project 0.4
+needs tower-service 0.3
+needs want 0.3
+
+direct rdeps that need updating afterwards:
+hyper-tls to 0.4.0
