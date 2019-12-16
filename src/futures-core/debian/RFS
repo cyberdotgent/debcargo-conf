@@ -1,0 +1,16 @@
+upload to experimental, part of futures/tokio/hyper transition - see TODO.rst
+
+direct rdeps that need updating afterwards:
+futures to 0.3.4
+gio to 0.8.0
+glib to 0.9.1
+gstreamer to 0.15.2
+h2 to 0.2.1
+hyper to 0.13.2
+tokio to 0.2.10
+tokio-util to 0.2.0
+
+new direct rdeps that can be uploaded afterwards:
+futures-executor 0.3.4
+futures-channel 0.3.4
+futures-util 0.3.4
