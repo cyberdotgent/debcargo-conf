@@ -140,6 +140,67 @@ rustup
  * xz2
    * lzma-sys
 
+tokio/futures/hyper with async/await
+------------------------------------
+
+likely via experimental first, since not all rdeps support the new releases yet:
+
+* futures 0.3.1
+   * futures-executor 0.3.1
+   * futures-util 0.3.1
+      * futures-task 0.3.1
+      * futures-channel 0.3.1
+         * futures-core 0.3.1
+         * future-sink 0.3.1
+      * futures-io 0.3.1
+      * futures-macro 0.3.1
+      * pin-utils 0.1.0-alpha.4
+      * proc-macro-nested 0.1.3
+
+* tokio-macros 0.2.0
+
+* tokio 0.2.4
+   * bytes 0.5.3 (outdated)
+   * futures-core 0.3.1 (see above)
+   * pin-project-lite 0.1.1
+   * tokio-macros 0.2.0
+
+* tokio-tls 0.3.0
+   * tokio 0.2.4 (+ subset of dependencies)
+
+* tokio-util 0.2.0
+   * tokio 0.2.4 (+ subset of dependencies)
+   * futures-sink 0.3.1 (see above)
+
+* hyper 0.13.0
+   * futures-* 0.3.1 (see above)
+   * h2 0.2.1
+      * futures-* 0.3.1 (see above)
+      * http 0.2.0
+         * bytes 0.5.3 (needed for tokio anyway)
+      * tokio 0.2.4 (see above)
+      * tokio-util 0.2.0 (see above)
+   * http-body 0.3.1
+      * http 0.2.0 (+ deps)
+   * pin-project 0.4.6
+      * pin-project-internal 0.4.6
+   * tokio 0.2.4 (see above)
+   * tower-service 0.3.0
+   * want 0.3.0
+
+rdeps:
+- bufstream
+- bzip2
+- flate2
+- gstreamer
+- pcap
+- reqwest
+- signal-hook
+- string
+- want
+
+lots of crates got collapsed and will thus need to be removed!
+
 ==============
 Eventual goals
 ==============
