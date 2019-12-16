@@ -1,0 +1,19 @@
+NEW
+
+upload to experimental, part of futures/tokio/hyper transition - see TODO.rst
+
+needs futures-channel, futures-core, futures-io, futures-macro, futures-sink, futures-task 0.3.4
+needs proc-macro-nested 0.1
+needs pin-utils 0.1
+needs futures-0.1 for backwards compatibility feature 'compat' - not yet (re-)packaged!
+needs tokio-io-0.1 for backwards compatibility feature 'io-compat' - not yet (re-)packaged!
+
+direct rdeps that need updating afterwards:
+futures to 0.3.4
+gio to 0.8.0
+glib to 0.9.1
+h2 to 0.2.1
+hyper to 0.13.2
+
+new direct rdeps that can be uploaded afterwards:
+futures-executor to 0.3.4
