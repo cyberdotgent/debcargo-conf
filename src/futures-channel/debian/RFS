@@ -1,0 +1,16 @@
+NEW
+
+upload to experimental, part of futures/tokio/hyper transition - see TODO.rst
+
+needs futures-core and futures-sink 0.3.4
+
+direct rdeps that need updating afterwards:
+futures to 0.3.3
+gio to 0.8.0
+glib to 0.9.1
+h2 to 0.2.1
+hyper to 0.13.2
+
+new direct rdeps that can be uploaded afterwards:
+futures-util 0.3.4
+tokio-util 0.2.0
