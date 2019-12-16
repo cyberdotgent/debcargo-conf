@@ -1,0 +1,8 @@
+NEW
+
+upload to experimental, part of futures/tokio/hyper transition - see TODO.rst
+
+needs tokio 0.2
+
+direct rdeps that need updating afterwards:
+hyper-tls to 0.4.0
