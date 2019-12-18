@@ -6,6 +6,12 @@ rust-bindgen (0.51.1-4) unstable; urgency=medium
 
  -- Sylvestre Ledru <sylvestre@debian.org>  Tue, 31 Dec 2019 18:27:17 +0100
 
+rust-bindgen (0.51.1-3~bpo10+pve1) proxmox-rust; urgency=medium
+
+  * Backport to Debian Buster / Proxmox 6.x products
+
+ -- Proxmox Support Team <support@proxmox.com>  Wed, 18 Dec 2019 13:53:16 +0100
+
 rust-bindgen (0.51.1-3) unstable; urgency=medium
 
   * mark feature-specific autopkgtests as flakey (see #945560)
