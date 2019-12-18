@@ -1,3 +1,9 @@
+rust-cc (1.0.46-1~bpo10+pve1) proxmox-rust; urgency=medium
+
+  * Backport to Debian Buster / Proxmox 6.x products
+
+ -- Proxmox Support Team <support@proxmox.com>  Wed, 18 Dec 2019 13:13:48 +0100
+
 rust-cc (1.0.46-1) unstable; urgency=medium
 
   * Team upload.
