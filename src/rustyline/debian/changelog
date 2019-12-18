@@ -1,3 +1,9 @@
+rust-rustyline (5.0.5-1~bpo10+pve2) proxmox-rust; urgency=medium
+
+  * Relax nix crate dependency to 0.16
+
+ -- Proxmox Support Team <support@proxmox.com>  Wed, 18 Dec 2019 14:37:16 +0100
+
 rust-rustyline (5.0.5-1~bpo10+pve1) proxmox-rust; urgency=medium
 
   * Backport to Debian Buster / Proxmox 6.x products
