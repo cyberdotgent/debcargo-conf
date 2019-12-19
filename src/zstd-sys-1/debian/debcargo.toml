@@ -1,0 +1,9 @@
+semver_suffix = true
+overlay = "."
+uploaders = ["Fabian Grünbichler <f.gruenbichler@proxmox.com>"]
+
+# bundled copy of libstd
+excludes = ["zstd/**"]
+
+[packages.lib]
+depends = ["libzstd-dev"]
