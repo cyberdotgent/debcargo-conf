@@ -1,0 +1,14 @@
+upload to experimental, part of futures/tokio/hyper transition - see TODO.rst
+
+needs cairo-rs 0.9
+needs cairo-sys-rs 0.9.1
+needs gdk-pixbuf 0.8
+needs gdk-sys 0.9.1
+needs gio 0.8
+needs gio-sys 0.9.1
+needs glib 0.9
+needs pango 0.8
+
+direct rdeps that need updating afterwards:
+
+gtk to 0.8.0
