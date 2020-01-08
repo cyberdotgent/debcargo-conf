@@ -82,6 +82,13 @@ Comment:
  FIXME (overlay): These notices are extracted from files. Please review them
  before uploading to the archive.
 
+Files: ./src/gravity.rs
+Copyright: 2019, The Gtk-rs Project Developers.
+License: UNKNOWN-LICENSE; FIXME (overlay)
+Comment:
+ FIXME (overlay): These notices are extracted from files. Please review them
+ before uploading to the archive.
+
 Files: ./src/item.rs
 Copyright: 2018, The Gtk-rs Project Developers.
 License: UNKNOWN-LICENSE; FIXME (overlay)
@@ -126,8 +133,8 @@ Comment:
 
 Files: debian/*
 Copyright:
- 2018-2019 Debian Rust Maintainers <pkg-rust-maintainers@alioth-lists.debian.net>
- 2018-2019 Wolfgang Silbermayr <wolfgang@silbermayr.at>
+ 2018-2020 Debian Rust Maintainers <pkg-rust-maintainers@alioth-lists.debian.net>
+ 2018-2020 Wolfgang Silbermayr <wolfgang@silbermayr.at>
 License: MIT
 
 License: MIT
