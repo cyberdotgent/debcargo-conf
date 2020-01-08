@@ -1,0 +1,10 @@
+upload to experimental, part of futures/tokio/hyper transition - see TODO.rst
+
+needs cairo-rs 0.8
+needs cairo-sys-rs 0.9.1
+needs glib 0.9
+needs glib-sys 0.9.1
+needs gobject-sys 0.9.1
+needs pango 0.8
+needs pango-sys 0.9.1
+needs pangocairo-sys 0.10.1
