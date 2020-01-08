@@ -1,0 +1,4 @@
+part of futures/tokio/hyper transition - see TODO.rst
+
+direct rdeps that need updating afterwards:
+h2 to 0.2.1
