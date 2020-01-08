@@ -1,0 +1,10 @@
+upload to experimental, part of futures/tokio/hyper transition - see TODO.rst
+
+direct rdeps that need updating afterwards:
+gstreamer to 0.15.0
+gstreamer-audio to 0.15.0
+gstreamer-audio-sys to 0.8.1
+gstreamer-base to 0.15.0
+gstreamer-base-sys to 0.8.1
+gstreamer-video to 0.15.0
+gstreamer-video-sys to 0.8.1
