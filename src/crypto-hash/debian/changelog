@@ -1,3 +1,9 @@
+rust-crypto-hash (0.3.4-1~bpo10+pve1) proxmox-rust; urgency=medium
+
+  * Backport to Debian Buster / Proxmox
+
+ -- Proxmox Support Team <support@proxmox.com>  Tue, 14 Jan 2020 15:17:53 +0100
+
 rust-crypto-hash (0.3.4-1) unstable; urgency=medium
 
   * Package crypto-hash 0.3.4 from crates.io using debcargo 2.4.0
