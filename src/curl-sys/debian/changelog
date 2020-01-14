@@ -1,3 +1,9 @@
+rust-curl-sys (0.4.24-1~bpo10+pve1) proxmox-rust; urgency=medium
+
+  * Backport to Debian Buster / Proxmox
+
+ -- Proxmox Support Team <support@proxmox.com>  Tue, 14 Jan 2020 14:09:59 +0100
+
 rust-curl-sys (0.4.24-1) unstable; urgency=medium
 
   * Package curl-sys 0.4.24 from crates.io using debcargo 2.4.0
