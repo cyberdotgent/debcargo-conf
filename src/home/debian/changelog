@@ -1,3 +1,9 @@
+rust-home (0.5.1-1~bpo10+pve1) proxmox-rust; urgency=medium
+
+  * Backport to Debian Buster / Proxmox
+
+ -- Proxmox Support Team <support@proxmox.com>  Tue, 14 Jan 2020 14:10:04 +0100
+
 rust-home (0.5.1-1) unstable; urgency=medium
 
   * Package home 0.5.1 from crates.io using debcargo 2.4.0
