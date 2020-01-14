@@ -1,3 +1,9 @@
+rust-globset (0.4.4-2~bpo10+pve1) proxmox-rust; urgency=medium
+
+  * Backport to Debian Buster / Proxmox
+
+ -- Proxmox Support Team <support@proxmox.com>  Tue, 14 Jan 2020 15:19:27 +0100
+
 rust-globset (0.4.4-2) unstable; urgency=medium
 
   * Team upload.
