@@ -1,3 +1,9 @@
+rust-proc-macro2 (1.0.7-1) unstable; urgency=medium
+
+  * Package proc-macro2 1.0.7 from crates.io using debcargo 2.4.0
+
+ -- Wolfgang Silbermayr <wolfgang@silbermayr.at>  Fri, 03 Jan 2020 12:59:40 +0100
+
 rust-proc-macro2 (1.0.6-1~bpo10+pve1) proxmox-rust; urgency=medium
 
   * Backport to Debian Buster / Proxmox 6.x products

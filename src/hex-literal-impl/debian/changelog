@@ -1,0 +1,5 @@
+rust-hex-literal-impl (0.2.1-1) unstable; urgency=medium
+
+  * Package hex-literal-impl 0.2.1 from crates.io using debcargo 2.4.0
+
+ -- Andrej Shadura <andrewsh@debian.org>  Fri, 03 Jan 2020 13:55:29 +0100

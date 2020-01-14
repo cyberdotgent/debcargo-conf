@@ -1,5 +1,6 @@
 overlay = "."
 uploaders = ["Fabian Grünbichler <f.gruenbichler@proxmox.com>"]
+summary = "FFI wrappers for libpam"
 
 [packages.lib]
 depends = ["libpam-dev"]

@@ -1,3 +1,10 @@
+rust-openssl-sys (0.9.53-1) unstable; urgency=medium
+
+  * Team upload.
+  * Package openssl-sys 0.9.53 from crates.io using debcargo 2.4.0
+
+ -- Andrej Shadura <andrewsh@debian.org>  Mon, 13 Jan 2020 15:46:41 +0100
+
 rust-openssl-sys (0.9.49-1~bpo10+pve1) proxmox-rust; urgency=medium
 
   * Backport to Debian Buster / Proxmox 6.x products

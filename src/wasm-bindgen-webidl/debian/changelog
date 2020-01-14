@@ -1,3 +1,9 @@
+rust-wasm-bindgen-webidl (0.2.58-1) unstable; urgency=medium
+
+  * Package wasm-bindgen-webidl 0.2.58 from crates.io using debcargo 2.4.0
+
+ -- Wolfgang Silbermayr <wolfgang@silbermayr.at>  Wed, 08 Jan 2020 15:08:03 +0100
+
 rust-wasm-bindgen-webidl (0.2.56-1) unstable; urgency=medium
 
   * Package wasm-bindgen-webidl 0.2.56 from crates.io using debcargo 2.4.0

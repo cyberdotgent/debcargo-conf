@@ -1,3 +1,9 @@
+rust-unicode-normalization (0.1.11-1) unstable; urgency=medium
+
+  * Package unicode-normalization 0.1.11 from crates.io using debcargo 2.4.2
+
+ -- Daniel Kahn Gillmor <dkg@fifthhorseman.net>  Mon, 13 Jan 2020 13:40:14 -0500
+
 rust-unicode-normalization (0.1.7-1~bpo10+pve1) proxmox-rust; urgency=medium
 
   * Backport to Debian Buster / Proxmox 6.x products

@@ -1,3 +1,16 @@
+rust-debcargo (2.4.2-1) unstable; urgency=medium
+
+  * Package debcargo 2.4.2 from crates.io using debcargo 2.4.2
+
+ -- Ximin Luo <infinity0@debian.org>  Wed, 08 Jan 2020 21:54:13 +0000
+
+rust-debcargo (2.4.1-1) unstable; urgency=medium
+
+  * Package debcargo 2.4.1 from crates.io using debcargo 2.4.1
+  * Closes: #945436, #945499, #945560, #947088.
+
+ -- Ximin Luo <infinity0@debian.org>  Fri, 03 Jan 2020 01:19:34 +0000
+
 rust-debcargo (2.4.0-1) unstable; urgency=medium
 
   * Package debcargo 2.4.0 from crates.io using debcargo 2.4.0
