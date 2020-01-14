@@ -1,3 +1,9 @@
+rust-cargo (0.41.0-2~bpo10+pve1) proxmox-rust; urgency=medium
+
+  * Backport to Debian Buster / Proxmox
+
+ -- Proxmox Support Team <support@proxmox.com>  Tue, 14 Jan 2020 13:58:38 +0100
+
 rust-cargo (0.41.0-2) unstable; urgency=medium
 
   * Package cargo 0.41.0 from crates.io using debcargo 2.4.0
