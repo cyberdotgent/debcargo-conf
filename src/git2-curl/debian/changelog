@@ -1,3 +1,9 @@
+rust-git2-curl (0.11.0-2~bpo10+pve1) proxmox-rust; urgency=medium
+
+  * Backport to Debian Buster / Proxmox
+
+ -- Proxmox Support Team <support@proxmox.com>  Tue, 14 Jan 2020 14:10:02 +0100
+
 rust-git2-curl (0.11.0-2) unstable; urgency=medium
 
   * Package git2-curl 0.11.0 from crates.io using debcargo 2.4.0
