@@ -1,3 +1,9 @@
+rust-libudev-sys (0.1.4-1~bpo10+pve1) proxmox-rust; urgency=medium
+
+  * Backport to Debian Buster / Proxmox
+
+ -- Proxmox Support Team <support@proxmox.com>  Wed, 15 Jan 2020 13:41:34 +0100
+
 rust-libudev-sys (0.1.4-1) unstable; urgency=medium
 
   * Package libudev-sys 0.1.4 from crates.io using debcargo 2.2.9
