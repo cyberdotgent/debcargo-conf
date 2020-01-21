@@ -1,3 +1,10 @@
+rust-lock-api (0.3.3-1) unstable; urgency=medium
+
+  * Team upload.
+  * Package lock_api 0.3.3 from crates.io using debcargo 2.4.2
+
+ -- Nikos Tsipinakis <nikos@tsipinakis.com>  Tue, 14 Jan 2020 23:20:40 +0000
+
 rust-lock-api (0.3.2-1~bpo10+pve1) proxmox-rust; urgency=medium
 
   * Backport to Debian Buster / Proxmox 6.x products
