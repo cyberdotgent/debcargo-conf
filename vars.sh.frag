@@ -58,7 +58,7 @@ BUILDDIR="$PWD/build/$PKGNAME"
 PKGCFG="$PKGDIR/debian/debcargo.toml"
 
 mkdir -p "$(dirname $BUILDDIR)"
-cp "$PWD/build.sh" "$PWD/build/build.sh"
+ln -srf "$PWD/build.sh" "$PWD/build/build.sh"
 chmod +x "$PWD/build/build.sh"
 
 if [ -z "$CRATE" ]; then
@@ -74,4 +74,8 @@ shouldbuild() {
 	local dst="$1"
 	local src="$2"
 	test ! -e "$dst" -o "$src" -nt "$dst"
+}
+
+get_existing_version() {
+	sed -nre "s/.*Package .* (.*) from crates.io.*/\1/gp" "$1/debian/changelog" | head -n1
 }

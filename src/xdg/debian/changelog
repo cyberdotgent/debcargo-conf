@@ -1,3 +1,10 @@
+rust-xdg (2.2.0-2) unstable; urgency=medium
+
+  * Package xdg 2.2.0 from crates.io using debcargo 2.4.2
+  * Source-only reupload for migration to testing
+
+ -- Wolfgang Silbermayr <wolfgang@silbermayr.at>  Fri, 24 Jan 2020 08:28:40 +0100
+
 rust-xdg (2.2.0-1~bpo10+pve1) proxmox-rust; urgency=medium
 
   * Backport to Debian Buster / Proxmox 6.x products

@@ -16,7 +16,8 @@ classify() {
 	local c=0
 	local url="$1"
 	local name="$(zegrep -o 'autopkgtest \[[0-9:]+\]: testing package [^[:space:]]+' "$url" | cut '-d ' -f5)"
-	if zegrep -q '^error\[E0554\]' "$url"; then
+	if zegrep -q '^error\[E0554\]' "$url" && \
+	 ! zegrep -q "^cargo-auto-test: re-running test with RUSTC_BOOTSTRAP due to E0554" "$url"; then
 		results["falsepositive_unstable"]+="$name"$'\n'
 		c=$((c+1))
 	fi
@@ -30,6 +31,10 @@ classify() {
 	fi
 	if zgrep -q "^error.* No such file or directory (os error 2)$" "$url"; then
 		results["maybetestbroken_filemissing"]+="$name"$'\n'
+		c=$((c+1))
+	fi
+	if zgrep -q "^Broken autopkgtest-satdep" "$url"; then
+		results["missing_dependency"]+="$name"$'\n'
 		c=$((c+1))
 	fi
 	if [ "$c" = 0 ]; then
@@ -56,6 +61,9 @@ explain["falsepositive_debcargo_945560"]="cargo requires more dependencies than 
 
 action["maybetestbroken_filemissing"]="Mark the relevant tests as test_is_broken=true in debcargo.toml, re-upload the package, and file a bug upstream for them to fix it."
 explain["maybetestbroken_filemissing"]="Carge does not enforce that tests pass per-crate, so sometimes crate authors run tests on a per-workspace basis and have crate tests depend on files in the parent workspace, which are not part of the crate when uploaded to crates.io."
+
+action["missing_dependency"]="Package the missing dev-dependencies."
+explain["missing_dependency"]="autopkgtest cannot install all dependencies.  Check the dev-dependencies section in the Cargo.toml or the Testsuite-Triggers field in the dsc file to see a list of additional autopkgtest dependencies, or inspect the full log to find the missing packages."
 
 if [ -z "$*" ]; then
 	if ! [ -f rust-regressions.list ]; then

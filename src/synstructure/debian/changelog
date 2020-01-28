@@ -1,3 +1,10 @@
+rust-synstructure (0.12.3-2) unstable; urgency=medium
+
+  * Package synstructure 0.12.3 from crates.io using debcargo 2.4.2
+  * Source-only reupload for transition to testing
+
+ -- Wolfgang Silbermayr <wolfgang@silbermayr.at>  Thu, 23 Jan 2020 20:36:14 +0100
+
 rust-synstructure (0.12.3-1~bpo10+pve1) proxmox-rust; urgency=medium
 
   * Backport to Debian Buster / Proxmox 6.x products
