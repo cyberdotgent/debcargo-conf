@@ -9,7 +9,7 @@ Index: wasm-bindgen-futures/Cargo.toml
 -[target."cfg(target_arch = \"wasm32\")".dev-dependencies.futures-channel-preview]
 -version = "0.3.0-alpha.18"
 +[target."cfg(target_arch = \"wasm32\")".dev-dependencies.futures-channel]
-+version = "0.3.1"
++version = "0.3.3"
  
  [target."cfg(target_arch = \"wasm32\")".dev-dependencies.wasm-bindgen-test]
  version = "0.3.8"

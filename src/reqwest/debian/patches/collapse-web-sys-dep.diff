@@ -1,0 +1,16 @@
+this needs to be updated with the next web-sys update, or when we fix this properly:
+https://salsa.debian.org/rust-team/debcargo-conf/issues/17
+
+Index: reqwest/Cargo.toml
+===================================================================
+--- reqwest.orig/Cargo.toml
++++ reqwest/Cargo.toml
+@@ -213,6 +213,7 @@ version = "0.4.1"
+ 
+ [target."cfg(target_arch = \"wasm32\")".dependencies.web-sys]
+ version = "0.3.25"
+-features = ["Headers", "Request", "RequestInit", "Response", "Window"]
++features = ["Window"]
++default_features = false
+ [target."cfg(windows)".dependencies.winreg]
+ version = "0.6"
