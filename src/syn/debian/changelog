@@ -1,3 +1,9 @@
+rust-syn (1.0.12-1~bpo10+pve1) proxmox-rust; urgency=medium
+
+  * Backport to Debian Buster / Proxmox
+
+ -- Proxmox Support Team <support@proxmox.com>  Thu, 16 Apr 2020 13:05:26 +0200
+
 rust-syn (1.0.12-1) unstable; urgency=medium
 
   * Package syn 1.0.12 from crates.io using debcargo 2.4.0
