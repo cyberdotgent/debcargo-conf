@@ -9,6 +9,13 @@ Copyright:
  2014-2020 Alex Crichton
 License: MIT or Apache-2.0
 
+Files: src/task/wait_async_polyfill.rs
+Copyright: Lars T Hansen <lhansen@mozilla.com>
+License: MPL-2.0
+Comment:
+ Rust port of https://github.com/tc39/proposal-atomics-wait-async/blob/master/polyfill.js
+ under same license/copyright
+
 Files: debian/*
 Copyright:
  2020 Debian Rust Maintainers <pkg-rust-maintainers@alioth-lists.debian.net>
