@@ -7,8 +7,9 @@ Source: https://github.com/carllerche/h2
 
 Files: *
 Copyright:
- 2017-2019 Carl Lerche <me@carllerche.com>
- 2019 Sean McArthur <sean@seanmonstar.com>
+ 2017-2020 Carl Lerche <me@carllerche.com>
+ 2019-2020 Sean McArthur <sean@seanmonstar.com>
+ 2017 h2 authors
 License: MIT
 
 Files: debian/*
