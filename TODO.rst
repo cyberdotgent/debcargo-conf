@@ -173,7 +173,10 @@ tokio/futures/hyper with async/await
 
 * bcder (recently packaged, not yet compatible with bytes 0.5)
 * bufstream (dead upstream, no rdeps)
+* buffered-reader
 * bzip2 (no upstream support yet, no rdeps for future/tokio features)
+* cargo
+* debcargo
 * flate2 (no upstream support (yet), no rdeps for future/tokio features)
 * gstreamer-* (new upstream version is compatible, updated, no non-gstreamer rdeps, needs glib update, which triggers:
    * atk
@@ -185,14 +188,25 @@ tokio/futures/hyper with async/await
    * pangocairo
    * pango
    * and their respective sys crates
+* hdrhistogram
+* mio-extras
 * mio-extras (no rdeps, compatible)
+* mio-named-pipes
 * mio-named-pipes (no rdeps except tokio-process, compatible)
+* mio-uds
 * mio-uds (rdeps: signal-hook, tokio-uds, tokio-signal)
+* object
+* ogg
 * pcap (no rdeps, can be dropped)
+* protobuf
 * reqwest (updated, needs updated hyper-tls, new wasm-bindgen-futures, updated web-sys/js-sys/webasm)
+* rspotify
+* sequoia-openpgp
 * signal-hook (updated version not yet released, single rdep "tokio-signal" got merged into tokio and only uses signal-hook-registry now -> patched to remove dependency)
 * string (relaxed dep on bytes)
+* syntect
 * want (updated)
+* zip
 
 *old crates to be removed*
 
