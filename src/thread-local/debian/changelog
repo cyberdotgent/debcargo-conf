@@ -1,3 +1,9 @@
+rust-thread-local (1.0.1-1~bpo10+pve1) proxmox-rust; urgency=medium
+
+  * Backport to Debian Buster / Proxmox
+
+ -- Proxmox Support Team <support@proxmox.com>  Thu, 14 May 2020 15:24:55 +0200
+
 rust-thread-local (1.0.1-1) unstable; urgency=medium
 
   * Team upload.
