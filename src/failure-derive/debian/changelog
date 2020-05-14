@@ -1,3 +1,17 @@
+rust-failure-derive (0.1.7-2) unstable; urgency=medium
+
+  * Team upload.
+  * Package failure_derive 0.1.7 from crates.io using debcargo 2.4.2
+  * Disable a failing test
+
+ -- Sylvestre Ledru <sylvestre@debian.org>  Sat, 11 Apr 2020 23:38:13 +0200
+
+rust-failure-derive (0.1.7-1) unstable; urgency=medium
+
+  * Package failure_derive 0.1.7 from crates.io using debcargo 2.4.2
+
+ -- Wolfgang Silbermayr <wolfgang@silbermayr.at>  Sat, 04 Apr 2020 08:30:36 +0200
+
 rust-failure-derive (0.1.6-1~bpo10+pve1) proxmox-rust; urgency=medium
 
   * Backport to Debian Buster / Proxmox 6.x products

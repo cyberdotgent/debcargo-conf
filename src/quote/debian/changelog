@@ -1,3 +1,12 @@
+rust-quote (1.0.2-2) unstable; urgency=medium
+
+  * Package quote 1.0.2 from crates.io using debcargo 2.4.2
+
+  [ Sylvestre Ledru ]
+  * Disable autopkgtest to allow the transition
+
+ -- Wolfgang Silbermayr <wolfgang@silbermayr.at>  Mon, 03 Feb 2020 23:31:41 +0100
+
 rust-quote (1.0.2-1~bpo10+pve1) proxmox-rust; urgency=medium
 
   * Backport to Debian Buster / Proxmox 6.x products

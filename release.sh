@@ -1,6 +1,32 @@
 #!/bin/bash
+# Release a packaged crate to Debian.
+#
+# Usage: [REALVER=<EXACTVER>] ./release.sh <CRATE> [<SEMVER>]
+#
+# Envvars:
+# See also ./vars.sh.frag for its envvars, which we pass through.
+# See also ./build.sh for its envvars, which we pass through.
+# RERELEASE=1
+#     Bump the changelog for a source-only reupload, required for migration to
+#     Debian Testing, and automatically dput the tarball. You need this after a
+#     NEW upload. This is a dumb consequence of two independently-thought-out
+#     policies but nobody on either team has expressed interest in fixing it,
+#     claiming "not my department".
+# NOUPDATE=1
+#     Tell debcargo not to attempt to update to the latest version, i.e.
+#     autodetect REALVER. Set this if you get unexpected diffs when releasing.
+#     We probably want to switch this on by default, please complain in our IRC
+#     channel if you agree.
+# REUSE_EXISTING_ORIG_TARBALL=1
+#     Re-use the existing .orig tarball. This is needed if it was previously
+#     generated with an old version of debcargo, otherwise you'll get
+#     auto-REJECT from Debian FTP. TODO: we probably want to set this
+#     automatically on if the Debian version ends with -2 or above.
 
 . ./vars.sh.frag
+
+RED=`echo -e "\033[1;31m"`
+NC=`echo -e "\033[0m"`
 
 if test ! -d $PKGDIR_REL; then
     abort 1 "Cannot find $PKGDIR_REL. Did you run ./new-package.sh before?"
@@ -137,27 +163,85 @@ eof
 
 else
 
+unstable_bin_packages="$(rmadison --noconf --suite unstable --source-and-binary "${DEBSRC}" | grep -v 'source$' | cut -d ' ' -f 1 | sort -u)"
+upload_bin_packages="$(grep '^Binary' "build/${DEBSRC}_${DEBVER}.dsc" | sed -e 's/^Binary: //' -e 's/, /,/g' | tr ',' '\n' | sort -u)"
+diff_bin_packages="$(diff -u0 <(echo "$unstable_bin_packages") <(echo "$upload_bin_packages") | tail -n-2)"
+new_bin_packages="$(echo "$diff_bin_packages" | grep '^+' | sed -e 's/^+//g')"
+rm_bin_packages="$(echo "$diff_bin_packages" | grep '^-' | sed -e 's/^-//g')"
+
+show_build_notice() {
+cat <<eof
+The recommended way to build and upload is to run something like:
+
+  cd build && ./build.sh $CRATE $VER && dput ${DEBSRC}_${DEBVER}_${DEB_HOST_ARCH}.changes
+eof
+}
+
 cat <<eof
 Release of $CRATE ready as a source package in ${BUILDDIR#$PWD/}. You need to
 perform the following steps:
 
 Build the package if necessary, and upload
 ==========================================
+eof
 
-If the source package is already in Debian and this version does not introduce
+if [ -z "$unstable_bin_packages" ]; then
+cat <<eof
+${RED}
+Since this is a NEW source package not already in the Debian archive, you will need to build a binary package out of it.
+
+For your reference, this source package builds $(echo "$upload_bin_packages" | wc -l) binary package(s):
+$upload_bin_packages
+${NC}
+eof
+show_build_notice
+
+elif [ -z "$new_bin_packages" ]; then
+cat <<eof
+Since the source package is already in Debian and this version does not introduce
 new binaries, then you can just go ahead and directly dput the source package.
 
   cd build && dput ${DEBSRC}_${DEBVER}_source.changes
 
-For your reference, this source package builds $(grep ^Package build/${CRATE//_/-}/debian/control | wc -l) binary package(s):
-$(sed -ne 's/^Package: //pg' build/hmac/debian/control | tr '\n' ',')
+For your reference, this source package builds $(echo "$upload_bin_packages" | wc -l) binary package(s):
+$upload_bin_packages
+eof
+# don't show build notice
 
-If this is a NEW source package or introduces NEW binary packages not already
-in the Debian archive, you will need to build a binary package out of it. The
-recommended way is to run something like:
+else
+cat <<eof
+${RED}
+ATTENTION: this upload introduces NEW binary packages not already in the Debian
+archive, you will need to build a binary package out of it.
 
-  cd build && ./build.sh $CRATE $VER && dput ${DEBSRC}_${DEBVER}_${DEB_HOST_ARCH}.changes
+PLEASE THINK CAREFULLY BEFORE UPLOADING NEW VERSIONS WITH NEW BINARY PACKAGES,
+AS SUCH UPLOADS CAN AFFECT ONGOING TRANSITIONS AND DELAY THEM SIGNIFICANTLY.
 
+For your reference, this source package builds $(echo "$upload_bin_packages" | wc -l) binary package(s):
+$upload_bin_packages
+
+Of those, the following are NEW:
+$new_bin_packages
+${NC}
+eof
+show_build_notice
+
+fi # end decision-making on show_build_notice
+
+if [ -n "$rm_bin_packages" ]; then
+
+cat <<eof
+
+ATTENTION: The following binary packages which are currently available in
+Debian unstable are no longer built from ${DEBSRC}, please investigate whether
+this is intentional, and file RM requests where appropriate:
+
+$rm_bin_packages
+eof
+
+fi
+
+cat <<eof
 This assumes you followed the "Build environment" instructions in README.rst,
 for setting up a build environment for release.
 

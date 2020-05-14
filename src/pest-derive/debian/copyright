@@ -1,16 +1,17 @@
 Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
-Upstream-Name: pest_derive
+Upstream-Name: pest
 Upstream-Contact: Dragoș Tiselice <dragostiselice@gmail.com>
 Source: https://github.com/pest-parser/pest
 
 Files: *
-Copyright: 2016-2020 Dragoș Tiselice <dragostiselice@gmail.com>
+Copyright: 2018-2020 Dragoș Tiselice <dragostiselice@gmail.com>
 License: MIT or Apache-2.0
 
 Files: debian/*
 Copyright:
  2020 Debian Rust Maintainers <pkg-rust-maintainers@alioth-lists.debian.net>
  2020 Proxmox Support Team <support@proxmox.com>
+ 2020 Arnaud Ferraris <arnaud.ferraris@gmail.com>
 License: MIT or Apache-2.0
 
 License: Apache-2.0

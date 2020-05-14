@@ -1,3 +1,55 @@
+rust-backtrace (0.3.44-6) unstable; urgency=medium
+
+  * Team upload.
+  * Package backtrace 0.3.44 from crates.io using debcargo 2.4.2
+  * Fix feature name error in debcargo.toml, the rust feature
+    is named compiler_builtins not compiler-builtins.
+
+ -- Peter Michael Green <plugwash@debian.org>  Tue, 14 Apr 2020 20:56:43 +0000
+
+rust-backtrace (0.3.44-5) unstable; urgency=medium
+
+  * Team upload.
+  * Package backtrace 0.3.44 from crates.io using debcargo 2.4.2
+  * Mark test as broken for compiler-builtins featureset, I missed it
+    in the last upload.
+
+ -- Peter Michael Green <plugwash@debian.org>  Tue, 14 Apr 2020 19:43:13 +0000
+
+rust-backtrace (0.3.44-4) unstable; urgency=medium
+
+  * Team upload.
+  * Package backtrace 0.3.44 from crates.io using debcargo 2.4.2
+  * Mark tests as broken for some featuresets.
+
+ -- Peter Michael Green <plugwash@debian.org>  Tue, 14 Apr 2020 10:24:49 +0000
+
+rust-backtrace (0.3.44-3) unstable; urgency=medium
+
+  * Team upload.
+  * Package backtrace 0.3.44 from crates.io using debcargo 2.4.2
+  * Stick with 0.3.44 in unstable until a sane 0.3.46 package passes NEW
+    in experimental.
+  * Remove "rustc-dep-of-std" featureset packages
+  * Relax dependency on goblin
+
+ -- Peter Michael Green <plugwash@debian.org>  Mon, 13 Apr 2020 02:31:04 +0000
+
+rust-backtrace (0.3.44-2) unstable; urgency=medium
+
+  * Package backtrace 0.3.44 from crates.io using debcargo 2.4.2
+  * Add a relax-dep patch for dependencies that are in Debian in older
+    versions
+
+ -- Wolfgang Silbermayr <wolfgang@silbermayr.at>  Thu, 20 Feb 2020 10:01:20 +0100
+
+rust-backtrace (0.3.44-1) unstable; urgency=medium
+
+  * Package backtrace 0.3.44 from crates.io using debcargo 2.4.2
+  * Drop obsolete dependency upgrade patch
+
+ -- Wolfgang Silbermayr <wolfgang@silbermayr.at>  Wed, 19 Feb 2020 10:58:52 +0100
+
 rust-backtrace (0.3.40-2) unstable; urgency=medium
 
   * Team upload.

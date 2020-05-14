@@ -1,3 +1,18 @@
+rust-openssl-sys (0.9.55-2) unstable; urgency=medium
+
+  * Team upload.
+  * Package openssl-sys 0.9.55 from crates.io using debcargo 2.4.2
+  * Fix autopkgtest, don't attempt to find removed vendored openssl.
+
+ -- Ximin Luo <infinity0@debian.org>  Tue, 21 Apr 2020 21:03:54 +0100
+
+rust-openssl-sys (0.9.55-1) unstable; urgency=medium
+
+  * Team upload.
+  * Package openssl-sys 0.9.55 from crates.io using debcargo 2.4.2
+
+ -- Ximin Luo <infinity0@debian.org>  Sat, 18 Apr 2020 16:08:12 +0100
+
 rust-openssl-sys (0.9.53-1) unstable; urgency=medium
 
   * Team upload.

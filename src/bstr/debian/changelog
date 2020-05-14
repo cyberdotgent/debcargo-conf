@@ -1,3 +1,15 @@
+rust-bstr (0.2.12-1) unstable; urgency=medium
+
+  * Package bstr 0.2.12 from crates.io using debcargo 2.4.0
+
+ -- Sylvestre Ledru <sylvestre@debian.org>  Wed, 18 Mar 2020 22:40:41 +0100
+
+rust-bstr (0.2.11-1) unstable; urgency=medium
+
+  * Package bstr 0.2.11 from crates.io using debcargo 2.4.0
+
+ -- Sylvestre Ledru <sylvestre@debian.org>  Tue, 25 Feb 2020 13:58:20 +0100
+
 rust-bstr (0.2.8-1~bpo10+pve1) proxmox-rust; urgency=medium
 
   * Backport to Debian Buster / Proxmox

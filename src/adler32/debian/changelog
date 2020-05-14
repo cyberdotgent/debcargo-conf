@@ -1,3 +1,18 @@
+rust-adler32 (1.0.4-2) unstable; urgency=medium
+
+  * Team upload.
+  * Source-only upload for testing migration
+  * Package adler32 1.0.4 from crates.io using debcargo 2.4.2
+
+ -- Peter Michael Green <plugwash@debian.org>  Sun, 12 Apr 2020 16:34:28 +0000
+
+rust-adler32 (1.0.4-1) unstable; urgency=medium
+
+  * Team upload.
+  * Package adler32 1.0.4 from crates.io using debcargo 2.4.2
+
+ -- Fabian Grünbichler <f.gruenbichler@proxmox.com>  Sat, 28 Mar 2020 21:48:05 +0100
+
 rust-adler32 (1.0.3-1) unstable; urgency=medium
 
   * Package adler32 1.0.3 from crates.io using debcargo 2.2.6

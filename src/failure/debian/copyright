@@ -4,15 +4,15 @@ Upstream-Contact: Without Boats <boats@mozilla.com>
 Source: https://github.com/rust-lang-nursery/failure
 
 Files: *
-Copyright: 2017-2019 Without Boats <boats@mozilla.com>
+Copyright: 2017-2020 Without Boats <boats@mozilla.com>
 License: MIT or Apache-2.0
 
 Files: debian/*
 Copyright:
- 2018-2019 Debian Rust Maintainers <pkg-rust-maintainers@alioth-lists.debian.net>
- 2018-2019 Ximin Luo <infinity0@debian.org>
- 2018-2019 Robin Krahl <robin.krahl@ireas.org>
- 2019 Wolfgang Silbermayr <wolfgang@silbermayr.at>
+ 2018-2020 Debian Rust Maintainers <pkg-rust-maintainers@alioth-lists.debian.net>
+ 2018-2020 Ximin Luo <infinity0@debian.org>
+ 2018-2020 Robin Krahl <robin.krahl@ireas.org>
+ 2019-2020 Wolfgang Silbermayr <wolfgang@silbermayr.at>
 License: MIT or Apache-2.0
 
 License: Apache-2.0

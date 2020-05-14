@@ -1,3 +1,20 @@
+rust-atty (0.2.14-2) unstable; urgency=medium
+
+  * Mark the autopkgtest as flaky because of
+    https://github.com/softprops/atty/issues/39
+
+ -- Sylvestre Ledru <sylvestre@debian.org>  Sat, 11 Apr 2020 12:35:52 +0200
+
+rust-atty (0.2.14-1) unstable; urgency=medium
+
+  * Team upload.
+  * Drop build dependency on hermit-api.
+
+  [ Sylvestre Ledru ]
+  * Package atty 0.2.14 from crates.io using debcargo 2.4.0
+
+ -- Andrej Shadura <andrewsh@debian.org>  Tue, 07 Apr 2020 13:06:30 +0200
+
 rust-atty (0.2.13-2) unstable; urgency=medium
 
   * Team upload.

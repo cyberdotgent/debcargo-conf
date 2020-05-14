@@ -1,3 +1,38 @@
+rust-sequoia-openpgp (0.16.0-3) unstable; urgency=medium
+
+  * Unbreak autopkg test with additional upstream fix
+  * Package sequoia-openpgp 0.16.0 from crates.io using debcargo 2.4.2
+
+ -- Daniel Kahn Gillmor <dkg@fifthhorseman.net>  Tue, 28 Apr 2020 11:47:56 -0400
+
+rust-sequoia-openpgp (0.16.0-2) unstable; urgency=medium
+
+  * Avoid autopkg tests that require compression when using
+    --no-default-features (backporting upstream fix)
+  * Package sequoia-openpgp 0.16.0 from crates.io using debcargo 2.4.2
+
+ -- Daniel Kahn Gillmor <dkg@fifthhorseman.net>  Mon, 27 Apr 2020 10:28:49 -0400
+
+rust-sequoia-openpgp (0.16.0-1) unstable; urgency=medium
+
+  * Package sequoia-openpgp 0.16.0 from crates.io using debcargo 2.4.2
+
+ -- Daniel Kahn Gillmor <dkg@fifthhorseman.net>  Fri, 24 Apr 2020 15:27:44 -0400
+
+rust-sequoia-openpgp (0.15.0-1) unstable; urgency=medium
+
+  * Package sequoia-openpgp 0.15.0 from crates.io using debcargo 2.4.2
+  * Cherry-pick an upstream patch to avoid running padding example without
+    compression-deflate feature.
+
+ -- Daniel Kahn Gillmor <dkg@fifthhorseman.net>  Fri, 06 Mar 2020 14:06:56 -0500
+
+rust-sequoia-openpgp (0.14.0-1) unstable; urgency=medium
+
+  * Package sequoia-openpgp 0.14.0 from crates.io using debcargo 2.4.2
+
+ -- Daniel Kahn Gillmor <dkg@fifthhorseman.net>  Tue, 18 Feb 2020 18:55:02 -0500
+
 rust-sequoia-openpgp (0.13.0-1) unstable; urgency=medium
 
   * Package sequoia-openpgp 0.13.0 from crates.io using debcargo 2.4.2

@@ -1,3 +1,13 @@
+rust-schannel (0.1.19-1) unstable; urgency=medium
+
+  * Package schannel 0.1.19 from crates.io using debcargo 2.4.2
+
+  [ Fabian Grünbichler ]
+  * Team upload.
+  * Package schannel 0.1.18 from crates.io using debcargo 2.4.2
+
+ -- Sylvestre Ledru <sylvestre@debian.org>  Sun, 10 May 2020 17:34:47 +0200
+
 rust-schannel (0.1.13-1) unstable; urgency=medium
 
   * Package schannel 0.1.13 from crates.io using debcargo 2.2.3

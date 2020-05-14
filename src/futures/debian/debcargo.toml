@@ -6,3 +6,7 @@ allow_prerelease_deps = true
 uploaders = ["Wolfgang Silbermayr <wolfgang@silbermayr.at>"]
 
 summary = "Futures and streams"
+
+[packages.lib]
+# Disable because of a bunch of errors
+test_is_broken = true

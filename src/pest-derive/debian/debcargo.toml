@@ -1,2 +1,2 @@
 overlay = "."
-uploaders = ["Proxmox Support Team <support@proxmox.com>"]
+uploaders = ["Proxmox Support Team <support@proxmox.com>", "Arnaud Ferraris <arnaud.ferraris@gmail.com>"]

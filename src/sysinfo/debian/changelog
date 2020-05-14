@@ -1,3 +1,30 @@
+rust-sysinfo (0.13.2-3) unstable; urgency=medium
+
+  * Team upload.
+  * Fix typo in debcargo.toml.
+
+ -- Andrej Shadura <andrewsh@debian.org>  Tue, 14 Apr 2020 14:43:45 +0200
+
+rust-sysinfo (0.13.2-2) unstable; urgency=medium
+
+  * Team upload.
+  * Ignore test failures.
+
+ -- Andrej Shadura <andrewsh@debian.org>  Tue, 14 Apr 2020 11:02:43 +0200
+
+rust-sysinfo (0.13.2-1) unstable; urgency=medium
+
+  * Team upload.
+
+  [ Andrej Shadura ]
+  * Package sysinfo 0.13.2 from crates.io using debcargo 2.4.2.
+  * Disable (by removing) the disk_list test.
+
+  [ Sylvestre Ledru ]
+  * Package sysinfo 0.12.0 from crates.io using debcargo 2.4.0.
+
+ -- Andrej Shadura <andrewsh@debian.org>  Tue, 14 Apr 2020 10:28:25 +0200
+
 rust-sysinfo (0.9.6-1) unstable; urgency=medium
 
   * Package sysinfo 0.9.6 from crates.io using debcargo 2.4.0

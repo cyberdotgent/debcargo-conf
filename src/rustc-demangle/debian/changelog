@@ -1,3 +1,13 @@
+rust-rustc-demangle (0.1.16-4) unstable; urgency=medium
+
+  * Team upload.
+  * Package rustc-demangle 0.1.16 from crates.io using debcargo 2.4.2
+  * disable librust-rustc-demangle+core-dev 
+    librust-rustc-demangle+rustc-dep-of-std-dev tests as they are using nightly
+    feature
+
+ -- Sylvestre Ledru <sylvestre@debian.org>  Sun, 12 Apr 2020 00:02:29 +0200
+
 rust-rustc-demangle (0.1.16-3) unstable; urgency=medium
 
   * Package rustc-demangle 0.1.16 from crates.io using debcargo 2.4.2

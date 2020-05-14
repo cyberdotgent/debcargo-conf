@@ -1,3 +1,26 @@
+rust-crossbeam-queue (0.2.1-2) unstable; urgency=medium
+
+  * Team upload.
+  * Package crossbeam-queue 0.2.1 from crates.io using debcargo 2.4.2
+  * Set test_is_broken = true
+    + the tests fail when neither the std or alloc featureset is enabled,
+      from reading the code my understanding is that with neither
+      featureset enabled the package is essentially useless and this
+      is by-design.
+
+ -- Peter Michael Green <plugwash@debian.org>  Tue, 14 Apr 2020 13:26:41 +0000
+
+rust-crossbeam-queue (0.2.1-1) unstable; urgency=medium
+
+  * Team upload.
+  * Combine all featuresets into a single package to avoid a trip through
+    new. The extra dependency load is fairly small.
+
+  [ Wolfgang Silbermayr ]
+  * Package crossbeam-queue 0.2.1 from crates.io using debcargo 2.4.2
+
+ -- Peter Michael Green <plugwash@debian.org>  Mon, 13 Apr 2020 16:50:42 +0000
+
 rust-crossbeam-queue (0.1.2-3) unstable; urgency=medium
 
   * Team upload.

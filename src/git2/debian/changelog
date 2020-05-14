@@ -1,3 +1,24 @@
+rust-git2 (0.11.0-1) unstable; urgency=medium
+
+  * Team upload.
+  * Package git2 0.11.0 from crates.io using debcargo 2.4.2
+
+ -- Ximin Luo <infinity0@debian.org>  Sat, 18 Apr 2020 16:11:29 +0100
+
+rust-git2 (0.10.2-3) unstable; urgency=medium
+
+  * Team upload.
+  * Package git2 0.10.2 from crates.io using debcargo 2.4.2
+
+ -- Peter Michael Green <plugwash@debian.org>  Tue, 14 Apr 2020 08:45:51 +0000
+
+rust-git2 (0.10.2-2) unstable; urgency=medium
+
+  * Team upload.
+  * Package git2 0.10.2 from crates.io using debcargo 2.4.2
+
+ -- Peter Michael Green <plugwash@debian.org>  Mon, 13 Apr 2020 18:22:03 +0000
+
 rust-git2 (0.10.2-1~bpo10+pve1) proxmox-rust; urgency=medium
 
   * Backport to Debian Buster / Proxmox

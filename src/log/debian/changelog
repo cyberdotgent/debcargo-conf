@@ -1,3 +1,20 @@
+rust-log (0.4.8-4) unstable; urgency=medium
+
+  * Team upload.
+  * Package log 0.4.8 from crates.io using debcargo 2.4.2
+  * mark --all-features test as flakey (see
+    https://github.com/rust-lang/log/issues/381)
+
+ -- Daniel Kahn Gillmor <dkg@fifthhorseman.net>  Fri, 21 Feb 2020 17:35:39 -0500
+
+rust-log (0.4.8-3) unstable; urgency=medium
+
+  * Team upload.
+  * drop sval-related features (Closes: #948639)
+  * Package log 0.4.8 from crates.io using debcargo 2.4.2
+
+ -- Daniel Kahn Gillmor <dkg@fifthhorseman.net>  Fri, 21 Feb 2020 15:42:22 -0500
+
 rust-log (0.4.8-2~bpo10+pve1) proxmox-rust; urgency=medium
 
   * Backport to Debian Buster / Proxmox 6.x products
