@@ -1,3 +1,9 @@
+rust-strsim (0.9.3-1~bpo10+pve1) proxmox-rust; urgency=medium
+
+  * Backport to Debian Buster / Proxmox
+
+ -- Proxmox Support Team <support@proxmox.com>  Fri, 15 May 2020 14:42:57 +0200
+
 rust-strsim (0.9.3-1) unstable; urgency=medium
 
   * Package strsim 0.9.3 from crates.io using debcargo 2.4.0
