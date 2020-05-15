@@ -1,3 +1,9 @@
+rust-winapi (0.3.8-2~bpo10+pve1) proxmox-rust; urgency=medium
+
+  * Backport to Debian Buster / Proxmox
+
+ -- Proxmox Support Team <support@proxmox.com>  Fri, 15 May 2020 14:42:58 +0200
+
 rust-winapi (0.3.8-2) unstable; urgency=medium
 
   * Team upload.
