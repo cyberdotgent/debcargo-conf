@@ -446,6 +446,13 @@ Comment:
  FIXME (overlay): These notices are extracted from files. Please review them
  before uploading to the archive.
 
+Files: ./src/subclass/clock.rs
+Copyright: 2019 Sebastian Dröge <sebastian@centricular.com>
+License: UNKNOWN-LICENSE; FIXME (overlay)
+Comment:
+ FIXME (overlay): These notices are extracted from files. Please review them
+ before uploading to the archive.
+
 Files: ./src/subclass/device.rs
 Copyright: 2019 Sebastian Dröge <sebastian@centricular.com>
 License: UNKNOWN-LICENSE; FIXME (overlay)
@@ -511,6 +518,27 @@ Comment:
 
 Files: ./src/subclass/plugin_1_14.rs
 Copyright: 2016-2018 Sebastian Dröge <sebastian@centricular.com>
+License: UNKNOWN-LICENSE; FIXME (overlay)
+Comment:
+ FIXME (overlay): These notices are extracted from files. Please review them
+ before uploading to the archive.
+
+Files: ./src/subclass/preset.rs
+Copyright: 2019 Sebastian Dröge <sebastian@centricular.com>
+License: UNKNOWN-LICENSE; FIXME (overlay)
+Comment:
+ FIXME (overlay): These notices are extracted from files. Please review them
+ before uploading to the archive.
+
+Files: ./src/subclass/system_clock.rs
+Copyright: 2019 Sebastian Dröge <sebastian@centricular.com>
+License: UNKNOWN-LICENSE; FIXME (overlay)
+Comment:
+ FIXME (overlay): These notices are extracted from files. Please review them
+ before uploading to the archive.
+
+Files: ./src/subclass/tag_setter.rs
+Copyright: 2019 Sebastian Dröge <sebastian@centricular.com>
 License: UNKNOWN-LICENSE; FIXME (overlay)
 Comment:
  FIXME (overlay): These notices are extracted from files. Please review them

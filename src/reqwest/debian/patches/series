@@ -1,2 +1,1 @@
-fix-deps.patch
-update-base64.patch
+collapse-web-sys-dep.diff

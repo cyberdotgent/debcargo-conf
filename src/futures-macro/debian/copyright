@@ -7,9 +7,12 @@ Source: https://github.com/rust-lang/futures-rs
 
 Files: *
 Copyright:
- 2018-2019 Taylor Cramer <cramertj@google.com>
- 2018-2019 Taiki Endo <te316e89@gmail.com>
+ 2016-2020 Alex Crichton <alex@alexcrichton.com>
+ 2017-2020 The Tokio Authors
+ 2018-2020 Taylor Cramer <cramertj@google.com>
+ 2018-2020 Taiki Endo <te316e89@gmail.com>
 License: MIT or Apache-2.0
+Comment: Crichton & Tokio Authors listed in License files, Cramer and Endo in Cargo.toml
 
 Files: debian/*
 Copyright:

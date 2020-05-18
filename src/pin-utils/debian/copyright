@@ -4,7 +4,9 @@ Upstream-Contact: Josef Brandl <mail@josefbrandl.de>
 Source: https://github.com/rust-lang-nursery/pin-utils
 
 Files: *
-Copyright: 2018-2019 Josef Brandl <mail@josefbrandl.de>
+Copyright:
+  2018-2019 Josef Brandl <mail@josefbrandl.de>
+  2018 The pin-utils authors
 License: MIT or Apache-2.0
 
 Files: debian/*

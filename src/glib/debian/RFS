@@ -1,0 +1,19 @@
+upload to experimental, part of futures/tokio/hyper transition - see TODO.rst
+
+needs glib-sys 0.9.1
+needs gobject-sys 0.9.1
+needs futures-channel, futures-core, futures-executor, futures-task, futures-util 0.3
+
+direct rdeps that need updating afterwards:
+atk to 0.8.0
+cairo-rs to 0.8.0
+gdk to 0.12.0
+gdk-pixbuf to 0.8.0
+gio to 0.8.0
+gstreamer to 0.15.0
+gstreamer-audio to 0.15.0
+gstreamer-base to 0.15.0
+gstreamer-video to 0.15.0
+gtk to 0.8.0
+pango to 0.8.0
+pangocairo to 0.9.0

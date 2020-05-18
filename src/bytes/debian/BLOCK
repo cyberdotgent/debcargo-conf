@@ -1,0 +1,13 @@
+direct rdeps that need updating afterwards:
+h2 to 0.2.1
+http-body to 0.3.1
+http to 0.2.0
+hyper to 0.13.1
+hyper-tls to 0.4.0
+tokio to 0.2.10
+
+new direct rdeps that can be uploaded afterwards:
+tokio-util to 0.2.0
+
+currently broken:
+bcder, not yet compatible

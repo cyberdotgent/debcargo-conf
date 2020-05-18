@@ -5,16 +5,18 @@ Source: https://github.com/carllerche/mio
 
 Files: *
 Copyright:
- 2014-2019 Carl Lerche <me@carllerche.com>
- 2014-2019 MIO contributors
+ 2014-2018 Carl Lerche <me@carllerche.com>
+ 2014-2018 (other) MIO contributors
  2016 The Rust Project Developers
 License: MIT
 
 Files: ./src/lazycell.rs
 Copyright:
  2014 The Rust Project Developers
- 2016-2018 Nikita Pekin and the lazycell contributors
+ 2016-2018 Nikita Pekin
+ 2016-2018 The lazycell contributors
 License: MIT
+Comment: fork of rust-lazycell, upstream switches back in 0.7 release
 
 Files: debian/*
 Copyright:

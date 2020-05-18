@@ -19,15 +19,15 @@ Comment:
  FIXME (overlay): These notices are extracted from files. Please review them
  before uploading to the archive.
 
-Files: ./LGPL
-Copyright: 1991 Free Software Foundation, Inc.
+Files: ./LICENSE
+Copyright: 2013-2015, The Gtk-rs Project Developers.
 License: UNKNOWN-LICENSE; FIXME (overlay)
 Comment:
  FIXME (overlay): These notices are extracted from files. Please review them
  before uploading to the archive.
 
-Files: ./LICENSE
-Copyright: 2013-2015, The Gtk-rs Project Developers.
+Files: ./src/app_info.rs
+Copyright: 2019, The Gtk-rs Project Developers.
 License: UNKNOWN-LICENSE; FIXME (overlay)
 Comment:
  FIXME (overlay): These notices are extracted from files. Please review them
@@ -70,6 +70,13 @@ Comment:
 
 Files: ./src/input_stream.rs
 Copyright: 2013-2017, The Gtk-rs Project Developers.
+License: UNKNOWN-LICENSE; FIXME (overlay)
+Comment:
+ FIXME (overlay): These notices are extracted from files. Please review them
+ before uploading to the archive.
+
+Files: ./src/io_stream.rs
+Copyright: 2019, The Gtk-rs Project Developers.
 License: UNKNOWN-LICENSE; FIXME (overlay)
 Comment:
  FIXME (overlay): These notices are extracted from files. Please review them
@@ -131,6 +138,13 @@ Comment:
  FIXME (overlay): These notices are extracted from files. Please review them
  before uploading to the archive.
 
+Files: ./src/read_input_stream.rs
+Copyright: 2019, The Gtk-rs Project Developers.
+License: UNKNOWN-LICENSE; FIXME (overlay)
+Comment:
+ FIXME (overlay): These notices are extracted from files. Please review them
+ before uploading to the archive.
+
 Files: ./src/resource.rs
 Copyright: 2017, The Gtk-rs Project Developers.
 License: UNKNOWN-LICENSE; FIXME (overlay)
@@ -159,7 +173,35 @@ Comment:
  FIXME (overlay): These notices are extracted from files. Please review them
  before uploading to the archive.
 
+Files: ./src/subclass/input_stream.rs
+Copyright: 2019, The Gtk-rs Project Developers.
+License: UNKNOWN-LICENSE; FIXME (overlay)
+Comment:
+ FIXME (overlay): These notices are extracted from files. Please review them
+ before uploading to the archive.
+
+Files: ./src/subclass/io_stream.rs
+Copyright: 2019, The Gtk-rs Project Developers.
+License: UNKNOWN-LICENSE; FIXME (overlay)
+Comment:
+ FIXME (overlay): These notices are extracted from files. Please review them
+ before uploading to the archive.
+
 Files: ./src/subclass/mod.rs
+Copyright: 2019, The Gtk-rs Project Developers.
+License: UNKNOWN-LICENSE; FIXME (overlay)
+Comment:
+ FIXME (overlay): These notices are extracted from files. Please review them
+ before uploading to the archive.
+
+Files: ./src/subclass/output_stream.rs
+Copyright: 2019, The Gtk-rs Project Developers.
+License: UNKNOWN-LICENSE; FIXME (overlay)
+Comment:
+ FIXME (overlay): These notices are extracted from files. Please review them
+ before uploading to the archive.
+
+Files: ./src/subclass/seekable.rs
 Copyright: 2019, The Gtk-rs Project Developers.
 License: UNKNOWN-LICENSE; FIXME (overlay)
 Comment:
@@ -180,6 +222,20 @@ Comment:
  FIXME (overlay): These notices are extracted from files. Please review them
  before uploading to the archive.
 
+Files: ./src/unix_mount_entry.rs
+Copyright: 2013-2019, The Gtk-rs Project Developers.
+License: UNKNOWN-LICENSE; FIXME (overlay)
+Comment:
+ FIXME (overlay): These notices are extracted from files. Please review them
+ before uploading to the archive.
+
+Files: ./src/unix_mount_point.rs
+Copyright: 2013-2019, The Gtk-rs Project Developers.
+License: UNKNOWN-LICENSE; FIXME (overlay)
+Comment:
+ FIXME (overlay): These notices are extracted from files. Please review them
+ before uploading to the archive.
+
 Files: ./src/unix_output_stream.rs
 Copyright: 2013-2018, The Gtk-rs Project Developers.
 License: UNKNOWN-LICENSE; FIXME (overlay)
@@ -194,6 +250,13 @@ Comment:
  FIXME (overlay): These notices are extracted from files. Please review them
  before uploading to the archive.
 
+Files: ./src/write_output_stream.rs
+Copyright: 2019, The Gtk-rs Project Developers.
+License: UNKNOWN-LICENSE; FIXME (overlay)
+Comment:
+ FIXME (overlay): These notices are extracted from files. Please review them
+ before uploading to the archive.
+
 Files: ./tests/check_gir.rs
 Copyright: 2013-2018, The Gtk-rs Project Developers.
 License: UNKNOWN-LICENSE; FIXME (overlay)
@@ -203,8 +266,8 @@ Comment:
 
 Files: debian/*
 Copyright:
- 2018-2019 Debian Rust Maintainers <pkg-rust-maintainers@alioth-lists.debian.net>
- 2018-2019 Wolfgang Silbermayr <wolfgang@silbermayr.at>
+ 2018-2020 Debian Rust Maintainers <pkg-rust-maintainers@alioth-lists.debian.net>
+ 2018-2020 Wolfgang Silbermayr <wolfgang@silbermayr.at>
 License: MIT
 
 License: MIT
