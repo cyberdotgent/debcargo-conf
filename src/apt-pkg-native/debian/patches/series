@@ -1,3 +1,4 @@
 0001-use-correct-raw-type-in-PkgFileIterator.patch
 0002-add-priority-type-accessor-to-VerView.patch
 0003-add-package-detail-accessors.patch
+fix-linking.patch
