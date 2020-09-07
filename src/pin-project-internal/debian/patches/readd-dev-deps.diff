@@ -5,16 +5,16 @@ Description: Re-add dev dependencies
  in the project's upstream repository.
 Author: Wolfgang Silbermayr <wolfgang@silbermayr.at>
 Forwarded: no
-Last-Update: 2020-01-25
+Last-Update: 2020-09-07
 ---
 This patch header follows DEP-3: http://dep.debian.net/deps/dep3/
 --- a/Cargo.toml
 +++ b/Cargo.toml
 @@ -34,3 +34,7 @@
  [dependencies.syn]
- version = "1.0"
+ version = "1.0.13"
  features = ["full", "visit-mut"]
 +
 +[dev-dependencies]
-+pin-project = "0.4.7"
++pin-project = "0.4.23"
 +rustversion = "1.0"
