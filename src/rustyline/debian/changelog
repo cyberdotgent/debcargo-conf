@@ -1,3 +1,9 @@
+rust-rustyline (6.0.0-1~bpo10+pve2) proxmox-rust; urgency=medium
+
+  * Rebuild backport with bumped nix dependency
+
+ -- Proxmox Support Team <support@proxmox.com>  Mon, 19 Oct 2020 11:26:05 +0200
+
 rust-rustyline (6.0.0-1~bpo10+pve1) proxmox-rust; urgency=medium
 
   * Backport to Debian Buster / Proxmox
