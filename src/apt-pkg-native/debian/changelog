@@ -1,3 +1,9 @@
+rust-apt-pkg-native (0.3.1-1~bpo10+pve2) proxmox-rust; urgency=medium
+
+  * add two more patches needed by PBS changelog feature
+
+ -- Proxmox Support Team <support@proxmox.com>  Thu, 22 Oct 2020 16:27:50 +0200
+
 rust-apt-pkg-native (0.3.1-1~bpo10+pve1) proxmox-rust; urgency=medium
 
   * Backport to Debian Buster / Proxmox
