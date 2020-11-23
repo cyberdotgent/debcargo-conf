@@ -1,3 +1,9 @@
+rust-nom-4 (4.2.3-3~bpo10+pve1) proxmox-rust; urgency=medium
+
+  * Backport to Debian Buster / Proxmox
+
+ -- Proxmox Support Team <support@proxmox.com>  Mon, 23 Nov 2020 14:57:21 +0100
+
 rust-nom-4 (4.2.3-3) unstable; urgency=medium
 
   * Patch version_check dependency to 0.9
