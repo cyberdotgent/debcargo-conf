@@ -1,7 +1,7 @@
 Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
 Upstream-Name: mio
 Upstream-Contact: Carl Lerche <me@carllerche.com>
-Source: https://github.com/carllerche/mio
+Source: https://github.com/tokio-rs/mio
 
 Files: *
 Copyright: FIXME (overlay) UNKNOWN-YEARS Carl Lerche <me@carllerche.com>
@@ -14,15 +14,6 @@ Comment:
 
 Files: ./LICENSE
 Copyright: 2014 Carl Lerche and other MIO contributors
-License: UNKNOWN-LICENSE; FIXME (overlay)
-Comment:
- FIXME (overlay): These notices are extracted from files. Please review them
- before uploading to the archive.
-
-Files: ./src/lazycell.rs
-Copyright:
- 2014 The Rust Project Developers
- 2016-2018 Nikita Pekin and the lazycell contributors
 License: UNKNOWN-LICENSE; FIXME (overlay)
 Comment:
  FIXME (overlay): These notices are extracted from files. Please review them
