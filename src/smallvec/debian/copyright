@@ -1,6 +1,7 @@
 Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
 Upstream-Name: smallvec
 Upstream-Contact: Simon Sapin <simon.sapin@exyr.org>
+Upstream-Contact: The Servo Project Developers
 Source: https://github.com/servo/rust-smallvec
 
 Files: *
