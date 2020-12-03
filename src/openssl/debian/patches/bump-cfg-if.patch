@@ -1,0 +1,13 @@
+Index: openssl/Cargo.toml
+===================================================================
+--- openssl.orig/Cargo.toml
++++ openssl/Cargo.toml
+@@ -24,7 +24,7 @@ repository = "https://github.com/sfackle
+ version = "1.0"
+ 
+ [dependencies.cfg-if]
+-version = "0.1"
++version = "1.0"
+ 
+ [dependencies.foreign-types]
+ version = "0.3.1"
