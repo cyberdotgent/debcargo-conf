@@ -1,1 +1,2 @@
 drop-wasi.patch
+bump-cfg-if.patch

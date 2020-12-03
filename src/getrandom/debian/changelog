@@ -1,3 +1,9 @@
+rust-getrandom (0.1.14-1~bpo10+pve2) proxmox-rust; urgency=medium
+
+  * bump cfg-if dependency to 1.0
+
+ -- Proxmox Support Team <support@proxmox.com>  Thu, 3 Dec 2020 11:52:37 +0100
+
 rust-getrandom (0.1.14-1~bpo10+pve1) proxmox-rust; urgency=medium
 
   * Backport to Debian Buster / Proxmox
