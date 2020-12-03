@@ -15,12 +15,6 @@ License: CC-BY-SA-3.0
 Comment:
  Information about this is included in README.md file of the project.
 
-Files: src/flavors/array.rs
-Copyright: 2010-2011 Dmitry Vyukov
-License: Apache-2.0 or BSD-2-Clause
-Comment:
- Information about this is included in README.md file of the project.
-
 Files: tests/golang.rs
 Copyright: 2009 The Go Authors
 License: BSD-3-Clause
