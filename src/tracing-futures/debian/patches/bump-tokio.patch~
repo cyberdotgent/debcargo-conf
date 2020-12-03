@@ -1,0 +1,13 @@
+Index: tracing-futures/Cargo.toml
+===================================================================
+--- tracing-futures.orig/Cargo.toml
++++ tracing-futures/Cargo.toml
+@@ -47,7 +47,7 @@ version = "0.1"
+ optional = true
+ 
+ [dependencies.tokio-executor]
+-version = "0.1"
++version = "0.3"
+ optional = true
+ 
+ [dependencies.tracing]
