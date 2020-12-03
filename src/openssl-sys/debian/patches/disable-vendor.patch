@@ -1,6 +1,8 @@
---- a/Cargo.toml
-+++ b/Cargo.toml
-@@ -31,14 +31,11 @@
+Index: openssl-sys/Cargo.toml
+===================================================================
+--- openssl-sys.orig/Cargo.toml
++++ openssl-sys/Cargo.toml
+@@ -31,14 +31,11 @@ version = "1.0"
  [build-dependencies.cc]
  version = "1.0"
  
@@ -16,9 +18,12 @@
 +openssl-src = []
  [target."cfg(target_env = \"msvc\")".build-dependencies.vcpkg]
  version = "0.2.8"
---- a/build/main.rs
-+++ b/build/main.rs
-@@ -1,6 +1,6 @@
+Index: openssl-sys/build/main.rs
+===================================================================
+--- openssl-sys.orig/build/main.rs
++++ openssl-sys/build/main.rs
+@@ -2,7 +2,7 @@
+ 
  extern crate autocfg;
  extern crate cc;
 -#[cfg(feature = "vendored")]
@@ -26,7 +31,7 @@
  extern crate openssl_src;
  extern crate pkg_config;
  #[cfg(target_env = "msvc")]
-@@ -14,7 +14,7 @@
+@@ -16,7 +16,7 @@ use std::path::{Path, PathBuf};
  mod cfgs;
  
  mod find_normal;
@@ -35,7 +40,7 @@
  mod find_vendored;
  
  enum Version {
-@@ -42,7 +42,7 @@
+@@ -44,7 +44,7 @@ fn env(name: &str) -> Option<OsString> {
  }
  
  fn find_openssl(target: &str) -> (PathBuf, PathBuf) {
