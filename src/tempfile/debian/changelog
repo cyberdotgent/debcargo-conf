@@ -1,3 +1,9 @@
+rust-tempfile (3.1.0-1~bpo10+pve2) proxmox-rust; urgency=medium
+
+  * Bump dependency on cfg-if to 1.0
+
+ -- Proxmox Support Team <support@proxmox.com>  Mon, 7 Dec 2020 13:51:49 +0100
+
 rust-tempfile (3.1.0-1~bpo10+pve1) proxmox-rust; urgency=medium
 
   * Backport to Debian Buster / Proxmox
