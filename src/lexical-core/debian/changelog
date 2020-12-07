@@ -1,3 +1,9 @@
+rust-lexical-core (0.6.7-1~bpo10+pve2) proxmox-rust; urgency=medium
+
+  * bump cfg-if dependency to 1.0
+
+ -- Proxmox Support Team <support@proxmox.com>  Mon, 7 Dec 2020 11:29:33 +0100
+
 rust-lexical-core (0.6.7-1~bpo10+pve1) proxmox-rust; urgency=medium
 
   * Backport to Debian Buster / Proxmox

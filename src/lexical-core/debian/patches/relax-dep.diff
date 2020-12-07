@@ -7,7 +7,7 @@ Index: lexical-core/Cargo.toml
  
  [dependencies.cfg-if]
 -version = "=0.1.9"
-+version = "=0.1.10"
++version = "1.0"
  
  [dependencies.dtoa]
  version = "0.4"
