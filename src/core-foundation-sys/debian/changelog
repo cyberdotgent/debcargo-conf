@@ -1,3 +1,9 @@
+rust-core-foundation-sys (0.8.1-1~bpo10+pve1) proxmox-rust; urgency=medium
+
+  * Rebuild for Debian Buster / Proxmox
+
+ -- Proxmox Support Team <support@proxmox.com>  Wed, 27 Jan 2021 10:51:57 +0100
+
 rust-core-foundation-sys (0.8.1-1) unstable; urgency=medium
 
   * Package core-foundation-sys 0.8.1 from crates.io using debcargo 2.4.3
