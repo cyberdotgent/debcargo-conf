@@ -1,3 +1,9 @@
+rust-debcargo (2.4.3-3~bpo10+pve1) proxmox-rust; urgency=medium
+
+  * Rebuild for Debian Buster / Proxmox
+
+ -- Proxmox Support Team <support@proxmox.com>  Wed, 27 Jan 2021 14:20:02 +0100
+
 rust-debcargo (2.4.3-3) unstable; urgency=medium
 
   * Team upload.
