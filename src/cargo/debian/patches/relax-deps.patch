@@ -2,6 +2,15 @@ Index: cargo/Cargo.toml
 ===================================================================
 --- cargo.orig/Cargo.toml
 +++ cargo/Cargo.toml
+@@ -49,7 +49,7 @@ version = "2.31.2"
+ version = "0.31"
+ 
+ [dependencies.crossbeam-utils]
+-version = "0.7"
++version = "0.8"
+ 
+ [dependencies.crypto-hash]
+ version = "0.3.1"
 @@ -75,10 +75,10 @@ features = ["zlib"]
  version = "0.4"
  
