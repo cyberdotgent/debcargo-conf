@@ -1,1 +1,3 @@
-collapse-web-sys-dep.diff
+fix-deps.patch
+update-base64.patch
+bump-base64.diff

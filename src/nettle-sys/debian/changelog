@@ -1,3 +1,16 @@
+rust-nettle-sys (2.0.4-5) unstable; urgency=medium
+
+  * Package nettle-sys 2.0.4 from crates.io using debcargo 2.4.3
+  * relax dependency on bindgen to enable working with bindgen 0.55.x
+
+ -- Daniel Kahn Gillmor <dkg@fifthhorseman.net>  Fri, 16 Oct 2020 12:27:25 -0400
+
+rust-nettle-sys (2.0.4-4) unstable; urgency=medium
+
+  * Package nettle-sys 2.0.4 from crates.io using debcargo 2.4.3
+
+ -- Daniel Kahn Gillmor <dkg@fifthhorseman.net>  Wed, 14 Oct 2020 18:48:57 -0400
+
 rust-nettle-sys (2.0.4-3) unstable; urgency=medium
 
   * Package nettle-sys 2.0.4 from crates.io using debcargo 2.4.2

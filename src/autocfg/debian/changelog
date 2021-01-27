@@ -1,3 +1,9 @@
+rust-autocfg (1.0.1-1) unstable; urgency=medium
+
+  * Package autocfg 1.0.1 from crates.io using debcargo 2.4.3
+
+ -- Ximin Luo <infinity0@debian.org>  Thu, 01 Oct 2020 23:04:12 +0100
+
 rust-autocfg (1.0.0-2~bpo10+pve1) proxmox-rust; urgency=medium
 
   * Backport to Debian Buster / Proxmox

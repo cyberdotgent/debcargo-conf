@@ -1,3 +1,25 @@
+rust-lalrpop (0.17.2-7) unstable; urgency=medium
+
+  * Team upload.
+  * Package lalrpop 0.17.2 from crates.io using debcargo 2.4.3
+  * bump sha2 to 0.9
+
+ -- Sylvestre Ledru <sylvestre@debian.org>  Wed, 25 Nov 2020 23:38:42 +0100
+
+rust-lalrpop (0.17.2-6) unstable; urgency=medium
+
+  * relax dependency on ena to allow 0.14
+  * Package lalrpop 0.17.2 from crates.io using debcargo 2.4.3
+
+ -- Daniel Kahn Gillmor <dkg@fifthhorseman.net>  Wed, 14 Oct 2020 11:52:27 -0400
+
+rust-lalrpop (0.17.2-5) unstable; urgency=medium
+
+  * bump dependency on itertools to 0.9
+  * Package lalrpop 0.17.2 from crates.io using debcargo 2.4.3
+
+ -- Daniel Kahn Gillmor <dkg@fifthhorseman.net>  Wed, 14 Oct 2020 10:26:33 -0400
+
 rust-lalrpop (0.17.2-4) unstable; urgency=medium
 
   * bump dependency on rust-petgraph to 0.5

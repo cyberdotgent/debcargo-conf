@@ -1,2 +1,3 @@
-built-using.patch
-bump-bindgen-dependency.patch
+bindgen-version.diff
+builrs.diff
+add-more-pointer-sizes.diff

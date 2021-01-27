@@ -1,3 +1,72 @@
+rust-sequoia-openpgp (1.0.0-1) unstable; urgency=medium
+
+  * Package sequoia-openpgp 1.0.0 from crates.io using debcargo 2.4.3
+
+ -- Daniel Kahn Gillmor <dkg@fifthhorseman.net>  Wed, 16 Dec 2020 11:24:54 -0500
+
+rust-sequoia-openpgp (0.21.0-1) unstable; urgency=medium
+
+  * Package sequoia-openpgp 0.21.0 from crates.io using debcargo 2.4.3
+  * drop most dependency cleanup, already upstream
+
+ -- Daniel Kahn Gillmor <dkg@fifthhorseman.net>  Mon, 14 Dec 2020 22:27:10 -0500
+
+rust-sequoia-openpgp (0.20.0-1) unstable; urgency=medium
+
+  * Package sequoia-openpgp 0.20.0 from crates.io using debcargo 2.4.3
+
+ -- Daniel Kahn Gillmor <dkg@fifthhorseman.net>  Wed, 14 Oct 2020 23:59:39 -0400
+
+rust-sequoia-openpgp (0.18.0-1) unstable; urgency=medium
+
+  * Package sequoia-openpgp 0.18.0 from crates.io using debcargo 2.4.2
+  * relax MSRV-related dependency bounds on dyn-clone 
+
+ -- Daniel Kahn Gillmor <dkg@fifthhorseman.net>  Wed, 05 Aug 2020 19:29:31 -0400
+
+rust-sequoia-openpgp (0.17.0-5) unstable; urgency=medium
+
+  * Package sequoia-openpgp 0.17.0 from crates.io using debcargo 2.4.2
+  * actually mark the correct autopkgtests as broken
+
+ -- Daniel Kahn Gillmor <dkg@fifthhorseman.net>  Tue, 23 Jun 2020 13:04:52 -0400
+
+rust-sequoia-openpgp (0.17.0-4) unstable; urgency=medium
+
+  * Package sequoia-openpgp 0.17.0 from crates.io using debcargo 2.4.2
+  * Mark autopkgtests as broken for features with dependencies that cargo
+    cannot currently represent
+
+ -- Daniel Kahn Gillmor <dkg@fifthhorseman.net>  Mon, 22 Jun 2020 12:48:37 -0400
+
+rust-sequoia-openpgp (0.17.0-3) unstable; urgency=medium
+
+  * Package sequoia-openpgp 0.17.0 from crates.io using debcargo 2.4.2
+  * Adjust dependencies: crypto-nettle is a required backend, and the
+    quickcheck flavor also depends on rand.
+
+ -- Daniel Kahn Gillmor <dkg@fifthhorseman.net>  Sat, 20 Jun 2020 13:13:14 -0400
+
+rust-sequoia-openpgp (0.17.0-2) unstable; urgency=medium
+
+  * Package sequoia-openpgp 0.17.0 from crates.io using debcargo 2.4.2
+  * No-op source-only re-upload for Debian Testing Migration.
+
+ -- Daniel Kahn Gillmor <dkg@fifthhorseman.net>  Fri, 19 Jun 2020 16:00:54 -0400
+
+rust-sequoia-openpgp (0.17.0-1) unstable; urgency=medium
+
+  * Package sequoia-openpgp 0.17.0 from crates.io using debcargo 2.4.2
+
+ -- Daniel Kahn Gillmor <dkg@fifthhorseman.net>  Wed, 17 Jun 2020 17:15:32 -0400
+
+rust-sequoia-openpgp (0.16.0-4) unstable; urgency=medium
+
+  * Package sequoia-openpgp 0.16.0 from crates.io using debcargo 2.4.2
+  * accept building against base64 0.12.*
+
+ -- Daniel Kahn Gillmor <dkg@fifthhorseman.net>  Wed, 10 Jun 2020 13:09:57 -0400
+
 rust-sequoia-openpgp (0.16.0-3) unstable; urgency=medium
 
   * Unbreak autopkg test with additional upstream fix

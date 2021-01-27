@@ -19,16 +19,25 @@ Index: log/Cargo.toml
 -version = "0.5.2"
 -optional = true
 -default-features = false
++# [dependencies.sval]
++# version = "0.5.2"
++# optional = true
++# default-features = false
++
  [dev-dependencies.serde_test]
  version = "1.0"
  
 -[dev-dependencies.sval]
 -version = "0.5.2"
 -features = ["test"]
--
++# [dev-dependencies.sval]
++# version = "0.5.2"
++# features = ["test"]
+ 
  [features]
  kv_unstable = []
 -kv_unstable_sval = ["kv_unstable", "sval/fmt"]
++kv_unstable_sval = ["kv_unstable"]#, "sval/fmt"]
  max_level_debug = []
  max_level_error = []
  max_level_info = []

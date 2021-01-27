@@ -1,1 +1,2 @@
-relax-deps.patch
+no-cipher.patch
+no-blobby.patch

@@ -33,13 +33,6 @@ Comment:
  FIXME (overlay): These notices are extracted from files. Please review them
  before uploading to the archive.
 
-Files: ./src/prelude.rs
-Copyright: 2019, The Gtk-rs Project Developers.
-License: UNKNOWN-LICENSE; FIXME (overlay)
-Comment:
- FIXME (overlay): These notices are extracted from files. Please review them
- before uploading to the archive.
-
 Files: ./tests/check_gir.rs
 Copyright: 2013-2018, The Gtk-rs Project Developers.
 License: UNKNOWN-LICENSE; FIXME (overlay)
@@ -49,8 +42,8 @@ Comment:
 
 Files: debian/*
 Copyright:
- 2019-2020 Debian Rust Maintainers <pkg-rust-maintainers@alioth-lists.debian.net>
- 2019-2020 Andrej Shadura <andrewsh@debian.org>
+ 2019 Debian Rust Maintainers <pkg-rust-maintainers@alioth-lists.debian.net>
+ 2019 Andrej Shadura <andrewsh@debian.org>
 License: MIT
 
 License: MIT

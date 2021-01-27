@@ -1,8 +1,0 @@
-upload to experimental, part of futures/tokio/hyper transition - see TODO.rst
-
-needs glib-sys 0.9.1
-needs gobject-sys 0.9.1
-
-direct rdeps that need updating afterwards:
-atk to 0.8.0
-gtk-sys to 0.9.2

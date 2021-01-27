@@ -1,3 +1,41 @@
+rust-buffered-reader (1.0.0-1) unstable; urgency=medium
+
+  * Package buffered-reader 1.0.0 from crates.io using debcargo 2.4.3
+
+ -- Daniel Kahn Gillmor <dkg@fifthhorseman.net>  Wed, 16 Dec 2020 10:21:44 -0500
+
+rust-buffered-reader (0.21.0-1) unstable; urgency=medium
+
+  * Package buffered-reader 0.21.0 from crates.io using debcargo 2.4.3
+
+ -- Daniel Kahn Gillmor <dkg@fifthhorseman.net>  Mon, 14 Dec 2020 19:14:52 -0500
+
+rust-buffered-reader (0.20.0-1) unstable; urgency=medium
+
+  * Package buffered-reader 0.20.0 from crates.io using debcargo 2.4.3
+
+ -- Daniel Kahn Gillmor <dkg@fifthhorseman.net>  Wed, 14 Oct 2020 23:32:32 -0400
+
+rust-buffered-reader (0.18.0-2) unstable; urgency=medium
+
+  * Package buffered-reader 0.18.0 from crates.io using debcargo 2.4.2
+  * relax upstream MSRV-related dependency on flate2
+
+ -- Daniel Kahn Gillmor <dkg@fifthhorseman.net>  Wed, 05 Aug 2020 15:46:13 -0400
+
+rust-buffered-reader (0.18.0-1) unstable; urgency=medium
+
+  * Package buffered-reader 0.18.0 from crates.io using debcargo 2.4.2
+  * Dropped upstream pin on miniz_oxide targeting MSRV 1.34
+
+ -- Daniel Kahn Gillmor <dkg@fifthhorseman.net>  Mon, 03 Aug 2020 22:03:18 -0400
+
+rust-buffered-reader (0.17.0-1) unstable; urgency=medium
+
+  * Package buffered-reader 0.17.0 from crates.io using debcargo 2.4.2
+
+ -- Daniel Kahn Gillmor <dkg@fifthhorseman.net>  Wed, 17 Jun 2020 16:41:20 -0400
+
 rust-buffered-reader (0.16.0-1) unstable; urgency=medium
 
   * Package buffered-reader 0.16.0 from crates.io using debcargo 2.4.2

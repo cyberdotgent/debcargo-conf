@@ -1,3 +1,18 @@
+rust-rpassword (5.0.0-2) unstable; urgency=medium
+
+  * Team upload.
+  * Package rpassword 5.0.0 from crates.io using debcargo 2.4.3
+  * Removing tests/piped.rs content, ticket open upstream
+
+ -- Ed Neville <ed-debian@s5h.net>  Mon, 14 Dec 2020 13:57:34 -0500
+
+rust-rpassword (5.0.0-1) unstable; urgency=medium
+
+  * Team upload.
+  * Package rpassword 5.0.0 from crates.io using debcargo 2.4.3
+
+ -- Daniel Kahn Gillmor <dkg@fifthhorseman.net>  Wed, 14 Oct 2020 23:33:43 -0400
+
 rust-rpassword (4.0.5-1) unstable; urgency=medium
 
   * Package rpassword 4.0.5 from crates.io using debcargo 2.4.0

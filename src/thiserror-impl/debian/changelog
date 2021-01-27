@@ -1,3 +1,16 @@
+rust-thiserror-impl (1.0.20-1) unstable; urgency=medium
+
+  * Team upload.
+  * Package thiserror-impl 1.0.20 from crates.io using debcargo 2.4.2
+
+ -- Daniel Kahn Gillmor <dkg@fifthhorseman.net>  Wed, 17 Jun 2020 10:44:52 -0400
+
+rust-thiserror-impl (1.0.19-1) unstable; urgency=medium
+
+  * Package thiserror-impl 1.0.19 from crates.io using debcargo 2.4.3
+
+ -- Wolfgang Silbermayr <wolfgang@silbermayr.at>  Sun, 14 Jun 2020 17:11:18 +0200
+
 rust-thiserror-impl (1.0.15-1~bpo10+pve1) proxmox-rust; urgency=medium
 
   * Backport to Debian Buster / Proxmox

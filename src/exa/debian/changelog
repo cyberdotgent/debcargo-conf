@@ -1,3 +1,18 @@
+rust-exa (0.9.0-5) unstable; urgency=medium
+
+  * Package exa 0.9.0 from crates.io using debcargo 2.4.4-alpha.0
+  * Bump number-prefix to 0.4 to match the one uploaded
+  * Disable dwz. See https://github.com/rust-lang/rust/issues/66118
+
+ -- Sylvestre Ledru <sylvestre@debian.org>  Tue, 22 Dec 2020 13:24:16 +0100
+
+rust-exa (0.9.0-4) unstable; urgency=medium
+
+  * Package exa 0.9.0 from crates.io using debcargo 2.4.3
+  * Rebuild exa to bump the users dep to 0.10
+
+ -- Sylvestre Ledru <sylvestre@debian.org>  Sun, 28 Jun 2020 19:32:07 +0200
+
 rust-exa (0.9.0-3) unstable; urgency=medium
 
   * Package exa 0.9.0 from crates.io using debcargo 2.4.2

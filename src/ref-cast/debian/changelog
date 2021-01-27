@@ -1,0 +1,5 @@
+rust-ref-cast (1.0.3-1) unstable; urgency=medium
+
+  * Package ref-cast 1.0.3 from crates.io using debcargo 2.4.3
+
+ -- Henry-Nicolas Tourneur <debian@nilux.be>  Mon, 21 Dec 2020 09:58:29 +0100

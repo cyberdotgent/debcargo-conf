@@ -1,1 +1,2 @@
-relax-dep.diff
+collapse_features.patch
+relax_deps.patch

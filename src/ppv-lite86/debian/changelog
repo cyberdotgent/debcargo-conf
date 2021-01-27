@@ -1,3 +1,10 @@
+rust-ppv-lite86 (0.2.6-2) unstable; urgency=medium
+
+  * Team upload.
+  * Fix build on s390x. (Closes: #961335)
+
+ -- Jan Niehusmann <jan@debian.org>  Sat, 28 Nov 2020 23:30:58 +0100
+
 rust-ppv-lite86 (0.2.6-1~bpo10+pve1) proxmox-rust; urgency=medium
 
   * Backport to Debian Buster / Proxmox

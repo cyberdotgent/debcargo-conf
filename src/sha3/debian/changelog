@@ -1,3 +1,14 @@
+rust-sha3 (0.9.1-1) unstable; urgency=medium
+
+  * Team upload.
+  * Package sha3 0.9.1 from crates.io using debcargo 2.4.3
+  * Work around #977627
+
+  [ kpcyrd ]
+  * Fix deps (Closes: #975768)
+
+ -- Daniel Kahn Gillmor <dkg@fifthhorseman.net>  Thu, 17 Dec 2020 17:01:53 -0500
+
 rust-sha3 (0.8.2-2) unstable; urgency=medium
 
   * Team upload.

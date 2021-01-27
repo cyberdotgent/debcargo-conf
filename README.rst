@@ -305,6 +305,7 @@ To achieve that, after ``./update.sh``, try::
   $ quilt push -a
   $ quilt new relax-dep.diff
   $ quilt edit Cargo.toml
+  $ quilt header -e --dep3
   $ quilt refresh
   $ cargo build # check that it works. if it does, then
   $ cp -R patches ../../src/<package>/debian
@@ -329,6 +330,11 @@ the older version, in this example ``0.3`` (`explanation`_).
 
 .. _explanation: https://salsa.debian.org/rust-team/debcargo-conf/merge_requests/86#note_135456
 
+Information on patch headers is available in `dep3`_.
+Use (some of) the headers to explain **why** the patch exists.
+
+.. _dep3: https://dep-team.pages.debian.net/deps/dep3/
+
 Help, something went wrong!
 ---------------------------
 
@@ -338,3 +344,13 @@ can try re-running the command with ``RUST_BACKTRACE=1``. If you are using the
 ``debcargo-dbgsym`` package, otherwise the stack trace will be next to useless.
 Make sure you have the `debug repository <https://wiki.debian.org/HowToGetABacktrace#Installing_the_debugging_symbols>`_
 enabled in your APT sources.
+
+
+Some ramblings
+--------------
+
+In ``#debian-rust`` came these two blog posts along with the remark of _good read_
+ * https://blog.hackeriet.no/packaging-a-rust-project-for-debian/
+ * https://blog.hackeriet.no/packaging-rust-part-II/
+
+Now are they, those two blog posts, parked here. Waiting for better integration.

@@ -1,0 +1,38 @@
+rust-sequoia-sop (0.22.0-1) unstable; urgency=medium
+
+  * Package sequoia-sop 0.22.0 from crates.io using debcargo 2.4.3
+
+ -- Daniel Kahn Gillmor <dkg@fifthhorseman.net>  Wed, 16 Dec 2020 12:45:17 -0500
+
+rust-sequoia-sop (0.21.0-1) unstable; urgency=medium
+
+  * Package sequoia-sop 0.21.0 from crates.io using debcargo 2.4.3
+
+ -- Daniel Kahn Gillmor <dkg@fifthhorseman.net>  Tue, 15 Dec 2020 00:51:22 -0500
+
+rust-sequoia-sop (0.20.0-1) unstable; urgency=medium
+
+  * Package sequoia-sop 0.20.0 from crates.io using debcargo 2.4.3
+
+ -- Daniel Kahn Gillmor <dkg@fifthhorseman.net>  Thu, 15 Oct 2020 00:19:12 -0400
+
+rust-sequoia-sop (0.18.0-1) unstable; urgency=medium
+
+  * Package sequoia-sop 0.18.0 from crates.io using debcargo 2.4.2
+  * drop patch already upstream
+
+ -- Daniel Kahn Gillmor <dkg@fifthhorseman.net>  Wed, 05 Aug 2020 23:32:27 -0400
+
+rust-sequoia-sop (0.17.0-2) unstable; urgency=medium
+
+  * Package sequoia-sop 0.17.0 from crates.io using debcargo 2.4.2
+  * No-op source-only re-upload for Debian Testing Migration.
+
+ -- Daniel Kahn Gillmor <dkg@fifthhorseman.net>  Fri, 17 Jul 2020 11:09:15 -0400
+
+rust-sequoia-sop (0.17.0-1) unstable; urgency=medium
+
+  * Package sequoia-sop 0.17.0 from crates.io using debcargo 2.4.2
+    (Closes: #963027)
+
+ -- Daniel Kahn Gillmor <dkg@fifthhorseman.net>  Thu, 09 Jul 2020 16:56:09 -0400

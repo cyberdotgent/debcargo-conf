@@ -1,2 +1,2 @@
-#deps.patch
-#crossbeam.diff
+fix-deps.diff
+md-5-0.9.diff

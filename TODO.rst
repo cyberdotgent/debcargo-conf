@@ -65,6 +65,15 @@ rustfmt-nightly
   * rustc-ap-syntax-pos
   * rustc-ap-serialize (fails because of usage of nightly feature)
 
+bat update
+----------
+
+Needs syntect => onig => onig-sys => bindgen 0.55 (for librust-bindgen-0.51+runtime-dev)
+Disabling syntect in bat causes:
+error[E0433]: failed to resolve: use of undeclared type or module `syntect`
+ --> src/terminal.rs:4:5
+
+
 bingrep
 -------
 
@@ -280,16 +289,28 @@ Binary crates worth packaging (please add if you know more):
 - bench - simple benchmarking
 - bingrep - Grep through binaries from various OSs and architectures.
 - brewstillery - Brewer's, vinter's and distiller's calculator (GTK).
+- cargo-deb - Create Debian packages from Cargo projects
+- cargo-debstatus - Print the status of crate’s dependencies in Debian
+  * blocked on postgres
 - cargo-download - Download sources of a crate
 - cargo-edit - Cargo editing subcommands (add, rm, upgrade)
+- diskonaut - interactive disk usage tui tool
+- fractal - Matrix messaging client (GTK, https://wiki.gnome.org/Apps/Fractal)
 - hg - Rust implement of hg
 - jql - JSON Query Language CLI tool.
-- recode_rs -  CLI tool converting between the character encodings.
+- meli - terminal mail client (https://meli.delivery/)
+- podcasts - Podcasts app (GTK, https://wiki.gnome.org/Apps/Podcasts)
+- recode_rs - CLI tool converting between the character encodings.
+- resvg - SVG renderer (in Debian; packaged separately, but doesn’t build anymore)
 - rural - User-friendly command-line HTTP tool
+- rust-analyzer - modular rust compiler frontend with LSP
 - rustfmt-nightly - rust coding style
 - rustup - installing and managing multiple rust toolchains
+- shortwave - Internet radio client (GTK, https://gitlab.gnome.org/World/Shortwave)
 - tmux-hints - Find matches (e.g. urls) and navigate them by keyboard
+- viu - Command-line image viewer
 - xsv - Command line program for manipulating CSV files
+- zola - static site generator (https://www.getzola.org/)
 
 To see lists of interesting binary crates, you can run something like::
 

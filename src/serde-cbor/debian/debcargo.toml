@@ -1,2 +1,6 @@
 overlay = "."
-uploaders = ["Proxmox Support Team <support@proxmox.com>"]
+uploaders = ["Sylvestre Ledru <sylvestre@debian.org>"]
+collapse_features = true
+
+[packages.lib]
+test_is_broken = true

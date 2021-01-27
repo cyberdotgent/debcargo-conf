@@ -5,8 +5,10 @@ set -e
 BASE_DIR=$(pwd)
 
 if test ! -f LIST_UPLOAD.txt; then
-	echo "Could not find LIST_UPLOAD.txt"
-	echo "Run python3 dev/rust-excuses-source-upload.py > LIST_UPLOAD.txt"
+        echo "Could not find LIST_UPLOAD.txt"
+        echo "Run:"
+        echo "wget https://release.debian.org/britney/excuses.yaml"
+        echo "python3 dev/rust-excuses-source-upload.py > LIST_UPLOAD.txt"
 	exit 1
 fi
 
@@ -20,6 +22,7 @@ for f in $(awk '{print $1}' LIST_UPLOAD.txt|sed -e "s|rust-||g"); do
 		V=$(dpkg-parsechangelog --file src/$f/debian/changelog|grep Version|awk '{print $2}'|cut -d- -f1)
 		PKG=$(grep Upstream-Name src/$f/debian/copyright|awk '{print $2}')
 		REALVER=$V ./update.sh $PKG
+		cd src/$f && sed -i -e "s|  \* Package|  * Source upload\n  * Package|" debian/changelog && cd -
 		git commit -m" $f: source upload" src/$f
 		RERELEASE=1 ./release.sh $PKG
 		git checkout master && git merge origin/pending-$f

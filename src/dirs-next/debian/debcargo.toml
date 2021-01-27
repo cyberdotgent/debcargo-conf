@@ -1,2 +1,2 @@
 overlay = "."
-uploaders = ["Fabian Grünbichler <f.gruenbichler@proxmox.com>"]
+uploaders = ["Sylvestre Ledru <sylvestre@debian.org>"]

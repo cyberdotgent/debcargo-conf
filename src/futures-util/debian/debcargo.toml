@@ -1,8 +1,6 @@
 overlay = "."
-# needed for pin-utils 1.0
-allow_prerelease_deps = true
-uploaders = ["Fabian Grünbichler <f.gruenbichler@proxmox.com>"]
 summary = "Common utilities for the `futures` library"
+uploaders = ["Andrej Shadura <andrewsh@debian.org>"]
 
 [packages.lib]
 test_is_broken = true

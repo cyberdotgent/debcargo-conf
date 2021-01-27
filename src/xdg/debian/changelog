@@ -1,3 +1,10 @@
+rust-xdg (2.2.0-3) unstable; urgency=medium
+
+  * Team upload.
+  * Patch failing tests (Closes: #958398, #961460)
+
+ -- Nikos Tsipinakis <nikos@tsipinakis.com>  Sat, 29 Aug 2020 10:58:22 +0200
+
 rust-xdg (2.2.0-2~bpo10+pve1) proxmox-rust; urgency=medium
 
   * Backport to Debian Buster / Proxmox

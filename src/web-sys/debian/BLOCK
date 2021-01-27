@@ -1,7 +1,0 @@
-wasm-bindgen-futures and reqwest depend on features not provided by the
-bin-NMUed web-sys. if we integrate the binNMU and maintain a list of features
-to be provided by web-sys, they need to be looked at/integrated. if we decide
-to collapse all features altogether, they need to be switched to that new
-mechanism as well.
-
-https://salsa.debian.org/rust-team/debcargo-conf/issues/17

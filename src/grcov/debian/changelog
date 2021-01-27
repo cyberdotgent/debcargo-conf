@@ -1,3 +1,25 @@
+rust-grcov (0.5.15-2) unstable; urgency=medium
+
+  * Package grcov 0.5.15 from crates.io using debcargo 2.4.3
+  * Disable dwz. See https://github.com/rust-lang/rust/issues/66118
+
+ -- Sylvestre Ledru <sylvestre@debian.org>  Tue, 15 Dec 2020 10:30:10 +0100
+
+rust-grcov (0.5.15-1) unstable; urgency=medium
+
+  * Package grcov 0.5.15 from crates.io using debcargo 2.4.3
+
+ -- Sylvestre Ledru <sylvestre@debian.org>  Fri, 27 Nov 2020 23:48:04 +0100
+
+rust-grcov (0.4.1-3) unstable; urgency=medium
+
+  * Package grcov 0.4.1 from crates.io using debcargo 2.4.3
+  * Fix the dep (Closes: #948630)
+  * Cherry pick cb0f93e69e652ef7d45c2e42157af100935d705f
+    for crossbeam 0.7
+
+ -- Sylvestre Ledru <sylvestre@debian.org>  Fri, 27 Nov 2020 22:13:55 +0100
+
 rust-grcov (0.4.1-2) unstable; urgency=medium
 
   * Team upload.

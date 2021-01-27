@@ -1,3 +1,36 @@
+rust-bat (0.12.1-6) unstable; urgency=medium
+
+  * Team upload.
+  * Package bat 0.12.1 from crates.io using debcargo 2.4.3
+  * Bump dependency on rust-git2, the old version seems to be
+    broken with the new libgit2.
+
+ -- Peter Michael Green <plugwash@debian.org>  Mon, 07 Dec 2020 05:23:43 +0000
+
+rust-bat (0.12.1-5) unstable; urgency=medium
+
+  * Add myself to the uploaders
+  * try to unbreak it afer some recent changes (Closes: #973950)
+  * Package bat 0.12.1 from crates.io using debcargo 2.4.3
+
+ -- Sylvestre Ledru <sylvestre@debian.org>  Thu, 19 Nov 2020 22:00:22 +0100
+
+rust-bat (0.12.1-4) unstable; urgency=medium
+
+  * Team upload.
+  * Package bat 0.12.1 from crates.io using debcargo 2.4.3
+
+ -- Sylvestre Ledru <sylvestre@debian.org>  Sun, 18 Oct 2020 00:17:46 +0200
+
+rust-bat (0.12.1-3) unstable; urgency=medium
+
+  * Team upload.
+  * Package bat 0.12.1 from crates.io using debcargo 2.4.3
+  * Other uploads + update the unbreak it
+    (Closes: #956514, #970488)
+
+ -- Sylvestre Ledru <sylvestre@debian.org>  Sun, 04 Oct 2020 17:23:46 +0200
+
 rust-bat (0.12.1-2) unstable; urgency=medium
 
   * Team upload.

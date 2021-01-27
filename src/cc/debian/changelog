@@ -1,3 +1,10 @@
+rust-cc (1.0.59-1) unstable; urgency=medium
+
+  * Team upload.
+  * Package cc 1.0.59 from crates.io using debcargo 2.4.2
+
+ -- Sylvestre Ledru <sylvestre@debian.org>  Sat, 29 Aug 2020 18:22:09 +0200
+
 rust-cc (1.0.50-5~bpo10+pve1) proxmox-rust; urgency=medium
 
   * Backport to Debian Buster / Proxmox

@@ -1,15 +1,42 @@
+rust-libz-sys (1.1.2-3) unstable; urgency=medium
+
+  * Team upload.
+  * Package libz-sys 1.1.2 from crates.io using debcargo 2.4.3
+  * Mark all features autopkgtest as broken, it tries to build
+    a missing embedded copy of zlib.
+
+ -- Peter Michael Green <plugwash@debian.org>  Thu, 10 Dec 2020 18:01:47 +0000
+
+rust-libz-sys (1.1.2-2) unstable; urgency=medium
+
+  * Team upload.
+  * Source upload
+  * Package libz-sys 1.1.2 from crates.io using debcargo 2.4.3
+
+ -- Sylvestre Ledru <sylvestre@debian.org>  Sun, 18 Oct 2020 11:16:01 +0200
+
+rust-libz-sys (1.1.2-1) unstable; urgency=medium
+
+  * Source upload
+  * Package libz-sys 1.1.2 from crates.io using debcargo 2.4.3
+
+ -- Ximin Luo <infinity0@debian.org>  Thu, 01 Oct 2020 23:25:37 +0100
+
 rust-libz-sys (1.0.25-1) unstable; urgency=medium
 
   * Team upload.
+  * Source upload
   * Package libz-sys 1.0.25 from crates.io using debcargo 2.2.9
 
   [ Ximin Luo ]
+  * Source upload
   * Package libz-sys 1.0.25 from crates.io using debcargo 2.2.8
 
  -- Matt Kraai <kraai@debian.org>  Sat, 08 Dec 2018 13:27:55 -0800
 
 rust-libz-sys (1.0.18-1) unstable; urgency=medium
 
+  * Source upload
   * Package libz-sys 1.0.18 from crates.io using debcargo 2.2.5
 
  -- Ximin Luo <infinity0@debian.org>  Fri, 03 Aug 2018 05:11:26 -0700

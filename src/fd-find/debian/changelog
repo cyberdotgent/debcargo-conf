@@ -1,3 +1,23 @@
+rust-fd-find (8.2.1-1) unstable; urgency=medium
+
+  * Package fd-find 8.2.1 from crates.io using debcargo 2.4.3
+  * Disable dwz. See https://github.com/rust-lang/rust/issues/66118
+
+ -- Sylvestre Ledru <sylvestre@debian.org>  Tue, 15 Dec 2020 10:38:34 +0100
+
+rust-fd-find (8.1.1-2) unstable; urgency=medium
+
+  * Package fd-find 8.1.1 from crates.io using debcargo 2.4.3
+    Update to dirs 3.0
+
+ -- Sylvestre Ledru <sylvestre@debian.org>  Sun, 04 Oct 2020 14:52:59 +0200
+
+rust-fd-find (8.1.1-1) unstable; urgency=medium
+
+  * Package fd-find 8.1.1 from crates.io using debcargo 2.4.3
+
+ -- Sylvestre Ledru <sylvestre@debian.org>  Sat, 20 Jun 2020 10:03:27 +0200
+
 rust-fd-find (8.0.0-1) unstable; urgency=medium
 
   * Package fd-find 8.0.0 from crates.io using debcargo 2.4.2

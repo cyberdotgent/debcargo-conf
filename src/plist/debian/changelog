@@ -1,3 +1,17 @@
+rust-plist (1.0.0-1) unstable; urgency=medium
+
+  * Team upload.
+  * Package plist 1.0.0 from crates.io using debcargo 2.4.2
+
+ -- Sylvestre Ledru <sylvestre@debian.org>  Sat, 29 Aug 2020 17:51:24 +0200
+
+rust-plist (0.5.4-2) unstable; urgency=medium
+
+  * Team upload.
+  * enable use with base64 0.12.*
+
+ -- Daniel Kahn Gillmor <dkg@fifthhorseman.net>  Wed, 10 Jun 2020 15:39:10 -0400
+
 rust-plist (0.5.4-1) unstable; urgency=medium
 
   * Team upload.

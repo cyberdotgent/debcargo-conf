@@ -1,3 +1,34 @@
+rust-num-traits (0.2.14-1) unstable; urgency=medium
+
+  * Team upload.
+  * Package num-traits 0.2.14 from crates.io using debcargo 2.4.3
+
+ -- Andrej Shadura <andrewsh@debian.org>  Wed, 18 Nov 2020 13:37:12 +0100
+
+rust-num-traits (0.2.11-5) unstable; urgency=medium
+
+  * Temporarily downgrade rust-libm to Recommends.
+
+ -- Andrej Shadura <andrewsh@debian.org>  Thu, 12 Nov 2020 13:24:42 +0100
+
+rust-num-traits (0.2.11-4) unstable; urgency=medium
+
+  * Fix the changelog.
+
+ -- Andrej Shadura <andrewsh@debian.org>  Thu, 12 Nov 2020 11:05:59 +0100
+
+rust-num-traits (0.2.11-3) unstable; urgency=medium
+
+  * Fix the missing comma (Closes: #973768).
+
+ -- Andrej Shadura <andrewsh@debian.org>  Thu, 12 Nov 2020 11:03:16 +0100
+
+rust-num-traits (0.2.11-2) unstable; urgency=medium
+
+  * Reenable libm.
+
+ -- Andrej Shadura <andrewsh@debian.org>  Mon, 13 Jan 2020 12:26:02 +0100
+
 rust-num-traits (0.2.11-1+doctestfix) unstable; urgency=medium
 
   * Package num-traits 0.2.11 from crates.io using debcargo 2.4.2

@@ -1,0 +1,5 @@
+rust-rustls (0.18.0-1) unstable; urgency=medium
+
+  * Package rustls 0.18.0 from crates.io using debcargo 2.4.2
+
+ -- Bastian Germann <bastiangermann@fishpost.de>  Sun, 30 Aug 2020 17:11:19 +0200

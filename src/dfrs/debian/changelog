@@ -1,0 +1,22 @@
+rust-dfrs (0.0.6-3) unstable; urgency=medium
+
+  * Package dfrs 0.0.6 from crates.io using debcargo 2.4.3
+  * Change nix dependency 0.19
+
+ -- kpcyrd <git@rxv.cc>  Thu, 05 Nov 2020 00:26:43 +0100
+
+rust-dfrs (0.0.6-2) unstable; urgency=medium
+
+  * Team upload.
+  * Source upload
+  * Package dfrs 0.0.6 from crates.io using debcargo 2.4.3
+
+ -- Sylvestre Ledru <sylvestre@debian.org>  Sun, 18 Oct 2020 11:14:53 +0200
+
+rust-dfrs (0.0.6-1) unstable; urgency=medium
+
+  * Source upload
+  * Source upload
+  * Package dfrs 0.0.6 from crates.io using debcargo 2.4.3
+
+ -- kpcyrd <git@rxv.cc>  Mon, 12 Oct 2020 09:54:14 +0200

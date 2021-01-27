@@ -1,0 +1,22 @@
+Index: num-format/Cargo.toml
+===================================================================
+--- num-format.orig/Cargo.toml
++++ num-format/Cargo.toml
+@@ -25,7 +25,7 @@ categories = ["encoding", "international
+ license = "MIT/Apache-2.0"
+ repository = "https://github.com/bcmyers/num-format"
+ [dependencies.arrayvec]
+-version = "0.4"
++version = "0.5"
+ default-features = false
+ 
+ [dependencies.itoa]
+@@ -61,7 +61,7 @@ version = "1.0"
+ default = ["std"]
+ std = ["arrayvec/default", "itoa/default", "itoa/i128"]
+ with-num-bigint = ["num-bigint", "std"]
+-with-serde = ["arrayvec/serde-1", "serde/derive"]
++with-serde = ["serde/derive"]
+ with-system-locale = ["cfg-if", "encoding_rs", "lazy_static", "libc", "num-format-windows", "std", "widestring", "winapi/winnls"]
+ [target."cfg(unix)".dependencies.cfg-if]
+ version = "0.1"

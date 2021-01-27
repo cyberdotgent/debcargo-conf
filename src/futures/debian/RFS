@@ -1,6 +1,0 @@
-upload to experimental, part of futures/tokio/hyper transition - see TODO.rst
-
-needs futures-channel, futures-core, futures-executor, futures-io, futures-sink, futures-task, futures-util 0.3.1
-
-compat / io-compat features need futures-util with that feature, which pulls in futures-0.1 / tokio-io-0.1
-

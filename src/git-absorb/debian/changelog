@@ -1,0 +1,11 @@
+rust-git-absorb (0.6.6-2) unstable; urgency=medium
+
+  * Fix the extremely long lines in the long description.
+
+ -- Andrej Shadura <andrewsh@debian.org>  Fri, 06 Nov 2020 09:23:53 +0100
+
+rust-git-absorb (0.6.6-1) unstable; urgency=medium
+
+  * Package git-absorb 0.6.6 from crates.io using debcargo 2.4.3
+
+ -- Andrej Shadura <andrewsh@debian.org>  Thu, 05 Nov 2020 09:55:22 +0100

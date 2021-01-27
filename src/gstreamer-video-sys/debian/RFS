@@ -1,7 +1,0 @@
-upload to experimental, part of futures/tokio/hyper transition - see TODO.rst
-
-needs gstreamer-base-sys 0.8
-needs gstreamer-sys 0.8
-
-direct rdeps that need updating afterwards:
-gstreamer-video to 0.15.0

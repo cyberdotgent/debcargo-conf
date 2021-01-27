@@ -1,3 +1,18 @@
+rust-socket2 (0.3.19-2) unstable; urgency=medium
+
+  * Team upload.
+  * Package socket2 0.3.19 from crates.io using debcargo 2.4.3
+  * Fix files with very old timestamps.
+
+ -- Peter Michael Green <plugwash@debian.org>  Thu, 31 Dec 2020 15:18:32 +0000
+
+rust-socket2 (0.3.19-1) unstable; urgency=medium
+
+  * Team upload.
+  * Package socket2 0.3.19 from crates.io using debcargo 2.4.3
+
+ -- Peter Michael Green <plugwash@debian.org>  Wed, 30 Dec 2020 17:00:36 +0000
+
 rust-socket2 (0.3.17-1~bpo10+pve1) proxmox-rust; urgency=medium
 
   * Rebuild for Debian Buster / Proxmox
