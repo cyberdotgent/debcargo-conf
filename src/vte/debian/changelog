@@ -1,3 +1,9 @@
+rust-vte (0.3.3-2~bpo10+pve1) proxmox-rust; urgency=medium
+
+  * Rebuild for Debian Buster / Proxmox
+
+ -- Proxmox Support Team <support@proxmox.com>  Wed, 27 Jan 2021 13:41:36 +0100
+
 rust-vte (0.3.3-2) unstable; urgency=medium
 
   * Team upload.
