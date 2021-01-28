@@ -114,8 +114,8 @@ check_build_deps() {
 	( cd "$PKGNAME" && dpkg-checkbuilddeps --admindir=../dpkg-dummy )
 }
 
-if ! check_build_deps; then
-	if [ "$IGNORE_MISSING_BUILD_DEPS" != 1 ]; then
+if [ "$IGNORE_MISSING_BUILD_DEPS" != 1 ]; then
+	if ! check_build_deps; then
 		abort 1 "Missing build-dependencies, but maybe try '{apt,cargo} update'"
 	fi
 fi
