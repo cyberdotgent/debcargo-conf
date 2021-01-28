@@ -1,0 +1,13 @@
+Index: lexical-core/Cargo.toml
+===================================================================
+--- lexical-core.orig/Cargo.toml
++++ lexical-core/Cargo.toml
+@@ -43,7 +43,7 @@ optional = true
+ version = "1.2"
+ 
+ [dependencies.cfg-if]
+-version = "=0.1.9"
++version = "1.0"
+ 
+ [dependencies.dtoa]
+ version = "0.4"
