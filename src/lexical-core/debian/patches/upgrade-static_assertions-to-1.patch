@@ -1,17 +1,21 @@
---- a/Cargo.toml
-+++ b/Cargo.toml
-@@ -54,7 +54,7 @@
+Index: lexical-core/Cargo.toml
+===================================================================
+--- lexical-core.orig/Cargo.toml
++++ lexical-core/Cargo.toml
+@@ -54,7 +54,7 @@ version = "1.0"
  optional = true
  
  [dependencies.static_assertions]
 -version = "0.3.3"
 +version = "1.1.0"
+ optional = true
  [dev-dependencies.approx]
  version = "0.3.0"
- 
---- a/src/atof/algorithm/small_powers.rs
-+++ b/src/atof/algorithm/small_powers.rs
-@@ -13,46 +13,46 @@
+Index: lexical-core/src/atof/algorithm/small_powers.rs
+===================================================================
+--- lexical-core.orig/src/atof/algorithm/small_powers.rs
++++ lexical-core/src/atof/algorithm/small_powers.rs
+@@ -13,46 +13,46 @@ use super::small_powers_64::*;
  
  cfg_if! {
  if #[cfg(has_const_index)] {
@@ -91,11 +95,13 @@
 +const_assert!(POW35[1] / POW35[0] == 35);
 +const_assert!(POW36[1] / POW36[0] == 36);
  
- }}  //cfg_if
+ }} //cfg_if
  
---- a/src/util/table.rs
-+++ b/src/util/table.rs
-@@ -752,97 +752,97 @@
+Index: lexical-core/src/util/table.rs
+===================================================================
+--- lexical-core.orig/src/util/table.rs
++++ lexical-core/src/util/table.rs
+@@ -716,97 +716,97 @@ const F32_POW36: [f32; 8] = [1.0, 36.0,
  
  // Compile-time guarantees for our tables.
  #[cfg(has_const_index)]
@@ -224,7 +230,7 @@
  
  impl TablePower for f32 {
      const POW2_EXPONENT_BIAS: i32 = 149;
-@@ -3106,97 +3106,97 @@
+@@ -3073,97 +3073,97 @@ const F64_POW36: [f64; 17] = [1.0, 36.0,
  
  // Compile-time guarantees for our tables.
  #[cfg(has_const_index)]
