@@ -2,7 +2,7 @@ overlay = "."
 uploaders = ["Fabian Grünbichler <f.gruenbichler@proxmox.com>"]
 
 # bundled copy of libstd
-excludes = ["zstd/**"]
+excludes = ["zstd/**", "src/bindings.rs", "src/bindings_experimental.rs", "src/bindings_std.rs", "src/bindings_std_experimental.rs", "update_bindings.sh", "update_zstd.sh"]
 
 [packages.lib]
 depends = ["libzstd-dev"]
