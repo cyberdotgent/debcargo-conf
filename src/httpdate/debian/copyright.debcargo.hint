@@ -1,10 +1,10 @@
 Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
 Upstream-Name: httpdate
-Upstream-Contact: Pyfisch <pyfisch@gmail.com>
+Upstream-Contact: Pyfisch <pyfisch@posteo.org>
 Source: https://github.com/pyfisch/httpdate
 
 Files: *
-Copyright: FIXME (overlay) UNKNOWN-YEARS Pyfisch <pyfisch@gmail.com>
+Copyright: FIXME (overlay) UNKNOWN-YEARS Pyfisch <pyfisch@posteo.org>
 License: MIT or Apache-2.0
 Comment:
  FIXME (overlay): Since upstream copyright years are not available in
@@ -21,8 +21,8 @@ Comment:
 
 Files: debian/*
 Copyright:
- 2020 Debian Rust Maintainers <pkg-rust-maintainers@alioth-lists.debian.net>
- 2020 Fabian Grünbichler <f.gruenbichler@proxmox.com>
+ 2020-2021 Debian Rust Maintainers <pkg-rust-maintainers@alioth-lists.debian.net>
+ 2020-2021 Fabian Grünbichler <f.gruenbichler@proxmox.com>
 License: MIT or Apache-2.0
 
 License: Apache-2.0
