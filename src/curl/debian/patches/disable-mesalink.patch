@@ -1,7 +1,9 @@
 Description: for now, disable mesalink as it has some extra deps
---- a/Cargo.toml
-+++ b/Cargo.toml
-@@ -44,7 +44,6 @@
+Index: curl/Cargo.toml
+===================================================================
+--- curl.orig/Cargo.toml
++++ curl/Cargo.toml
+@@ -58,7 +58,6 @@ version = "2.0.3"
  default = ["ssl"]
  force-system-lib-on-osx = ["curl-sys/force-system-lib-on-osx"]
  http2 = ["curl-sys/http2"]
