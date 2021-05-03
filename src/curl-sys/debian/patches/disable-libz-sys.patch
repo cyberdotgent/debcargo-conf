@@ -14,10 +14,10 @@ Index: curl-sys/Cargo.toml
  [build-dependencies.cc]
  version = "1.0"
  
-@@ -52,7 +47,6 @@ spnego = []
- ssl = ["openssl-sys"]
+@@ -53,7 +48,6 @@ spnego = []
  static-curl = []
  static-ssl = ["openssl-sys"]
+ upkeep_7_62_0 = []
 -zlib-ng-compat = ["libz-sys/zlib-ng", "static-curl"]
  [target."cfg(all(unix, not(target_os = \"macos\")))".dependencies.openssl-sys]
  version = "0.9"
