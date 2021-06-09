@@ -1,4 +1,2 @@
 strip-security-framework.patch
-update-hex.patch
-
 disable-tests-that-access-network.patch
