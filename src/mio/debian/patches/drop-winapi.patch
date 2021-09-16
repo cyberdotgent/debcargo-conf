@@ -2,10 +2,10 @@ Index: mio/Cargo.toml
 ===================================================================
 --- mio.orig/Cargo.toml
 +++ mio/Cargo.toml
-@@ -60,12 +60,3 @@ udp = ["net"]
+@@ -61,12 +61,3 @@ udp = ["net"]
  uds = ["net"]
  [target."cfg(unix)".dependencies.libc]
- version = "0.2.69"
+ version = "0.2.86"
 -[target."cfg(windows)".dependencies.miow]
 -version = "0.3.6"
 -
@@ -14,4 +14,4 @@ Index: mio/Cargo.toml
 -
 -[target."cfg(windows)".dependencies.winapi]
 -version = "0.3"
--features = ["winsock2", "mswsock"]
+-features = ["winsock2", "mswsock", "mstcpip"]
