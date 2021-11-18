@@ -2,15 +2,6 @@ Index: reqwest/Cargo.toml
 ===================================================================
 --- reqwest.orig/Cargo.toml
 +++ reqwest/Cargo.toml
-@@ -135,7 +135,7 @@ optional = true
- default-features = false
- 
- [target."cfg(not(target_arch = \"wasm32\"))".dependencies.base64]
--version = "0.13"
-+version = "0.12"
- 
- [target."cfg(not(target_arch = \"wasm32\"))".dependencies.cookie_crate]
- version = "0.14"
 @@ -266,20 +266,3 @@ features = ["derive"]
  version = "1.0"
  features = ["macros", "rt-multi-thread"]
