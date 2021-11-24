@@ -2,12 +2,12 @@ Index: openssl-sys/Cargo.toml
 ===================================================================
 --- openssl-sys.orig/Cargo.toml
 +++ openssl-sys/Cargo.toml
-@@ -31,14 +31,11 @@ version = "1.0"
+@@ -30,14 +30,11 @@ version = "1.0"
  [build-dependencies.cc]
  version = "1.0"
  
 -[build-dependencies.openssl-src]
--version = "111.0.1"
+-version = "300"
 -optional = true
 -
  [build-dependencies.pkg-config]
@@ -39,8 +39,8 @@ Index: openssl-sys/build/main.rs
 +#[cfg(feature = "vendored_debian_disabled")]
  mod find_vendored;
  
- enum Version {
-@@ -44,7 +44,7 @@ fn env(name: &str) -> Option<OsString> {
+ #[derive(PartialEq)]
+@@ -46,7 +46,7 @@ fn env(name: &str) -> Option<OsString> {
  }
  
  fn find_openssl(target: &str) -> (PathBuf, PathBuf) {
