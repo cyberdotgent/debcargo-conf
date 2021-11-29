@@ -1,3 +1,29 @@
+rust-bindgen (0.59.1-2) unstable; urgency=medium
+
+  * Team upload.
+  * Package bindgen 0.59.1 from crates.io using debcargo 2.4.4
+    + Regenerating packaging with debcargo will allow rust-bindgen+env-logger
+      to be installed with both old and new versions of rust-env-logger.
+
+ -- Peter Michael Green <plugwash@debian.org>  Fri, 12 Nov 2021 02:44:31 +0000
+
+rust-bindgen (0.59.1-1.1) unstable; urgency=medium
+
+  * Non-maintainer upload.
+  * add patch to relax dependency on Rust library env_logger,
+    and update (build-)dependencies on librust-env-logger-*-dev;
+    this closes: bug#998347
+  * fix Cargo.toml checksum hint file
+
+ -- Jonas Smedegaard <dr@jones.dk>  Tue, 02 Nov 2021 19:36:53 +0100
+
+rust-bindgen (0.59.1-1) unstable; urgency=medium
+
+  * Team upload.
+  * Package bindgen 0.59.1 from crates.io using debcargo 2.4.4-alpha.0
+
+ -- Sylvestre Ledru <sylvestre@debian.org>  Sun, 22 Aug 2021 17:37:34 +0200
+
 rust-bindgen (0.55.1-3) unstable; urgency=medium
 
   * Team upload.
