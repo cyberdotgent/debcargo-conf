@@ -1,0 +1,17 @@
+Index: im-rc/Cargo.toml
+===================================================================
+--- im-rc.orig/Cargo.toml
++++ im-rc/Cargo.toml
+@@ -45,10 +45,10 @@ version = "0.9"
+ optional = true
+ 
+ [dependencies.rand_core]
+-version = "0.5.1"
++version = "0.6"
+ 
+ [dependencies.rand_xoshiro]
+-version = "0.4"
++version = "0.6"
+ 
+ [dependencies.rayon]
+ version = "1"
