@@ -1,3 +1,9 @@
+rust-zstd-sys (1.4.19-1~bpo11+pve2) proxmox-rust; urgency=medium
+
+  * rebuild with bindgen 0.59 / itertools 0.10
+
+ -- Proxmox Support Team <support@proxmox.com>  Mon, 29 Nov 2021 12:06:28 +0100
+
 rust-zstd-sys (1.4.19-1~bpo11+pve1) proxmox-rust; urgency=medium
 
   * Backport to Debian Bullseye / Proxmox
