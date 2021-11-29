@@ -8,13 +8,10 @@ set -e
 
 abort() { local x=$1; shift; for i in "$@"; do echo >&2 "$0: abort: $i"; done; exit "$x"; }
 
-mkdir -p "$(dirname "$0")/.git/hooks"
-HOOK_COMMIT="$(dirname "$0")/.git/hooks/pre-commit"
-
 if [ -n "$DEBCARGO" ]; then
 	true
-elif which debcargo >/dev/null; then
-	DEBCARGO=$(which debcargo)
+elif type -p debcargo >/dev/null 2>&1; then
+	DEBCARGO=$(type -p debcargo)
 elif [ -f "$HOME/.cargo/bin/debcargo" ]; then
 	DEBCARGO="$HOME/.cargo/bin/debcargo"
 else
@@ -26,6 +23,7 @@ dcver=$($DEBCARGO --version | sed -ne 's/debcargo //p')
 case $dcver in
 2.0.*|2.1.*|2.2.*|2.3.*)	abort 1 "unsupported debcargo version $dcver. try reinstalling with \`cargo install debcargo --force\`";;
 2.4.*)	true;;
+2.5.*)	true;;
 *)	abort 1 "unsupported debcargo version: $dcver";;
 esac
 
