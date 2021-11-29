@@ -1,3 +1,9 @@
+rust-crates-io (0.33.0-1~bpo11+pve1) proxmox-rust; urgency=medium
+
+  * Rebuild for Debian Bullseye / Proxmox
+
+ -- Proxmox Support Team <support@proxmox.com>  Mon, 29 Nov 2021 10:31:56 +0100
+
 rust-crates-io (0.33.0-1) unstable; urgency=medium
 
   * Package crates-io 0.33.0 from crates.io using debcargo 2.4.4
