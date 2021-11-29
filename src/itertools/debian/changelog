@@ -1,3 +1,9 @@
+rust-itertools (0.10.1-1~bpo11+pve1) proxmox-rust; urgency=medium
+
+  * Rebuild for Debian Bullseye / Proxmox
+
+ -- Proxmox Support Team <support@proxmox.com>  Mon, 29 Nov 2021 09:53:54 +0100
+
 rust-itertools (0.10.1-1) unstable; urgency=medium
 
   * Package itertools 0.10.1 from crates.io using debcargo 2.4.4
