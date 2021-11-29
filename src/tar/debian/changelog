@@ -1,3 +1,29 @@
+rust-tar (0.4.37-3) unstable; urgency=medium
+
+  * Team upload.
+  * Package tar 0.4.37 from crates.io using debcargo 2.4.4
+  * Skip adding loop0 to tarball in test if it doesn't exist
+    (apparently it doesn't on Debian CI).
+
+ -- Peter Michael Green <plugwash@debian.org>  Tue, 09 Nov 2021 21:24:12 +0000
+
+rust-tar (0.4.37-2) unstable; urgency=medium
+
+  * Team upload.
+  * Package tar 0.4.37 from crates.io using debcargo 2.4.4
+  * Disable tests that rely on test data which is not included on crates.io
+    and hence not included in the Debian package. The prior version in
+    Debian testing skipped all tests due to dependency issues so this
+    represents an improvement of test coverage.
+
+ -- Peter Michael Green <plugwash@debian.org>  Tue, 09 Nov 2021 11:23:25 +0000
+
+rust-tar (0.4.37-1) unstable; urgency=medium
+
+  * Package tar 0.4.37 from crates.io using debcargo 2.4.4
+
+ -- Ximin Luo <infinity0@debian.org>  Sat, 23 Oct 2021 19:30:39 +0100
+
 rust-tar (0.4.26-1) unstable; urgency=medium
 
   * Package tar 0.4.26 from crates.io using debcargo 2.3.1-alpha.0
