@@ -6,3 +6,4 @@ uploaders = [
 
 # The auto-generated summary is too long.
 summary = "Easy support for JS and Rust interaction"
+collapse_features = true
