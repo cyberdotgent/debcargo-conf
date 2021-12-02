@@ -6,3 +6,4 @@ uploaders = [
 
 # The auto-generated summary is too long.
 summary = "Shared support of wasm-bindgen and wasm-bindgen cli"
+collapse_features = true
