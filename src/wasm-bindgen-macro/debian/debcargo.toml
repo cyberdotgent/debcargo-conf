@@ -6,3 +6,4 @@ uploaders = [
 
 # The auto-generated summary is too long.
 summary = "Definition of the `#[wasm_bindgen]` attribute"
+collapse_features = true
