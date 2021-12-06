@@ -36,10 +36,10 @@ Packaging
 New crates
 ----------
 
-`./new.sh $CRATE`
+`./new-package.sh $CRATE`
 
-`new.sh` (which is actually just a convenience symlink to `update.sh` will
-download the crate from crates.io, extract it into the `build` directory,
+`new-package.sh` (which is actually just a convenience symlink to `update.sh`
+will download the crate from crates.io, extract it into the `build` directory,
 generate the three default files in `src/$CRATE/debian`, and print some hints
 on what to do next, such as filling out `d/copyright` based on the generated
 hint file.
