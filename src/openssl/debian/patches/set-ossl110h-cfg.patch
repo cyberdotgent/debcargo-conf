@@ -1,0 +1,27 @@
+commit bf2fb5d101f5b68ae16c1af4d40efbd71766c8df
+Author:     Fabian Grünbichler <f.gruenbichler@proxmox.com>
+AuthorDate: Wed Dec 15 14:20:28 2021 +0100
+Commit:     Fabian Grünbichler <f.gruenbichler@proxmox.com>
+CommitDate: Wed Dec 15 14:20:28 2021 +0100
+
+    openssl: set ossl110h cfg
+    
+    this is used as conditional guard for disabling renegotiation via
+    SslOptions.
+    
+    Signed-off-by: Fabian Grünbichler <f.gruenbichler@proxmox.com>
+
+diff --git a/build.rs b/build.rs
+index d90ebc17..c165b7e9 100644
+--- a/build.rs
++++ b/build.rs
+@@ -32,6 +32,9 @@ fn main() {
+         if version >= 0x1_01_00_07_0 {
+             println!("cargo:rustc-cfg=ossl110g");
+         }
++        if version >= 0x1_01_00_08_0 {
++            println!("cargo:rustc-cfg=ossl110h");
++        }
+         if version >= 0x1_01_01_00_0 {
+             println!("cargo:rustc-cfg=ossl111");
+         }

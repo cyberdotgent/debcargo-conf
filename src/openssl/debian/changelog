@@ -1,3 +1,9 @@
+rust-openssl (0.10.38-1~bpo11+pve2) proxmox-rust; urgency=medium
+
+  * add patch to detect >=1.1.0h correctly
+
+ -- Proxmox Support Team <support@proxmox.com>  Wed, 15 Dec 2021 14:22:58 +0100
+
 rust-openssl (0.10.38-1~bpo11+pve1) proxmox-rust; urgency=medium
 
   * Rebuild for Debian Bullseye / Proxmox
