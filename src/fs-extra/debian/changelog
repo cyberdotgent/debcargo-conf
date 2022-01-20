@@ -1,3 +1,9 @@
+rust-fs-extra (1.2.0-1~bpo11+pve1) proxmox-rust; urgency=medium
+
+  * Rebuild for Debian Bullseye / Proxmox
+
+ -- Proxmox Support Team <support@proxmox.com>  Thu, 20 Jan 2022 09:49:39 +0100
+
 rust-fs-extra (1.2.0-1) unstable; urgency=medium
 
   * Team upload.
