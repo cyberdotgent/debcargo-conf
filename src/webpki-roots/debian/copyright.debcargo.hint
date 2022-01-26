@@ -1,7 +1,7 @@
 Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
 Upstream-Name: webpki-roots
 Upstream-Contact: Joseph Birr-Pixton <jpixton@gmail.com>
-Source: https://github.com/ctz/webpki-roots
+Source: https://github.com/rustls/webpki-roots
 
 Files: *
 Copyright: FIXME (overlay) UNKNOWN-YEARS Joseph Birr-Pixton <jpixton@gmail.com>
@@ -14,8 +14,8 @@ Comment:
 
 Files: debian/*
 Copyright:
- 2021 Debian Rust Maintainers <pkg-rust-maintainers@alioth-lists.debian.net>
- 2021 Fabian Grünbichler <f.gruenbichler@proxmox.com>
+ 2021-2022 Debian Rust Maintainers <pkg-rust-maintainers@alioth-lists.debian.net>
+ 2021-2022 Fabian Grünbichler <f.gruenbichler@proxmox.com>
 License: MPL-2.0
 
 License: MPL-2.0
