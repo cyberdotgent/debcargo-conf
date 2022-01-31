@@ -1,3 +1,9 @@
+rust-quickcheck (1.0.3-1~bpo11+pve1) proxmox-rust; urgency=medium
+
+  * Rebuild for Debian Bullseye / Proxmox
+
+ -- Proxmox Support Team <support@proxmox.com>  Mon, 31 Jan 2022 11:04:15 +0100
+
 rust-quickcheck (1.0.3-1) experimental; urgency=medium
 
   * Package quickcheck 1.0.3 from crates.io using debcargo 2.5.0 (Closes: 1001656)
