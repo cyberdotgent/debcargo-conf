@@ -1,2 +1,2 @@
-disable-vendor.diff
-bump-bindgen.patch
+0001-Avoid-msvc-dependencies.patch
+0002-Relax-dependency-on-bindgen.patch
