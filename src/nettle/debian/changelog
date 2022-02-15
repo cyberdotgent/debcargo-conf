@@ -1,3 +1,9 @@
+rust-nettle (7.1.0-1~bpo11+pve1) proxmox-rust; urgency=medium
+
+  * Rebuild for Debian Bullseye / Proxmox
+
+ -- Proxmox Support Team <support@proxmox.com>  Tue, 15 Feb 2022 09:29:49 +0100
+
 rust-nettle (7.1.0-1) unstable; urgency=medium
 
   * Package nettle 7.1.0 from crates.io using debcargo 2.5.0
