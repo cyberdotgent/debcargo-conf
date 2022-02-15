@@ -1,3 +1,103 @@
+rust-sequoia-openpgp (1.7.0-6) unstable; urgency=medium
+
+  * Package sequoia-openpgp 1.7.0 from crates.io using debcargo 2.5.0
+  * fix time_t handling on 32-bit platforms
+  * mark compression serialization test as requiring bzip2
+
+ -- Daniel Kahn Gillmor <dkg@fifthhorseman.net>  Thu, 10 Feb 2022 10:30:08 -0500
+
+rust-sequoia-openpgp (1.7.0-5) unstable; urgency=medium
+
+  * Package sequoia-openpgp 1.7.0 from crates.io using debcargo 2.5.0
+  * Consolidate workarounds for #985741 and #985762
+
+ -- Daniel Kahn Gillmor <dkg@fifthhorseman.net>  Thu, 10 Feb 2022 00:44:24 -0500
+
+rust-sequoia-openpgp (1.7.0-4) unstable; urgency=medium
+
+  * Package sequoia-openpgp 1.7.0 from crates.io using debcargo 2.5.0
+  * Adjust autopkgtests to align with upstream feature requirements
+
+ -- Daniel Kahn Gillmor <dkg@fifthhorseman.net>  Wed, 09 Feb 2022 18:02:15 -0500
+
+rust-sequoia-openpgp (1.7.0-3) unstable; urgency=medium
+
+  * Package sequoia-openpgp 1.7.0 from crates.io using debcargo 2.5.0
+
+ -- Daniel Kahn Gillmor <dkg@fifthhorseman.net>  Wed, 09 Feb 2022 01:56:40 -0500
+
+rust-sequoia-openpgp (1.7.0-2) unstable; urgency=medium
+
+  * Package sequoia-openpgp 1.7.0 from crates.io using debcargo 2.5.0
+  * Move to unstable from experimental
+
+ -- Daniel Kahn Gillmor <dkg@fifthhorseman.net>  Sat, 05 Feb 2022 20:57:31 -0500
+
+rust-sequoia-openpgp (1.7.0-1) experimental; urgency=medium
+
+  * Package sequoia-openpgp 1.7.0 from crates.io using debcargo 2.5.0
+  * refresh patches dropping windows build and criterion benchmarks
+  * also drop wasm build, associated rust crypto, and experimental or
+    variable-time crypto features (debian build is still focusd on nettle)
+  * Upstream license changed from GPL-2.0+ to LGPL-2.0+, debian packaging
+    followed suit.
+
+ -- Daniel Kahn Gillmor <dkg@fifthhorseman.net>  Wed, 02 Feb 2022 03:26:36 -0500
+
+rust-sequoia-openpgp (1.3.0-4) unstable; urgency=medium
+
+  * Package sequoia-openpgp 1.3.0 from crates.io using debcargo 2.4.4
+  * Remove compression layer from some tests so that compression-free
+    feature set can test successfully.
+
+ -- Daniel Kahn Gillmor <dkg@fifthhorseman.net>  Tue, 31 Aug 2021 10:12:27 -0400
+
+rust-sequoia-openpgp (1.3.0-3) unstable; urgency=medium
+
+  * Package sequoia-openpgp 1.3.0 from crates.io using debcargo 2.4.4
+  * Update debugging/diagnosis patch supplied by upstream
+
+ -- Daniel Kahn Gillmor <dkg@fifthhorseman.net>  Mon, 30 Aug 2021 09:12:14 -0400
+
+rust-sequoia-openpgp (1.3.0-2) unstable; urgency=medium
+
+  * Package sequoia-openpgp 1.3.0 from crates.io using debcargo 2.4.4
+  * Apply debugging/diagnosis patch supplied by upstream
+
+ -- Daniel Kahn Gillmor <dkg@fifthhorseman.net>  Sun, 29 Aug 2021 13:17:56 -0400
+
+rust-sequoia-openpgp (1.3.0-1) unstable; urgency=medium
+
+  * Package sequoia-openpgp 1.3.0 from crates.io using debcargo 2.4.4
+
+ -- Daniel Kahn Gillmor <dkg@fifthhorseman.net>  Thu, 19 Aug 2021 00:43:40 -0400
+
+rust-sequoia-openpgp (1.1.0-3) unstable; urgency=medium
+
+  * Package sequoia-openpgp 1.1.0 from crates.io using debcargo 2.4.4
+  * Drop test-skipping workaround for #985729 and #985730, adopt
+    upstream's workaround instead
+  * fix test suite on platforms with 32-bit time_t
+
+ -- Daniel Kahn Gillmor <dkg@fifthhorseman.net>  Tue, 23 Mar 2021 12:28:45 -0400
+
+rust-sequoia-openpgp (1.1.0-2) unstable; urgency=medium
+
+  * Package sequoia-openpgp 1.1.0 from crates.io using debcargo 2.4.4
+  * Drop unncessary config about obsolete "quickcheck" feature
+  * Clarify which autopkgtests should succeed (including workaround
+    for debcargo's #985762)
+  * Work around #985729 and #985730 by dropping some regex tests
+
+ -- Daniel Kahn Gillmor <dkg@fifthhorseman.net>  Mon, 22 Mar 2021 19:42:47 -0400
+
+rust-sequoia-openpgp (1.1.0-1) unstable; urgency=medium
+
+  * Package sequoia-openpgp 1.1.0 from crates.io using debcargo 2.4.4
+  * ship example rust source files
+
+ -- Daniel Kahn Gillmor <dkg@fifthhorseman.net>  Fri, 05 Mar 2021 18:02:55 -0500
+
 rust-sequoia-openpgp (1.0.0-1) unstable; urgency=medium
 
   * Package sequoia-openpgp 1.0.0 from crates.io using debcargo 2.4.3
@@ -20,7 +120,7 @@ rust-sequoia-openpgp (0.20.0-1) unstable; urgency=medium
 rust-sequoia-openpgp (0.18.0-1) unstable; urgency=medium
 
   * Package sequoia-openpgp 0.18.0 from crates.io using debcargo 2.4.2
-  * relax MSRV-related dependency bounds on dyn-clone 
+  * relax MSRV-related dependency bounds on dyn-clone
 
  -- Daniel Kahn Gillmor <dkg@fifthhorseman.net>  Wed, 05 Aug 2020 19:29:31 -0400
 
