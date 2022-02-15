@@ -1,3 +1,9 @@
+rust-lalrpop (0.17.2-8~bpo11+pve1) proxmox-rust; urgency=medium
+
+  * Rebuild for Debian Bullseye / Proxmox
+
+ -- Proxmox Support Team <support@proxmox.com>  Tue, 15 Feb 2022 09:28:03 +0100
+
 rust-lalrpop (0.17.2-8) unstable; urgency=medium
 
   * Team upload.
