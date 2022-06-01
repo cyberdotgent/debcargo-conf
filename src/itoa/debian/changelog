@@ -1,3 +1,9 @@
+rust-itoa (1.0.1-2~bpo11+pve1) proxmox-rust; urgency=medium
+
+  * Rebuild for Debian Bullseye / Proxmox
+
+ -- Proxmox Support Team <support@proxmox.com>  Wed, 01 Jun 2022 12:50:23 +0200
+
 rust-itoa (1.0.1-2) unstable; urgency=medium
 
   * Team upload.
