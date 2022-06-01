@@ -1,3 +1,28 @@
+rust-serde-json (1.0.80-2) unstable; urgency=medium
+
+  * Team upload.
+  * Package serde_json 1.0.80 from crates.io using debcargo 2.5.0
+  * Establish baseline for tests.
+
+ -- Peter Michael Green <plugwash@debian.org>  Tue, 03 May 2022 17:13:29 +0000
+
+rust-serde-json (1.0.80-1) unstable; urgency=medium
+
+  * Package serde_json 1.0.80 from crates.io using debcargo 2.4.2
+
+  [ Carlos F. Sanz ]
+  * Team upload.
+  * Package serde_json 1.0.78 from crates.io using debcargo 2.5.0
+
+ -- Peter Michael Green <plugwash@debian.org>  Mon, 02 May 2022 12:24:00 +0000
+
+rust-serde-json (1.0.45-1) unstable; urgency=medium
+
+  * Team upload.
+  * Package serde_json 1.0.45 from crates.io using debcargo 2.5.0
+
+ -- James McCoy <jamessan@debian.org>  Sat, 01 Jan 2022 23:26:16 -0500 
+
 rust-serde-json (1.0.41-1) unstable; urgency=medium
 
   * Package serde_json 1.0.41 from crates.io using debcargo 2.4.0
