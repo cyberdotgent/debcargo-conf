@@ -2,16 +2,26 @@ Index: mio/Cargo.toml
 ===================================================================
 --- mio.orig/Cargo.toml
 +++ mio/Cargo.toml
-@@ -61,12 +61,3 @@ udp = ["net"]
- uds = ["net"]
+@@ -100,8 +100,6 @@ default = []
+ net = []
+ os-ext = [
+     "os-poll",
+-    "windows-sys/Win32_System_Pipes",
+-    "windows-sys/Win32_Security",
+ ]
+ os-poll = []
+ 
+@@ -113,13 +111,3 @@ version = "0.11.0"
+ 
  [target."cfg(unix)".dependencies.libc]
- version = "0.2.86"
--[target."cfg(windows)".dependencies.miow]
--version = "0.3.6"
+ version = "0.2.121"
 -
--[target."cfg(windows)".dependencies.ntapi]
--version = "0.3"
--
--[target."cfg(windows)".dependencies.winapi]
--version = "0.3"
--features = ["winsock2", "mswsock", "mstcpip"]
+-[target."cfg(windows)".dependencies.windows-sys]
+-version = "0.36"
+-features = [
+-    "Win32_Storage_FileSystem",
+-    "Win32_Foundation",
+-    "Win32_Networking_WinSock",
+-    "Win32_System_IO",
+-    "Win32_System_WindowsProgramming",
+-]
