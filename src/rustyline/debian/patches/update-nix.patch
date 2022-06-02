@@ -1,0 +1,26 @@
+From 8bb4e578e6376c1e0e6a62d395958c58e7704345 Mon Sep 17 00:00:00 2001
+From: Ryan Zoeller <rtzoeller@rtzoeller.com>
+Date: Wed, 20 Apr 2022 22:24:30 -0500
+Subject: [PATCH] Upgrade nix to 0.24, limit features
+
+This reduces compilation time slightly, and removes the memoffset crate
+as an indirect dependency.
+---
+ Cargo.toml | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+Index: rustyline/Cargo.toml
+===================================================================
+--- rustyline.orig/Cargo.toml
++++ rustyline/Cargo.toml
+@@ -85,7 +85,9 @@ default = ["with-dirs"]
+ with-dirs = ["dirs-next"]
+ with-fuzzy = ["skim"]
+ [target."cfg(unix)".dependencies.nix]
+-version = "0.23"
++version = "0.24"
++default-features = false
++features = ["fs", "ioctl", "poll", "signal", "term"]
+ 
+ [target."cfg(unix)".dependencies.skim]
+ version = "0.9"
