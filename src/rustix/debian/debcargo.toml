@@ -1,0 +1,3 @@
+overlay = "."
+uploaders = ["Fabian Grünbichler <f.gruenbichler@proxmox.com>"]
+whitelist = ["src/imp/linux_raw/arch/outline/**"]
