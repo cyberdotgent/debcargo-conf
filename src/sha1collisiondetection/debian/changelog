@@ -1,3 +1,10 @@
+rust-sha1collisiondetection (0.2.3-1+b2~bpo11+pve1) proxmox-rust; urgency=medium
+
+  * Rebuild for Debian Bullseye / Proxmox, drop patch pulling in unnecessary
+    dependencies
+
+ -- Proxmox Support Team <support@proxmox.com>  Fri, 22 Jul 2022 10:06:16 +0200
+
 rust-sha1collisiondetection (0.2.3-1) unstable; urgency=medium
 
   * Package sha1collisiondetection 0.2.3 from crates.io using debcargo 2.4.3
