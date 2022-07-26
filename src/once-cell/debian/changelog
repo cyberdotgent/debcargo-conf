@@ -1,3 +1,9 @@
+rust-once-cell (1.12.0-2~bpo11+pve1) proxmox-rust; urgency=medium
+
+  * Rebuild for Debian Bullseye / Proxmox
+
+ -- Proxmox Support Team <support@proxmox.com>  Tue, 26 Jul 2022 14:48:53 +0200
+
 rust-once-cell (1.12.0-2) unstable; urgency=medium
 
   * Team upload.
