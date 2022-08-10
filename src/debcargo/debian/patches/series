@@ -1,1 +1,4 @@
-relax-dep.patch
+0001-downgrade-textwrap-dep-to-match-clap.patch
+0002-update-to-cargo-0.63-git2-0.14.patch
+0003-handle-namespaced-features.patch
+0004-re-add-version-flag.patch

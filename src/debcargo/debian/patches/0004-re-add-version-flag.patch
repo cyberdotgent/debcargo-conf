@@ -1,0 +1,31 @@
+From c7d81124a8e95e90282f8de52fbf76c185b52ad5 Mon Sep 17 00:00:00 2001
+From: =?UTF-8?q?Fabian=20Gr=C3=BCnbichler?= <f.gruenbichler@proxmox.com>
+Date: Fri, 19 Aug 2022 14:02:06 +0200
+Subject: [PATCH] re-add '--version' flag
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 8bit
+
+to main command, sub-commands don't get it by default anymore in clap
+3.x
+
+Signed-off-by: Fabian Grünbichler <f.gruenbichler@proxmox.com>
+---
+ src/bin/debcargo.rs | 1 +
+ 1 file changed, 1 insertion(+)
+
+diff --git a/src/bin/debcargo.rs b/src/bin/debcargo.rs
+index 6361a59..548e600 100644
+--- a/src/bin/debcargo.rs
++++ b/src/bin/debcargo.rs
+@@ -56,6 +56,7 @@ fn verify_app() {
+ 
+ fn real_main() -> Result<()> {
+     let m = Opt::clap()
++        .version(crate_version!())
+         .global_setting(AppSettings::ColoredHelp)
+         .get_matches();
+     use Opt::*;
+-- 
+2.30.2
+
