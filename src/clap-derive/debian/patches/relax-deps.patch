@@ -1,0 +1,21 @@
+Index: clap-derive/Cargo.toml
+===================================================================
+--- clap-derive.orig/Cargo.toml
++++ clap-derive/Cargo.toml
+@@ -46,13 +46,13 @@ version = "0.4.0"
+ version = "1"
+ 
+ [dependencies.proc-macro2]
+-version = "1.0.28"
++version = "1.0.26"
+ 
+ [dependencies.quote]
+-version = "1.0.9"
++version = "1.0.7"
+ 
+ [dependencies.syn]
+-version = "1.0.74"
++version = "1.0.70"
+ features = ["full"]
+ 
+ [features]

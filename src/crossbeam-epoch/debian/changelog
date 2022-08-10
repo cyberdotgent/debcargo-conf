@@ -1,3 +1,31 @@
+rust-crossbeam-epoch (0.9.8-2~bpo11+pve1) proxmox-rust; urgency=medium
+
+  * Rebuild for Debian Bullseye / Proxmox
+
+ -- Proxmox Support Team <support@proxmox.com>  Wed, 10 Aug 2022 09:42:28 +0200
+
+rust-crossbeam-epoch (0.9.8-2) unstable; urgency=medium
+
+  * Team upload.
+  * Package crossbeam-epoch 0.9.8 from crates.io using debcargo 2.5.0
+  * Fix tests when run with no-default-features.
+
+ -- Peter Michael Green <plugwash@debian.org>  Sun, 22 May 2022 19:25:39 +0000
+
+rust-crossbeam-epoch (0.9.8-1) unstable; urgency=medium
+
+  * Team upload.
+  * Package crossbeam-epoch 0.9.8 from crates.io using debcargo 2.5.0
+  * drop unstable feature "loom" in addition to "nightly"
+
+ -- Daniel Kahn Gillmor <dkg@fifthhorseman.net>  Sat, 21 May 2022 16:08:55 -0400
+
+rust-crossbeam-epoch (0.8.2-2) unstable; urgency=medium
+  * Team upload.
+  * Added d/patches/relax-deps.patch so that crossbeam-epoch works with
+    memoffset 0.6.
+ -- Henry-Nicolas Tourneur <debian@nilux.be>  Sun, 28 Nov 2021 22:11:07 +0100
+
 rust-crossbeam-epoch (0.8.2-1) unstable; urgency=medium
 
   * Team upload.

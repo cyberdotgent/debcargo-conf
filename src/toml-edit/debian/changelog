@@ -1,3 +1,20 @@
+rust-toml-edit (0.14.4-1~bpo11+pve1) proxmox-rust; urgency=medium
+
+  * Rebuild for Debian Bullseye / Proxmox
+
+ -- Proxmox Support Team <support@proxmox.com>  Fri, 05 Aug 2022 13:37:42 +0200
+
+rust-toml-edit (0.14.4-1) unstable; urgency=medium
+
+  * Team upload.
+  * Package toml_edit 0.14.4 from crates.io using debcargo 2.5.0
+  * Set collapse_features = true
+  * Remove dev-dependencies that are not in Debian and disable the tests
+    that depend on them so the rest of the testsuite can run.
+  * Reduce dependency on kstring to major version 1 to match what is in Debian.
+
+ -- Peter Michael Green <plugwash@debian.org>  Sun, 19 Jun 2022 22:38:46 +0000
+
 rust-toml-edit (0.1.5-2) unstable; urgency=medium
 
   * Team upload.

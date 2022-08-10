@@ -1,3 +1,35 @@
+rust-bumpalo (3.7.0-3~bpo11+pve1) proxmox-rust; urgency=medium
+
+  * Rebuild for Debian Bullseye / Proxmox
+
+ -- Proxmox Support Team <support@proxmox.com>  Fri, 05 Aug 2022 14:52:27 +0200
+
+rust-bumpalo (3.7.0-3) unstable; urgency=medium
+
+  * Team upload.
+  * Package bumpalo 3.7.0 from crates.io using debcargo 2.4.4
+  * Apply patch (submitted and accepted upstream) to fix alloc_slice_fill_zero
+    test on architectures where max alignment is only 4.
+  * Disable oom_instead_of_bump_pointer_overflow test, upstream has agreed with
+    my determination that it is the test rather than the code it tests which
+    is broken, but we have not yet reached consensus on how best to fix it.
+    see https://github.com/fitzgen/bumpalo/issues/128
+
+ -- Peter Michael Green <plugwash@debian.org>  Sun, 21 Nov 2021 11:15:41 +0000
+
+rust-bumpalo (3.7.0-2) unstable; urgency=medium
+
+  * Package bumpalo 3.7.0 from crates.io using debcargo 2.4.4-alpha.0
+  * Re-upload with dependency on dh-cargo >= 26 fixing mtime of changelog file
+
+ -- Wolfgang Silbermayr <wolfgang@silbermayr.at>  Sun, 29 Aug 2021 18:45:17 +0200
+
+rust-bumpalo (3.7.0-1) unstable; urgency=medium
+
+  * Package bumpalo 3.7.0 from crates.io using debcargo 2.4.4-alpha.0
+
+ -- Wolfgang Silbermayr <wolfgang@silbermayr.at>  Sun, 29 Aug 2021 08:32:39 +0200
+
 rust-bumpalo (3.4.0-1) unstable; urgency=medium
 
   * Package bumpalo 3.4.0 from crates.io using debcargo 2.4.3

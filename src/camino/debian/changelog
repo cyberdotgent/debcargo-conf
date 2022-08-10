@@ -1,0 +1,11 @@
+rust-camino (1.0.5-1~bpo11+pve1) proxmox-rust; urgency=medium
+
+  * Rebuild for Debian Bullseye / Proxmox
+
+ -- Proxmox Support Team <support@proxmox.com>  Wed, 10 Aug 2022 08:50:49 +0200
+
+rust-camino (1.0.5-1) unstable; urgency=medium
+
+  * Package camino 1.0.5 from crates.io using debcargo 2.4.4-alpha.0
+
+ -- Wolfgang Silbermayr <wolfgang@silbermayr.at>  Sun, 19 Sep 2021 20:21:18 +0200

@@ -1,0 +1,22 @@
+rust-clap-derive (3.2.15-1~bpo11+pve1) proxmox-rust; urgency=medium
+
+  * Rebuild for Debian Bullseye / Proxmox
+
+ -- Proxmox Support Team <support@proxmox.com>  Thu, 18 Aug 2022 12:21:08 +0200
+
+rust-clap-derive (3.2.15-1) unstable; urgency=medium
+
+  * Team upload.
+  * Package clap_derive 3.2.15 from crates.io using debcargo 2.5.0
+
+ -- Peter Michael Green <plugwash@debian.org>  Sun, 31 Jul 2022 16:41:35 +0000
+
+rust-clap-derive (3.1.7-1) unstable; urgency=medium
+
+  * Team upload.
+  * Package clap_derive 3.1.7 from crates.io using debcargo 2.5.0
+
+  [ Ben Westover ]
+  * Package clap_derive 3.1.4 from crates.io using debcargo 2.5.0
+
+ -- Sylvestre Ledru <sylvestre@debian.org>  Fri, 15 Apr 2022 13:26:37 +0200

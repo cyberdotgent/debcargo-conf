@@ -1,0 +1,18 @@
+Description: relax dependency on crate rand
+Author: Jonas Smedegaard <dr@jones.dk>
+Last-Update: 2022-05-28
+---
+This patch header follows DEP-3: http://dep.debian.net/deps/dep3/
+Index: ahash/Cargo.toml
+===================================================================
+--- ahash.orig/Cargo.toml
++++ ahash/Cargo.toml
+@@ -79,7 +79,7 @@ version = "0.4.2"
+ version = "0.1.10"
+ 
+ [dev-dependencies.rand]
+-version = "0.7.3"
++version = "0.8"
+ 
+ [dev-dependencies.seahash]
+ version = "4.0"

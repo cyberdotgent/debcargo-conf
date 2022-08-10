@@ -1,3 +1,29 @@
+rust-terminal-size (0.1.17-2~bpo11+pve1) proxmox-rust; urgency=medium
+
+  * Rebuild for Debian Bullseye / Proxmox
+
+ -- Proxmox Support Team <support@proxmox.com>  Fri, 05 Aug 2022 14:53:51 +0200
+
+rust-terminal-size (0.1.17-2) unstable; urgency=medium
+
+  * Team upload.
+  * Package terminal_size 0.1.17 from crates.io using debcargo 2.4.4
+  * When creating pseudo-terminal for testing use c_char instead of i8
+    for the array passed to ptsname_r so the test code will build on
+    architectures with unsigned char.
+
+ -- Peter Michael Green <plugwash@debian.org>  Sat, 04 Sep 2021 23:53:42 +0000
+
+rust-terminal-size (0.1.17-1) unstable; urgency=medium
+
+  * Team upload.
+  * Package terminal_size 0.1.17 from crates.io using debcargo 2.4.4
+  * Create a psuedo-terminal to use for testing rather than relying on the
+    environment providing a terminal (which Debian's autopkgtest environment 
+    doesn't).
+
+ -- Peter Michael Green <plugwash@debian.org>  Sat, 04 Sep 2021 18:33:24 +0000
+
 rust-terminal-size (0.1.13-2) unstable; urgency=medium
 
   * Team upload.
