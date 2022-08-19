@@ -1,3 +1,9 @@
+rust-nettle-sys (2.1.0-1~bpo11+pve2) proxmox-rust; urgency=medium
+
+  * Rebuild with bindgen 0.60
+
+ -- Proxmox Support Team <support@proxmox.com>  Fri, 19 Aug 2022 12:04:29 +0200
+
 rust-nettle-sys (2.1.0-1~bpo11+pve1) proxmox-rust; urgency=medium
 
   * Rebuild for Debian Bullseye / Proxmox
