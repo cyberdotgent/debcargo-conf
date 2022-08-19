@@ -1,3 +1,16 @@
+rust-shlex (1.1.0-1~bpo11+pve1) proxmox-rust; urgency=medium
+
+  * Rebuild for Debian Bullseye / Proxmox
+
+ -- Proxmox Support Team <support@proxmox.com>  Fri, 19 Aug 2022 11:30:23 +0200
+
+rust-shlex (1.1.0-1) unstable; urgency=medium
+
+  * Team upload.
+  * Package shlex 1.1.0 from crates.io using debcargo 2.5.0
+
+ -- Peter Michael Green <plugwash@debian.org>  Sun, 31 Jul 2022 17:08:52 +0000
+
 rust-shlex (0.1.1-1) unstable; urgency=medium
 
   * Package shlex 0.1.1 from crates.io using debcargo 2.1.2

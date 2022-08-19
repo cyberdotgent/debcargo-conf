@@ -1,18 +1,30 @@
---- a/Cargo.toml
-+++ b/Cargo.toml
-@@ -68,8 +68,7 @@ version = "1.0"
- version = "1.0"
+Index: syn/Cargo.toml
+===================================================================
+--- syn.orig/Cargo.toml
++++ syn/Cargo.toml
+@@ -101,9 +101,6 @@ version = "1.0"
+ version = "0.11"
+ features = ["blocking"]
  
- [dev-dependencies.reqwest]
--version = "0.10"
--features = ["blocking"]
-+version = "0.9"
+-[dev-dependencies.syn-test-suite]
+-version = "0"
+-
+ [dev-dependencies.tar]
+ version = "0.4.16"
  
- [dev-dependencies.syn-test-suite]
- version = "0"
---- a/tests/repo/mod.rs
-+++ b/tests/repo/mod.rs
-@@ -103,7 +103,7 @@ fn download_and_unpack() -> Result<()> {
+@@ -132,6 +129,6 @@ proc-macro = [
+     "proc-macro2/proc-macro",
+     "quote/proc-macro",
+ ]
+-test = ["syn-test-suite/all-features"]
++#test = ["syn-test-suite/all-features"]
+ visit = []
+ visit-mut = []
+Index: syn/tests/repo/mod.rs
+===================================================================
+--- syn.orig/tests/repo/mod.rs
++++ syn/tests/repo/mod.rs
+@@ -153,7 +153,7 @@ fn download_and_unpack() -> Result<()> {
          "https://github.com/rust-lang/rust/archive/{}.tar.gz",
          REVISION
      );
