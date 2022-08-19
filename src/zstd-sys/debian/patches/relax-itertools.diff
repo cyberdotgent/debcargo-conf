@@ -3,7 +3,7 @@ Index: zstd-sys/Cargo.toml
 --- zstd-sys.orig/Cargo.toml
 +++ zstd-sys/Cargo.toml
 @@ -33,7 +33,7 @@ version = "0.2.45"
- version = "0.59"
+ version = "0.60"
  
  [build-dependencies.itertools]
 -version = "0.9"
