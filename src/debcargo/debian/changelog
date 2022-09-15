@@ -1,3 +1,9 @@
+rust-debcargo (2.5.0-4~bpo11+pve2) proxmox-rust; urgency=medium
+
+  * Rebuild with CVE-fixed cargo crate
+
+ -- Proxmox Support Team <support@proxmox.com>  Thu, 15 Sep 2022 09:45:13 +0200
+
 rust-debcargo (2.5.0-4~bpo11+pve1) unstable; urgency=medium
 
   * Upgrade to cargo 0.63
