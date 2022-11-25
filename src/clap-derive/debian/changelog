@@ -1,3 +1,9 @@
+rust-clap-derive (3.2.18-1~bpo11+1) bullseye-backports; urgency=medium
+
+  * Rebuild for Proxmox / Debian 11 Bullseye
+
+ -- Proxmox Support Team <support@proxmox.com>  Fri, 25 Nov 2022 10:55:37 +0100
+
 rust-clap-derive (3.2.18-1) unstable; urgency=medium
 
   * Team upload.
