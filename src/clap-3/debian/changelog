@@ -1,3 +1,9 @@
+rust-clap-3 (3.2.23-2~bpo11+1) bullseye-backports; urgency=medium
+
+  * Rebuild for Proxmox / Debian Bullseye
+
+ -- Proxmox Support Team <support@proxmox.com>  Fri, 25 Nov 2022 09:48:51 +0100
+
 rust-clap-3 (3.2.23-2) unstable; urgency=medium
 
   * Package clap 3.2.23 from crates.io using debcargo 2.5.0
