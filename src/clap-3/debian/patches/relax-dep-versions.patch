@@ -1,0 +1,12 @@
+--- clap.orig/Cargo.toml
++++ clap/Cargo.toml
+@@ -354,3 +354,3 @@
+ [dependencies.indexmap]
+-version = "1.0"
++version = "1"
+ 
+@@ -368,3 +368,3 @@
+ [dependencies.strsim]
+-version = "0.10"
++version = "0.9"
+ optional = true
