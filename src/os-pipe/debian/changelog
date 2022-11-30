@@ -1,3 +1,16 @@
+rust-os-pipe (1.1.1-1~bpo11+pve1) proxmox-rust; urgency=medium
+
+  * Rebuild for Debian Bullseye / Proxmox
+
+ -- Proxmox Support Team <support@proxmox.com>  Wed, 30 Nov 2022 12:32:38 +0100
+
+rust-os-pipe (1.1.1-1) unstable; urgency=medium
+
+  * Team upload.
+  * Package os_pipe 1.1.1 from crates.io using debcargo 2.5.0
+
+ -- Alexander Kjäll <alexander.kjall@gmail.com>  Sun, 23 Oct 2022 09:27:18 -0400
+
 rust-os-pipe (0.9.1-1) unstable; urgency=medium
 
   * Package os_pipe 0.9.1 from crates.io using debcargo 2.4.0
