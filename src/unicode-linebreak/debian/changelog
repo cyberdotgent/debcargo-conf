@@ -1,3 +1,17 @@
+rust-unicode-linebreak (0.1.4-1~bpo11+pve1) proxmox-rust; urgency=medium
+
+  * Rebuild for Debian Bullseye / Proxmox
+
+ -- Proxmox Support Team <support@proxmox.com>  Wed, 30 Nov 2022 11:40:00 +0100
+
+rust-unicode-linebreak (0.1.4-1) unstable; urgency=medium
+
+  * Team upload.
+  * Package unicode-linebreak 0.1.4 from crates.io using debcargo 2.5.0
+  * Add LineBreak.txt in d/copyright
+
+ -- Blair Noctis <n@sail.ng>  Sun, 30 Oct 2022 09:29:55 +0100
+
 rust-unicode-linebreak (0.1.2-1~bpo11+pve1) proxmox-rust; urgency=medium
 
   * Rebuild for Debian Bullseye / Proxmox
