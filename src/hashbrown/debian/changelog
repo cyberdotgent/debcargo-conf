@@ -1,3 +1,16 @@
+rust-hashbrown (0.12.3-1~bpo11+pve1) proxmox-rust; urgency=medium
+
+  * Rebuild for Debian Bullseye / Proxmox
+
+ -- Proxmox Support Team <support@proxmox.com>  Wed, 30 Nov 2022 11:45:48 +0100
+
+rust-hashbrown (0.12.3-1) unstable; urgency=medium
+
+  * Team upload.
+  * Package hashbrown 0.12.3 from crates.io using debcargo 2.5.0
+
+ -- Blair Noctis <n@sail.ng>  Thu, 13 Oct 2022 22:10:16 -0400
+
 rust-hashbrown (0.12.1-1~bpo11+pve1) proxmox-rust; urgency=medium
 
   * Rebuild for Debian Bullseye / Proxmox
