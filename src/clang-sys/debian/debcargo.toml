@@ -7,11 +7,11 @@ uploaders = [
 excludes = ["ci/**"]
 
 [source]
-build_depends = ["llvm", "clang"]
+build_depends = ["llvm-15", "clang-15"]
 
 [packages.lib]
-depends = ["libclang-dev", "llvm", "clang"]
-extra_test_depends = ["llvm", "clang"]
+depends = ["libclang-15-dev", "llvm-15", "clang-15"]
+extra_test_depends = ["llvm-15", "clang-15"]
 
 [packages."lib+@"]
 # The `runtime` and `static` features can't be combined (see build.rs)

@@ -1,3 +1,9 @@
+rust-clang-sys (1.0.1-2~bpo11+pve1) proxmox-rust; urgency=medium
+
+  * rebuild with llvm-15
+
+ -- Proxmox Support <support@proxmox.com>  Tue, 06 Dec 2022 12:53:55 +0100
+
 rust-clang-sys (1.0.1-2) unstable; urgency=medium
 
   * Team upload.
