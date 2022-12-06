@@ -16,14 +16,14 @@ Comment:
  be correct information so you should review and fix this before uploading to
  the archive.
 
-Files: ./LICENSE-MIT
+Files: LICENSE-MIT
 Copyright: 2014 Alex Crichton
 License: UNKNOWN-LICENSE; FIXME (overlay)
 Comment:
  FIXME (overlay): These notices are extracted from files. Please review them
  before uploading to the archive.
 
-Files: ./src/bufreader.rs
+Files: src/bufreader.rs
 Copyright: 2013 The Rust Project Developers
 License: UNKNOWN-LICENSE; FIXME (overlay)
 Comment:

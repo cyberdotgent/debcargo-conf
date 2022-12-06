@@ -1,0 +1,18 @@
+Index: miniz-oxide/Cargo.toml
+===================================================================
+--- miniz-oxide.orig/Cargo.toml
++++ miniz-oxide/Cargo.toml
+@@ -42,13 +42,7 @@ name = "miniz_oxide"
+ version = "1.0"
+ default-features = false
+ 
+-[dependencies.simd-adler32]
+-version = "0.3"
+-optional = true
+-default-features = false
+-
+ [features]
+ default = ["with-alloc"]
+-simd = ["simd-adler32"]
+ std = []
+ with-alloc = []

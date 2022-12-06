@@ -1,3 +1,16 @@
+rust-tar (0.4.38-1~bpo11+pve1) proxmox-rust; urgency=medium
+
+  * Rebuild for Debian Bullseye / Proxmox
+
+ -- Proxmox Support Team <support@proxmox.com>  Tue, 06 Dec 2022 10:52:49 +0100
+
+rust-tar (0.4.38-1) unstable; urgency=medium
+
+  * Team upload.
+  * Package tar 0.4.38 from crates.io using debcargo 2.5.0
+
+ -- Fabian Gruenbichler <debian@fabian.gruenbichler.email>  Thu, 20 Oct 2022 20:51:02 -0400
+
 rust-tar (0.4.37-3~bpo11+pve1) proxmox-rust; urgency=medium
 
   * Rebuild for Debian Bullseye / Proxmox

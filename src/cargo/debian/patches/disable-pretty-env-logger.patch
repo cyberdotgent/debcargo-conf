@@ -1,0 +1,26 @@
+this needs to be disabled even with pretty-env-logger disabled, as cargo
+depends on two different versions of env-logger otherwise!
+
+Index: cargo/Cargo.toml
+===================================================================
+--- cargo.orig/Cargo.toml
++++ cargo/Cargo.toml
+@@ -138,10 +138,6 @@ version = "0.2"
+ [dependencies.percent-encoding]
+ version = "2.0"
+ 
+-[dependencies.pretty_env_logger]
+-version = "0.4"
+-optional = true
+-
+ [dependencies.rustc-workspace-hack]
+ version = "1.0.0"
+ 
+@@ -217,7 +213,6 @@ default-features = false
+ 
+ [features]
+ deny-warnings = []
+-pretty-env-logger = ["pretty_env_logger"]
+ 
+ [target."cfg(windows)".dependencies.fwdansi]
+ version = "1.1.0"

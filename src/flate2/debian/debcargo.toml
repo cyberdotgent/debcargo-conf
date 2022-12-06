@@ -3,4 +3,18 @@ uploaders = ["Paride Legovini <paride@debian.org>"]
 summary = "FLATE, Gzip, and Zlib bindings for Rust"
 
 [packages.lib]
+# no-default-features is broken since it needs at least one of the backend features enabled
 test_is_broken = true
+extra_lines = ["Breaks: librust-tiff-dev (<= 0.6.1-1)"]
+
+[packages."lib+default"]
+test_is_broken = false
+
+[packages."lib+cloudflare_zlib"]
+test_is_broken = false
+
+[packages."lib+rust_backend"]
+test_is_broken = false
+
+[packages."lib+miniz_oxide"]
+test_is_broken = false
