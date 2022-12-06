@@ -36,7 +36,7 @@ if test ! -f "$PKGDIR_REL/debian/changelog"; then
 	abort 1 "Cannot find $PKGDIR_REL/debian/changelog. Did you run ./new-package.sh before?"
 fi
 
-if git grep --quiet FIXME -- "$PKGDIR_REL" :^"$PKGDIR_REL/debian/*.debcargo.hint" :^"$PKGDIR_REL/debian/changelog"; then
+if git grep --quiet FIXME -- "$PKGDIR_REL" :^"$PKGDIR_REL/debian/*.debcargo.hint" :^"$PKGDIR_REL/debian/changelog" :^"$PKGDIR_REL/debian/patches/*"; then
 	abort 1 "FIXMEs remain in $PKGDIR_REL, fix and commit those first."
 fi
 
@@ -173,7 +173,8 @@ show_build_notice() {
 cat <<eof
 The recommended way to build and upload is to run something like:
 
-  cd build && ./build.sh $CRATE $VER && dput ${DEBSRC}_${DEBVER}_${DEB_HOST_ARCH}.changes
+  cd build && ./build.sh $CRATE $VER && dput ${DEBSRC}_${DEBVER}_${DEB_HOST_ARCH}.changes && git push origin $RELBRANCH && git checkout - && cd -
+
 eof
 }
 
@@ -201,7 +202,11 @@ cat <<eof
 Since the source package is already in Debian and this version does not introduce
 new binaries, then you can just go ahead and directly dput the source package.
 
-  cd build && dput ${DEBSRC}_${DEBVER}_source.changes
+  cd build && dput ${DEBSRC}_${DEBVER}_source.changes && git checkout - && git merge -
+
+If you want to build and test it, run:
+
+  cd build && ./build.sh $CRATE && dput ${DEBSRC}_${DEBVER}_source.changes && git checkout - && git merge - && cd -
 
 For your reference, this source package builds $(echo "$upload_bin_packages" | wc -l) binary package(s):
 $upload_bin_packages
