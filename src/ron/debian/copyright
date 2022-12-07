@@ -3,12 +3,14 @@ Upstream-Name: ron
 Upstream-Contact:
  Dzmitry Malyshau <kvarkus@gmail.com>
  Thomas Schaller <torkleyy@gmail.com>
+ Juniper Langenstein <juniper.langenstein@helsinki.fi>
 Source: https://github.com/ron-rs/ron
 
 Files: *
 Copyright:
  2015-2021 Dzmitry Malyshau <kvarkus@gmail.com>
  2015-2022 Thomas Schaller <torkleyy@gmail.com>
+ 2021-2022 Juniper Langenstein <juniper.langenstein@helsinki.fi>
  2015-2022 RON developers
 License: MIT or Apache-2.0
 

@@ -2,15 +2,15 @@ Index: ron/Cargo.toml
 ===================================================================
 --- ron.orig/Cargo.toml
 +++ ron/Cargo.toml
-@@ -34,6 +34,7 @@ keywords = [
- categories = ["encoding"]
- license = "MIT/Apache-2.0"
+@@ -33,6 +33,7 @@ keywords = [
+ license = "MIT OR Apache-2.0"
  repository = "https://github.com/ron-rs/ron"
+ resolver = "2"
 +autotests = false
  
- [lib]
- name = "ron"
-@@ -52,9 +52,6 @@ features = ["serde-1"]
+ [dependencies.base64]
+ version = "0.13"
+@@ -48,9 +48,6 @@ features = ["serde-1"]
  version = "1.0.60"
  features = ["serde_derive"]
  
@@ -20,10 +20,10 @@ Index: ron/Cargo.toml
  [dev-dependencies.serde_bytes]
  version = "0.11"
  
-@@ -61,3 +61,99 @@ version = "0.11"
- 
- [dev-dependencies.serde_json]
- version = "1"
+@@ -60,3 +60,99 @@ version = "1"
+ [features]
+ default = []
+ integer128 = []
 +
 +[[test]]
 +name="117_untagged_tuple_variant"
