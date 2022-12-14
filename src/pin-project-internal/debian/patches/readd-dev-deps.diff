@@ -13,8 +13,8 @@ Index: pin-project-internal/Cargo.toml
 ===================================================================
 --- pin-project-internal.orig/Cargo.toml
 +++ pin-project-internal/Cargo.toml
-@@ -34,3 +34,4 @@ version = "1.0.56"
- features = ["full", "visit-mut"]
+@@ -49,3 +49,4 @@ features = [
+ ]
  
  [dev-dependencies]
 +pin-project = "1.0.10"
