@@ -1,3 +1,49 @@
+rust-web-sys (0.3.60-3) unstable; urgency=medium
+
+  * Team upload.
+  * Package web-sys 0.3.60 from crates.io using debcargo 2.5.0
+  * Add provides librust-web-sys-0.3+default-dev and corresponding autopkgtest.
+
+ -- Peter Michael Green <plugwash@debian.org>  Sat, 15 Oct 2022 07:44:32 +0000
+
+rust-web-sys (0.3.60-2) unstable; urgency=medium
+
+  * Team upload.
+  * Package web-sys 0.3.60 from crates.io using debcargo 2.5.0
+  * Update build-dependencies for new upstream version.
+
+ -- Peter Michael Green <plugwash@debian.org>  Tue, 27 Sep 2022 06:01:03 +0000
+
+rust-web-sys (0.3.60-1) unstable; urgency=medium
+
+  * Team upload.
+  * Package web-sys 0.3.60 from crates.io using debcargo 2.5.0
+  * Remove suggests of package that does not exist.
+  * Provide librust-web-sys-0.3+console-dev (Closes: #1020727)
+  * Override debian/tests/control to reduce the level of tests to something
+    sane, it currently takes an hour just to skip all the tests! If they
+    actually ran it would probablly take days.
+
+ -- Peter Michael Green <plugwash@debian.org>  Tue, 27 Sep 2022 04:28:14 +0000
+
+rust-web-sys (0.3.55-1) unstable; urgency=medium
+
+  * Team upload.
+  * Package web-sys 0.3.55 from crates.io using debcargo 2.5.0
+  * Drop the librust-web-sys+env-logger-dev feature package, upstream no
+    longer has any dependency (optional or otherwise) on rust-env-logger.
+
+ -- Peter Michael Green <plugwash@debian.org>  Sat, 08 Jan 2022 13:48:35 +0000
+
+rust-web-sys (0.3.35-1.1) unstable; urgency=medium
+
+  * Non-maintainer upload.
+  * Reduce the Provides field to the 2 values actually used in the Debian
+    archive so that we don't break reprepro with a field of more than
+    256 Kb and so that we are below the new DAK-enforced limit of 64 Kb.
+
+ -- Raphaël Hertzog <hertzog@debian.org>  Fri, 17 Jan 2020 10:17:12 +0100
+
 rust-web-sys (0.3.35-1) unstable; urgency=medium
 
   * Team upload.

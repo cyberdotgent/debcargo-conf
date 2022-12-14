@@ -1,0 +1,3 @@
+overlay = "."
+uploaders = ["Fabian Grünbichler <f.gruenbichler@proxmox.com>"]
+allow_prerelease_deps = true

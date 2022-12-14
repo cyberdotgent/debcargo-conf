@@ -6,7 +6,6 @@ uploaders = [
 
 # The auto-generated summary is too long.
 summary = "Implementation of the `#[wasm_bindgen]` attribute"
-collapse_features = true
 
 [packages."lib+@"]
 test_is_broken = true
