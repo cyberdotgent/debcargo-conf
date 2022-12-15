@@ -1,28 +1,25 @@
 Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
 Upstream-Name: mio
 Upstream-Contact: Carl Lerche <me@carllerche.com>
-Source: https://github.com/carllerche/mio
+Source: https://github.com/tokio-rs/mio
 
 Files: *
 Copyright:
  2014-2018 Carl Lerche <me@carllerche.com>
- 2014-2018 (other) MIO contributors
+ 2014-2018 MIO contributors
  2016 The Rust Project Developers
+License: MIT
+
+Files: debian/*
+Copyright:
+ 2018-2020 Debian Rust Maintainers <pkg-rust-maintainers@alioth-lists.debian.net>
+ 2018 kpcyrd <git@rxv.cc>
 License: MIT
 
 Files: ./src/lazycell.rs
 Copyright:
  2014 The Rust Project Developers
- 2016-2018 Nikita Pekin
- 2016-2018 The lazycell contributors
-License: MIT
-Comment: fork of rust-lazycell, upstream switches back in 0.7 release
-
-Files: debian/*
-Copyright:
- 2018-2019 Debian Rust Maintainers <pkg-rust-maintainers@alioth-lists.debian.net>
- 2018-2019 kpcyrd <git@rxv.cc>
-License: MIT
+ 2016-2018 Nikita Pekin and the lazycell contributors
 
 License: MIT
  Permission is hereby granted, free of charge, to any person obtaining a copy

@@ -1,8 +1,6 @@
-Index: mio/Cargo.toml
-===================================================================
---- mio.orig/Cargo.toml
-+++ mio/Cargo.toml
-@@ -100,8 +100,6 @@ default = []
+--- a/Cargo.toml
++++ b/Cargo.toml
+@@ -100,26 +100,8 @@ default = []
  net = []
  os-ext = [
      "os-poll",
@@ -11,8 +9,12 @@ Index: mio/Cargo.toml
  ]
  os-poll = []
  
-@@ -113,13 +111,3 @@ version = "0.11.0"
- 
+-[target."cfg(target_os = \"wasi\")".dependencies.libc]
+-version = "0.2.121"
+-
+-[target."cfg(target_os = \"wasi\")".dependencies.wasi]
+-version = "0.11.0"
+-
  [target."cfg(unix)".dependencies.libc]
  version = "0.2.121"
 -

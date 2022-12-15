@@ -1,2 +1,2 @@
-drop-winapi.patch
-drop-wasi.patch
+remove-non-linux-deps.diff
+relax-deps.diff
