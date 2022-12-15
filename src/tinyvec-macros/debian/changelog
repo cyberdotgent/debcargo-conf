@@ -1,3 +1,9 @@
+rust-tinyvec-macros (0.1.0-1~bpo11+pve1) proxmox-rust; urgency=medium
+
+  * Rebuild for Debian Bullseye / Proxmox
+
+ -- Proxmox Support Team <support@proxmox.com>  Thu, 15 Dec 2022 10:42:24 +0100
+
 rust-tinyvec-macros (0.1.0-1) unstable; urgency=medium
 
   * Package tinyvec_macros 0.1.0 from crates.io using debcargo 2.5.0
