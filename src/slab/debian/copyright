@@ -1,7 +1,7 @@
 Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
 Upstream-Name: slab
 Upstream-Contact: Carl Lerche <me@carllerche.com>
-Source: https://github.com/carllerche/slab
+Source: https://github.com/tokio-rs/slab
 
 Files: *
 Copyright: 2017-2018 Carl Lerche <me@carllerche.com>
