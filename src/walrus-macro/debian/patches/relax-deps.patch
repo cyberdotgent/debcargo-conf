@@ -1,0 +1,26 @@
+Index: walrus-macro/Cargo.toml
+===================================================================
+--- walrus-macro.orig/Cargo.toml
++++ walrus-macro/Cargo.toml
+@@ -25,7 +25,7 @@ repository = "https://github.com/rustwas
+ [lib]
+ proc_macro = true
+ [dependencies.heck]
+-version = "0.3.1"
++version = "0.4"
+ 
+ [dependencies.proc-macro2]
+ version = "1.0.1"
+Index: walrus-macro/src/lib.rs
+===================================================================
+--- walrus-macro.orig/src/lib.rs
++++ walrus-macro/src/lib.rs
+@@ -3,7 +3,7 @@
+ extern crate proc_macro;
+ 
+ use self::proc_macro::TokenStream;
+-use heck::SnakeCase;
++use heck::ToSnakeCase;
+ use proc_macro2::Span;
+ use quote::quote;
+ use syn::ext::IdentExt;

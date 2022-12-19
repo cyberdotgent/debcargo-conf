@@ -1,0 +1,13 @@
+Index: wit-parser/Cargo.toml
+===================================================================
+--- wit-parser.orig/Cargo.toml
++++ wit-parser/Cargo.toml
+@@ -37,7 +37,7 @@ version = "2"
+ version = "1.9.1"
+ 
+ [dependencies.pulldown-cmark]
+-version = "0.8"
++version = "0.9"
+ default-features = false
+ 
+ [dependencies.unicode-xid]
