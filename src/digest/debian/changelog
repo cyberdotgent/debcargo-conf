@@ -1,3 +1,38 @@
+rust-digest (0.10.5-2~bpo11+pve1) proxmox-rust; urgency=medium
+
+  * Rebuild for Debian Bullseye / Proxmox
+
+ -- Proxmox Support Team <support@proxmox.com>  Wed, 11 Jan 2023 10:17:39 +0100
+
+rust-digest (0.10.5-2) unstable; urgency=medium
+
+  * Team upload.
+  * Package digest 0.10.5 from crates.io using debcargo 2.5.0
+  * Remove the dep const-oid
+
+ -- Sylvestre Ledru <sylvestre@debian.org>  Sun, 30 Oct 2022 10:21:21 +0100
+
+rust-digest (0.10.5-1) unstable; urgency=medium
+
+  * Team upload.
+  * Package digest 0.10.5 from crates.io using debcargo 2.5.0
+
+ -- Sebastian Ramacher <sramacher@debian.org>  Sun, 30 Oct 2022 10:13:04 +0100
+
+rust-digest (0.10.3-2) unstable; urgency=medium
+
+  * Team upload.
+  * Package digest 0.10.3 from crates.io using debcargo 2.5.0
+
+ -- Matthias Geiger <matthias.geiger1024@tutanota.de>  Sat, 27 Aug 2022 15:03:30 +0200
+
+rust-digest (0.10.3-1) unstable; urgency=medium
+
+  * Team upload.
+  * Package digest 0.10.3 from crates.io using debcargo 2.5.0
+
+ -- Sylvestre Ledru <sylvestre@debian.org>  Tue, 31 May 2022 22:37:20 +0200
+
 rust-digest (0.9.0-1) unstable; urgency=medium
 
   * Team upload.
