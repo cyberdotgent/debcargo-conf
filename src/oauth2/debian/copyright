@@ -8,15 +8,15 @@ Source: https://github.com/ramosbugs/oauth2-rs
 
 Files: *
 Copyright:
- 2014-2021 Alex Crichton <alex@alexcrichton.com>
- 2014-2021 Florin Lipan <florinlipan@gmail.com>
- 2014-2021 David A. Ramos <ramos@cs.stanford.edu>
+ 2014-2023 Alex Crichton <alex@alexcrichton.com>
+ 2014-2023 Florin Lipan <florinlipan@gmail.com>
+ 2014-2023 David A. Ramos <ramos@cs.stanford.edu>
 License: MIT or Apache-2.0
 
 Files: debian/*
 Copyright:
- 2021 Debian Rust Maintainers <pkg-rust-maintainers@alioth-lists.debian.net>
- 2021 Fabian Grünbichler <f.gruenbichler@proxmox.com>
+ 2021-2023 Debian Rust Maintainers <pkg-rust-maintainers@alioth-lists.debian.net>
+ 2021-2023 Fabian Grünbichler <f.gruenbichler@proxmox.com>
 License: MIT or Apache-2.0
 
 License: Apache-2.0
