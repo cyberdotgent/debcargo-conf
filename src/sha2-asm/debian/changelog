@@ -1,3 +1,26 @@
+rust-sha2-asm (0.6.2-2~bpo11+1) bullseye; urgency=medium
+
+  * Rebuild for Proxmox projects based off bullseye.
+
+ -- Proxmox Support Team <support@proxmox.com>  Wed, 11 Jan 2023 17:53:12 +0100
+
+rust-sha2-asm (0.6.2-2) unstable; urgency=medium
+
+  * Team upload.
+  * Package sha1-asm 0.6.2 from crates.io using debcargo 2.5.0
+  * Adjust upstream files to not fail build on unsupported architectures.
+  * Remove overridden debian/rules.
+  * Skip tests if the users CPU does not support the needed CPU extensions.
+
+ -- Peter Michael Green <plugwash@debian.org>  Sat, 04 Jun 2022 00:24:25 +0000
+
+rust-sha2-asm (0.6.2-1) unstable; urgency=medium
+
+  * Team upload.
+  * Package sha2-asm 0.6.2 from crates.io using debcargo 2.5.0
+
+ -- Sylvestre Ledru <sylvestre@debian.org>  Wed, 01 Jun 2022 13:29:19 +0200
+
 rust-sha2-asm (0.5.1-3) unstable; urgency=medium
 
   * Team upload.
