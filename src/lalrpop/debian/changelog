@@ -1,3 +1,9 @@
+rust-lalrpop (0.17.2-8~bpo11+pve2) proxmox-rust; urgency=medium
+
+  * Rebuild for Debian Bullseye / Proxmox with sha2 relaxed to 0.10
+
+ -- Proxmox Support Team <support@proxmox.com>  Tue, 17 Jan 2023 09:06:58 +0100
+
 rust-lalrpop (0.17.2-8~bpo11+pve1) proxmox-rust; urgency=medium
 
   * Rebuild for Debian Bullseye / Proxmox
