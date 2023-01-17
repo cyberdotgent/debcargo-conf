@@ -7,7 +7,7 @@ Index: lalrpop/Cargo.toml
  
  [dependencies.sha2]
 -version = "0.8.0"
-+version = "0.9"
++version = "0.10"
  
  [dependencies.string_cache]
  version = "0.8.0"
