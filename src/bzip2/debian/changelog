@@ -1,3 +1,9 @@
+rust-bzip2 (0.4.4-1~bpo11+pve1) proxmox-rust; urgency=medium
+
+  * Rebuild for Debian Bullseye / Proxmox
+
+ -- Proxmox Support Team <support@proxmox.com>  Thu, 19 Jan 2023 16:31:17 +0100
+
 rust-bzip2 (0.4.4-1) unstable; urgency=medium
 
   * Team upload.
