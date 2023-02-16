@@ -44,6 +44,7 @@ Provides:
  librust-web-sys-0.3+domexception-dev (= ${binary:Version}),
  librust-web-sys-0.3+domrect-dev (=${binary:Version}),
  librust-web-sys-0.3+domstringmap-dev (=${binary:Version}),
+ librust-web-sys-0.3+domtokenlist-dev (=${binary:Version}),
  librust-web-sys-0.3+dragevent-dev (= ${binary:Version}),
  librust-web-sys-0.3+element-dev (= ${binary:Version}),
  librust-web-sys-0.3+errorevent-dev (= ${binary:Version}),
