@@ -1,3 +1,9 @@
+rust-web-sys (0.3.60-3~bpo11+pve3) unstable; urgency=medium
+
+  *  Rebuild for Debian Bullseye / Proxmox with more Provides (domtokenlist)
+
+ -- Proxmox Support Team <support@proxmox.com>  Thu, 16 Feb 2023 12:32:03 +0100
+
 rust-web-sys (0.3.60-3~bpo11+pve2) proxmox-rust; urgency=medium
 
   * Rebuild for Debian Bullseye / Proxmox with more Provides
