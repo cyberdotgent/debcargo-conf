@@ -1,0 +1,13 @@
+Index: h2/Cargo.toml
+===================================================================
+--- h2.orig/Cargo.toml
++++ h2/Cargo.toml
+@@ -115,7 +115,7 @@ features = [
+ version = "0.23.2"
+ 
+ [dev-dependencies.walkdir]
+-version = "2.3.2"
++version = "2.3.1"
+ 
+ [dev-dependencies.webpki-roots]
+ version = "0.22.2"
