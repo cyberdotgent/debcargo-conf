@@ -1,3 +1,11 @@
 overlay = "."
 uploaders = ["kpcyrd <git@rxv.cc>"]
 collapse_features = true
+
+# unstable feature
+[packages."lib+ffi"]
+test_is_broken = true
+
+# enables 'ffi'
+[packages."lib+@"]
+test_is_broken = true
