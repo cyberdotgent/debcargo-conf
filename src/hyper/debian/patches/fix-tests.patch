@@ -129,7 +129,33 @@ Index: hyper/Cargo.toml
  [dependencies.bytes]
  version = "1"
  
-@@ -325,6 +205,3 @@ tcp = [
+@@ -244,25 +124,9 @@ version = "0.3"
+ features = ["alloc"]
+ default-features = false
+ 
+-[dev-dependencies.matches]
+-version = "0.1"
+-
+-[dev-dependencies.num_cpus]
+-version = "1.0"
+-
+ [dev-dependencies.pretty_env_logger]
+ version = "0.4"
+ 
+-[dev-dependencies.serde]
+-version = "1.0"
+-features = ["derive"]
+-
+-[dev-dependencies.serde_json]
+-version = "1.0"
+-
+-[dev-dependencies.spmc]
+-version = "0.3"
+-
+ [dev-dependencies.tokio]
+ version = "1"
+ features = [
+@@ -325,6 +189,3 @@ tcp = [
      "tokio/rt",
      "tokio/time",
  ]
