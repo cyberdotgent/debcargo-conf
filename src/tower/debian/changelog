@@ -1,0 +1,11 @@
+rust-tower (0.4.13-2) unstable; urgency=medium
+
+  * Disable hedge feature as its dep hdrhistogram fails to build on i386
+
+ -- Blair Noctis <n@sail.ng>  Wed, 16 Nov 2022 22:40:57 +0100
+
+rust-tower (0.4.13-1) unstable; urgency=medium
+
+  * Package tower 0.4.13 from crates.io using debcargo 2.5.0
+
+ -- Blair Noctis <n@sail.ng>  Sat, 08 Oct 2022 13:05:24 +0200
