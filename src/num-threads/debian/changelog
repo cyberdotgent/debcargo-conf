@@ -1,3 +1,9 @@
+rust-num-threads (0.1.6-1~bpo11+pve1) proxmox-rust; urgency=medium
+
+  * Rebuild for Debian Bullseye / Proxmox
+
+ -- Proxmox Support Team <support@proxmox.com>  Wed, 19 Apr 2023 14:12:12 +0200
+
 rust-num-threads (0.1.6-1) unstable; urgency=medium
 
   * Package num_threads 0.1.6 from crates.io using debcargo 2.5.0

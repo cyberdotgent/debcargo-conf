@@ -1,3 +1,9 @@
+rust-seahash (4.1.0-1~bpo11+pve1) proxmox-rust; urgency=medium
+
+  * Rebuild for Debian Bullseye / Proxmox
+
+ -- Proxmox Support Team <support@proxmox.com>  Wed, 19 Apr 2023 14:12:13 +0200
+
 rust-seahash (4.1.0-1) unstable; urgency=medium
 
   * Package seahash 4.1.0 from crates.io using debcargo 2.5.0

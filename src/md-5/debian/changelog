@@ -1,3 +1,9 @@
+rust-md-5 (0.10.1-1~bpo11+pve1) proxmox-rust; urgency=medium
+
+  * Rebuild for Debian Bullseye / Proxmox
+
+ -- Proxmox Support Team <support@proxmox.com>  Wed, 19 Apr 2023 14:12:13 +0200
+
 rust-md-5 (0.10.1-1) unstable; urgency=medium
 
   * Team upload.
