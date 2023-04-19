@@ -1,0 +1,14 @@
+rust-rkyv (0.7.39-2) unstable; urgency=medium
+
+  * Team upload.
+  * Package rkyv 0.7.39 from crates.io using debcargo 2.5.0
+  * Bump dependency on rend to 0.4
+  * Establish baseline for tests.
+
+ -- Peter Michael Green <plugwash@debian.org>  Fri, 09 Sep 2022 14:15:41 +0000
+
+rust-rkyv (0.7.39-1) unstable; urgency=medium
+
+  * Package rkyv 0.7.39 from crates.io using debcargo 2.5.0
+
+ -- Reinhard Tartler <siretart@tauware.de>  Sat, 09 Jul 2022 10:26:45 -0400
