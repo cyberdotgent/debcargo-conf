@@ -1,0 +1,12 @@
+rust-rkyv-derive (0.7.39-2) unstable; urgency=medium
+
+  * Team upload.
+  * Package rkyv_derive 0.7.39 from crates.io using debcargo 2.5.0
+
+ -- Peter Michael Green <plugwash@debian.org>  Sun, 06 Nov 2022 11:38:19 +0000
+
+rust-rkyv-derive (0.7.39-1) unstable; urgency=medium
+
+  * Package rkyv_derive 0.7.39 from crates.io using debcargo 2.5.0
+
+ -- Reinhard Tartler <siretart@tauware.de>  Sat, 09 Jul 2022 06:58:44 -0400
