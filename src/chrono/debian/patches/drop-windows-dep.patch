@@ -1,0 +1,24 @@
+--- a/Cargo.toml
++++ b/Cargo.toml
+@@ -92,7 +92,6 @@
+ alloc = []
+ clock = [
+     "std",
+-    "winapi",
+     "iana-time-zone",
+ ]
+ default = [
+@@ -115,13 +114,3 @@
+ version = "0.2"
+ optional = true
+ 
+-
+-[target."cfg(windows)".dependencies.winapi]
+-version = "0.3.0"
+-features = [
+-    "std",
+-    "minwinbase",
+-    "minwindef",
+-    "timezoneapi",
+-]
+-optional = true
