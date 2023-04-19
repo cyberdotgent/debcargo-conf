@@ -4,12 +4,19 @@ Upstream-Contact: The Rust Project Developers
 Source: https://github.com/rust-lang/time
 
 Files: *
-Copyright: 2012-2019 The Rust Project Developers
+Copyright:
+ 2019-2021 Jacob Pratt <open-source@jhpratt.dev>
+ 2019-2021 Time contributors
 License: MIT or Apache-2.0
+
+Files: src/shim.rs
+Copyright: 2016 Alex Burk <rust@alexburka.com>
+License: MIT or Apache-2.0
+Comment: Taken from the `guard` crate authored by Alex Burk.
 
 Files: debian/*
 Copyright:
- 2018-2019 Debian Rust Maintainers <pkg-rust-maintainers@alioth-lists.debian.net>
+ 2018-2021 Debian Rust Maintainers <pkg-rust-maintainers@alioth-lists.debian.net>
  2018-2019 Wolfgang Silbermayr <wolfgang@silbermayr.at>
 License: MIT or Apache-2.0
 
