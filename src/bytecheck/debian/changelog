@@ -1,0 +1,12 @@
+rust-bytecheck (0.6.9-1) unstable; urgency=medium
+
+  * Package bytecheck 0.6.9 from crates.io using debcargo 2.5.0
+  * disable feature 'simdutf8'
+
+ -- Reinhard Tartler <siretart@tauware.de>  Fri, 05 Aug 2022 11:21:21 +0200
+
+rust-bytecheck (0.6.8-1) unstable; urgency=medium
+
+  * Package bytecheck 0.6.8 from crates.io using debcargo 2.5.0
+
+ -- Reinhard Tartler <siretart@tauware.de>  Sat, 09 Jul 2022 07:10:19 -0400
