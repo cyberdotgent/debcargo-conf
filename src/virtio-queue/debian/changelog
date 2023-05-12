@@ -1,3 +1,9 @@
+rust-virtio-queue (0.7.1-4~bpo12+pve1) proxmox-rust; urgency=medium
+
+  * Rebuild for Debian Bookworm / Proxmox
+
+ -- Proxmox Support Team <support@proxmox.com>  Fri, 12 May 2023 10:09:59 +0200
+
 rust-virtio-queue (0.7.1-4) unstable; urgency=medium
 
   * drop architecture restrictions now once vmm-sys-util is not
