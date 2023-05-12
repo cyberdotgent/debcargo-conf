@@ -1,3 +1,35 @@
+rust-vm-memory (0.10.0-3) unstable; urgency=medium
+
+  * Team upload.
+  * Package vm-memory 0.10.0 from crates.io using debcargo 2.6.0
+  * Fix check_byte_valued_type on architectures where 64-bit types have an
+    alignment less than their size (e.g. i386).
+  * Fix building tests on architectures where 64-bit atomics are not available
+    (e.g. armel)
+  * Set test_is_broken=true for the backend-bitmap feature, it does not build on
+    architectures where 64-bit atomics are not available.
+
+ -- Peter Michael Green <plugwash@debian.org>  Tue, 18 Apr 2023 22:11:39 +0000
+
+rust-vm-memory (0.10.0-2) unstable; urgency=medium
+
+  * Team upload.
+  * Package vm-memory 0.10.0 from crates.io using debcargo 2.6.0
+  * Fix tests/establish baseline. 
+    + Use let val = 1usize; instead of let val = 1u64; in test_bytes to 
+      fix build failure on 32-bit.
+    + Use a smaller value of REGION_SIZE in benches/mmap/mod.rs on 32-bit to
+      avoid out of memory errors.
+    + Skip some mmap tests on ppc64el
+
+ -- Peter Michael Green <plugwash@debian.org>  Sat, 15 Apr 2023 17:07:22 +0000
+
+rust-vm-memory (0.10.0-1) unstable; urgency=medium
+
+  * Package vm-memory 0.10.0 from crates.io using debcargo 2.6.0
+
+ -- Fabian Grünbichler <debian@fabian.gruenbichler.email>  Fri, 14 Apr 2023 18:48:39 +0300
+
 rust-vm-memory (0.7.0-2) unstable; urgency=medium
 
   * Team upload.
