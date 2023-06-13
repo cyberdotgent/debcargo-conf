@@ -1,0 +1,15 @@
+Index: tempfile/Cargo.toml
+===================================================================
+--- tempfile.orig/Cargo.toml
++++ tempfile/Cargo.toml
+@@ -53,10 +53,3 @@ features = ["fs"]
+ 
+ [target."cfg(target_os = \"redox\")".dependencies.redox_syscall]
+ version = "0.2.9"
+-
+-[target."cfg(windows)".dependencies.windows-sys]
+-version = "0.48"
+-features = [
+-    "Win32_Storage_FileSystem",
+-    "Win32_Foundation",
+-]
