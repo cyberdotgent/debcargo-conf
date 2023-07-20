@@ -1,3 +1,24 @@
+rust-virtio-queue (0.9.0-2~bpo12+pve1) proxmox-rust; urgency=medium
+
+  * Rebuild for Debian Bookworm / Proxmox
+
+ -- Proxmox Support Team <support@proxmox.com>  Thu, 20 Jul 2023 10:01:16 +0200
+
+rust-virtio-queue (0.9.0-2) unstable; urgency=medium
+
+  * Team upload.
+  * Disable benches and remove criterion
+
+ -- Blair Noctis <n@sail.ng>  Sun, 16 Jul 2023 14:08:29 +0300
+
+rust-virtio-queue (0.9.0-1) unstable; urgency=medium
+
+  * Team upload.
+  * Package virtio-queue 0.9.0 from crates.io using debcargo 2.6.0
+  * Drop relax-deps.patch, no longer needed
+
+ -- Blair Noctis <n@sail.ng>  Sun, 16 Jul 2023 12:43:06 +0300
+
 rust-virtio-queue (0.7.1-4~bpo12+pve1) proxmox-rust; urgency=medium
 
   * Rebuild for Debian Bookworm / Proxmox
