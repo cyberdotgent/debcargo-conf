@@ -1,3 +1,26 @@
+rust-vm-memory (0.12.0-2~bpo12+pve1) proxmox-rust; urgency=medium
+
+  * Rebuild for Debian Bookworm / Proxmox
+
+ -- Proxmox Support Team <support@proxmox.com>  Thu, 20 Jul 2023 09:37:38 +0200
+
+rust-vm-memory (0.12.0-2) unstable; urgency=medium
+
+  * Team upload.
+  * Disable benches and remove criterion
+
+ -- Blair Noctis <n@sail.ng>  Sun, 16 Jul 2023 14:02:54 +0300
+
+rust-vm-memory (0.12.0-1) unstable; urgency=medium
+
+  * Team upload.
+  * Package vm-memory 0.12.0 from crates.io using debcargo 2.6.0
+  * Refresh skip-tests-ppc64el.patch and skip-tests-atomic-u64.patch
+    (and include less context there)
+  * Add relax-deps.diff to avoid pulling thiserror >=1.0.40
+
+ -- Michael Tokarev <mjt@tls.msk.ru>  Sun, 16 Jul 2023 12:45:07 +0300
+
 rust-vm-memory (0.10.0-3~bpo12+pve1) proxmox-rust; urgency=medium
 
   * Rebuild for Debian Bookworm / Proxmox
