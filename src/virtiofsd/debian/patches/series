@@ -1,3 +1,2 @@
-use-older-env-logger.diff
-relax-deps.patch
+relax-env-logger-deps.diff
 ignore-tests.patch

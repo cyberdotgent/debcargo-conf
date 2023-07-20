@@ -1,3 +1,21 @@
+rust-virtiofsd (1.7.0-1~bpo12+pve1) proxmox-rust; urgency=medium
+
+  * Rebuild for Debian Bookworm / Proxmox
+
+ -- Proxmox Support Team <support@proxmox.com>  Thu, 20 Jul 2023 09:21:44 +0200
+
+rust-virtiofsd (1.7.0-1) unstable; urgency=medium
+
+  * Package virtiofsd 1.7.0 from crates.io using debcargo 2.6.0
+
+ -- Michael Tokarev <mjt@tls.msk.ru>  Tue, 18 Jul 2023 17:38:24 +0300
+
+rust-virtiofsd (1.6.1-1) unstable; urgency=medium
+
+  * Package virtiofsd 1.6.1 from crates.io using debcargo 2.6.0
+
+ -- Michael Tokarev <mjt@tls.msk.ru>  Tue, 13 Jun 2023 11:50:48 +0300
+
 rust-virtiofsd (1.6.0-4~bpo12+pve1) proxmox-rust; urgency=medium
 
   * Rebuild for Debian Bookworm / Proxmox
