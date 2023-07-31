@@ -1,0 +1,33 @@
+diff --git a/Cargo.toml b/Cargo.toml
+index 56415ed..c455dec 100644
+--- a/Cargo.toml
++++ b/Cargo.toml
+@@ -145,7 +145,7 @@ version = "0.1"
+ optional = true
+ 
+ [dependencies.base64]
+-version = "0.21"
++version = "0.13"
+ optional = true
+ 
+ [dependencies.boring]
+diff --git a/src/base64.rs b/src/base64.rs
+index 1546252..935295b 100644
+--- a/src/base64.rs
++++ b/src/base64.rs
+@@ -1,12 +1,9 @@
+-use ::base64::{
+-    engine::{general_purpose::STANDARD, Engine},
+-    DecodeError,
+-};
++use base64::DecodeError;
+ 
+ pub(crate) fn encode<T: AsRef<[u8]>>(input: T) -> String {
+-    STANDARD.encode(input)
++    base64::encode(input)
+ }
+ 
+ pub(crate) fn decode<T: AsRef<[u8]>>(input: T) -> Result<Vec<u8>, DecodeError> {
+-    STANDARD.decode(input)
++    base64::decode(input)
+ }
