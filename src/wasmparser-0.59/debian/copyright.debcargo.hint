@@ -1,0 +1,197 @@
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: wasmparser
+Upstream-Contact: Yury Delendik <ydelendik@mozilla.com>
+Source: https://github.com/bytecodealliance/wasm-tools/tree/main/crates/wasmparser
+
+Files: *
+Copyright: FIXME (overlay) UNKNOWN-YEARS Yury Delendik <ydelendik@mozilla.com>
+License: Apache-2.0 WITH LLVM-exception
+Comment:
+ FIXME (overlay): Since upstream copyright years are not available in
+ Cargo.toml, they were extracted from the upstream Git repository. This may not
+ be correct information so you should review and fix this before uploading to
+ the archive.
+
+Files: src/binary_reader.rs
+Copyright: 2018 Mozilla Foundation
+License: UNKNOWN-LICENSE; FIXME (overlay)
+Comment:
+ FIXME (overlay): These notices are extracted from files. Please review them
+ before uploading to the archive.
+
+Files: src/lib.rs
+Copyright: 2017 Mozilla Foundation
+License: UNKNOWN-LICENSE; FIXME (overlay)
+Comment:
+ FIXME (overlay): These notices are extracted from files. Please review them
+ before uploading to the archive.
+
+Files: src/limits.rs
+Copyright: 2017 Mozilla Foundation
+License: UNKNOWN-LICENSE; FIXME (overlay)
+Comment:
+ FIXME (overlay): These notices are extracted from files. Please review them
+ before uploading to the archive.
+
+Files: src/module_resources.rs
+Copyright: 2019 Mozilla Foundation
+License: UNKNOWN-LICENSE; FIXME (overlay)
+Comment:
+ FIXME (overlay): These notices are extracted from files. Please review them
+ before uploading to the archive.
+
+Files: src/operators_validator.rs
+Copyright: 2019 Mozilla Foundation
+License: UNKNOWN-LICENSE; FIXME (overlay)
+Comment:
+ FIXME (overlay): These notices are extracted from files. Please review them
+ before uploading to the archive.
+
+Files: src/primitives.rs
+Copyright: 2018 Mozilla Foundation
+License: UNKNOWN-LICENSE; FIXME (overlay)
+Comment:
+ FIXME (overlay): These notices are extracted from files. Please review them
+ before uploading to the archive.
+
+Files: src/readers/code_section.rs
+Copyright: 2018 Mozilla Foundation
+License: UNKNOWN-LICENSE; FIXME (overlay)
+Comment:
+ FIXME (overlay): These notices are extracted from files. Please review them
+ before uploading to the archive.
+
+Files: src/readers/data_section.rs
+Copyright: 2018 Mozilla Foundation
+License: UNKNOWN-LICENSE; FIXME (overlay)
+Comment:
+ FIXME (overlay): These notices are extracted from files. Please review them
+ before uploading to the archive.
+
+Files: src/readers/element_section.rs
+Copyright: 2018 Mozilla Foundation
+License: UNKNOWN-LICENSE; FIXME (overlay)
+Comment:
+ FIXME (overlay): These notices are extracted from files. Please review them
+ before uploading to the archive.
+
+Files: src/readers/export_section.rs
+Copyright: 2018 Mozilla Foundation
+License: UNKNOWN-LICENSE; FIXME (overlay)
+Comment:
+ FIXME (overlay): These notices are extracted from files. Please review them
+ before uploading to the archive.
+
+Files: src/readers/function_section.rs
+Copyright: 2018 Mozilla Foundation
+License: UNKNOWN-LICENSE; FIXME (overlay)
+Comment:
+ FIXME (overlay): These notices are extracted from files. Please review them
+ before uploading to the archive.
+
+Files: src/readers/global_section.rs
+Copyright: 2018 Mozilla Foundation
+License: UNKNOWN-LICENSE; FIXME (overlay)
+Comment:
+ FIXME (overlay): These notices are extracted from files. Please review them
+ before uploading to the archive.
+
+Files: src/readers/import_section.rs
+Copyright: 2018 Mozilla Foundation
+License: UNKNOWN-LICENSE; FIXME (overlay)
+Comment:
+ FIXME (overlay): These notices are extracted from files. Please review them
+ before uploading to the archive.
+
+Files: src/readers/init_expr.rs
+Copyright: 2018 Mozilla Foundation
+License: UNKNOWN-LICENSE; FIXME (overlay)
+Comment:
+ FIXME (overlay): These notices are extracted from files. Please review them
+ before uploading to the archive.
+
+Files: src/readers/linking_section.rs
+Copyright: 2018 Mozilla Foundation
+License: UNKNOWN-LICENSE; FIXME (overlay)
+Comment:
+ FIXME (overlay): These notices are extracted from files. Please review them
+ before uploading to the archive.
+
+Files: src/readers/memory_section.rs
+Copyright: 2018 Mozilla Foundation
+License: UNKNOWN-LICENSE; FIXME (overlay)
+Comment:
+ FIXME (overlay): These notices are extracted from files. Please review them
+ before uploading to the archive.
+
+Files: src/readers/mod.rs
+Copyright: 2018 Mozilla Foundation
+License: UNKNOWN-LICENSE; FIXME (overlay)
+Comment:
+ FIXME (overlay): These notices are extracted from files. Please review them
+ before uploading to the archive.
+
+Files: src/readers/name_section.rs
+Copyright: 2018 Mozilla Foundation
+License: UNKNOWN-LICENSE; FIXME (overlay)
+Comment:
+ FIXME (overlay): These notices are extracted from files. Please review them
+ before uploading to the archive.
+
+Files: src/readers/operators.rs
+Copyright: 2018 Mozilla Foundation
+License: UNKNOWN-LICENSE; FIXME (overlay)
+Comment:
+ FIXME (overlay): These notices are extracted from files. Please review them
+ before uploading to the archive.
+
+Files: src/readers/producers_section.rs
+Copyright: 2019 Mozilla Foundation
+License: UNKNOWN-LICENSE; FIXME (overlay)
+Comment:
+ FIXME (overlay): These notices are extracted from files. Please review them
+ before uploading to the archive.
+
+Files: src/readers/reloc_section.rs
+Copyright: 2018 Mozilla Foundation
+License: UNKNOWN-LICENSE; FIXME (overlay)
+Comment:
+ FIXME (overlay): These notices are extracted from files. Please review them
+ before uploading to the archive.
+
+Files: src/readers/section_reader.rs
+Copyright: 2018 Mozilla Foundation
+License: UNKNOWN-LICENSE; FIXME (overlay)
+Comment:
+ FIXME (overlay): These notices are extracted from files. Please review them
+ before uploading to the archive.
+
+Files: src/readers/table_section.rs
+Copyright: 2018 Mozilla Foundation
+License: UNKNOWN-LICENSE; FIXME (overlay)
+Comment:
+ FIXME (overlay): These notices are extracted from files. Please review them
+ before uploading to the archive.
+
+Files: src/readers/type_section.rs
+Copyright: 2018 Mozilla Foundation
+License: UNKNOWN-LICENSE; FIXME (overlay)
+Comment:
+ FIXME (overlay): These notices are extracted from files. Please review them
+ before uploading to the archive.
+
+Files: src/validator.rs
+Copyright: 2018 Mozilla Foundation
+License: UNKNOWN-LICENSE; FIXME (overlay)
+Comment:
+ FIXME (overlay): These notices are extracted from files. Please review them
+ before uploading to the archive.
+
+Files: debian/*
+Copyright:
+ 2022 Debian Rust Maintainers <pkg-rust-maintainers@alioth-lists.debian.net>
+ 2022 Fabian Grünbichler <f.gruenbichler@proxmox.com>
+License: Apache-2.0 WITH LLVM-exception
+
+License: Apache-2.0 WITH LLVM-exception
+ FIXME (overlay): Unrecognized crate license, please find the full license text in the rest of the crate source code and copy-paste it here
