@@ -2,23 +2,19 @@ Description: Remove dependencies for Windows and Redox OS
 Last-Update: 2022-08-26
 ---
 This patch header follows DEP-3: http://dep.debian.net/deps/dep3/
---- a/Cargo.toml
-+++ b/Cargo.toml
-@@ -52,17 +52,5 @@
+Index: parking-lot-core/Cargo.toml
+===================================================================
+--- parking-lot-core.orig/Cargo.toml
++++ parking-lot-core/Cargo.toml
+@@ -52,11 +52,5 @@ deadlock_detection = [
  ]
  nightly = []
  
 -[target."cfg(target_os = \"redox\")".dependencies.redox_syscall]
--version = "0.2.8"
+-version = "0.3"
 -
  [target."cfg(unix)".dependencies.libc]
  version = "0.2.95"
 -
--[target."cfg(windows)".dependencies.windows-sys]
--version = "0.42.0"
--features = [
--    "Win32_Foundation",
--    "Win32_System_LibraryLoader",
--    "Win32_System_SystemServices",
--    "Win32_System_WindowsProgramming",
--]
+-[target."cfg(windows)".dependencies.windows-targets]
+-version = "0.48.0"
