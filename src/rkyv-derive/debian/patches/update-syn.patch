@@ -1,0 +1,933 @@
+From 9c7b0cab68a0fa9963bc92b59d5f5a278c4432ea Mon Sep 17 00:00:00 2001
+From: MaxOhn <ohn.m@hotmail.de>
+Date: Tue, 5 Sep 2023 14:13:48 +0200
+Subject: [PATCH] dep(derive): bumped syn to 2.0
+
+FG: adapted paths
+---
+ src/archive.rs        |  70 ++++----
+ src/attributes.rs     | 267 ++++++++++++------------------
+ src/deserialize.rs    |   8 +-
+ src/repr.rs           | 109 +++++-------
+ src/serde/receiver.rs |  15 +-
+ src/serialize.rs      |   8 +-
+ src/util.rs           | 108 +++++++++++-
+ src/with.rs           |   8 +-
+ 11 files changed, 339 insertions(+), 314 deletions(-)
+
+Index: rkyv-derive/src/archive.rs
+===================================================================
+--- rkyv-derive.orig/src/archive.rs
++++ rkyv-derive/src/archive.rs
+@@ -8,7 +8,7 @@ use proc_macro2::{Span, TokenStream};
+ use quote::quote;
+ use syn::{
+     parse_quote, spanned::Spanned, Attribute, Data, DeriveInput, Error, Field, Fields, Ident,
+-    Index, LitStr, Meta, NestedMeta, Type,
++    Index, LitStr, Meta, Type,
+ };
+ 
+ pub fn derive(input: DeriveInput) -> Result<TokenStream, Error> {
+@@ -16,22 +16,14 @@ pub fn derive(input: DeriveInput) -> Res
+     derive_archive_impl(input, &attributes)
+ }
+ 
+-fn field_archive_attrs(field: &Field) -> impl '_ + Iterator<Item = NestedMeta> {
+-    field
+-        .attrs
+-        .iter()
+-        .filter_map(|attr| {
+-            if let Ok(Meta::List(list)) = attr.parse_meta() {
+-                if list.path.is_ident("archive_attr") {
+-                    Some(list.nested)
+-                } else {
+-                    None
+-                }
+-            } else {
+-                None
+-            }
+-        })
+-        .flatten()
++fn field_archive_attrs(field: &Field) -> impl Iterator<Item = &'_ TokenStream> {
++    field.attrs.iter().filter_map(|attr| {
++        let Meta::List(ref list) = attr.meta else {
++            return None;
++        };
++
++        list.path.is_ident("archive_attr").then_some(&list.tokens)
++    })
+ }
+ 
+ fn derive_archive_impl(
+@@ -159,7 +151,7 @@ fn derive_archive_impl(
+                     for field in fields
+                         .named
+                         .iter()
+-                        .filter(|f| !f.attrs.iter().any(|a| a.path.is_ident("omit_bounds")))
++                        .filter(|f| !f.attrs.iter().any(|a| a.path().is_ident("omit_bounds")))
+                     {
+                         let ty = with_ty(field)?;
+                         archive_where
+@@ -220,7 +212,7 @@ fn derive_archive_impl(
+                             if compare.is_ident("PartialEq") {
+                                 let mut partial_eq_where = archive_where.clone();
+                                 for field in fields.named.iter().filter(|f| {
+-                                    !f.attrs.iter().any(|a| a.path.is_ident("omit_bounds"))
++                                    !f.attrs.iter().any(|a| a.path().is_ident("omit_bounds"))
+                                 }) {
+                                     let ty = &field.ty;
+                                     let wrapped_ty = with_ty(field).unwrap();
+@@ -249,7 +241,7 @@ fn derive_archive_impl(
+                             } else if compare.is_ident("PartialOrd") {
+                                 let mut partial_ord_where = archive_where.clone();
+                                 for field in fields.named.iter().filter(|f| {
+-                                    !f.attrs.iter().any(|a| a.path.is_ident("omit_bounds"))
++                                    !f.attrs.iter().any(|a| a.path().is_ident("omit_bounds"))
+                                 }) {
+                                     let ty = &field.ty;
+                                     let archived_ty = with_ty(field).unwrap();
+@@ -296,7 +288,7 @@ fn derive_archive_impl(
+                         for field in fields
+                             .named
+                             .iter()
+-                            .filter(|f| !f.attrs.iter().any(|a| a.path.is_ident("omit_bounds")))
++                            .filter(|f| !f.attrs.iter().any(|a| a.path().is_ident("omit_bounds")))
+                         {
+                             let ty = with_ty(field).unwrap();
+                             copy_safe_where
+@@ -345,7 +337,7 @@ fn derive_archive_impl(
+                     for field in fields
+                         .unnamed
+                         .iter()
+-                        .filter(|f| !f.attrs.iter().any(|a| a.path.is_ident("omit_bounds")))
++                        .filter(|f| !f.attrs.iter().any(|a| a.path().is_ident("omit_bounds")))
+                     {
+                         let ty = with_ty(field)?;
+                         archive_where
+@@ -399,7 +391,7 @@ fn derive_archive_impl(
+                             if compare.is_ident("PartialEq") {
+                                 let mut partial_eq_where = archive_where.clone();
+                                 for field in fields.unnamed.iter().filter(|f| {
+-                                    !f.attrs.iter().any(|a| a.path.is_ident("omit_bounds"))
++                                    !f.attrs.iter().any(|a| a.path().is_ident("omit_bounds"))
+                                 }) {
+                                     let ty = &field.ty;
+                                     let wrapped_ty = with_ty(field).unwrap();
+@@ -432,7 +424,7 @@ fn derive_archive_impl(
+                             } else if compare.is_ident("PartialOrd") {
+                                 let mut partial_ord_where = archive_where.clone();
+                                 for field in fields.unnamed.iter().filter(|f| {
+-                                    !f.attrs.iter().any(|a| a.path.is_ident("omit_bounds"))
++                                    !f.attrs.iter().any(|a| a.path().is_ident("omit_bounds"))
+                                 }) {
+                                     let ty = &field.ty;
+                                     let wrapped_ty = with_ty(field).unwrap();
+@@ -480,7 +472,7 @@ fn derive_archive_impl(
+                         for field in fields
+                             .unnamed
+                             .iter()
+-                            .filter(|f| !f.attrs.iter().any(|a| a.path.is_ident("omit_bounds")))
++                            .filter(|f| !f.attrs.iter().any(|a| a.path().is_ident("omit_bounds")))
+                         {
+                             let ty = with_ty(field).unwrap();
+                             copy_safe_where
+@@ -624,7 +616,7 @@ fn derive_archive_impl(
+                         for field in fields
+                             .named
+                             .iter()
+-                            .filter(|f| !f.attrs.iter().any(|a| a.path.is_ident("omit_bounds")))
++                            .filter(|f| !f.attrs.iter().any(|a| a.path().is_ident("omit_bounds")))
+                         {
+                             let ty = with_ty(field)?;
+                             archive_where
+@@ -636,7 +628,7 @@ fn derive_archive_impl(
+                         for field in fields
+                             .unnamed
+                             .iter()
+-                            .filter(|f| !f.attrs.iter().any(|a| a.path.is_ident("omit_bounds")))
++                            .filter(|f| !f.attrs.iter().any(|a| a.path().is_ident("omit_bounds")))
+                         {
+                             let ty = with_ty(field)?;
+                             archive_where
+@@ -962,7 +954,7 @@ fn derive_archive_impl(
+                             match variant.fields {
+                                 Fields::Named(ref fields) => {
+                                     for field in fields.named.iter().filter(|f| {
+-                                        !f.attrs.iter().any(|a| a.path.is_ident("omit_bounds"))
++                                        !f.attrs.iter().any(|a| a.path().is_ident("omit_bounds"))
+                                     }) {
+                                         let ty = &field.ty;
+                                         let wrapped_ty = with_ty(field).unwrap();
+@@ -973,7 +965,7 @@ fn derive_archive_impl(
+                                 }
+                                 Fields::Unnamed(ref fields) => {
+                                     for field in fields.unnamed.iter().filter(|f| {
+-                                        !f.attrs.iter().any(|a| a.path.is_ident("omit_bounds"))
++                                        !f.attrs.iter().any(|a| a.path().is_ident("omit_bounds"))
+                                     }) {
+                                         let ty = &field.ty;
+                                         let wrapped_ty = with_ty(field).unwrap();
+@@ -1059,7 +1051,7 @@ fn derive_archive_impl(
+                             match variant.fields {
+                                 Fields::Named(ref fields) => {
+                                     for field in fields.named.iter().filter(|f| {
+-                                        !f.attrs.iter().any(|a| a.path.is_ident("omit_bounds"))
++                                        !f.attrs.iter().any(|a| a.path().is_ident("omit_bounds"))
+                                     }) {
+                                         let ty = &field.ty;
+                                         let wrapped_ty = with_ty(field).unwrap();
+@@ -1070,7 +1062,7 @@ fn derive_archive_impl(
+                                 }
+                                 Fields::Unnamed(ref fields) => {
+                                     for field in fields.unnamed.iter().filter(|f| {
+-                                        !f.attrs.iter().any(|a| a.path.is_ident("omit_bounds"))
++                                        !f.attrs.iter().any(|a| a.path().is_ident("omit_bounds"))
+                                     }) {
+                                         let ty = &field.ty;
+                                         let wrapped_ty = with_ty(field).unwrap();
+@@ -1216,11 +1208,9 @@ fn derive_archive_impl(
+                 for variant in data.variants.iter() {
+                     match variant.fields {
+                         Fields::Named(ref fields) => {
+-                            for field in fields
+-                                .named
+-                                .iter()
+-                                .filter(|f| !f.attrs.iter().any(|a| a.path.is_ident("omit_bounds")))
+-                            {
++                            for field in fields.named.iter().filter(|f| {
++                                !f.attrs.iter().any(|a| a.path().is_ident("omit_bounds"))
++                            }) {
+                                 let ty = with_ty(field).unwrap();
+                                 copy_safe_where
+                                     .predicates
+@@ -1228,11 +1218,9 @@ fn derive_archive_impl(
+                             }
+                         }
+                         Fields::Unnamed(ref fields) => {
+-                            for field in fields
+-                                .unnamed
+-                                .iter()
+-                                .filter(|f| !f.attrs.iter().any(|a| a.path.is_ident("omit_bounds")))
+-                            {
++                            for field in fields.unnamed.iter().filter(|f| {
++                                !f.attrs.iter().any(|a| a.path().is_ident("omit_bounds"))
++                            }) {
+                                 let ty = with_ty(field).unwrap();
+                                 copy_safe_where
+                                     .predicates
+Index: rkyv-derive/src/attributes.rs
+===================================================================
+--- rkyv-derive.orig/src/attributes.rs
++++ rkyv-derive/src/attributes.rs
+@@ -1,6 +1,9 @@
+-use crate::repr::Repr;
++use crate::{repr::Repr, util::PunctuatedExt};
+ use quote::ToTokens;
+-use syn::{AttrStyle, DeriveInput, Error, Ident, Lit, LitStr, Meta, NestedMeta, Path};
++use syn::{
++    meta::ParseNestedMeta, parenthesized, AttrStyle, DeriveInput, Error, Ident, LitStr, Meta, Path,
++    Token,
++};
+ 
+ #[derive(Default)]
+ pub struct Attributes {
+@@ -30,180 +33,118 @@ fn try_set_attribute<T: ToTokens>(
+     } else {
+         Err(Error::new_spanned(
+             value,
+-            format!("{} already specified", name),
++            format!("{name} already specified"),
+         ))
+     }
+ }
+ 
+-fn parse_archive_attributes(attributes: &mut Attributes, meta: &Meta) -> Result<(), Error> {
+-    match meta {
+-        Meta::Path(path) => {
+-            if path.is_ident("check_bytes") {
+-                try_set_attribute(&mut attributes.check_bytes, path.clone(), "check_bytes")
+-            } else if path.is_ident("copy_safe") {
+-                try_set_attribute(&mut attributes.copy_safe, path.clone(), "copy_safe")
+-            } else {
+-                Err(Error::new_spanned(meta, "unrecognized archive argument"))
+-            }
+-        }
+-        Meta::List(list) => {
+-            if list.path.is_ident("compare") {
+-                if attributes.compares.is_none() {
+-                    let mut compares = Vec::new();
+-                    for compare in list.nested.iter() {
+-                        if let NestedMeta::Meta(Meta::Path(path)) = compare {
+-                            compares.push(path.clone());
+-                        } else {
+-                            return Err(Error::new_spanned(
+-                                compare,
+-                                "compare arguments must be compare traits to derive",
+-                            ));
+-                        }
+-                    }
+-                    attributes.compares = Some((list.path.clone(), compares));
+-                    Ok(())
+-                } else {
+-                    Err(Error::new_spanned(list, "compares already specified"))
+-                }
+-            } else if list.path.is_ident("bound") {
+-                for bound in list.nested.iter() {
+-                    if let NestedMeta::Meta(Meta::NameValue(name_value)) = bound {
+-                        if let Lit::Str(ref lit_str) = name_value.lit {
+-                            if name_value.path.is_ident("archive") {
+-                                try_set_attribute(
+-                                    &mut attributes.archive_bound,
+-                                    lit_str.clone(),
+-                                    "archive bound",
+-                                )?;
+-                            } else if name_value.path.is_ident("serialize") {
+-                                try_set_attribute(
+-                                    &mut attributes.serialize_bound,
+-                                    lit_str.clone(),
+-                                    "serialize bound",
+-                                )?;
+-                            } else if name_value.path.is_ident("deserialize") {
+-                                try_set_attribute(
+-                                    &mut attributes.deserialize_bound,
+-                                    lit_str.clone(),
+-                                    "deserialize bound",
+-                                )?;
+-                            } else {
+-                                return Err(Error::new_spanned(
+-                                    bound,
+-                                    "bound must be either serialize or deserialize",
+-                                ));
+-                            }
+-                        } else {
+-                            return Err(Error::new_spanned(
+-                                bound,
+-                                "bound arguments must be a string",
+-                            ));
+-                        }
+-                    } else {
+-                        return Err(Error::new_spanned(
+-                            bound,
+-                            "bound arguments must be serialize or deserialize bounds to apply",
+-                        ));
+-                    }
+-                }
+-                Ok(())
+-            } else if list.path.is_ident("repr") {
+-                // TODO: remove `archive(repr(...))` syntax
+-                attributes.archived_repr.parse_args(list.nested.iter())
+-            } else {
+-                Err(Error::new_spanned(
+-                    &list.path,
+-                    "unrecognized archive argument",
+-                ))
+-            }
++fn parse_archive_attributes(
++    attributes: &mut Attributes,
++    meta: ParseNestedMeta<'_>,
++) -> Result<(), Error> {
++    if meta.path.is_ident("check_bytes") {
++        try_set_attribute(&mut attributes.check_bytes, meta.path, "check_bytes")
++    } else if meta.path.is_ident("copy_safe") {
++        try_set_attribute(&mut attributes.copy_safe, meta.path, "copy_safe")
++    } else if meta.path.is_ident("archived") {
++        let ident = meta.value()?.parse::<LitStr>()?.parse()?;
++
++        try_set_attribute(&mut attributes.archived, ident, "archived")
++    } else if meta.path.is_ident("resolver") {
++        let ident = meta.value()?.parse::<LitStr>()?.parse()?;
++
++        try_set_attribute(&mut attributes.resolver, ident, "resolver")
++    } else if meta.path.is_ident("as") {
++        try_set_attribute(
++            &mut attributes.archive_as,
++            meta.value()?.parse()?,
++            "archive as",
++        )
++    } else if meta.path.is_ident("crate") {
++        let lit_str: LitStr = meta.value()?.parse()?;
++        let stream = syn::parse_str(&lit_str.value())?;
++        let tokens = crate::serde::respan::respan(stream, lit_str.span());
++        let path: Path = syn::parse2(tokens)?;
++        try_set_attribute(&mut attributes.rkyv_path, path, "crate")?;
++        attributes.rkyv_path_str = Some(lit_str);
++
++        Ok(())
++    } else if meta.path.is_ident("compare") {
++        if attributes.compares.is_some() {
++            let msg = "compares already specified";
++
++            return Err(Error::new_spanned(meta.path, msg));
+         }
+-        Meta::NameValue(meta) => {
+-            if meta.path.is_ident("archived") {
+-                if let Lit::Str(ref lit_str) = meta.lit {
+-                    try_set_attribute(
+-                        &mut attributes.archived,
+-                        Ident::new(&lit_str.value(), lit_str.span()),
+-                        "archived",
+-                    )
+-                } else {
+-                    Err(Error::new_spanned(meta, "archived must be a string"))
+-                }
+-            } else if meta.path.is_ident("resolver") {
+-                if let Lit::Str(ref lit_str) = meta.lit {
+-                    try_set_attribute(
+-                        &mut attributes.resolver,
+-                        Ident::new(&lit_str.value(), lit_str.span()),
+-                        "resolver",
+-                    )
+-                } else {
+-                    Err(Error::new_spanned(meta, "resolver must be a string"))
+-                }
+-            } else if meta.path.is_ident("as") {
+-                if let Lit::Str(ref lit_str) = meta.lit {
+-                    try_set_attribute(&mut attributes.archive_as, lit_str.clone(), "archive as")
+-                } else {
+-                    Err(Error::new_spanned(meta, "archive as must be a string"))
+-                }
+-            } else if meta.path.is_ident("crate") {
+-                if let Lit::Str(ref lit_str) = meta.lit {
+-                    let stream = syn::parse_str(&lit_str.value())?;
+-                    let tokens = crate::serde::respan::respan(stream, lit_str.span());
+-                    let path = syn::parse2(tokens)?;
+-                    try_set_attribute(&mut attributes.rkyv_path, path, "crate")?;
+-                    attributes.rkyv_path_str = Some(lit_str.clone());
+-                    Ok(())
+-                } else {
+-                    Err(Error::new_spanned(meta, "crate must be a string"))
+-                }
++
++        let content;
++        parenthesized!(content in meta.input);
++
++        let compares = Vec::parse_separated_nonempty::<Token![,]>(&content)?;
++        attributes.compares = Some((meta.path, compares));
++
++        Ok(())
++    } else if meta.path.is_ident("bound") {
++        meta.parse_nested_meta(|nested| {
++            let (bound, name) = if nested.path.is_ident("archive") {
++                (&mut attributes.archive_bound, "archive bound")
++            } else if nested.path.is_ident("serialize") {
++                (&mut attributes.serialize_bound, "serialize bound")
++            } else if nested.path.is_ident("deserialize") {
++                (&mut attributes.deserialize_bound, "deserialize bound")
+             } else {
+-                Err(Error::new_spanned(meta, "unrecognized archive argument"))
+-            }
+-        }
++                let msg = "bound must be either archive, serialize, or deserialize";
++
++                return Err(Error::new_spanned(nested.path, msg));
++            };
++
++            let lit_str = nested.value()?.parse()?;
++
++            try_set_attribute(bound, lit_str, name)
++        })
++    } else if meta.path.is_ident("repr") {
++        // TODO: remove `archive(repr(...))` syntax
++        meta.parse_nested_meta(|nested| attributes.archived_repr.parse_list_meta(nested))
++    } else {
++        Err(meta.error("unrecognized archive argument"))
+     }
+ }
+ 
+ pub fn parse_attributes(input: &DeriveInput) -> Result<Attributes, Error> {
+     let mut result = Attributes::default();
++
+     for attr in input.attrs.iter() {
+-        if let AttrStyle::Outer = attr.style {
+-            if attr.path.is_ident("archive") || attr.path.is_ident("archive_attr") {
+-                if let Meta::List(list) = attr.parse_meta()? {
+-                    if list.path.is_ident("archive") {
+-                        for nested in list.nested.iter() {
+-                            if let NestedMeta::Meta(meta) = nested {
+-                                parse_archive_attributes(&mut result, meta)?;
+-                            } else {
+-                                return Err(Error::new_spanned(
+-                                    nested,
+-                                    "archive arguments must be metas",
+-                                ));
+-                            }
+-                        }
+-                    } else if list.path.is_ident("archive_attr") {
+-                        for nested in list.nested.iter() {
+-                            if let NestedMeta::Meta(meta) = nested {
+-                                if let Meta::List(list) = meta {
+-                                    if list.path.is_ident("repr") {
+-                                        result.archived_repr.parse_args(list.nested.iter())?;
+-                                    } else {
+-                                        result.attrs.push(meta.clone());
+-                                    }
+-                                } else {
+-                                    result.attrs.push(meta.clone());
+-                                }
+-                            } else {
+-                                return Err(Error::new_spanned(
+-                                    nested,
+-                                    "archive_attr arguments must be metas",
+-                                ));
+-                            }
+-                        }
+-                    }
++        let AttrStyle::Outer = attr.style else {
++            continue;
++        };
++
++        if !(attr.path().is_ident("archive") || attr.path().is_ident("archive_attr")) {
++            continue;
++        }
++
++        let Meta::List(ref list) = attr.meta else {
++            let msg = "archive and archive_attr may only be structured list attributes";
++
++            return Err(Error::new_spanned(attr, msg));
++        };
++
++        if list.path.is_ident("archive") {
++            list.parse_nested_meta(|nested| parse_archive_attributes(&mut result, nested))?;
++        } else if list.path.is_ident("archive_attr") {
++            let metas = list
++                .parse_args_with(Vec::parse_separated_nonempty::<Token![,]>)
++                .map_err(|e| Error::new(e.span(), "archive_attr arguments must be metas"))?;
++
++            for meta in metas {
++                let Meta::List(list) = meta else {
++                    result.attrs.push(meta);
++
++                    continue;
++                };
++
++                if list.path.is_ident("repr") {
++                    list.parse_nested_meta(|nested| result.archived_repr.parse_list_meta(nested))?;
+                 } else {
+-                    return Err(Error::new_spanned(
+-                        attr,
+-                        "archive and archive_attr may only be structured list attributes",
+-                    ));
++                    result.attrs.push(Meta::List(list));
+                 }
+             }
+         }
+Index: rkyv-derive/src/deserialize.rs
+===================================================================
+--- rkyv-derive.orig/src/deserialize.rs
++++ rkyv-derive/src/deserialize.rs
+@@ -55,7 +55,7 @@ fn derive_deserialize_impl(
+                 for field in fields
+                     .named
+                     .iter()
+-                    .filter(|f| !f.attrs.iter().any(|a| a.path.is_ident("omit_bounds")))
++                    .filter(|f| !f.attrs.iter().any(|a| a.path().is_ident("omit_bounds")))
+                 {
+                     let ty = with_ty(field)?;
+                     deserialize_where
+@@ -98,7 +98,7 @@ fn derive_deserialize_impl(
+                 for field in fields
+                     .unnamed
+                     .iter()
+-                    .filter(|f| !f.attrs.iter().any(|a| a.path.is_ident("omit_bounds")))
++                    .filter(|f| !f.attrs.iter().any(|a| a.path().is_ident("omit_bounds")))
+                 {
+                     let ty = with_ty(field)?;
+                     deserialize_where
+@@ -153,7 +153,7 @@ fn derive_deserialize_impl(
+                         for field in fields
+                             .named
+                             .iter()
+-                            .filter(|f| !f.attrs.iter().any(|a| a.path.is_ident("omit_bounds")))
++                            .filter(|f| !f.attrs.iter().any(|a| a.path().is_ident("omit_bounds")))
+                         {
+                             let ty = with_ty(field)?;
+                             deserialize_where
+@@ -168,7 +168,7 @@ fn derive_deserialize_impl(
+                         for field in fields
+                             .unnamed
+                             .iter()
+-                            .filter(|f| !f.attrs.iter().any(|a| a.path.is_ident("omit_bounds")))
++                            .filter(|f| !f.attrs.iter().any(|a| a.path().is_ident("omit_bounds")))
+                         {
+                             let ty = with_ty(field)?;
+                             deserialize_where
+Index: rkyv-derive/src/repr.rs
+===================================================================
+--- rkyv-derive.orig/src/repr.rs
++++ rkyv-derive/src/repr.rs
+@@ -1,6 +1,6 @@
+ use proc_macro2::{Literal, Punct, Spacing, Span, TokenStream};
+ use quote::{quote, ToTokens, TokenStreamExt};
+-use syn::{spanned::Spanned, Error, Lit, LitInt, Meta, NestedMeta};
++use syn::{meta::ParseNestedMeta, parenthesized, spanned::Spanned, Error, LitInt};
+ 
+ #[derive(Clone, Copy)]
+ pub enum IntRepr {
+@@ -165,73 +165,52 @@ impl Repr {
+         }
+     }
+ 
+-    pub fn parse_args<'a>(
+-        &mut self,
+-        args: impl Iterator<Item = &'a NestedMeta>,
+-    ) -> Result<(), Error> {
+-        for arg in args {
+-            if let NestedMeta::Meta(meta) = arg {
+-                match meta {
+-                    Meta::Path(path) => {
+-                        if path.is_ident("packed") {
+-                            self.try_set_modifier(Modifier::Packed, path)?;
+-                        } else {
+-                            let parsed_repr = if path.is_ident("transparent") {
+-                                BaseRepr::Transparent
+-                            } else if path.is_ident("C") {
+-                                BaseRepr::C
+-                            } else if path.is_ident("i8") {
+-                                BaseRepr::Int(IntRepr::I8)
+-                            } else if path.is_ident("i16") {
+-                                BaseRepr::Int(IntRepr::I16)
+-                            } else if path.is_ident("i32") {
+-                                BaseRepr::Int(IntRepr::I32)
+-                            } else if path.is_ident("i64") {
+-                                BaseRepr::Int(IntRepr::I64)
+-                            } else if path.is_ident("i128") {
+-                                BaseRepr::Int(IntRepr::I128)
+-                            } else if path.is_ident("u8") {
+-                                BaseRepr::Int(IntRepr::U8)
+-                            } else if path.is_ident("u16") {
+-                                BaseRepr::Int(IntRepr::U16)
+-                            } else if path.is_ident("u32") {
+-                                BaseRepr::Int(IntRepr::U32)
+-                            } else if path.is_ident("u64") {
+-                                BaseRepr::Int(IntRepr::U64)
+-                            } else if path.is_ident("u128") {
+-                                BaseRepr::Int(IntRepr::U128)
+-                            } else {
+-                                return Err(Error::new_spanned(
+-                                    path,
+-                                    "invalid repr, available reprs are transparent, C, i* and u*",
+-                                ));
+-                            };
+-
+-                            self.try_set_base_repr(parsed_repr, path)?;
+-                        }
+-                    }
+-                    Meta::List(list) => {
+-                        if list.path.is_ident("align") {
+-                            if list.nested.len() != 1 {
+-                                return Err(Error::new_spanned(list, "missing arguments to align"));
+-                            } else if let Some(NestedMeta::Lit(Lit::Int(alignment))) =
+-                                list.nested.first()
+-                            {
+-                                self.try_set_modifier(
+-                                    Modifier::Align(alignment.clone()),
+-                                    alignment,
+-                                )?;
+-                            }
+-                        }
+-                    }
+-                    _ => return Err(Error::new_spanned(meta, "invalid repr argument")),
+-                }
+-            } else {
+-                return Err(Error::new_spanned(arg, "invalid repr argument"));
++    pub fn parse_list_meta(&mut self, meta: ParseNestedMeta<'_>) -> Result<(), Error> {
++        if meta.path.is_ident("packed") {
++            return self.try_set_modifier(Modifier::Packed, meta.path);
++        } else if meta.path.is_ident("align") {
++            let content;
++            parenthesized!(content in meta.input);
++            let alignment = content.parse()?;
++
++            if !content.is_empty() {
++                return Err(content.error("align requires only one argument"));
+             }
++
++            return self.try_set_modifier(Modifier::Align(alignment), meta.path);
+         }
+ 
+-        Ok(())
++        let parsed_repr = if meta.path.is_ident("transparent") {
++            BaseRepr::Transparent
++        } else if meta.path.is_ident("C") {
++            BaseRepr::C
++        } else if meta.path.is_ident("i8") {
++            BaseRepr::Int(IntRepr::I8)
++        } else if meta.path.is_ident("i16") {
++            BaseRepr::Int(IntRepr::I16)
++        } else if meta.path.is_ident("i32") {
++            BaseRepr::Int(IntRepr::I32)
++        } else if meta.path.is_ident("i64") {
++            BaseRepr::Int(IntRepr::I64)
++        } else if meta.path.is_ident("i128") {
++            BaseRepr::Int(IntRepr::I128)
++        } else if meta.path.is_ident("u8") {
++            BaseRepr::Int(IntRepr::U8)
++        } else if meta.path.is_ident("u16") {
++            BaseRepr::Int(IntRepr::U16)
++        } else if meta.path.is_ident("u32") {
++            BaseRepr::Int(IntRepr::U32)
++        } else if meta.path.is_ident("u64") {
++            BaseRepr::Int(IntRepr::U64)
++        } else if meta.path.is_ident("u128") {
++            BaseRepr::Int(IntRepr::U128)
++        } else {
++            let msg = "invalid repr, available reprs are transparent, C, i* and u*";
++
++            return Err(Error::new_spanned(meta.path, msg));
++        };
++
++        self.try_set_base_repr(parsed_repr, meta.path)
+     }
+ }
+ 
+Index: rkyv-derive/src/serde/receiver.rs
+===================================================================
+--- rkyv-derive.orig/src/serde/receiver.rs
++++ rkyv-derive/src/serde/receiver.rs
+@@ -149,7 +149,6 @@ impl ReplaceReceiver<'_> {
+             }
+ 
+             Type::Infer(_) | Type::Never(_) | Type::Verbatim(_) => {}
+-
+             _ => {}
+         }
+     }
+@@ -181,10 +180,12 @@ impl ReplaceReceiver<'_> {
+                 for arg in &mut arguments.args {
+                     match arg {
+                         GenericArgument::Type(arg) => self.visit_type_mut(arg),
+-                        GenericArgument::Binding(arg) => self.visit_type_mut(&mut arg.ty),
++                        GenericArgument::AssocType(arg) => self.visit_type_mut(&mut arg.ty),
+                         GenericArgument::Lifetime(_)
+-                        | GenericArgument::Constraint(_)
+-                        | GenericArgument::Const(_) => {}
++                        | GenericArgument::Const(_)
++                        | GenericArgument::AssocConst(_)
++                        | GenericArgument::Constraint(_) => {}
++                        _ => {}
+                     }
+                 }
+             }
+@@ -207,7 +208,8 @@ impl ReplaceReceiver<'_> {
+     fn visit_type_param_bound_mut(&mut self, bound: &mut TypeParamBound) {
+         match bound {
+             TypeParamBound::Trait(bound) => self.visit_path_mut(&mut bound.path),
+-            TypeParamBound::Lifetime(_) => {}
++            TypeParamBound::Lifetime(_) | TypeParamBound::Verbatim(_) => {}
++            _ => {}
+         }
+     }
+ 
+@@ -231,7 +233,8 @@ impl ReplaceReceiver<'_> {
+                             self.visit_type_param_bound_mut(bound);
+                         }
+                     }
+-                    WherePredicate::Lifetime(_) | WherePredicate::Eq(_) => {}
++                    WherePredicate::Lifetime(_) => {}
++                    _ => {}
+                 }
+             }
+         }
+Index: rkyv-derive/src/serialize.rs
+===================================================================
+--- rkyv-derive.orig/src/serialize.rs
++++ rkyv-derive/src/serialize.rs
+@@ -61,7 +61,7 @@ fn derive_serialize_impl(
+                 for field in fields
+                     .named
+                     .iter()
+-                    .filter(|f| !f.attrs.iter().any(|a| a.path.is_ident("omit_bounds")))
++                    .filter(|f| !f.attrs.iter().any(|a| a.path().is_ident("omit_bounds")))
+                 {
+                     let ty = with_ty(field)?;
+                     serialize_where
+@@ -91,7 +91,7 @@ fn derive_serialize_impl(
+                 for field in fields
+                     .unnamed
+                     .iter()
+-                    .filter(|f| !f.attrs.iter().any(|a| a.path.is_ident("omit_bounds")))
++                    .filter(|f| !f.attrs.iter().any(|a| a.path().is_ident("omit_bounds")))
+                 {
+                     let ty = with_ty(field)?;
+                     serialize_where
+@@ -135,7 +135,7 @@ fn derive_serialize_impl(
+                         for field in fields
+                             .named
+                             .iter()
+-                            .filter(|f| !f.attrs.iter().any(|a| a.path.is_ident("omit_bounds")))
++                            .filter(|f| !f.attrs.iter().any(|a| a.path().is_ident("omit_bounds")))
+                         {
+                             let ty = with_ty(field)?;
+                             serialize_where
+@@ -147,7 +147,7 @@ fn derive_serialize_impl(
+                         for field in fields
+                             .unnamed
+                             .iter()
+-                            .filter(|f| !f.attrs.iter().any(|a| a.path.is_ident("omit_bounds")))
++                            .filter(|f| !f.attrs.iter().any(|a| a.path().is_ident("omit_bounds")))
+                         {
+                             let ty = with_ty(field)?;
+                             serialize_where
+Index: rkyv-derive/src/util.rs
+===================================================================
+--- rkyv-derive.orig/src/util.rs
++++ rkyv-derive/src/util.rs
+@@ -1,11 +1,17 @@
+ use proc_macro2::Ident;
+-use syn::{punctuated::Punctuated, Error, LitStr, Token, WhereClause, WherePredicate};
++use syn::{
++    parse::{Parse, ParseStream},
++    token::Token as TokenTrait,
++    Error, LitStr, Token, WhereClause,
++};
+ 
+ pub fn add_bounds(bounds: &LitStr, where_clause: &mut WhereClause) -> Result<(), Error> {
+-    let clauses = bounds.parse_with(Punctuated::<WherePredicate, Token![,]>::parse_terminated)?;
++    let clauses = bounds.parse_with(Vec::parse_terminated::<Token![,]>)?;
++
+     for clause in clauses {
+         where_clause.predicates.push(clause);
+     }
++
+     Ok(())
+ }
+ 
+@@ -16,3 +22,101 @@ pub fn strip_raw(ident: &Ident) -> Strin
+         .map(ToString::to_string)
+         .unwrap_or(as_string)
+ }
++
++/// Revamping utility from [`Punctuated`] for the purpose of storing items
++/// more efficiently.
++///
++/// [`Punctuated`]: syn::punctuated::Punctuated
++pub trait PunctuatedExt<T> {
++    /// Parses one or more occurrences of `T` separated by punctuation of type
++    /// `P`, not accepting trailing punctuation.
++    ///
++    /// Parsing continues as long as punctuation `P` is present at the head of
++    /// the stream. This method returns upon parsing a `T` and observing that it
++    /// is not followed by a `P`, even if there are remaining tokens in the
++    /// stream.
++    fn parse_separated_nonempty<P: Parse + TokenTrait>(input: ParseStream) -> Result<Vec<T>, Error>
++    where
++        T: Parse,
++    {
++        Self::parse_separated_nonempty_with::<P>(input, T::parse)
++    }
++
++    /// Parses one or more occurrences of `T` using the given parse function,
++    /// separated by punctuation of type `P`, not accepting trailing
++    /// punctuation.
++    ///
++    /// Like [`parse_separated_nonempty`], may complete early without parsing
++    /// the entire content of this stream.
++    fn parse_separated_nonempty_with<P: Parse + TokenTrait>(
++        input: ParseStream,
++        parser: fn(ParseStream) -> Result<T, Error>,
++    ) -> Result<Vec<T>, Error>;
++
++    /// Parses zero or more occurrences of `T` separated by punctuation of type
++    /// `P`, with optional trailing punctuation.
++    ///
++    /// Parsing continues until the end of this parse stream. The entire content
++    /// of this parse stream must consist of `T` and `P`.
++    fn parse_terminated<P: Parse>(input: ParseStream) -> Result<Vec<T>, Error>
++    where
++        T: Parse,
++    {
++        Self::parse_terminated_with::<P>(input, T::parse)
++    }
++
++    /// Parses zero or more occurrences of `T` using the given parse function,
++    /// separated by punctuation of type `P`, with optional trailing
++    /// punctuation.
++    ///
++    /// Like [`parse_terminated`], the entire content of this stream is expected
++    /// to be parsed.
++    fn parse_terminated_with<P: Parse>(
++        input: ParseStream,
++        parser: fn(ParseStream) -> Result<T, Error>,
++    ) -> Result<Vec<T>, Error>;
++}
++
++impl<T> PunctuatedExt<T> for Vec<T> {
++    fn parse_separated_nonempty_with<P: Parse + TokenTrait>(
++        input: ParseStream,
++        parser: fn(ParseStream) -> Result<T, Error>,
++    ) -> Result<Self, Error> {
++        let mut vec = Vec::new();
++
++        loop {
++            vec.push(parser(input)?);
++
++            if !P::peek(input.cursor()) {
++                break;
++            }
++
++            input.parse::<P>()?;
++        }
++
++        Ok(vec)
++    }
++
++    fn parse_terminated_with<P: Parse>(
++        input: ParseStream,
++        parser: fn(ParseStream) -> Result<T, Error>,
++    ) -> Result<Self, Error> {
++        let mut vec = Vec::new();
++
++        loop {
++            if input.is_empty() {
++                break;
++            }
++
++            vec.push(parser(input)?);
++
++            if input.is_empty() {
++                break;
++            }
++
++            input.parse::<P>()?;
++        }
++
++        Ok(vec)
++    }
++}
+Index: rkyv-derive/src/with.rs
+===================================================================
+--- rkyv-derive.orig/src/with.rs
++++ rkyv-derive/src/with.rs
+@@ -1,4 +1,6 @@
+-use syn::{parse_quote, punctuated::Punctuated, token::Comma, Error, Expr, Field, Path, Type};
++use syn::{parse_quote, Error, Expr, Field, Path, Token, Type};
++
++use crate::util::PunctuatedExt;
+ 
+ #[inline]
+ pub fn with<B, F: FnMut(B, &Type) -> B>(field: &Field, init: B, f: F) -> Result<B, Error> {
+@@ -6,8 +8,8 @@ pub fn with<B, F: FnMut(B, &Type) -> B>(
+         .attrs
+         .iter()
+         .filter_map(|attr| {
+-            if attr.path.is_ident("with") {
+-                Some(attr.parse_args_with(Punctuated::<Type, Comma>::parse_separated_nonempty))
++            if attr.path().is_ident("with") {
++                Some(attr.parse_args_with(Vec::parse_separated_nonempty::<Token![,]>))
+             } else {
+                 None
+             }
+Index: rkyv-derive/Cargo.toml
+===================================================================
+--- rkyv-derive.orig/Cargo.toml
++++ rkyv-derive/Cargo.toml
+@@ -32,7 +32,8 @@ version = "1.0"
+ version = "1.0"
+ 
+ [dependencies.syn]
+-version = "1.0"
++version = "2.0"
++features = ["full"]
+ 
+ [features]
+ arbitrary_enum_discriminant = []
