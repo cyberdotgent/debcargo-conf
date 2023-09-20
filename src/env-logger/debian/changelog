@@ -1,3 +1,13 @@
+rust-env-logger (0.10.0-1) unstable; urgency=medium
+
+  * Team upload.
+  * Package env_logger 0.10.0 from crates.io using debcargo 2.6.0
+  * Collapsed features in debcargo.toml
+  * Added patch to skip broken test
+  * Include patch to relax dependencies
+
+ -- Matthias Geiger <werdahias@riseup.net>  Thu, 10 Aug 2023 17:44:50 +0200
+
 rust-env-logger (0.9.3-1) unstable; urgency=medium
 
   * Team upload.
