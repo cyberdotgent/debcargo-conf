@@ -1,0 +1,5 @@
+rust-anstream (0.3.2-1) unstable; urgency=medium
+
+  * Package anstream 0.3.2 from crates.io using debcargo 2.6.0
+
+ -- Fabian Grünbichler <debian@fabian.gruenbichler.email>  Sun, 20 Aug 2023 13:02:36 +0200
