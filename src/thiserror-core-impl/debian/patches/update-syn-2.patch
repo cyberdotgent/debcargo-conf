@@ -1,0 +1,146 @@
+From fb8b81f20b352b9adf47639a9af1dbcbdcc13d81 Mon Sep 17 00:00:00 2001
+From: David Tolnay <dtolnay@gmail.com>
+Date: Mon, 13 Mar 2023 11:15:43 -0700
+Subject: [PATCH] Update to syn 2
+
+Index: thiserror-core-impl/Cargo.toml
+===================================================================
+--- thiserror-core-impl.orig/Cargo.toml
++++ thiserror-core-impl/Cargo.toml
+@@ -11,7 +11,7 @@
+ 
+ [package]
+ edition = "2018"
+-rust-version = "1.31"
++rust-version = "1.56"
+ name = "thiserror-core-impl"
+ version = "1.0.38"
+ authors = [
+@@ -35,7 +35,7 @@ version = "1.0"
+ version = "1.0"
+ 
+ [dependencies.syn]
+-version = "1.0.45"
++version = "2"
+ 
+ [features]
+ std = []
+Index: thiserror-core-impl/src/attr.rs
+===================================================================
+--- thiserror-core-impl.orig/src/attr.rs
++++ thiserror-core-impl/src/attr.rs
+@@ -2,9 +2,9 @@ use proc_macro2::{Delimiter, Group, Span
+ use quote::{format_ident, quote, ToTokens};
+ use std::collections::BTreeSet as Set;
+ use std::iter::FromIterator;
+-use syn::parse::{Nothing, ParseStream};
++use syn::parse::ParseStream;
+ use syn::{
+-    braced, bracketed, parenthesized, token, Attribute, Error, Ident, Index, LitInt, LitStr,
++    braced, bracketed, parenthesized, token, Attribute, Error, Ident, Index, LitInt, LitStr, Meta,
+     Result, Token,
+ };
+ 
+@@ -54,24 +54,27 @@ pub fn get(input: &[Attribute]) -> Resul
+     };
+ 
+     for attr in input {
+-        if attr.path.is_ident("error") {
++        if attr.path().is_ident("error") {
+             parse_error_attribute(&mut attrs, attr)?;
+-        } else if attr.path.is_ident("source") {
++        } else if attr.path().is_ident("source") {
+             require_empty_attribute(attr)?;
+             if attrs.source.is_some() {
+                 return Err(Error::new_spanned(attr, "duplicate #[source] attribute"));
+             }
+             attrs.source = Some(attr);
+-        } else if attr.path.is_ident("backtrace") {
++        } else if attr.path().is_ident("backtrace") {
+             require_empty_attribute(attr)?;
+             if attrs.backtrace.is_some() {
+                 return Err(Error::new_spanned(attr, "duplicate #[backtrace] attribute"));
+             }
+             attrs.backtrace = Some(attr);
+-        } else if attr.path.is_ident("from") {
+-            if !attr.tokens.is_empty() {
+-                // Assume this is meant for derive_more crate or something.
+-                continue;
++        } else if attr.path().is_ident("from") {
++            match attr.meta {
++                Meta::Path(_) => {}
++                Meta::List(_) | Meta::NameValue(_) => {
++                    // Assume this is meant for derive_more crate or something.
++                    continue;
++                }
+             }
+             if attrs.from.is_some() {
+                 return Err(Error::new_spanned(attr, "duplicate #[from] attribute"));
+@@ -166,21 +169,21 @@ fn parse_token_expr(input: ParseStream,
+             let delimiter = parenthesized!(content in input);
+             let nested = parse_token_expr(&content, true)?;
+             let mut group = Group::new(Delimiter::Parenthesis, nested);
+-            group.set_span(delimiter.span);
++            group.set_span(delimiter.span.join());
+             TokenTree::Group(group)
+         } else if input.peek(token::Brace) {
+             let content;
+             let delimiter = braced!(content in input);
+             let nested = parse_token_expr(&content, true)?;
+             let mut group = Group::new(Delimiter::Brace, nested);
+-            group.set_span(delimiter.span);
++            group.set_span(delimiter.span.join());
+             TokenTree::Group(group)
+         } else if input.peek(token::Bracket) {
+             let content;
+             let delimiter = bracketed!(content in input);
+             let nested = parse_token_expr(&content, true)?;
+             let mut group = Group::new(Delimiter::Bracket, nested);
+-            group.set_span(delimiter.span);
++            group.set_span(delimiter.span.join());
+             TokenTree::Group(group)
+         } else {
+             input.parse()?
+@@ -191,8 +194,15 @@ fn parse_token_expr(input: ParseStream,
+ }
+ 
+ fn require_empty_attribute(attr: &Attribute) -> Result<()> {
+-    syn::parse2::<Nothing>(attr.tokens.clone())?;
+-    Ok(())
++    let error_span = match &attr.meta {
++        Meta::Path(_) => return Ok(()),
++        Meta::List(meta) => meta.delimiter.span().open(),
++        Meta::NameValue(meta) => meta.eq_token.span,
++    };
++    Err(Error::new(
++        error_span,
++        "unexpected token in thiserror attribute",
++    ))
+ }
+ 
+ impl ToTokens for Display<'_> {
+Index: thiserror-core-impl/src/expand.rs
+===================================================================
+--- thiserror-core-impl.orig/src/expand.rs
++++ thiserror-core-impl/src/expand.rs
+@@ -526,15 +526,14 @@ fn type_parameter_of_option(ty: &Type) -
+ 
+ fn spanned_error_trait(input: &DeriveInput) -> TokenStream {
+     let vis_span = match &input.vis {
+-        Visibility::Public(vis) => Some(vis.pub_token.span()),
+-        Visibility::Crate(vis) => Some(vis.crate_token.span()),
+-        Visibility::Restricted(vis) => Some(vis.pub_token.span()),
++        Visibility::Public(vis) => Some(vis.span),
++        Visibility::Restricted(vis) => Some(vis.pub_token.span),
+         Visibility::Inherited => None,
+     };
+     let data_span = match &input.data {
+-        Data::Struct(data) => data.struct_token.span(),
+-        Data::Enum(data) => data.enum_token.span(),
+-        Data::Union(data) => data.union_token.span(),
++        Data::Struct(data) => data.struct_token.span,
++        Data::Enum(data) => data.enum_token.span,
++        Data::Union(data) => data.union_token.span,
+     };
+     let first_span = vis_span.unwrap_or(data_span);
+     let last_span = input.ident.span();
