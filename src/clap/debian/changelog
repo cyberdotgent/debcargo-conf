@@ -1,3 +1,19 @@
+rust-clap (4.1.13-2) unstable; urgency=medium
+
+  * Package clap 4.1.13 from crates.io using debcargo 2.6.0
+  * bump clap-lex dep
+
+ -- Sylvestre Ledru <sylvestre@debian.org>  Wed, 05 Jul 2023 23:27:39 +0200
+
+rust-clap (4.1.13-1) unstable; urgency=medium
+
+  * Team upload.
+  * Package clap 4.1.13 from crates.io using debcargo 2.6.0 (Closes: #1030817)
+    + Newer versions require clap_builder crate which is not in Debian.
+  * Update patches for new upstream.
+
+ -- Peter Michael Green <plugwash@debian.org>  Tue, 04 Jul 2023 01:46:25 +0000
+
 rust-clap (4.0.32-1) unstable; urgency=medium
 
   * Team upload.
