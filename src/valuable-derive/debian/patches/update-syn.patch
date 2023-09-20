@@ -1,0 +1,13 @@
+Index: valuable-derive/Cargo.toml
+===================================================================
+--- valuable-derive.orig/Cargo.toml
++++ valuable-derive/Cargo.toml
+@@ -30,7 +30,7 @@ version = "1.0"
+ version = "1.0"
+ 
+ [dependencies.syn]
+-version = "1.0.60"
++version = "2"
+ features = ["extra-traits"]
+ 
+ [dev-dependencies]
