@@ -1,2 +1,2 @@
 no-windows-sys.diff
-drop-fs-err.diff
+disable-hermit-abi.diff
