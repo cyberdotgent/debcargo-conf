@@ -15,7 +15,7 @@ Index: openssl-sys/Cargo.toml
  [build-dependencies.bindgen]
 -version = "0.64.0"
 -features = ["experimental"]
-+version = ">= 0.60, < 1.0"
++version = "0"
  optional = true
  
  [build-dependencies.cc]
