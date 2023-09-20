@@ -1,3 +1,38 @@
+rust-log (0.4.20-2) unstable; urgency=medium
+
+  * Team upload.
+  * Package log 0.4.20 from crates.io using debcargo 2.6.0
+  * Re-enable kv_unstable_serde feature. (Closes: #1040835, #1040837, #1040995)
+
+ -- Peter Michael Green <plugwash@debian.org>  Wed, 30 Aug 2023 23:29:21 +0000
+
+rust-log (0.4.20-1) unstable; urgency=medium
+
+  * Team upload.
+  * Package log 0.4.20 from crates.io using debcargo 2.6.0
+  * Revert disabling of "kv_unstable_std" and "kv_unstable_sval" features
+    and associated dependencies, the relavent packages are now installable
+    again. (Downgrades: #1040837)
+  * Disable kv_unstable_serde feature it was previously left in a broken state,
+    and can't yet be enabled in a non-broken state.
+
+ -- Peter Michael Green <plugwash@debian.org>  Tue, 22 Aug 2023 02:45:09 +0000
+
+rust-log (0.4.19-2) unstable; urgency=medium
+
+  * Package log 0.4.19 from crates.io using debcargo 2.6.0
+  * Unbreak the package by disable sval & value-bag until the new packages
+    have been accepted (they are in NEW)
+    (Closes: #1040702)
+
+ -- Sylvestre Ledru <sylvestre@debian.org>  Mon, 10 Jul 2023 10:34:22 +0200
+
+rust-log (0.4.19-1) unstable; urgency=medium
+
+  * Package log 0.4.19 from crates.io using debcargo 2.6.0
+
+ -- Sylvestre Ledru <sylvestre@debian.org>  Sun, 09 Jul 2023 09:29:04 +0200
+
 rust-log (0.4.17-3) unstable; urgency=medium
 
   * Team upload.
