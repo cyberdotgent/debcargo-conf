@@ -1,3 +1,5 @@
-add-alloc-feature-to-erased-serde-dependency
 remove-wasm-bindgen-test.diff
-remove-serde-json.diff
+remove-owned.diff
+disable-tests-value-bag-sval2-test.diff
+disable-tests-value-bag-serde1-test.diff
+fix-test-feature-requirements.diff
