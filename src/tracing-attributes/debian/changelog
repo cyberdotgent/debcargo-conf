@@ -1,3 +1,13 @@
+rust-tracing-attributes (0.1.26-1) unstable; urgency=medium
+
+  * Team upload.
+  * Package tracing-attributes 0.1.26 from crates.io using debcargo 2.6.0
+  * Disable tests which depend on tracing-mock which is not in Debian or even
+    on crates.io.
+  * Disable a "compile-fail" test whose output varies between compiler versions.
+
+ -- Peter Michael Green <plugwash@debian.org>  Tue, 01 Aug 2023 15:14:02 +0000
+
 rust-tracing-attributes (0.1.23-1) unstable; urgency=medium
 
   * Team upload.
