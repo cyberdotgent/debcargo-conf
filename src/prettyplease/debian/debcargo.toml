@@ -1,2 +1,3 @@
 overlay = "."
-uploaders = ["Fabian Grünbichler <f.gruenbichler@proxmox.com>"]
+uploaders = ["Michael Tokarev <mjt@tls.msk.ru>"]
+collapse_features = true
