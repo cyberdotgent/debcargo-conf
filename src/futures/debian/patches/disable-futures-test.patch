@@ -778,205 +778,34 @@ Index: futures/tests/stream.rs
 ===================================================================
 --- futures.orig/tests/stream.rs
 +++ futures/tests/stream.rs
-@@ -14,7 +14,7 @@ use futures::stream::{self, StreamExt};
- use futures::task::Poll;
+@@ -15,7 +15,7 @@ use futures::task::Poll;
  use futures::{ready, FutureExt};
  use futures_core::Stream;
+ use futures_executor::ThreadPool;
 -use futures_test::task::noop_context;
 +//use futures_test::task::noop_context;
  
  #[test]
  fn select() {
-@@ -33,11 +33,16 @@ fn select() {
- #[test]
- fn flat_map() {
-     block_on(async {
--        let st =
--            stream::iter(vec![stream::iter(0..=4u8), stream::iter(6..=10), stream::iter(0..=2)]);
--
--        let values: Vec<_> =
--            st.flat_map(|s| s.filter(|v| futures::future::ready(v % 2 == 0))).collect().await;
-+        let st = stream::iter(vec![
-+            stream::iter(0..=4u8),
-+            stream::iter(6..=10),
-+            stream::iter(0..=2),
-+        ]);
-+
-+        let values: Vec<_> = st
-+            .flat_map(|s| s.filter(|v| futures::future::ready(v % 2 == 0)))
-+            .collect()
-+            .await;
- 
-         assert_eq!(values, vec![0, 2, 4, 6, 8, 10, 0, 2]);
+@@ -59,7 +59,7 @@ fn scan() {
      });
-@@ -146,7 +151,10 @@ fn flatten_unordered() {
+ }
  
-             let fl_unordered = st.flatten_unordered(3).collect::<Vec<_>>().await;
+-#[test]
++/*#[test]
+ fn flatten_unordered() {
+     use futures::executor::block_on;
+     use futures::stream::*;
+@@ -396,7 +396,7 @@ fn flatten_unordered() {
+         .unwrap();
  
--            assert_eq!(fl_unordered, vec![0, 6, 10, 1, 7, 11, 2, 8, 12, 3, 9, 4, 10]);
-+            assert_eq!(
-+                fl_unordered,
-+                vec![0, 6, 10, 1, 7, 11, 2, 8, 12, 3, 9, 4, 10]
-+            );
-         });
+     block_on(empty_state_move_handle);
+-}
++}*/
  
-         block_on(async {
-@@ -170,12 +178,16 @@ fn flatten_unordered() {
-     // wake up immediately
-     {
-         block_on(async {
--            let mut fl_unordered = Interchanger { polled: false, base: 0, wake_immediately: true }
--                .take(10)
--                .map(|s| s.map(identity))
--                .flatten_unordered(10)
--                .collect::<Vec<_>>()
--                .await;
-+            let mut fl_unordered = Interchanger {
-+                polled: false,
-+                base: 0,
-+                wake_immediately: true,
-+            }
-+            .take(10)
-+            .map(|s| s.map(identity))
-+            .flatten_unordered(10)
-+            .collect::<Vec<_>>()
-+            .await;
- 
-             fl_unordered.sort_unstable();
- 
-@@ -183,11 +195,15 @@ fn flatten_unordered() {
-         });
- 
-         block_on(async {
--            let mut fm_unordered = Interchanger { polled: false, base: 0, wake_immediately: true }
--                .take(10)
--                .flat_map_unordered(10, |s| s.map(identity))
--                .collect::<Vec<_>>()
--                .await;
-+            let mut fm_unordered = Interchanger {
-+                polled: false,
-+                base: 0,
-+                wake_immediately: true,
-+            }
-+            .take(10)
-+            .flat_map_unordered(10, |s| s.map(identity))
-+            .collect::<Vec<_>>()
-+            .await;
- 
-             fm_unordered.sort_unstable();
- 
-@@ -198,12 +214,16 @@ fn flatten_unordered() {
-     // wake up after delay
-     {
-         block_on(async {
--            let mut fl_unordered = Interchanger { polled: false, base: 0, wake_immediately: false }
--                .take(10)
--                .map(|s| s.map(identity))
--                .flatten_unordered(10)
--                .collect::<Vec<_>>()
--                .await;
-+            let mut fl_unordered = Interchanger {
-+                polled: false,
-+                base: 0,
-+                wake_immediately: false,
-+            }
-+            .take(10)
-+            .map(|s| s.map(identity))
-+            .flatten_unordered(10)
-+            .collect::<Vec<_>>()
-+            .await;
- 
-             fl_unordered.sort_unstable();
- 
-@@ -211,11 +231,15 @@ fn flatten_unordered() {
-         });
- 
-         block_on(async {
--            let mut fm_unordered = Interchanger { polled: false, base: 0, wake_immediately: false }
--                .take(10)
--                .flat_map_unordered(10, |s| s.map(identity))
--                .collect::<Vec<_>>()
--                .await;
-+            let mut fm_unordered = Interchanger {
-+                polled: false,
-+                base: 0,
-+                wake_immediately: false,
-+            }
-+            .take(10)
-+            .flat_map_unordered(10, |s| s.map(identity))
-+            .collect::<Vec<_>>()
-+            .await;
- 
-             fm_unordered.sort_unstable();
- 
-@@ -224,15 +248,23 @@ fn flatten_unordered() {
- 
-         block_on(async {
-             let (mut fm_unordered, mut fl_unordered) = futures_util::join!(
--                Interchanger { polled: false, base: 0, wake_immediately: false }
--                    .take(10)
--                    .flat_map_unordered(10, |s| s.map(identity))
--                    .collect::<Vec<_>>(),
--                Interchanger { polled: false, base: 0, wake_immediately: false }
--                    .take(10)
--                    .map(|s| s.map(identity))
--                    .flatten_unordered(10)
--                    .collect::<Vec<_>>()
-+                Interchanger {
-+                    polled: false,
-+                    base: 0,
-+                    wake_immediately: false
-+                }
-+                .take(10)
-+                .flat_map_unordered(10, |s| s.map(identity))
-+                .collect::<Vec<_>>(),
-+                Interchanger {
-+                    polled: false,
-+                    base: 0,
-+                    wake_immediately: false
-+                }
-+                .take(10)
-+                .map(|s| s.map(identity))
-+                .flatten_unordered(10)
-+                .collect::<Vec<_>>()
-             );
- 
-             fm_unordered.sort_unstable();
-@@ -246,9 +278,13 @@ fn flatten_unordered() {
-     // waker panics
-     {
-         let stream = Arc::new(Mutex::new(
--            Interchanger { polled: false, base: 0, wake_immediately: true }
--                .take(10)
--                .flat_map_unordered(10, |s| s.map(identity)),
-+            Interchanger {
-+                polled: false,
-+                base: 0,
-+                wake_immediately: true,
-+            }
-+            .take(10)
-+            .flat_map_unordered(10, |s| s.map(identity)),
-         ));
- 
-         struct PanicWaker;
-@@ -292,9 +328,13 @@ fn flatten_unordered() {
-             once(Box::pin(async { panic!("Polled") })).left_stream::<DataStream>(),
-         ))
-         .chain(
--            Interchanger { polled: false, base: 0, wake_immediately: true }
--                .map(|stream| stream.right_stream())
--                .take(10),
-+            Interchanger {
-+                polled: false,
-+                base: 0,
-+                wake_immediately: true,
-+            }
-+            .map(|stream| stream.right_stream())
-+            .take(10),
-         );
- 
-         let stream = Arc::new(Mutex::new(st.flatten_unordered(10)));
-@@ -404,7 +444,7 @@ fn ready_chunks_panic_on_cap_zero() {
+ #[test]
+ fn take_until() {
+@@ -478,7 +478,7 @@ fn ready_chunks_panic_on_cap_zero() {
      let _ = rx1.ready_chunks(0);
  }
  
@@ -985,7 +814,7 @@ Index: futures/tests/stream.rs
  fn ready_chunks() {
      let (mut tx, rx1) = mpsc::channel::<i32>(16);
  
-@@ -461,3 +501,4 @@ fn select_with_strategy_doesnt_terminate
+@@ -535,3 +535,4 @@ fn select_with_strategy_doesnt_terminate
          assert_eq!(count.get(), times_should_poll + 1);
      }
  }
@@ -1038,30 +867,28 @@ Index: futures/tests/stream_futures_ordered.rs
  fn works_1() {
      let (a_tx, a_rx) = oneshot::channel::<i32>();
      let (b_tx, b_rx) = oneshot::channel::<i32>();
-@@ -44,7 +44,7 @@ fn works_2() {
+@@ -44,9 +44,9 @@ fn works_2() {
      assert!(stream.poll_next_unpin(&mut cx).is_pending());
      c_tx.send(33).unwrap();
      assert!(stream.poll_next_unpin(&mut cx).is_ready());
 -}
 +}*/
  
- #[test]
+-#[test]
++/*#[test]
  fn test_push_front() {
-@@ -111,14 +111,18 @@ fn test_push_back() {
+     let (a_tx, a_rx) = oneshot::channel::<i32>();
+     let (b_tx, b_rx) = oneshot::channel::<i32>();
+@@ -107,7 +107,7 @@ fn test_push_back() {
+ 
+     assert_eq!(Poll::Ready(Some(Ok(3))), stream.poll_next_unpin(&mut cx));
+     assert_eq!(Poll::Ready(Some(Ok(4))), stream.poll_next_unpin(&mut cx));
+-}
++}*/
  
  #[test]
  fn from_iterator() {
--    let stream = vec![future::ready::<i32>(1), future::ready::<i32>(2), future::ready::<i32>(3)]
--        .into_iter()
--        .collect::<FuturesOrdered<_>>();
-+    let stream = vec![
-+        future::ready::<i32>(1),
-+        future::ready::<i32>(2),
-+        future::ready::<i32>(3),
-+    ]
-+    .into_iter()
-+    .collect::<FuturesOrdered<_>>();
-     assert_eq!(stream.len(), 3);
+@@ -118,7 +118,7 @@ fn from_iterator() {
      assert_eq!(block_on(stream.collect::<Vec<_>>()), vec![1, 2, 3]);
  }
  
@@ -1070,10 +897,22 @@ Index: futures/tests/stream_futures_ordered.rs
  fn queue_never_unblocked() {
      let (_a_tx, a_rx) = oneshot::channel::<Box<dyn Any + Send>>();
      let (b_tx, b_rx) = oneshot::channel::<Box<dyn Any + Send>>();
-@@ -145,4 +149,4 @@ fn queue_never_unblocked() {
+@@ -145,9 +145,9 @@ fn queue_never_unblocked() {
      c_tx.send(Box::new(())).unwrap();
      assert!(stream.poll_next_unpin(cx).is_pending());
      assert!(stream.poll_next_unpin(cx).is_pending());
+-}
++}*/
+ 
+-#[test]
++/*#[test]
+ fn test_push_front_negative() {
+     let (a_tx, a_rx) = oneshot::channel::<i32>();
+     let (b_tx, b_rx) = oneshot::channel::<i32>();
+@@ -169,4 +169,4 @@ fn test_push_front_negative() {
+     assert_eq!(Poll::Ready(Some(Ok(3))), stream.poll_next_unpin(&mut cx));
+     assert_eq!(Poll::Ready(Some(Ok(2))), stream.poll_next_unpin(&mut cx));
+     assert_eq!(Poll::Ready(Some(Ok(1))), stream.poll_next_unpin(&mut cx));
 -}
 +}*/
 Index: futures/tests/stream_futures_unordered.rs
@@ -1108,21 +947,7 @@ Index: futures/tests/stream_futures_unordered.rs
  
  #[test]
  fn works_1() {
-@@ -43,8 +43,11 @@ fn works_1() {
-     let (b_tx, b_rx) = oneshot::channel::<i32>();
-     let (c_tx, c_rx) = oneshot::channel::<i32>();
- 
--    let mut iter =
--        block_on_stream(vec![a_rx, b_rx, c_rx].into_iter().collect::<FuturesUnordered<_>>());
-+    let mut iter = block_on_stream(
-+        vec![a_rx, b_rx, c_rx]
-+            .into_iter()
-+            .collect::<FuturesUnordered<_>>(),
-+    );
- 
-     b_tx.send(99).unwrap();
-     assert_eq!(Some(Ok(99)), iter.next());
-@@ -56,7 +59,7 @@ fn works_1() {
+@@ -56,7 +56,7 @@ fn works_1() {
      assert_eq!(None, iter.next());
  }
  
@@ -1131,7 +956,7 @@ Index: futures/tests/stream_futures_unordered.rs
  fn works_2() {
      let (a_tx, a_rx) = oneshot::channel::<i32>();
      let (b_tx, b_rx) = oneshot::channel::<i32>();
-@@ -74,18 +77,22 @@ fn works_2() {
+@@ -74,7 +74,7 @@ fn works_2() {
      c_tx.send(20).unwrap();
      assert_eq!(stream.poll_next_unpin(&mut cx), Poll::Ready(Some(Ok(30))));
      assert_eq!(stream.poll_next_unpin(&mut cx), Poll::Ready(None));
@@ -1140,17 +965,7 @@ Index: futures/tests/stream_futures_unordered.rs
  
  #[test]
  fn from_iterator() {
--    let stream = vec![future::ready::<i32>(1), future::ready::<i32>(2), future::ready::<i32>(3)]
--        .into_iter()
--        .collect::<FuturesUnordered<_>>();
-+    let stream = vec![
-+        future::ready::<i32>(1),
-+        future::ready::<i32>(2),
-+        future::ready::<i32>(3),
-+    ]
-+    .into_iter()
-+    .collect::<FuturesUnordered<_>>();
-     assert_eq!(stream.len(), 3);
+@@ -85,7 +85,7 @@ fn from_iterator() {
      assert_eq!(block_on(stream.collect::<Vec<_>>()), vec![1, 2, 3]);
  }
  
@@ -1159,7 +974,7 @@ Index: futures/tests/stream_futures_unordered.rs
  fn finished_future() {
      let (_a_tx, a_rx) = oneshot::channel::<i32>();
      let (b_tx, b_rx) = oneshot::channel::<i32>();
-@@ -108,7 +115,7 @@ fn finished_future() {
+@@ -108,7 +108,7 @@ fn finished_future() {
      assert!(stream.poll_next_unpin(cx).is_ready());
      assert!(stream.poll_next_unpin(cx).is_pending());
      assert!(stream.poll_next_unpin(cx).is_pending());
@@ -1168,111 +983,7 @@ Index: futures/tests/stream_futures_unordered.rs
  
  #[test]
  fn iter_mut_cancel() {
-@@ -116,7 +123,9 @@ fn iter_mut_cancel() {
-     let (b_tx, b_rx) = oneshot::channel::<i32>();
-     let (c_tx, c_rx) = oneshot::channel::<i32>();
- 
--    let mut stream = vec![a_rx, b_rx, c_rx].into_iter().collect::<FuturesUnordered<_>>();
-+    let mut stream = vec![a_rx, b_rx, c_rx]
-+        .into_iter()
-+        .collect::<FuturesUnordered<_>>();
- 
-     for rx in stream.iter_mut() {
-         rx.close();
-@@ -136,10 +145,13 @@ fn iter_mut_cancel() {
- 
- #[test]
- fn iter_mut_len() {
--    let mut stream =
--        vec![future::pending::<()>(), future::pending::<()>(), future::pending::<()>()]
--            .into_iter()
--            .collect::<FuturesUnordered<_>>();
-+    let mut stream = vec![
-+        future::pending::<()>(),
-+        future::pending::<()>(),
-+        future::pending::<()>(),
-+    ]
-+    .into_iter()
-+    .collect::<FuturesUnordered<_>>();
- 
-     let mut iter_mut = stream.iter_mut();
-     assert_eq!(iter_mut.len(), 3);
-@@ -173,7 +185,10 @@ fn iter_cancel() {
- 
-     impl<F: Future + Unpin> AtomicCancel<F> {
-         fn new(future: F) -> Self {
--            Self { future, cancel: AtomicBool::new(false) }
-+            Self {
-+                future,
-+                cancel: AtomicBool::new(false),
-+            }
-         }
-     }
- 
-@@ -199,9 +214,13 @@ fn iter_cancel() {
- 
- #[test]
- fn iter_len() {
--    let stream = vec![future::pending::<()>(), future::pending::<()>(), future::pending::<()>()]
--        .into_iter()
--        .collect::<FuturesUnordered<_>>();
-+    let stream = vec![
-+        future::pending::<()>(),
-+        future::pending::<()>(),
-+        future::pending::<()>(),
-+    ]
-+    .into_iter()
-+    .collect::<FuturesUnordered<_>>();
- 
-     let mut iter = stream.iter();
-     assert_eq!(iter.len(), 3);
-@@ -220,7 +239,9 @@ fn into_iter_cancel() {
-     let (b_tx, b_rx) = oneshot::channel::<i32>();
-     let (c_tx, c_rx) = oneshot::channel::<i32>();
- 
--    let stream = vec![a_rx, b_rx, c_rx].into_iter().collect::<FuturesUnordered<_>>();
-+    let stream = vec![a_rx, b_rx, c_rx]
-+        .into_iter()
-+        .collect::<FuturesUnordered<_>>();
- 
-     let stream = stream
-         .into_iter()
-@@ -244,9 +265,13 @@ fn into_iter_cancel() {
- 
- #[test]
- fn into_iter_len() {
--    let stream = vec![future::pending::<()>(), future::pending::<()>(), future::pending::<()>()]
--        .into_iter()
--        .collect::<FuturesUnordered<_>>();
-+    let stream = vec![
-+        future::pending::<()>(),
-+        future::pending::<()>(),
-+        future::pending::<()>(),
-+    ]
-+    .into_iter()
-+    .collect::<FuturesUnordered<_>>();
- 
-     let mut into_iter = stream.into_iter();
-     assert_eq!(into_iter.len(), 3);
-@@ -261,9 +286,14 @@ fn into_iter_len() {
- 
- #[test]
- fn into_iter_partial() {
--    let stream = vec![future::ready(1), future::ready(2), future::ready(3), future::ready(4)]
--        .into_iter()
--        .collect::<FuturesUnordered<_>>();
-+    let stream = vec![
-+        future::ready(1),
-+        future::ready(2),
-+        future::ready(3),
-+        future::ready(4),
-+    ]
-+    .into_iter()
-+    .collect::<FuturesUnordered<_>>();
- 
-     let mut into_iter = stream.into_iter();
-     assert!(into_iter.next().is_some());
-@@ -273,7 +303,7 @@ fn into_iter_partial() {
+@@ -273,7 +273,7 @@ fn into_iter_partial() {
      // don't panic when iterator is dropped before completing
  }
  
@@ -1281,7 +992,7 @@ Index: futures/tests/stream_futures_unordered.rs
  fn futures_not_moved_after_poll() {
      // Future that will be ready after being polled twice,
      // asserting that it does not move.
-@@ -284,9 +314,9 @@ fn futures_not_moved_after_poll() {
+@@ -284,9 +284,9 @@ fn futures_not_moved_after_poll() {
      assert_stream_next!(stream, ());
      assert_stream_next!(stream, ());
      assert_stream_done!(stream);
@@ -1293,7 +1004,7 @@ Index: futures/tests/stream_futures_unordered.rs
  fn len_valid_during_out_of_order_completion() {
      // Complete futures out-of-order and add new futures afterwards to ensure
      // length values remain correct.
-@@ -324,9 +354,9 @@ fn len_valid_during_out_of_order_complet
+@@ -324,9 +324,9 @@ fn len_valid_during_out_of_order_complet
      a_tx.send(7).unwrap();
      assert_eq!(stream.poll_next_unpin(&mut cx), Poll::Ready(Some(Ok(7))));
      assert_eq!(stream.len(), 0);
@@ -1305,7 +1016,7 @@ Index: futures/tests/stream_futures_unordered.rs
  fn polled_only_once_at_most_per_iteration() {
      #[derive(Debug, Clone, Copy, Default)]
      struct F {
-@@ -358,7 +388,7 @@ fn polled_only_once_at_most_per_iteratio
+@@ -358,7 +358,7 @@ fn polled_only_once_at_most_per_iteratio
  
      let mut tasks = FuturesUnordered::<F>::new();
      assert_eq!(Poll::Ready(None), tasks.poll_next_unpin(cx));
@@ -1401,10 +1112,10 @@ Index: futures/tests/stream_try_stream.rs
 ===================================================================
 --- futures.orig/tests/stream_try_stream.rs
 +++ futures/tests/stream_try_stream.rs
-@@ -2,9 +2,9 @@ use futures::{
-     stream::{self, StreamExt, TryStreamExt},
-     task::Poll,
+@@ -7,9 +7,9 @@ use futures::{
  };
+ use futures_executor::block_on;
+ use futures_task::Context;
 -use futures_test::task::noop_context;
 +//use futures_test::task::noop_context;
  
@@ -1413,7 +1124,7 @@ Index: futures/tests/stream_try_stream.rs
  fn try_filter_map_after_err() {
      let cx = &mut noop_context();
      let mut s = stream::iter(1..=3)
-@@ -13,9 +13,9 @@ fn try_filter_map_after_err() {
+@@ -18,9 +18,9 @@ fn try_filter_map_after_err() {
          .filter_map(|r| async move { r.ok() })
          .boxed();
      assert_eq!(Poll::Ready(None), s.poll_next_unpin(cx));
@@ -1425,7 +1136,7 @@ Index: futures/tests/stream_try_stream.rs
  fn try_skip_while_after_err() {
      let cx = &mut noop_context();
      let mut s = stream::iter(1..=3)
-@@ -24,9 +24,9 @@ fn try_skip_while_after_err() {
+@@ -29,9 +29,9 @@ fn try_skip_while_after_err() {
          .filter_map(|r| async move { r.ok() })
          .boxed();
      assert_eq!(Poll::Ready(None), s.poll_next_unpin(cx));
@@ -1437,12 +1148,15 @@ Index: futures/tests/stream_try_stream.rs
  fn try_take_while_after_err() {
      let cx = &mut noop_context();
      let mut s = stream::iter(1..=3)
-@@ -35,4 +35,4 @@ fn try_take_while_after_err() {
+@@ -40,7 +40,7 @@ fn try_take_while_after_err() {
          .filter_map(|r| async move { r.ok() })
          .boxed();
      assert_eq!(Poll::Ready(None), s.poll_next_unpin(cx));
 -}
 +}*/
+ 
+ #[test]
+ fn try_flatten_unordered() {
 Index: futures/tests/stream_unfold.rs
 ===================================================================
 --- futures.orig/tests/stream_unfold.rs
