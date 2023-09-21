@@ -1,0 +1,15 @@
+Index: chrono/Cargo.toml
+===================================================================
+--- chrono.orig/Cargo.toml
++++ chrono/Cargo.toml
+@@ -62,10 +62,6 @@ default-features = false
+ version = "0.2"
+ default-features = false
+ 
+-[dependencies.rkyv]
+-version = "0.7"
+-optional = true
+-
+ [dependencies.rustc-serialize]
+ version = "0.3.20"
+ optional = true

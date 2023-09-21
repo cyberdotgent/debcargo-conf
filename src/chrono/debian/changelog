@@ -1,3 +1,9 @@
+rust-chrono (0.4.23-3~bpo12+pve1) proxmox-rust; urgency=medium
+
+  * Rebuild for Debian Bookworm / Proxmox with rkyv feature/dep dropped
+
+ -- Proxmox Support Team <support@proxmox.com>  Thu, 21 Sep 2023 11:23:50 +0200
+
 rust-chrono (0.4.23-2) unstable; urgency=medium
 
   * Team upload.
