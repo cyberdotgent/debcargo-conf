@@ -1,0 +1,37 @@
+Index: walrus-macro/Cargo.toml
+===================================================================
+--- walrus-macro.orig/Cargo.toml
++++ walrus-macro/Cargo.toml
+@@ -34,5 +34,5 @@ version = "1.0.1"
+ version = "1.0.2"
+ 
+ [dependencies.syn]
+-version = "1.0.5"
++version = "2"
+ features = ["extra-traits"]
+Index: walrus-macro/src/lib.rs
+===================================================================
+--- walrus-macro.orig/src/lib.rs
++++ walrus-macro/src/lib.rs
+@@ -154,15 +154,16 @@ fn walrus_attrs(attrs: &mut Vec<syn::Att
+     let mut ret = proc_macro2::TokenStream::new();
+     let ident = syn::Path::from(syn::Ident::new("walrus", Span::call_site()));
+     for i in (0..attrs.len()).rev() {
+-        if attrs[i].path != ident {
++        if attrs[i].path() != &ident {
+             continue;
+         }
+         let attr = attrs.remove(i);
+-        let group = match attr.tokens.into_iter().next().unwrap() {
+-            proc_macro2::TokenTree::Group(g) => g,
+-            _ => panic!("#[walrus(...)] expected"),
++        let group = if let syn::Meta::List(syn::MetaList { tokens, .. }) = attr.meta {
++            tokens
++        } else {
++            panic!("#[walrus(...)] expected")
+         };
+-        ret.extend(group.stream());
++        ret.extend(group);
+         ret.extend(quote! { , });
+     }
+     return ret.into();
