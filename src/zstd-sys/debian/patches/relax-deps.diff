@@ -1,11 +1,13 @@
---- a/Cargo.toml
-+++ b/Cargo.toml
-@@ -52,7 +52,7 @@
+Index: zstd-sys/Cargo.toml
+===================================================================
+--- zstd-sys.orig/Cargo.toml
++++ zstd-sys/Cargo.toml
+@@ -52,7 +52,7 @@ doctest = false
  version = "0.2.45"
  
  [build-dependencies.bindgen]
 -version = "0.63"
-+version = "<= 0.63"
++version = "<= 0.66"
  features = [
      "runtime",
      "which-rustfmt",
