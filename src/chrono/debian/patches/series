@@ -6,3 +6,4 @@ drop-windows-dep.patch
 fix-tests-no-default-features.patch
 drop-android-dep.patch
 drop-rkyv.patch
+disable-criteron.diff
