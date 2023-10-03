@@ -1,6 +1,13 @@
---- a/Cargo.toml
-+++ b/Cargo.toml
-@@ -38,10 +38,10 @@
+Index: proc-macro-error/Cargo.toml
+===================================================================
+--- proc-macro-error.orig/Cargo.toml
++++ proc-macro-error/Cargo.toml
+@@ -34,14 +34,14 @@ version = "1"
+ version = "1"
+ 
+ [dependencies.syn]
+-version = "1"
++version = "2"
  optional = true
  default-features = false
  [dev-dependencies.serde_derive]
