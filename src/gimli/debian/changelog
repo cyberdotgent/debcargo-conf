@@ -1,3 +1,9 @@
+rust-gimli (0.27.3-1~bpo12+pve1) proxmox-rust; urgency=medium
+
+  * Rebuild for Debian Bookworm / Proxmox
+
+ -- Proxmox Support Team <support@proxmox.com>  Tue, 19 Sep 2023 14:35:14 +0200
+
 rust-gimli (0.27.3-1) unstable; urgency=medium
 
   * Package gimli 0.27.3 from crates.io using debcargo 2.6.0

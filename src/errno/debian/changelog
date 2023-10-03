@@ -1,3 +1,9 @@
+rust-errno (0.3.1-1~bpo12+pve1) proxmox-rust; urgency=medium
+
+  * Rebuild for Debian Bookworm / Proxmox
+
+ -- Proxmox Support Team <support@proxmox.com>  Wed, 20 Sep 2023 10:57:05 +0200
+
 rust-errno (0.3.1-1) unstable; urgency=medium
 
   * Team upload.

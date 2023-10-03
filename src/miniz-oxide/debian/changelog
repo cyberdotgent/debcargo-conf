@@ -1,3 +1,9 @@
+rust-miniz-oxide (0.7.1-1~bpo12+pve1) proxmox-rust; urgency=medium
+
+  * Rebuild for Debian Bookworm / Proxmox
+
+ -- Proxmox Support Team <support@proxmox.com>  Tue, 19 Sep 2023 14:53:08 +0200
+
 rust-miniz-oxide (0.7.1-1) unstable; urgency=medium
 
   * Package miniz_oxide 0.7.1 from crates.io using debcargo 2.6.0

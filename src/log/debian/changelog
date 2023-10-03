@@ -1,3 +1,9 @@
+rust-log (0.4.20-2~bpo12+pve1) proxmox-rust; urgency=medium
+
+  * Rebuild for Debian Bookworm / Proxmox
+
+ -- Proxmox Support Team <support@proxmox.com>  Wed, 20 Sep 2023 09:52:48 +0200
+
 rust-log (0.4.20-2) unstable; urgency=medium
 
   * Team upload.

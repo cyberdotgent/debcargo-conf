@@ -1,3 +1,9 @@
+rust-object (0.31.1-1~bpo12+pve1) proxmox-rust; urgency=medium
+
+  * Rebuild for Debian Bookworm / Proxmox
+
+ -- Proxmox Support Team <support@proxmox.com>  Tue, 19 Sep 2023 14:34:53 +0200
+
 rust-object (0.31.1-1) unstable; urgency=medium
 
   * Package object 0.31.1 from crates.io using debcargo 2.6.0
