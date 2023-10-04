@@ -1,0 +1,13 @@
+Index: yew/Cargo.toml
+===================================================================
+--- yew.orig/Cargo.toml
++++ yew/Cargo.toml
+@@ -71,7 +71,7 @@ version = "0.4.1"
+ features = ["map"]
+ 
+ [dependencies.indexmap]
+-version = "2"
++version = "1.9"
+ features = ["std"]
+ 
+ [dependencies.js-sys]
