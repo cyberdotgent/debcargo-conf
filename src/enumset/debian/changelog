@@ -1,3 +1,9 @@
+rust-enumset (1.1.2-1~bpo12+pve1) proxmox-rust; urgency=medium
+
+  * Rebuild for Debian Bookworm / Proxmox
+
+ -- Proxmox Support Team <support@proxmox.com>  Wed, 04 Oct 2023 08:18:54 +0200
+
 rust-enumset (1.1.2-1) unstable; urgency=medium
 
   * Package enumset 1.1.2 from crates.io using debcargo 2.6.0 (closes: #1042832)
