@@ -1,3 +1,9 @@
+rust-enumset (1.1.2-1) unstable; urgency=medium
+
+  * Package enumset 1.1.2 from crates.io using debcargo 2.6.0 (closes: #1042832)
+
+ -- Alexander Kjäll <alexander.kjall@gmail.com>  Sun, 20 Aug 2023 18:15:45 +0000
+
 rust-enumset (1.0.12-1) unstable; urgency=medium
 
   * Team upload.
