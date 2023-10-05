@@ -1,3 +1,9 @@
+rust-vm-memory (0.12.2-1~bpo12+pve1) proxmox-rust; urgency=medium
+
+  * Rebuild for Debian Bookworm / Proxmox
+
+ -- Proxmox Support Team <support@proxmox.com>  Thu, 05 Oct 2023 11:34:01 +0200
+
 rust-vm-memory (0.12.2-1) unstable; urgency=medium
 
   * Team upload.

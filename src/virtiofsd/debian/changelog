@@ -1,3 +1,10 @@
+rust-virtiofsd (1.7.2-1~bpo12+pve1) proxmox-rust; urgency=medium
+
+  * Rebuild for Debian Bookworm / Proxmox
+  * Cherry-pick fix for --syslog and seccomp
+
+ -- Proxmox Support Team <support@proxmox.com>  Thu, 05 Oct 2023 11:29:21 +0200
+
 rust-virtiofsd (1.7.2-1) unstable; urgency=medium
 
   * Package virtiofsd 1.7.2 from crates.io using debcargo 2.6.0
