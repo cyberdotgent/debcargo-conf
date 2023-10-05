@@ -1,0 +1,26 @@
+From 92b417d28cc9ec0c0a8e758b2935bb7cba879db2 Mon Sep 17 00:00:00 2001
+From: German Maglione <gmaglione@redhat.com>
+Date: Tue, 29 Aug 2023 11:27:05 +0200
+Subject: [PATCH] seccomp: Enable `getrandom()` syscall
+
+Add a seccomp filter to enable `getrandom()` syscall.
+This was reported in the KATA channel, virtiofsd fails with:
+"Child process terminated by signal 31" when called with `--syslog`
+
+Signed-off-by: German Maglione <gmaglione@redhat.com>
+---
+ src/seccomp.rs | 1 +
+ 1 file changed, 1 insertion(+)
+
+Index: virtiofsd/src/seccomp.rs
+===================================================================
+--- virtiofsd.orig/src/seccomp.rs
++++ virtiofsd/src/seccomp.rs
+@@ -122,6 +122,7 @@ pub fn enable_seccomp(action: SeccompAct
+     allow_syscall!(ctx, libc::SYS_getegid);
+     allow_syscall!(ctx, libc::SYS_geteuid);
+     allow_syscall!(ctx, libc::SYS_getpid);
++    allow_syscall!(ctx, libc::SYS_getrandom);
+     allow_syscall!(ctx, libc::SYS_gettid);
+     allow_syscall!(ctx, libc::SYS_gettimeofday);
+     allow_syscall!(ctx, libc::SYS_getxattr);
