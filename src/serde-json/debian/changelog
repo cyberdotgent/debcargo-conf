@@ -1,3 +1,9 @@
+rust-serde-json (1.0.103-1~bpo12+1) proxmox-rust; urgency=medium
+
+  * Rebuild for Proxmox Rust distribution.
+
+ -- Proxmox Support Team <support@proxmox.com>  Sat, 21 Oct 2023 16:08:18 +0200
+
 rust-serde-json (1.0.103-1) unstable; urgency=medium
 
   * Package serde_json 1.0.103 from crates.io using debcargo 2.6.0 (Closes: #1041238)
