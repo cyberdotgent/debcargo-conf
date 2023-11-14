@@ -1,0 +1,13 @@
+diff --git a/Cargo.toml b/Cargo.toml
+index 072ea3a..5decb37 100644
+--- a/Cargo.toml
++++ b/Cargo.toml
+@@ -150,7 +150,7 @@ version = "0.2.1"
+ default-features = false
+ 
+ [dependencies.fastrand]
+-version = "2.0"
++version = "1.8"
+ optional = true
+ 
+ [dependencies.futures-io]

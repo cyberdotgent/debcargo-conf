@@ -1,3 +1,5 @@
 downgrade_base64.patch
-upgrade_quoted_printable.patch
 remove_unused_features.patch
+downgrade_fastrand.patch
+downgrade_idna.patch
+downgrade_url.patch

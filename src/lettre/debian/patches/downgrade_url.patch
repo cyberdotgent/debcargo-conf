@@ -1,0 +1,13 @@
+diff --git a/Cargo.toml b/Cargo.toml
+index 09d2b9b..5004a3b 100644
+--- a/Cargo.toml
++++ b/Cargo.toml
+@@ -237,7 +237,7 @@ optional = true
+ default-features = false
+ 
+ [dependencies.url]
+-version = "2.4"
++version = "2.3"
+ optional = true
+ 
+ [dependencies.uuid]

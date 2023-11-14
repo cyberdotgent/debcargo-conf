@@ -1,8 +1,8 @@
 diff --git a/Cargo.toml b/Cargo.toml
-index 13c34b6..b4413b6 100644
+index 13e3b77..072ea3a 100644
 --- a/Cargo.toml
 +++ b/Cargo.toml
-@@ -114,32 +114,10 @@ required-features = [
+@@ -114,24 +114,6 @@ required-features = [
      "builder",
  ]
  
@@ -27,6 +27,9 @@ index 13c34b6..b4413b6 100644
  [[bench]]
  name = "transport_smtp"
  harness = false
+@@ -140,10 +122,6 @@ harness = false
+ name = "mailbox_parsing"
+ harness = false
  
 -[dependencies.async-std]
 -version = "1.8"
@@ -35,8 +38,8 @@ index 13c34b6..b4413b6 100644
  [dependencies.async-trait]
  version = "0.1"
  optional = true
-@@ -217,19 +195,6 @@ optional = true
- version = "0.8"
+@@ -224,19 +202,6 @@ optional = true
+ version = "0.9"
  optional = true
  
 -[dependencies.rustls]
@@ -55,19 +58,19 @@ index 13c34b6..b4413b6 100644
  [dependencies.serde]
  version = "1"
  features = ["derive"]
-@@ -248,11 +213,6 @@ optional = true
- version = "0.4.4"
+@@ -255,11 +220,6 @@ optional = true
+ version = "0.5.1"
  optional = true
  
 -[dependencies.tokio1_boring]
--version = "2.1.4"
+-version = "3"
 -optional = true
 -package = "tokio-boring"
 -
  [dependencies.tokio1_crate]
  version = "1"
  optional = true
-@@ -263,11 +223,6 @@ version = "0.3"
+@@ -270,11 +230,6 @@ version = "0.3"
  optional = true
  package = "tokio-native-tls"
  
@@ -79,8 +82,8 @@ index 13c34b6..b4413b6 100644
  [dependencies.tracing]
  version = "0.1.16"
  features = ["std"]
-@@ -283,10 +238,6 @@ optional = true
- version = "0.23"
+@@ -294,10 +249,6 @@ optional = true
+ version = "0.25"
  optional = true
  
 -[dev-dependencies.async-std]
@@ -88,35 +91,35 @@ index 13c34b6..b4413b6 100644
 -features = ["attributes"]
 -
  [dev-dependencies.criterion]
- version = "0.4"
+ version = "0.5"
  
-@@ -322,18 +273,6 @@ version = "0.3"
+@@ -333,18 +284,6 @@ version = "0.3"
  version = "2"
  
  [features]
 -async-std1 = [
--    "async-std",
--    "async-trait",
--    "futures-io",
--    "futures-util",
+-    "dep:async-std",
+-    "dep:async-trait",
+-    "dep:futures-io",
+-    "dep:futures-util",
 -]
 -async-std1-rustls-tls = [
 -    "async-std1",
 -    "rustls-tls",
--    "futures-rustls",
+-    "dep:futures-rustls",
 -]
--boring-tls = ["boring"]
+-boring-tls = ["dep:boring"]
  builder = [
-     "httpdate",
-     "mime",
-@@ -366,15 +305,9 @@ file-transport-envelope = [
+     "dep:httpdate",
+     "dep:mime",
+@@ -377,15 +316,9 @@ file-transport-envelope = [
  ]
- mime03 = ["mime"]
- pool = ["futures-util"]
+ mime03 = ["dep:mime"]
+ pool = ["dep:futures-util"]
 -rustls-tls = [
--    "webpki-roots",
--    "rustls",
--    "rustls-pemfile",
+-    "dep:webpki-roots",
+-    "dep:rustls",
+-    "dep:rustls-pemfile",
 -]
  sendmail-transport = [
      "tokio1_crate?/process",
@@ -124,25 +127,25 @@ index 13c34b6..b4413b6 100644
 -    "async-std?/unstable",
  ]
  smtp-transport = [
-     "base64",
-@@ -391,21 +324,11 @@ tokio1 = [
-     "futures-io",
-     "futures-util",
+     "dep:base64",
+@@ -403,21 +336,11 @@ tokio1 = [
+     "dep:futures-io",
+     "dep:futures-util",
  ]
 -tokio1-boring-tls = [
 -    "tokio1",
 -    "boring-tls",
--    "tokio1_boring",
+-    "dep:tokio1_boring",
 -]
  tokio1-native-tls = [
      "tokio1",
      "native-tls",
-     "tokio1_native_tls_crate",
+     "dep:tokio1_native_tls_crate",
  ]
 -tokio1-rustls-tls = [
 -    "tokio1",
 -    "rustls-tls",
--    "tokio1_rustls",
+-    "dep:tokio1_rustls",
 -]
  
  [badges.is-it-maintained-issue-resolution]

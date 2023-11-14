@@ -1,0 +1,13 @@
+diff --git a/Cargo.toml b/Cargo.toml
+index 5decb37..09d2b9b 100644
+--- a/Cargo.toml
++++ b/Cargo.toml
+@@ -176,7 +176,7 @@ version = "1"
+ optional = true
+ 
+ [dependencies.idna]
+-version = "0.4"
++version = "0.3"
+ 
+ [dependencies.mime]
+ version = "0.3.4"
