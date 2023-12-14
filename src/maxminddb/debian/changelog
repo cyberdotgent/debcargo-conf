@@ -1,3 +1,15 @@
+rust-maxminddb (0.23.0-1~bpo12+1) stable; urgency=medium
+
+  * Rebuild for Proxmox projects based on Debian bookworm.
+
+ -- Thomas Lamprecht <support@proxmox.com>  Thu, 14 Dec 2023 16:05:23 +0100
+
+rust-maxminddb (0.23.0-1) unstable; urgency=medium
+
+  * Package maxminddb 0.23.0 from crates.io using debcargo 2.6.0
+
+ -- Proxmox Support Team <support@proxmox.com>  Thu, 14 Dec 2023 16:03:14 +0100
+
 rust-maxminddb (0.21.0-1~bpo11+1) bullseye; urgency=medium
 
   * Rebuild for Debian Bullseye / Proxmox
