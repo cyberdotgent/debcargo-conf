@@ -1,3 +1,9 @@
+rust-sha1 (0.10.5-1~bpo12+pve1) proxmox-rust; urgency=medium
+
+  * Rebuild for Debian Bookworm / Proxmox
+
+ -- Proxmox Support Team <support@proxmox.com>  Fri, 15 Dec 2023 15:55:35 +0100
+
 rust-sha1 (0.10.5-1) unstable; urgency=medium
 
   * Team upload.

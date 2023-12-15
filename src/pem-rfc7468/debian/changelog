@@ -1,3 +1,9 @@
+rust-pem-rfc7468 (0.7.0-1~bpo12+pve1) proxmox-rust; urgency=medium
+
+  * Rebuild for Debian Bookworm / Proxmox
+
+ -- Proxmox Support Team <support@proxmox.com>  Fri, 15 Dec 2023 16:31:41 +0100
+
 rust-pem-rfc7468 (0.7.0-1) unstable; urgency=medium
 
   * Package pem-rfc7468 0.7.0 from crates.io using debcargo 2.6.0

@@ -1,3 +1,9 @@
+rust-curl-sys (0.4.67-2~bpo12+pve1) proxmox-rust; urgency=medium
+
+  * Rebuild for Debian Bookworm / Proxmox
+
+ -- Proxmox Support Team <support@proxmox.com>  Fri, 15 Dec 2023 15:50:43 +0100
+
 rust-curl-sys (0.4.67-2) unstable; urgency=medium
 
   * Team upload.

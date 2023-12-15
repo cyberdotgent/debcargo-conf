@@ -1,3 +1,9 @@
+rust-flagset (0.4.3-1~bpo12+pve1) proxmox-rust; urgency=medium
+
+  * Rebuild for Debian Bookworm / Proxmox
+
+ -- Proxmox Support Team <support@proxmox.com>  Fri, 15 Dec 2023 16:29:28 +0100
+
 rust-flagset (0.4.3-1) unstable; urgency=medium
 
   * Package flagset 0.4.3 from crates.io using debcargo 2.6.0

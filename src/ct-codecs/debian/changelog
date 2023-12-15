@@ -1,3 +1,9 @@
+rust-ct-codecs (1.1.1-1~bpo12+pve1) proxmox-rust; urgency=medium
+
+  * Rebuild for Debian Bookworm / Proxmox
+
+ -- Proxmox Support Team <support@proxmox.com>  Fri, 15 Dec 2023 14:59:37 +0100
+
 rust-ct-codecs (1.1.1-1) unstable; urgency=medium
 
   * Package ct-codecs 1.1.1 from crates.io using debcargo 2.6.0

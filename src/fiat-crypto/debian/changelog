@@ -1,3 +1,9 @@
+rust-fiat-crypto (0.2.2-1~bpo12+pve1) proxmox-rust; urgency=medium
+
+  * Rebuild for Debian Bookworm / Proxmox
+
+ -- Proxmox Support Team <support@proxmox.com>  Fri, 15 Dec 2023 15:04:27 +0100
+
 rust-fiat-crypto (0.2.2-1) unstable; urgency=medium
 
   * Team upload.

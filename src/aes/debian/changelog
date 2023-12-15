@@ -1,3 +1,9 @@
+rust-aes (0.8.3-2~bpo12+pve1) proxmox-rust; urgency=medium
+
+  * Rebuild for Debian Bookworm / Proxmox
+
+ -- Proxmox Support Team <support@proxmox.com>  Fri, 15 Dec 2023 16:50:55 +0100
+
 rust-aes (0.8.3-2) unstable; urgency=medium
 
   * Team upload.

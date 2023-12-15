@@ -1,3 +1,9 @@
+rust-digest (0.10.7-2~bpo12+pve1) proxmox-rust; urgency=medium
+
+  * Rebuild for Debian Bookworm / Proxmox
+
+ -- Proxmox Support Team <support@proxmox.com>  Fri, 15 Dec 2023 15:26:10 +0100
+
 rust-digest (0.10.7-2) unstable; urgency=medium
 
   * Enable oid feature and const-oid optional dependency

@@ -1,3 +1,9 @@
+rust-password-hash (0.5.0-1~bpo12+pve1) proxmox-rust; urgency=medium
+
+  * Rebuild for Debian Bookworm / Proxmox
+
+ -- Proxmox Support Team <support@proxmox.com>  Mon, 18 Dec 2023 09:32:57 +0100
+
 rust-password-hash (0.5.0-1) unstable; urgency=medium
 
   * Package password-hash 0.5.0 from crates.io using debcargo 2.6.0

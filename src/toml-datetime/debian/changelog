@@ -1,3 +1,9 @@
+rust-toml-datetime (0.6.5-1~bpo12+pve1) proxmox-rust; urgency=medium
+
+  * Rebuild for Debian Bookworm / Proxmox
+
+ -- Proxmox Support Team <support@proxmox.com>  Fri, 15 Dec 2023 14:36:20 +0100
+
 rust-toml-datetime (0.6.5-1) unstable; urgency=medium
 
   * Team upload.

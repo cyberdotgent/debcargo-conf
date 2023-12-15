@@ -1,3 +1,9 @@
+rust-crypto-common (0.1.6-1~bpo12+pve1) proxmox-rust; urgency=medium
+
+  * Rebuild for Debian Bookworm / Proxmox
+
+ -- Proxmox Support Team <support@proxmox.com>  Mon, 18 Dec 2023 09:42:55 +0100
+
 rust-crypto-common (0.1.6-1) unstable; urgency=medium
 
   * Team upload.

@@ -1,3 +1,9 @@
+rust-ff (0.13.0-1~bpo12+pve1) proxmox-rust; urgency=medium
+
+  * Rebuild for Debian Bookworm / Proxmox
+
+ -- Proxmox Support Team <support@proxmox.com>  Fri, 15 Dec 2023 16:01:50 +0100
+
 rust-ff (0.13.0-1) unstable; urgency=medium
 
   * Package ff 0.13.0 from crates.io using debcargo 2.6.0

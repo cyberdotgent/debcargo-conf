@@ -1,3 +1,9 @@
+rust-clap-builder (4.4.6-1~bpo12+pve1) proxmox-rust; urgency=medium
+
+  * Rebuild for Debian Bookworm / Proxmox
+
+ -- Proxmox Support Team <support@proxmox.com>  Mon, 18 Dec 2023 11:29:47 +0100
+
 rust-clap-builder (4.4.6-1) unstable; urgency=medium
 
   * Team upload.

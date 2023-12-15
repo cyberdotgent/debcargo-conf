@@ -1,3 +1,9 @@
+rust-walkdir (2.4.0-1~bpo12+pve1) proxmox-rust; urgency=medium
+
+  * Rebuild for Debian Bookworm / Proxmox
+
+ -- Proxmox Support Team <support@proxmox.com>  Fri, 15 Dec 2023 15:30:44 +0100
+
 rust-walkdir (2.4.0-1) unstable; urgency=medium
 
   * Team upload.

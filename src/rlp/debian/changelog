@@ -1,3 +1,9 @@
+rust-rlp (0.5.2-2~bpo12+pve1) proxmox-rust; urgency=medium
+
+  * Rebuild for Debian Bookworm / Proxmox
+
+ -- Proxmox Support Team <support@proxmox.com>  Fri, 15 Dec 2023 16:18:54 +0100
+
 rust-rlp (0.5.2-2) unstable; urgency=medium
 
   * fix overflow tests on 32-bit arches

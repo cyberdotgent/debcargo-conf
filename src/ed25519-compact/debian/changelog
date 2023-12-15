@@ -1,3 +1,9 @@
+rust-ed25519-compact (2.0.4-1~bpo12+pve1) proxmox-rust; urgency=medium
+
+  * Rebuild for Debian Bookworm / Proxmox
+
+ -- Proxmox Support Team <support@proxmox.com>  Fri, 15 Dec 2023 15:01:58 +0100
+
 rust-ed25519-compact (2.0.4-1) unstable; urgency=medium
 
   * Package ed25519-compact 2.0.4 from crates.io using debcargo 2.6.0
