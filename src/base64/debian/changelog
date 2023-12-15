@@ -1,3 +1,9 @@
+rust-base64 (0.21.5-1~bpo12+pve1) proxmox-rust; urgency=medium
+
+  * Rebuild for Debian Bookworm / Proxmox
+
+ -- Proxmox Support Team <support@proxmox.com>  Fri, 15 Dec 2023 14:21:01 +0100
+
 rust-base64 (0.21.5-1) unstable; urgency=medium
 
   * Team upload.
