@@ -1,32 +1,13 @@
-Index: clap/Cargo.toml
-===================================================================
 --- clap.orig/Cargo.toml
 +++ clap/Cargo.toml
-@@ -41,16 +41,12 @@ cargo-args = [
-     "-Zunstable-options",
-     "-Zrustdoc-scrape-examples",
- ]
+@@ -44 +43,0 @@
 -features = ["unstable-doc"]
- rustdoc-args = [
-     "--cfg",
-     "docsrs",
-     "--generate-link-to-definition",
- ]
- 
+@@ -50,3 +48,0 @@
 -[package.metadata.playground]
 -features = ["unstable-doc"]
 -
- [package.metadata.release]
- shared-version = true
- tag-name = "v{{version}}"
-@@ -422,10 +418,6 @@ std = ["clap_builder/std"]
- string = ["clap_builder/string"]
- suggestions = ["clap_builder/suggestions"]
- unicode = ["clap_builder/unicode"]
+@@ -431,4 +426,0 @@
 -unstable-doc = [
 -    "clap_builder/unstable-doc",
 -    "derive",
 -]
- unstable-styles = ["clap_builder/unstable-styles"]
- unstable-v5 = [
-     "clap_builder/unstable-v5",

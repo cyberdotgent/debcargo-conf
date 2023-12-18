@@ -2,7 +2,7 @@ Index: clap/Cargo.toml
 ===================================================================
 --- clap.orig/Cargo.toml
 +++ clap/Cargo.toml
-@@ -419,10 +419,5 @@ string = ["clap_builder/string"]
+@@ -425,10 +425,5 @@ string = ["clap_builder/string"]
  suggestions = ["clap_builder/suggestions"]
  unicode = ["clap_builder/unicode"]
  unstable-styles = ["clap_builder/unstable-styles"]
