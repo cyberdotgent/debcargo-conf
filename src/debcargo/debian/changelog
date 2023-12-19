@@ -1,3 +1,9 @@
+rust-debcargo (2.6.1-4~bpo12+pve1) proxmox-rust; urgency=medium
+
+  * Rebuild for Debian Bookworm / Proxmox
+
+ -- Proxmox Support Team <support@proxmox.com>  Tue, 19 Dec 2023 09:48:22 +0100
+
 rust-debcargo (2.6.1-4) unstable; urgency=medium
 
   * Team upload.
