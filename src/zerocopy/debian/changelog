@@ -6,8 +6,9 @@ rust-zerocopy (0.7.32-1) unstable; urgency=medium
   [ Agathe Porte ]
   * Team upload.
   * Package zerocopy 0.7.32 from crates.io using debcargo 2.6.1
-  * Closes: #1057283 
   * Do not build internal feature
+  * Closes: #1057283
+  * Use collapse_features = true
 
  -- Peter Michael Green <plugwash@debian.org>  Fri, 23 Feb 2024 03:00:27 +0000
 
