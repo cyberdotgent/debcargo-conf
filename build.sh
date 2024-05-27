@@ -20,6 +20,8 @@
 #     will pass to sbuild; for example SBUILD_OPTS=--arch=i386
 # EXTRA_DEBS
 #     Include extra dependency debs, e.g. EXTRA_DEBS=librust*.deb.
+# CHROOT_MODE=unshare
+#     Whether to build with sbuild unshare mode
 set -e
 
 SCRIPTDIR="$(dirname $(readlink -f "$0"))"
@@ -58,8 +60,18 @@ DEBDIST=$(dpkg-parsechangelog -l $PKGNAME/debian/changelog -SDistribution)
 DEB_HOST_ARCH=$(dpkg-architecture -q DEB_HOST_ARCH)
 SRCNAME="${DEBSRC}_${DEBVER}"
 BUILDNAME="${DEBSRC}_${DEBVER}_${DEB_HOST_ARCH}"
+
 if [ -z "$CHROOT" ]; then
-	if schroot -i -c "debcargo-unstable-${DEB_HOST_ARCH}-sbuild" >/dev/null 2>&1; then
+	if [ "$CHROOT_MODE" = "unshare" ]; then
+		CHROOT="$(find ~/.cache/sbuild -iname "debcargo-*" | head -n1)"
+		if [ -z "$CHROOT" ]; then
+			CHROOT="unstable-${DEB_HOST_ARCH}"
+			echo >&2 "Automatically using sbuild tarball unstable-${DEB_HOST_ARCH}; however it's"
+			echo >&2 "strongly recommended to create a separate tarball debcargo-unstable-${DEB_HOST_ARCH}"
+			echo >&2 "so your builds won't have to re-download & re-install cargo, rustc, and llvm every time."
+			echo >&2 "See README.rst section \"Build environment\" for details."
+		fi
+	elif schroot -i -c "debcargo-unstable-${DEB_HOST_ARCH}-sbuild" >/dev/null 2>&1; then
 		CHROOT="debcargo-unstable-${DEB_HOST_ARCH}-sbuild"
 	elif schroot -i -c "unstable-${DEB_HOST_ARCH}-sbuild" >/dev/null 2>&1; then
 		CHROOT="unstable-${DEB_HOST_ARCH}-sbuild"
@@ -78,6 +90,37 @@ shouldbuild() {
 	local src="$2"
 	test ! -e "$dst" -o "$src" -nt "$dst"
 }
+
+# maintain an apt cache in ./build/aptroot
+mkdir -p "./aptroot/etc/apt/apt.conf.d" "./aptroot/var/lib/apt/lists/" "./aptroot/etc/apt/preferences.d"
+cat << END > "./aptroot/apt.conf"
+Apt::Architecture "$DEB_HOST_ARCH";
+Apt::Architectures "$DEB_HOST_ARCH";
+Dir "$PWD/aptroot";
+Acquire::Languages "none";
+END
+{
+echo "deb [signed-by=/usr/share/keyrings/debian-archive-keyring.gpg] http://deb.debian.org/debian/ $DISTRIBUTION main";
+case $DISTRIBUTION in
+	experimental|rc-buggy)
+		echo "deb [signed-by=/usr/share/keyrings/debian-archive-keyring.gpg] http://deb.debian.org/debian/ unstable main"
+		;;
+	unstable|sid|testing) : ;;
+	*-backports)
+		echo "deb [signed-by=/usr/share/keyrings/debian-archive-keyring.gpg] http://deb.debian.org/debian/ ${DISTRIBUTION%-backports} main";
+		echo "deb [signed-by=/usr/share/keyrings/debian-archive-keyring.gpg] http://deb.debian.org/debian/ ${DISTRIBUTION%-backports}-updates main";
+		echo "deb [signed-by=/usr/share/keyrings/debian-archive-keyring.gpg] http://security.debian.org/debian-security/ ${DISTRIBUTION%-backports}-security main";
+		;;
+	*)
+		# assume stable release
+		echo "deb [signed-by=/usr/share/keyrings/debian-archive-keyring.gpg] http://deb.debian.org/debian/ $DISTRIBUTION-updates main";
+		echo "deb [signed-by=/usr/share/keyrings/debian-archive-keyring.gpg] http://security.debian.org/debian-security/ $DISTRIBUTION-security main";
+		;;
+esac;
+} > "./aptroot/etc/apt/sources.list"
+APT_CONFIG="$PWD/aptroot/apt.conf"
+export APT_CONFIG
+apt-get update
 
 if shouldbuild "$SRCNAME.dsc" "$PKGNAME/debian/changelog" ]; then
 	if [ "$REUSE_EXISTING_ORIG_TARBALL" = 1 ]; then
@@ -117,7 +160,10 @@ fi
 
 check_build_deps() {
 	mkdir -p dpkg-dummy
-	if shouldbuild dpkg-dummy/status /var/cache/apt/pkgcache.bin; then
+	# Dir::State::Lists is /var/lib/apt/lists by default.
+	# Since apt replaces the files in that directory instead of rewriting
+	# existing inodes, we can rely on the directory mtime.
+	if shouldbuild dpkg-dummy/status "$(eval "$(apt-config shell v Dir::State::Lists/d)"; printf "$v")"; then
 		# pretend dpkg status file that marks all packages as installed
 		# this is because dpkg-checkbuilddeps only works on installed pkgs
 		( apt-cache dumpavail -o APT::Default-Release=$DISTRIBUTION && \
@@ -153,7 +199,13 @@ if [ -n "${EXTRA_DEBS[*]}" ]; then
     EXTRA_DEBS_AUTOPKGTEST_OPTS=([0]=--autopkgtest-opt=--copy="$PWD/$EXTRA_DEBS_REPO_TMP/:/tmp/$EXTRA_DEBS_REPO_TMP/" [1]=--autopkgtest-opt=--add-apt-source="deb [trusted=yes] file:///tmp/$EXTRA_DEBS_REPO_TMP ./")
 fi
 
-AUTOPKGTEST_OPTS=("--run-autopkgtest" "--autopkgtest-root-arg=" "--autopkgtest-opts=-- schroot ${CHROOT}")
+if [ "$CHROOT_MODE" = "unshare" ]; then
+	AUTOPKGTEST_OPTS=("--run-autopkgtest" "--autopkgtest-root-arg=" "--autopkgtest-opts=--apt-upgrade -- unshare -t ${CHROOT} ${DISTRIBUTION:+-r $DISTRIBUTION}")
+else
+	AUTOPKGTEST_OPTS=("--run-autopkgtest" "--autopkgtest-root-arg=" "--autopkgtest-opts=-- schroot ${CHROOT}")
+fi
+
+
 if [ "$SKIP_AUTOPKGTEST" = 1 ]; then
 	AUTOPKGTEST_OPTS=()
 	EXTRA_DEBS_AUTOPKGTEST_OPTS=()
@@ -166,6 +218,7 @@ fi
 
 SBUILD_CONFIG="$SCRIPTDIR/dev/sbuildrc" sbuild --no-source --arch-any --arch-all \
   ${CHROOT:+-c $CHROOT} \
+  ${CHROOT_MODE:+--chroot-mode "$CHROOT_MODE"} \
   ${DISTRIBUTION:+-d $DISTRIBUTION} \
   "${EXTRA_DEBS_SBUILD[@]}" \
   "${EXTRA_DEBS_AUTOPKGTEST_OPTS[@]}" \
