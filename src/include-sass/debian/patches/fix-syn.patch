@@ -1,0 +1,12 @@
+Index: include-sass/Cargo.toml
+===================================================================
+--- include-sass.orig/Cargo.toml
++++ include-sass/Cargo.toml
+@@ -48,6 +48,7 @@ default-features = false
+ [dependencies.syn]
+ version = "2"
+ default-features = false
++features = ["parsing", "proc-macro"]
+ 
+ [features]
+ nightly = []

@@ -1,3 +1,9 @@
+rust-getrandom (0.2.8-2~bpo12+pve1) proxmox-rust; urgency=medium
+
+  * Rebuild for Debian Bookworm / Proxmox with WASM support
+
+ -- Proxmox Support Team <support@proxmox.com>  Mon, 27 May 2024 12:06:53 +0200
+
 rust-getrandom (0.2.8-1) unstable; urgency=medium
 
   * Team upload.

@@ -1,0 +1,13 @@
+Index: lasso/Cargo.toml
+===================================================================
+--- lasso.orig/Cargo.toml
++++ lasso/Cargo.toml
+@@ -89,7 +89,7 @@ optional = true
+ default-features = false
+ 
+ [dependencies.hashbrown]
+-version = "0.13.0"
++version = "0.12.0"
+ features = ["raw"]
+ 
+ [dependencies.serde]

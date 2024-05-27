@@ -1,0 +1,13 @@
+Index: grass-compiler/Cargo.toml
+===================================================================
+--- grass-compiler.orig/Cargo.toml
++++ grass-compiler/Cargo.toml
+@@ -52,7 +52,7 @@ version = "0.7"
+ version = "1.15.0"
+ 
+ [dependencies.phf]
+-version = "0.11"
++version = "0.10"
+ features = ["macros"]
+ 
+ [dependencies.rand]

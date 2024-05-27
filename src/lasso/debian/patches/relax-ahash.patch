@@ -1,0 +1,23 @@
+Index: lasso/Cargo.toml
+===================================================================
+--- lasso.orig/Cargo.toml
++++ lasso/Cargo.toml
+@@ -73,8 +73,7 @@ optional = true
+ default-features = false
+ 
+ [dependencies.ahash]
+-version = "0.8.0"
+-features = ["no-rng"]
++version = "0.7.6"
+ optional = true
+ default-features = false
+ 
+@@ -99,7 +98,7 @@ optional = true
+ default-features = false
+ 
+ [dev-dependencies.ahash]
+-version = "0.8.0"
++version = "0.7.6"
+ default-features = false
+ 
+ [dev-dependencies.criterion]
