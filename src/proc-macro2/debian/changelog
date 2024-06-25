@@ -1,3 +1,34 @@
+rust-proc-macro2 (1.0.85-1) unstable; urgency=medium
+
+  * Team upload.
+  * Package proc-macro2 1.0.85 from crates.io using debcargo 2.6.1
+
+ -- Blair Noctis <n@sail.ng>  Sun, 02 Jun 2024 06:00:40 +0000
+
+rust-proc-macro2 (1.0.81-1) unstable; urgency=medium
+
+  * Team upload.
+  * Package proc-macro2 1.0.81 from crates.io using debcargo 2.6.1
+
+ -- James McCoy <jamessan@debian.org>  Tue, 30 Apr 2024 10:04:11 -0400
+
+rust-proc-macro2 (1.0.76-1) unstable; urgency=medium
+
+  * Team upload.
+  * Package proc-macro2 1.0.76 from crates.io using debcargo 2.6.1
+
+ -- Peter Michael Green <plugwash@debian.org>  Tue, 09 Jan 2024 22:14:18 +0000
+
+rust-proc-macro2 (1.0.69-1) unstable; urgency=medium
+
+  * Package proc-macro2 1.0.69 from crates.io using debcargo 2.6.0
+
+  [ Blair Noctis ]
+  * Team upload.
+  * Package proc-macro2 1.0.67 from crates.io using debcargo 2.6.0
+
+ -- Peter Michael Green <plugwash@debian.org>  Thu, 09 Nov 2023 19:03:25 +0000
+
 rust-proc-macro2 (1.0.67-1~bpo12+pve1) proxmox-rust; urgency=medium
 
   * Rebuild for Debian Bookworm / Proxmox

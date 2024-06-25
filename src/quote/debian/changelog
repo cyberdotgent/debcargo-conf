@@ -1,3 +1,20 @@
+rust-quote (1.0.36-1) unstable; urgency=medium
+
+  * Team upload.
+  * Package quote 1.0.36 from crates.io using debcargo 2.6.1
+
+ -- Sylvestre Ledru <sylvestre@debian.org>  Wed, 01 May 2024 17:47:59 +0200
+
+rust-quote (1.0.35-1) unstable; urgency=medium
+
+  * Package quote 1.0.35 from crates.io using debcargo 2.6.1
+
+  [ Blair Noctis ]
+  * Team upload.
+  * Package quote 1.0.33 from crates.io using debcargo 2.6.0
+
+ -- Peter Michael Green <plugwash@debian.org>  Tue, 09 Jan 2024 22:18:17 +0000
+
 rust-quote (1.0.33-1~bpo12+pve1) proxmox-rust; urgency=medium
 
   * Rebuild for Debian Bookworm / Proxmox
