@@ -75,13 +75,6 @@ Comment:
  FIXME (overlay): These notices are extracted from files. Please review them
  before uploading to the archive.
 
-Files: src/readers/event_section.rs
-Copyright: 2020 Mozilla Foundation
-License: UNKNOWN-LICENSE; FIXME (overlay)
-Comment:
- FIXME (overlay): These notices are extracted from files. Please review them
- before uploading to the archive.
-
 Files: src/readers/export_section.rs
 Copyright: 2018 Mozilla Foundation
 License: UNKNOWN-LICENSE; FIXME (overlay)
@@ -180,6 +173,13 @@ Comment:
  FIXME (overlay): These notices are extracted from files. Please review them
  before uploading to the archive.
 
+Files: src/readers/tag_section.rs
+Copyright: 2020 Mozilla Foundation
+License: UNKNOWN-LICENSE; FIXME (overlay)
+Comment:
+ FIXME (overlay): These notices are extracted from files. Please review them
+ before uploading to the archive.
+
 Files: src/readers/type_section.rs
 Copyright: 2018 Mozilla Foundation
 License: UNKNOWN-LICENSE; FIXME (overlay)
@@ -196,8 +196,8 @@ Comment:
 
 Files: debian/*
 Copyright:
- 2022 Debian Rust Maintainers <pkg-rust-maintainers@alioth-lists.debian.net>
- 2022 Fabian Grünbichler <f.gruenbichler@proxmox.com>
+ 2022-2024 Debian Rust Maintainers <pkg-rust-maintainers@alioth-lists.debian.net>
+ 2022-2024 Fabian Grünbichler <f.gruenbichler@proxmox.com>
 License: Apache-2.0 WITH LLVM-exception
 
 License: Apache-2.0 WITH LLVM-exception

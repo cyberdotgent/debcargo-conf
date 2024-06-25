@@ -1,0 +1,13 @@
+Index: walrus/Cargo.toml
+===================================================================
+--- walrus.orig/Cargo.toml
++++ walrus/Cargo.toml
+@@ -37,7 +37,7 @@ harness = false
+ version = "1.0"
+ 
+ [dependencies.gimli]
+-version = "0.26.0"
++version = "0.27.0"
+ 
+ [dependencies.id-arena]
+ version = "2.2.1"
