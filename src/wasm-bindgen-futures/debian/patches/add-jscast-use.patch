@@ -1,7 +1,7 @@
-diff --git a/src/stream.rs b/src/stream.rs
-index fe35d81..69616d8 100644
---- a/src/stream.rs
-+++ b/src/stream.rs
+Index: wasm-bindgen-futures/src/stream.rs
+===================================================================
+--- wasm-bindgen-futures.orig/src/stream.rs
++++ wasm-bindgen-futures/src/stream.rs
 @@ -12,6 +12,7 @@ use core::task::{Context, Poll};
  use futures_core::stream::Stream;
  use js_sys::{AsyncIterator, IteratorNext};
