@@ -1,3 +1,9 @@
+rust-serde-derive (1.0.203-1~bpo12+pve1) proxmox-rust; urgency=medium
+
+  * Rebuild for Debian Bookworm / Proxmox
+
+ -- Proxmox Support Team <support@proxmox.com>  Tue, 25 Jun 2024 12:21:48 +0200
+
 rust-serde-derive (1.0.203-1) unstable; urgency=medium
 
   * Team upload.
