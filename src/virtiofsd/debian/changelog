@@ -1,3 +1,9 @@
+rust-virtiofsd (1.10.1-1~bpo12+pve1) proxmox-rust; urgency=medium
+
+  * Rebuild for Debian Bookworm / Proxmox
+
+ -- Proxmox Support Team <support@proxmox.com>  Fri, 05 Jul 2024 11:54:19 +0200
+
 rust-virtiofsd (1.10.1-1) unstable; urgency=medium
 
   * Package virtiofsd 1.10.1 from crates.io using debcargo 2.6.0
