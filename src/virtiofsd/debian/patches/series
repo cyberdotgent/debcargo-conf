@@ -1,3 +1,2 @@
 relax-env-logger-deps.diff
 ignore-tests.patch
-fix-seccomp-syslog.patch
