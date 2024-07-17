@@ -1,0 +1,12 @@
+rust-gix-config (0.36.1-2) unstable; urgency=medium
+
+  * Team upload.
+  * Properly disable missing benchmarks and fix tests.
+
+ -- Fabian Grünbichler <debian@fabian.gruenbichler.email>  Mon, 15 Jul 2024 18:40:44 +0200
+
+rust-gix-config (0.36.1-1) unstable; urgency=medium
+
+  * Package gix-config 0.36.1 from crates.io using debcargo 2.6.1
+
+ -- Federico Ceratto <federico@debian.org>  Tue, 11 Jun 2024 16:58:06 +0200

@@ -1,0 +1,13 @@
+rust-gix-index (0.32.1-2) unstable; urgency=medium
+
+  * Team upload.
+  * Package gix-index 0.32.1 from crates.io using debcargo 2.6.1
+  * Skip structure size tests on 32-bit architectures.
+
+ -- Peter Michael Green <plugwash@debian.org>  Sat, 13 Jul 2024 04:03:15 +0000
+
+rust-gix-index (0.32.1-1) unstable; urgency=medium
+
+  * Package gix-index 0.32.1 from crates.io using debcargo 2.6.1
+
+ -- Federico Ceratto <federico@debian.org>  Tue, 11 Jun 2024 17:00:18 +0200

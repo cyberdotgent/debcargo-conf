@@ -1,0 +1,27 @@
+rust-gix-packetline-blocking (0.17.4-2) unstable; urgency=medium
+
+  * Team upload.
+  * Fix autopkgtests by dropping async-io feature
+
+ -- Fabian Grünbichler <debian@fabian.gruenbichler.email>  Wed, 12 Jun 2024 09:41:27 +0200
+
+rust-gix-packetline-blocking (0.17.4-1) unstable; urgency=medium
+
+  * Team upload.
+  * Package gix-packetline-blocking 0.17.4 from crates.io using debcargo 2.6.1
+
+ -- Fabian Grünbichler <debian@fabian.gruenbichler.email>  Tue, 11 Jun 2024 20:32:56 +0200
+
+rust-gix-packetline-blocking (0.16.6-2) unstable; urgency=medium
+
+  * Team upload.
+  * Package gix-packetline-blocking 0.16.6 from crates.io using debcargo 2.6.1
+  * Bump faster-hex dependency.
+
+ -- Peter Michael Green <plugwash@debian.org>  Fri, 15 Dec 2023 03:04:23 +0000
+
+rust-gix-packetline-blocking (0.16.6-1) unstable; urgency=medium
+
+  * Package gix-packetline-blocking 0.16.6 from crates.io using debcargo 2.6.0
+
+ -- Alexander Kjäll <alexander.kjall@gmail.com>  Sat, 30 Sep 2023 12:17:47 +0200

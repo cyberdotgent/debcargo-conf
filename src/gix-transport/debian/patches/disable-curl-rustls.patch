@@ -1,0 +1,15 @@
+Index: gix-transport/Cargo.toml
+===================================================================
+--- gix-transport.orig/Cargo.toml
++++ gix-transport/Cargo.toml
+@@ -155,10 +155,6 @@ http-client-curl = [
+     "curl",
+     "http-client",
+ ]
+-http-client-curl-rust-tls = [
+-    "http-client-curl",
+-    "curl/rustls",
+-]
+ http-client-reqwest = [
+     "reqwest",
+     "http-client",

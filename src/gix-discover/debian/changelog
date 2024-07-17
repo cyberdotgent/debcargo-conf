@@ -1,0 +1,5 @@
+rust-gix-discover (0.31.0-1) unstable; urgency=medium
+
+  * Package gix-discover 0.31.0 from crates.io using debcargo 2.6.1
+
+ -- Federico Ceratto <federico@debian.org>  Tue, 11 Jun 2024 17:06:01 +0200

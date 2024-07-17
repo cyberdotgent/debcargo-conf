@@ -1,0 +1,12 @@
+rust-gix-ref (0.43.0-2) unstable; urgency=medium
+
+  * Team upload.
+  * Re-upload with tests marked as broken.
+
+ -- Fabian Grünbichler <debian@fabian.gruenbichler.email>  Mon, 15 Jul 2024 18:22:04 +0200
+
+rust-gix-ref (0.43.0-1) unstable; urgency=medium
+
+  * Package gix-ref 0.43.0 from crates.io using debcargo 2.6.1
+
+ -- Federico Ceratto <federico@debian.org>  Tue, 11 Jun 2024 16:47:18 +0200

@@ -1,0 +1,5 @@
+rust-gix-refspec (0.23.0-1) unstable; urgency=medium
+
+  * Package gix-refspec 0.23.0 from crates.io using debcargo 2.6.1
+
+ -- Federico Ceratto <federico@debian.org>  Tue, 11 Jun 2024 17:17:04 +0200

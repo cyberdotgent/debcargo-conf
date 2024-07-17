@@ -1,0 +1,36 @@
+Index: rust-gix-index-0.32.1/src/access/mod.rs
+===================================================================
+--- rust-gix-index-0.32.1.orig/src/access/mod.rs
++++ rust-gix-index-0.32.1/src/access/mod.rs
+@@ -573,6 +573,7 @@ mod tests {
+     use std::path::{Path, PathBuf};
+ 
+     #[test]
++    #[ignore]
+     fn entry_by_path_with_conflicting_file() {
+         let file = PathBuf::from("tests")
+             .join("fixtures")
+Index: rust-gix-index-0.32.1/src/extension/tree/mod.rs
+===================================================================
+--- rust-gix-index-0.32.1.orig/src/extension/tree/mod.rs
++++ rust-gix-index-0.32.1/src/extension/tree/mod.rs
+@@ -16,6 +16,7 @@ mod write;
+ mod tests {
+ 
+     #[test]
++    #[cfg(target_pointer_bits = "64")]
+     fn size_of_tree() {
+         assert_eq!(std::mem::size_of::<crate::extension::Tree>(), 88);
+     }
+Index: rust-gix-index-0.32.1/src/lib.rs
+===================================================================
+--- rust-gix-index-0.32.1.orig/src/lib.rs
++++ rust-gix-index-0.32.1/src/lib.rs
+@@ -226,6 +226,7 @@ pub(crate) mod util {
+ }
+ 
+ #[test]
++#[cfg(target_pointer_bits = "64")]
+ fn size_of_entry() {
+     assert_eq!(std::mem::size_of::<crate::Entry>(), 80);
+ 
