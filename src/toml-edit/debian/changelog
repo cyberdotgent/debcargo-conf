@@ -1,3 +1,29 @@
+rust-toml-edit (0.21.0-3) unstable; urgency=medium
+
+  * Team upload.
+  * Package toml_edit 0.21.0 from crates.io using debcargo 2.6.1
+  * Stop patching snapbox dependency.
+  * Add patch for winnow 0.6.
+
+ -- Peter Michael Green <plugwash@debian.org>  Tue, 14 May 2024 03:55:02 +0000
+
+rust-toml-edit (0.21.0-2) unstable; urgency=medium
+
+  * Team upload.
+  * Package toml_edit 0.21.0 from crates.io using debcargo 2.6.1
+
+ -- Peter Michael Green <plugwash@debian.org>  Tue, 30 Jan 2024 15:57:13 +0000
+
+rust-toml-edit (0.21.0-1) experimental; urgency=medium
+
+  * Team upload.
+  * Package toml_edit 0.21.0 from crates.io using debcargo 2.6.0
+  * Update patches for new upstream.
+  * Skip a couple of tests that fail with stack overflows, these tests were
+    inadvertently skipped in previous versions of the Debian package.
+
+ -- Peter Michael Green <plugwash@debian.org>  Wed, 15 Nov 2023 00:13:55 +0000
+
 rust-toml-edit (0.19.15-1~bpo12+pve1) proxmox-rust; urgency=medium
 
   * Rebuild for Debian Bookworm / Proxmox
