@@ -1,1 +1,4 @@
-fix-tests.patch
+no-tokio-rustls.patch
+disable-test-missing-testdata.patch
+no-webpki-roots.patch
+relax-deps.patch
