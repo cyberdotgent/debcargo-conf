@@ -1,0 +1,22 @@
+Index: async-compression/Cargo.toml
+===================================================================
+--- async-compression.orig/Cargo.toml
++++ async-compression/Cargo.toml
+@@ -69,7 +69,7 @@ optional = true
+ default-features = false
+ 
+ [dependencies.libzstd]
+-version = "0.13"
++version = "0.12"
+ optional = true
+ default-features = false
+ package = "zstd"
+@@ -90,7 +90,7 @@ version = "0.1.6"
+ optional = true
+ 
+ [dependencies.zstd-safe]
+-version = "7"
++version = "6"
+ optional = true
+ default-features = false
+ 

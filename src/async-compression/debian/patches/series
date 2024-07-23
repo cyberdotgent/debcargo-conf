@@ -2,3 +2,4 @@ remove-zstdmt-feature.patch
 remove-unavailable-examples-tests.patch
 disable-deflate64.patch
 relax-ntest.diff
+relax-zstd.patch
