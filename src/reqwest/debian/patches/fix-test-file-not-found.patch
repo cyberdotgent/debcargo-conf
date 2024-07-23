@@ -1,4 +1,4 @@
-This tests changes the blocking_file_part test to use a different 
+This tests changes the blocking_file_part test to use a different
 test file because Cargo.lock is not available in the autopkgtest
 environment.
 

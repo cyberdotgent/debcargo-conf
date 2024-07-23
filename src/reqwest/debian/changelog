@@ -1,3 +1,160 @@
+rust-reqwest (0.11.27-3) unstable; urgency=medium
+
+  * Cherry-pick another test fix to take the Ubuntu CI proxy into account
+    (LP: #2071789)
+
+ -- Florent 'Skia' Jacquet <florent.jacquet@canonical.com>  Wed, 10 Jul 2024 14:52:23 +0200
+
+rust-reqwest (0.11.27-2) unstable; urgency=medium
+
+  * Team upload
+  * Cherry-pick a test fix to take the Ubuntu CI proxy into account
+    (LP: #2071789)
+
+ -- Simon Chopin <schopin@ubuntu.com>  Thu, 04 Jul 2024 11:40:47 +0200
+
+rust-reqwest (0.11.27-1) unstable; urgency=medium
+
+  * Team upload.
+  * Package reqwest 0.11.27 from crates.io using debcargo 2.6.1
+  * Update dep on brotli to 6
+  * Refresh patches
+
+ -- Blair Noctis <n@sail.ng>  Mon, 17 Jun 2024 21:18:23 +0200
+
+rust-reqwest (0.11.24-3) unstable; urgency=medium
+
+  * Team upload.
+  * Package reqwest 0.11.24 from crates.io using debcargo 2.6.1
+  * Relax dependency on h2.
+
+ -- Peter Michael Green <plugwash@debian.org>  Sat, 13 Apr 2024 11:18:02 +0000
+
+rust-reqwest (0.11.24-2) unstable; urgency=medium
+
+  * Team upload.
+  * Package reqwest 0.11.24 from crates.io using debcargo 2.6.1
+
+ -- Alexander Kjäll <alexander.kjall@gmail.com>  Fri, 12 Apr 2024 09:20:36 -0400
+
+rust-reqwest (0.11.24-1) unstable; urgency=medium
+
+  * Team upload.
+  * Package reqwest 0.11.24 from crates.io using debcargo 2.6.1
+  * Update patches for new upstream and current situation in Debian.
+
+ -- Peter Michael Green <plugwash@debian.org>  Thu, 08 Feb 2024 04:04:10 +0000
+
+rust-reqwest (0.11.23-1) unstable; urgency=medium
+
+  * Team upload.
+  * Package reqwest 0.11.23 from crates.io using debcargo 2.6.1
+  * Reenable http3 and brotli as those dependencies are now in Debian.
+
+ -- Alexander Kjäll <alexander.kjall@gmail.com>  Wed, 07 Feb 2024 06:43:12 -0500
+
+rust-reqwest (0.11.22-5) unstable; urgency=medium
+
+  * Team upload.
+  * Package reqwest 0.11.22 from crates.io using debcargo 2.6.1
+  * Skip flaky tests test_empty_sys_no_proxy, test_get_sys_proxies_in_cgi and
+    test_sys_no_proxy on all architectures rather than just arm*.
+
+ -- Peter Michael Green <plugwash@debian.org>  Tue, 05 Dec 2023 15:52:19 +0000
+
+rust-reqwest (0.11.22-4) unstable; urgency=medium
+
+  * Team upload.
+  * Package reqwest 0.11.22 from crates.io using debcargo 2.6.0
+  * Stop overriding control files (Closes: #1050409, #1055671)
+  * Disable a number of tests which have proven flaky on debci.
+
+ -- Peter Michael Green <plugwash@debian.org>  Sun, 19 Nov 2023 19:15:01 +0000
+
+rust-reqwest (0.11.22-3) unstable; urgency=medium
+
+  * Team upload.
+  * Package reqwest 0.11.22 from crates.io using debcargo 2.6.0
+  * Add provides line for librust-reqwest-0.11+socks-dev
+
+ -- Alexander Kjäll <alexander.kjall@gmail.com>  Fri, 10 Nov 2023 10:27:07 +0100
+
+rust-reqwest (0.11.22-2) unstable; urgency=medium
+
+  * Team upload.
+  * Package reqwest 0.11.22 from crates.io using debcargo 2.6.0
+  * Fix truncated line in debian/tests/control.
+
+ -- Peter Michael Green <plugwash@debian.org>  Sat, 14 Oct 2023 05:54:02 +0000
+
+rust-reqwest (0.11.22-1) unstable; urgency=medium
+
+  * Team upload.
+  * Package reqwest 0.11.22 from crates.io using debcargo 2.6.0
+  * Remove bogus trust-dns-resolver build-dependency.
+  * Limit trust-dns, depends, provides and autopkgtests to architectures
+    where ring is available.
+  * Update patches for new upstream.
+  * Rearrange patches for eaasier testing.
+  * Remove macos-specific dependency newly added by upstream and not available in Debian.
+  * Revert upstream switch to trust-dns 0.23.
+  * Re-enable socks feature (Closes: #1024373).
+
+ -- Peter Michael Green <plugwash@debian.org>  Sat, 14 Oct 2023 05:30:39 +0000
+
+rust-reqwest (0.11.18-2) unstable; urgency=medium
+
+  * Team upload.
+  * Package reqwest 0.11.18 from crates.io using debcargo 2.6.0
+  * Reenable trust-dns-resolver
+  * Reenable async-compression
+  * Bump env-logger from 0.9 to 0.10
+
+ -- Alexander Kjäll <alexander.kjall@gmail.com>  Sat, 16 Sep 2023 21:39:48 +0200
+
+rust-reqwest (0.11.18-1) unstable; urgency=medium
+
+  * Team upload.
+  * Package reqwest 0.11.18 from crates.io using debcargo 2.6.0
+  * Update patches for new upstream.
+  * Update overridden debian/tests/control for new upstream.
+  * Disable newly added http3 feature, as it's dependencies are not
+    available in Debian.
+
+ -- Peter Michael Green <plugwash@debian.org>  Sat, 19 Aug 2023 12:15:03 +0000
+
+rust-reqwest (0.11.14-4) unstable; urgency=medium
+
+  * Team upload.
+  * Package reqwest 0.11.14 from crates.io using debcargo 2.6.0
+  * Bump cookie_store dependency to 0.19
+
+ -- Peter Michael Green <plugwash@debian.org>  Fri, 28 Jul 2023 02:01:21 +0000
+
+rust-reqwest (0.11.14-3) unstable; urgency=medium
+
+  * Team upload.
+  * Package reqwest 0.11.14 from crates.io using debcargo 2.6.0
+  * Add breaks on old version of librust-oauth2-dev to help britney's
+    autopkgtest scheduler.
+
+ -- Peter Michael Green <plugwash@debian.org>  Sat, 24 Jun 2023 20:09:51 +0000
+
+rust-reqwest (0.11.14-2) unstable; urgency=medium
+
+  * Team upload.
+  * Package reqwest 0.11.14 from crates.io using debcargo 2.6.0
+  * Bump dependency on rustls-pemfile to help britney's autopkgtest scheduler.
+
+ -- Peter Michael Green <plugwash@debian.org>  Thu, 22 Jun 2023 15:40:11 +0000
+
+rust-reqwest (0.11.14-1) unstable; urgency=medium
+
+  * Team upload.
+  * Package reqwest 0.11.14 from crates.io using debcargo 2.6.0 (Closes: #1037418)
+
+ -- Fabian Grünbichler <f.gruenbichler@proxmox.com>  Thu, 15 Jun 2023 01:09:09 +0000
+
 rust-reqwest (0.11.13-1) unstable; urgency=medium
 
   * Team upload.

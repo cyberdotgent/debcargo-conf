@@ -1,12 +1,11 @@
-Index: reqwest/Cargo.toml
-===================================================================
---- reqwest.orig/Cargo.toml
-+++ reqwest/Cargo.toml
-@@ -304,42 +304,6 @@ features = [
-     "rt-multi-thread",
+--- a/Cargo.toml
++++ b/Cargo.toml
+@@ -217,3 +217,2 @@
+     "tokio-util",
+-    "wasm-streams",
  ]
- default-features = false
--
+@@ -403,45 +402,2 @@
+ 
 -[target."cfg(target_arch = \"wasm32\")".dependencies.js-sys]
 -version = "0.3.45"
 -
@@ -19,9 +18,15 @@ Index: reqwest/Cargo.toml
 -[target."cfg(target_arch = \"wasm32\")".dependencies.wasm-bindgen-futures]
 -version = "0.4.18"
 -
+-[target."cfg(target_arch = \"wasm32\")".dependencies.wasm-streams]
+-version = "0.4"
+-optional = true
+-
 -[target."cfg(target_arch = \"wasm32\")".dependencies.web-sys]
 -version = "0.3.25"
 -features = [
+-    "AbortController",
+-    "AbortSignal",
 -    "Headers",
 -    "Request",
 -    "RequestInit",
@@ -34,6 +39,7 @@ Index: reqwest/Cargo.toml
 -    "ServiceWorkerGlobalScope",
 -    "RequestCredentials",
 -    "File",
+-    "ReadableStream",
 -]
 -
 -[target."cfg(target_arch = \"wasm32\")".dev-dependencies.wasm-bindgen]
@@ -42,6 +48,5 @@ Index: reqwest/Cargo.toml
 -
 -[target."cfg(target_arch = \"wasm32\")".dev-dependencies.wasm-bindgen-test]
 -version = "0.3"
- 
- [target."cfg(windows)".dependencies.winreg]
- version = "0.10"
+-
+ [target."cfg(target_os = \"macos\")".dependencies.system-configuration]

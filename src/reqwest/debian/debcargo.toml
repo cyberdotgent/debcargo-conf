@@ -1,5 +1,8 @@
 overlay = "."
-uploaders = ["Andrej Shadura <andrewsh@debian.org>"]
+uploaders = [
+  "Andrej Shadura <andrewsh@debian.org>",
+  "kpcyrd <git@rxv.cc>",
+]
 collapse_features = true
 
 # __tls appears to be an internal feature which is used to indicate that
@@ -7,3 +10,6 @@ collapse_features = true
 # a tls backend leads to a build failure.
 [packages."lib+__tls"]
 test_is_broken = true
+
+[packages.lib]
+extra_lines = ["Breaks: librust-oauth2-dev (<= 4.3.0-1+b1)"]
