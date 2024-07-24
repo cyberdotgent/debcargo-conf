@@ -1,3 +1,9 @@
+rust-universal-hash (0.5.1-1~bpo12+pve1) proxmox-rust; urgency=medium
+
+  * Rebuild for Debian Bookworm / Proxmox
+
+ -- Proxmox Support Team <support@proxmox.com>  Wed, 24 Jul 2024 11:48:58 +0200
+
 rust-universal-hash (0.5.1-1) unstable; urgency=medium
 
   * Team upload.

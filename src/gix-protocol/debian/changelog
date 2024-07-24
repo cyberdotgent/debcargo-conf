@@ -1,3 +1,9 @@
+rust-gix-protocol (0.45.1-2~bpo12+pve1) proxmox-rust; urgency=medium
+
+  * Rebuild for Debian Bookworm / Proxmox
+
+ -- Proxmox Support Team <support@proxmox.com>  Wed, 24 Jul 2024 11:49:03 +0200
+
 rust-gix-protocol (0.45.1-2) unstable; urgency=medium
 
   * Re-upload with all-features test marked as broken

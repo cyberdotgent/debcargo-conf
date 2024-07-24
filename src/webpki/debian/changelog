@@ -1,3 +1,9 @@
+rust-webpki (0.22.4-2~bpo12+pve1) proxmox-rust; urgency=medium
+
+  * Rebuild for Debian Bookworm / Proxmox
+
+ -- Proxmox Support Team <support@proxmox.com>  Wed, 24 Jul 2024 11:48:51 +0200
+
 rust-webpki (0.22.4-2) unstable; urgency=medium
 
   * Team upload.

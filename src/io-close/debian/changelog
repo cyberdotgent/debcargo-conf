@@ -1,3 +1,9 @@
+rust-io-close (0.3.7-1~bpo12+pve1) proxmox-rust; urgency=medium
+
+  * Rebuild for Debian Bookworm / Proxmox
+
+ -- Proxmox Support Team <support@proxmox.com>  Wed, 24 Jul 2024 11:48:49 +0200
+
 rust-io-close (0.3.7-1) unstable; urgency=medium
 
   * Package io-close 0.3.7 from crates.io using debcargo 2.6.0

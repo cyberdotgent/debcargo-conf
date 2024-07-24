@@ -1,3 +1,9 @@
+rust-errno (0.3.8-1~bpo12+pve1) proxmox-rust; urgency=medium
+
+  * Rebuild for Debian Bookworm / Proxmox
+
+ -- Proxmox Support Team <support@proxmox.com>  Wed, 24 Jul 2024 11:48:48 +0200
+
 rust-errno (0.3.8-1) unstable; urgency=medium
 
   * Package errno 0.3.8 from crates.io using debcargo 2.6.1

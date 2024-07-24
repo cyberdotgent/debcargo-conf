@@ -1,3 +1,9 @@
+rust-csv-core (0.1.10-1~bpo12+pve1) proxmox-rust; urgency=medium
+
+  * Rebuild for Debian Bookworm / Proxmox
+
+ -- Proxmox Support Team <support@proxmox.com>  Wed, 24 Jul 2024 11:48:46 +0200
+
 rust-csv-core (0.1.10-1) unstable; urgency=medium
 
   * Team upload.

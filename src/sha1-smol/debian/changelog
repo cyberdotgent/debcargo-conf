@@ -1,3 +1,9 @@
+rust-sha1-smol (1.0.0-1~bpo12+pve1) proxmox-rust; urgency=medium
+
+  * Rebuild for Debian Bookworm / Proxmox
+
+ -- Proxmox Support Team <support@proxmox.com>  Wed, 24 Jul 2024 11:48:40 +0200
+
 rust-sha1-smol (1.0.0-1) unstable; urgency=medium
 
   * Package sha1_smol 1.0.0 from crates.io using debcargo 2.6.0

@@ -1,3 +1,9 @@
+rust-async-io (2.3.3-3~bpo12+pve1) proxmox-rust; urgency=medium
+
+  * Rebuild for Debian Bookworm / Proxmox
+
+ -- Proxmox Support Team <support@proxmox.com>  Wed, 24 Jul 2024 11:48:41 +0200
+
 rust-async-io (2.3.3-3) unstable; urgency=medium
 
   * Team upload.

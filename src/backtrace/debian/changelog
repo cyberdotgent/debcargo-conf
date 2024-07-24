@@ -1,3 +1,9 @@
+rust-backtrace (0.3.69-2~bpo12+pve1) proxmox-rust; urgency=medium
+
+  * Rebuild for Debian Bookworm / Proxmox
+
+ -- Proxmox Support Team <support@proxmox.com>  Wed, 24 Jul 2024 11:48:47 +0200
+
 rust-backtrace (0.3.69-2) unstable; urgency=medium
 
   * Team upload.

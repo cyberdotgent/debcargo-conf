@@ -1,3 +1,9 @@
+rust-cargo-credential-libsecret (0.4.1-1~bpo12+pve1) proxmox-rust; urgency=medium
+
+  * Rebuild for Debian Bookworm / Proxmox
+
+ -- Proxmox Support Team <support@proxmox.com>  Wed, 24 Jul 2024 11:48:36 +0200
+
 rust-cargo-credential-libsecret (0.4.1-1) unstable; urgency=medium
 
   * Package cargo-credential-libsecret 0.4.1 from crates.io using debcargo 2.6.1

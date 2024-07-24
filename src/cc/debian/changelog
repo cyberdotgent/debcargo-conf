@@ -1,3 +1,9 @@
+rust-cc (1.0.83-1~bpo12+pve1) proxmox-rust; urgency=medium
+
+  * Rebuild for Debian Bookworm / Proxmox
+
+ -- Proxmox Support Team <support@proxmox.com>  Wed, 24 Jul 2024 11:48:50 +0200
+
 rust-cc (1.0.83-1) unstable; urgency=medium
 
   * Team upload.
