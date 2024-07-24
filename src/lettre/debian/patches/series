@@ -1,5 +1,1 @@
-downgrade_base64.patch
 remove_unused_features.patch
-downgrade_fastrand.patch
-downgrade_idna.patch
-downgrade_url.patch
