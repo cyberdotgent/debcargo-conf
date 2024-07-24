@@ -2,14 +2,39 @@ Index: chrono/Cargo.toml
 ===================================================================
 --- chrono.orig/Cargo.toml
 +++ chrono/Cargo.toml
-@@ -62,10 +62,6 @@ default-features = false
- version = "0.2"
- default-features = false
+@@ -65,11 +65,6 @@ default-features = false
+ version = "0.8"
+ optional = true
  
 -[dependencies.rkyv]
--version = "0.7"
+-version = "0.7.43"
 -optional = true
+-default-features = false
 -
- [dependencies.rustc-serialize]
- version = "0.3.20"
+ [dependencies.serde]
+ version = "1.0.99"
  optional = true
+@@ -100,23 +93,6 @@ default = [
+ ]
+ libc = []
+ now = ["std"]
+-rkyv = [
+-    "dep:rkyv",
+-    "rkyv/size_32",
+-]
+-rkyv-16 = [
+-    "dep:rkyv",
+-    "rkyv?/size_16",
+-]
+-rkyv-32 = [
+-    "dep:rkyv",
+-    "rkyv?/size_32",
+-]
+-rkyv-64 = [
+-    "dep:rkyv",
+-    "rkyv?/size_64",
+-]
+-rkyv-validation = ["rkyv?/validation"]
+ std = ["alloc"]
+ unstable-locales = ["pure-rust-locales"]
+ wasmbind = [
