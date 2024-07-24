@@ -1,3 +1,129 @@
+rust-sequoia-openpgp (1.21.1-2) unstable; urgency=medium
+
+  * Team upload.
+  * Package sequoia-openpgp 1.21.1 from crates.io using debcargo 2.6.1
+  * Remove dependency on p521 crate, it's not in Debian and not used
+    by any of the crypto backends currently enabled in Debian.
+
+ -- Peter Michael Green <plugwash@debian.org>  Sun, 30 Jun 2024 23:24:15 +0000
+
+rust-sequoia-openpgp (1.21.1-1) unstable; urgency=medium
+
+  * Package sequoia-openpgp 1.21.1 from crates.io using debcargo 2.6.1
+
+ -- Daniel Kahn Gillmor <dkg@fifthhorseman.net>  Fri, 28 Jun 2024 12:01:06 -0400
+
+rust-sequoia-openpgp (1.21.0-1) unstable; urgency=medium
+
+  * Package sequoia-openpgp 1.21.0 from crates.io using debcargo 2.6.1
+
+ -- Daniel Kahn Gillmor <dkg@fifthhorseman.net>  Fri, 28 Jun 2024 02:30:59 -0400
+
+rust-sequoia-openpgp (1.20.0-2) unstable; urgency=medium
+
+  * Package sequoia-openpgp 1.20.0 from crates.io using debcargo 2.6.1
+  * Upgrade memsec dependency to version 0.7.
+
+ -- Alexander Kjäll <alexander.kjall@gmail.com>  Sat, 08 Jun 2024 23:30:23 -0400
+
+rust-sequoia-openpgp (1.20.0-1) unstable; urgency=medium
+
+  * Package sequoia-openpgp 1.20.0 from crates.io using debcargo 2.6.1
+  * Avoid having to bump base64 from 0.21.7 to 0.22.0 for now
+  * Drop divergence from debcargo-generated debian/control
+
+ -- Daniel Kahn Gillmor <dkg@fifthhorseman.net>  Wed, 17 Apr 2024 21:22:03 -0400
+
+rust-sequoia-openpgp (1.19.0-1) unstable; urgency=medium
+
+  * Package sequoia-openpgp 1.19.0 from crates.io using debcargo 2.6.1
+
+ -- Alexander Kjäll <alexander.kjall@gmail.com>  Sat, 02 Mar 2024 14:23:02 +0100
+
+rust-sequoia-openpgp (1.18.0-1) unstable; urgency=medium
+
+  [ Holger Levsen ]
+  * Add myself to uploaders.
+
+  [ Alexander Kjäll ]
+  * Package sequoia-openpgp 1.18.0 from crates.io using debcargo 2.6.1
+
+ -- Holger Levsen <holger@debian.org>  Sat, 27 Jan 2024 12:12:46 +0100
+
+rust-sequoia-openpgp (1.17.0-2) unstable; urgency=medium
+
+  * Team upload.
+  * Package sequoia-openpgp 1.17.0 from crates.io using debcargo 2.6.1
+  * Remove unused rust-rsa dependency, due to a timing attack.
+
+ -- Alexander Kjäll <alexander.kjall@gmail.com>  Sat, 23 Dec 2023 18:25:34 +0100
+
+rust-sequoia-openpgp (1.17.0-1) unstable; urgency=medium
+
+  * Team upload.
+  * Package sequoia-openpgp 1.17.0 from crates.io using debcargo 2.6.0
+
+ -- Alexander Kjäll <alexander.kjall@gmail.com>  Wed, 22 Nov 2023 16:24:44 -0500
+
+rust-sequoia-openpgp (1.16.1-2) unstable; urgency=medium
+
+  * Team upload.
+  * Package sequoia-openpgp 1.16.1 from crates.io using debcargo 2.6.0
+  * Bump regex dependency to match regex-syntax dependency and help britney's
+    autopkgtest scheduler.
+
+ -- Peter Michael Green <plugwash@debian.org>  Wed, 25 Oct 2023 23:58:42 +0000
+
+rust-sequoia-openpgp (1.16.1-1) unstable; urgency=medium
+
+  * Team upload.
+  * Package sequoia-openpgp 1.16.1 from crates.io using debcargo 2.6.0
+  * Drop most of cleanup-deps.patch, it's no longer needed, update the
+    remaining parts.
+  * Refresh benches-require-compression-deflate.patch to remove fuzz
+  * Add patch for lalrpop 0.20
+  * Add patch for rust-regex-syntax 0.8 from upstream pull request. (Closes: #1053440)
+
+  [ Alexander Kjäll ]
+  * Remove pointless patching of buffered-reader dependency.
+  * Don't depend on getrandom package with js feature, which is not supported
+    by Debian's getrandom package.
+
+ -- Peter Michael Green <plugwash@debian.org>  Tue, 24 Oct 2023 23:41:36 +0000
+
+rust-sequoia-openpgp (1.16.0-3) unstable; urgency=medium
+
+  * Team upload.
+  * Package sequoia-openpgp 1.16.0 from crates.io using debcargo 2.6.0
+  * Adjust idna dependency to allow 0.4.
+
+ -- Peter Michael Green <plugwash@debian.org>  Sun, 27 Aug 2023 15:42:42 +0000
+
+rust-sequoia-openpgp (1.16.0-2) unstable; urgency=medium
+
+  * Team upload.
+  * Package sequoia-openpgp 1.16.0 from crates.io using debcargo 2.6.0
+  * Bump criterion to 0.5
+  * Enable crypto-botan2 backend to reduce divergence upstream
+
+ -- Alexander Kjäll <alexander.kjall@gmail.com>  Sun, 20 Aug 2023 12:59:49 +0200
+
+rust-sequoia-openpgp (1.16.0-1) unstable; urgency=medium
+
+  * Team upload.
+  * Package sequoia-openpgp 1.16.0 from crates.io using debcargo 2.6.0
+    + New upstream supports base64 0.21
+    + New upstream fixes RUSTSEC-2023-0038
+  * Update cleanup-deps.patch for new upstream.
+  * Relax openssl dependency slightly.
+  * Bump buffered-reader dependency to pick up security fix.
+  * Use an explicit cryto backend when testing, __implicit_backend_for_tests
+    only seems to work when testinging as part of a workspace, not when
+    testing standalone.
+  * Mark benches as requiring the "compression-deflate" feature.
+
+ -- Peter Michael Green <plugwash@debian.org>  Thu, 15 Jun 2023 16:14:29 +0000
+
 rust-sequoia-openpgp (1.13.0-1) experimental; urgency=medium
 
   * Package sequoia-openpgp 1.13.0 from crates.io using debcargo 2.6.0
