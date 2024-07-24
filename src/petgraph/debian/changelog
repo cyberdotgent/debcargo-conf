@@ -1,3 +1,9 @@
+rust-petgraph (0.6.4-1~bpo12+pve1) proxmox-rust; urgency=medium
+
+  * Rebuild for Debian Bookworm / Proxmox
+
+ -- Proxmox Support Team <support@proxmox.com>  Wed, 24 Jul 2024 16:01:10 +0200
+
 rust-petgraph (0.6.4-1) unstable; urgency=medium
 
   * Team upload.
