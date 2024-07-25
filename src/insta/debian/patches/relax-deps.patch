@@ -11,6 +11,15 @@ Index: insta/Cargo.toml
  optional = true
  package = "csv"
  
+@@ -51,7 +51,7 @@ optional = true
+ package = "ron"
+ 
+ [dependencies.dep_toml]
+-version = "0.5.7"
++version = "0.8"
+ optional = true
+ package = "toml"
+ 
 @@ -66,7 +66,7 @@ version = "1.4.0"
  version = "0.5.6"
  
