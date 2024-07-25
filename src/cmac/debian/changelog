@@ -1,3 +1,9 @@
+rust-cmac (0.7.2-1~bpo12+pve1) proxmox-rust; urgency=medium
+
+  * Rebuild for Debian Bookworm / Proxmox
+
+ -- Proxmox Support Team <support@proxmox.com>  Thu, 25 Jul 2024 10:22:25 +0200
+
 rust-cmac (0.7.2-1) unstable; urgency=medium
 
   * Package cmac 0.7.2 from crates.io using debcargo 2.6.0
