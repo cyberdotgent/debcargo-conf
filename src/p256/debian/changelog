@@ -1,3 +1,9 @@
+rust-p256 (0.13.2-1~bpo12+pve1) proxmox-rust; urgency=medium
+
+  * Rebuild for Debian Bookworm / Proxmox
+
+ -- Proxmox Support Team <support@proxmox.com>  Thu, 25 Jul 2024 10:00:38 +0200
+
 rust-p256 (0.13.2-1) unstable; urgency=medium
 
   * Package p256 0.13.2 from crates.io using debcargo 2.6.1

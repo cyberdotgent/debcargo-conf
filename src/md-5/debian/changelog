@@ -1,3 +1,9 @@
+rust-md-5 (0.10.6-1~bpo12+pve1) proxmox-rust; urgency=medium
+
+  * Rebuild for Debian Bookworm / Proxmox
+
+ -- Proxmox Support Team <support@proxmox.com>  Thu, 25 Jul 2024 10:00:38 +0200
+
 rust-md-5 (0.10.6-1) unstable; urgency=medium
 
   * Team upload.
