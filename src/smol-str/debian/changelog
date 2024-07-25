@@ -1,3 +1,9 @@
+rust-smol-str (0.2.0-1~bpo12+pve1) proxmox-rust; urgency=medium
+
+  * Rebuild for Debian Bookworm / Proxmox
+
+ -- Proxmox Support Team <support@proxmox.com>  Thu, 25 Jul 2024 10:49:41 +0200
+
 rust-smol-str (0.2.0-1) unstable; urgency=medium
 
   * Package smol_str 0.2.0 from crates.io using debcargo 2.6.0

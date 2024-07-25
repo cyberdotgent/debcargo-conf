@@ -1,3 +1,9 @@
+rust-rust-decimal (1.23.1-2~bpo12+pve1) proxmox-rust; urgency=medium
+
+  * Rebuild for Debian Bookworm / Proxmox
+
+ -- Proxmox Support Team <support@proxmox.com>  Thu, 25 Jul 2024 10:49:41 +0200
+
 rust-rust-decimal (1.23.1-2) unstable; urgency=medium
 
   * Team upload.

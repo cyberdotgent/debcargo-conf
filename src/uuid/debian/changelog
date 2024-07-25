@@ -1,3 +1,15 @@
+rust-uuid (1.6.1-1~bpo12+pve2) proxmox-rust; urgency=medium
+
+  * Rebuild for Debian Bookworm / Proxmox
+
+ -- Proxmox Support Team <support@proxmox.com>  Thu, 25 Jul 2024 10:49:41 +0200
+
+rust-uuid (1.6.1-1~bpo12+pve1) proxmox-rust; urgency=medium
+
+  * Rebuild for Debian Bookworm / Proxmox
+
+ -- Proxmox Support Team <support@proxmox.com>  Thu, 25 Jul 2024 10:46:29 +0200
+
 rust-uuid (1.6.1-1) unstable; urgency=medium
 
   * Team upload.
