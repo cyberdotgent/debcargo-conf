@@ -1,2 +1,3 @@
 drop-bundled-features.patch
 drop-winsqlite3.patch
+relax-deps.patch

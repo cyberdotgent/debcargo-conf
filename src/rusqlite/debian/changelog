@@ -1,3 +1,9 @@
+rust-rusqlite (0.28.0-5~bpo12+pve1) proxmox-rust; urgency=medium
+
+  * Rebuild for Debian Bookworm / Proxmox with bumped fallible-iterator
+
+ -- Proxmox Support Team <support@proxmox.com>  Fri, 26 Jul 2024 07:53:10 +0200
+
 rust-rusqlite (0.28.0-4) unstable; urgency=medium
 
   * Package rusqlite 0.28.0 from crates.io using debcargo 2.5.0
