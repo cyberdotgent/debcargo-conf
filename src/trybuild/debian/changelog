@@ -1,3 +1,9 @@
+rust-trybuild (1.0.91-1~bpo12+pve1) proxmox-rust; urgency=medium
+
+  * Rebuild for Debian Bookworm / Proxmox
+
+ -- Proxmox Support Team <support@proxmox.com>  Tue, 30 Jul 2024 12:16:31 +0200
+
 rust-trybuild (1.0.91-1) unstable; urgency=medium
 
   * Team upload.
