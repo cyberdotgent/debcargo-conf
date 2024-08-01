@@ -1,8 +1,0 @@
-Rdeps:
-- blake2b_simd
-- blake2s_simd
-- blake2-rfc
-- blake3
-- totp-rs
-	- ripasso
-- zip
