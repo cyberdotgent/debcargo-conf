@@ -7,7 +7,7 @@ Index: walrus/Cargo.toml
  
  [dependencies.gimli]
 -version = "0.26.0"
-+version = "0.27.0"
++version = "0.28.0"
  
  [dependencies.id-arena]
  version = "2.2.1"

@@ -1,3 +1,9 @@
+rust-walrus (0.20.3-1~bpo12+pve2) proxmox-rust; urgency=medium
+
+  * Rebuild with gimli 0.28
+
+ -- Proxmox Support Team <support@proxmox.com>  Thu, 8 Aug 2024 12:18:25 +0200
+
 rust-walrus (0.20.3-1~bpo12+pve1) proxmox-rust; urgency=medium
 
   * Rebuild for Debian Bookworm / Proxmox
