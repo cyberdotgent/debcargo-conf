@@ -1,0 +1,39 @@
+Index: find-crate/Cargo.toml
+===================================================================
+--- find-crate.orig/Cargo.toml
++++ find-crate/Cargo.toml
+@@ -26,7 +26,7 @@ repository = "https://github.com/taiki-e
+ [package.metadata.docs.rs]
+ targets = ["x86_64-unknown-linux-gnu"]
+ [dependencies.toml]
+-version = "0.5.2"
++version = "0.8"
+ [dev-dependencies.proc-macro2]
+ version = "1"
+ 
+Index: find-crate/src/lib.rs
+===================================================================
+--- find-crate.orig/src/lib.rs
++++ find-crate/src/lib.rs
+@@ -100,9 +100,7 @@
+ mod error;
+ 
+ use std::{
+-    env,
+-    fs::File,
+-    io::Read,
++    env, fs,
+     path::{Path, PathBuf},
+ };
+ use toml::value::{Table, Value};
+@@ -238,9 +236,7 @@ impl Manifest {
+     //       (should we use `CARGO_MANIFEST_DIR`? Or should we return an error?)
+     /// Creates a new `Manifest` from the specified toml file.
+     fn from_path(manifest_path: &Path) -> Result<Self> {
+-        let mut bytes = Vec::new();
+-        File::open(manifest_path)?.read_to_end(&mut bytes)?;
+-        toml::from_slice(&bytes).map_err(Into::into).map(Self::from_toml)
++        toml::from_str(&fs::read_to_string(manifest_path)?).map_err(Into::into).map(Self::from_toml)
+     }
+ 
+     /// Creates a new `Manifest` from a toml table.

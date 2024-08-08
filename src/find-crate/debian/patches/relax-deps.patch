@@ -1,0 +1,10 @@
+Index: find-crate/Cargo.toml
+===================================================================
+--- find-crate.orig/Cargo.toml
++++ find-crate/Cargo.toml
+@@ -34,4 +34,4 @@ version = "1"
+ version = "1"
+ 
+ [dev-dependencies.semver]
+-version = "0.11"
++version = "0.9"
