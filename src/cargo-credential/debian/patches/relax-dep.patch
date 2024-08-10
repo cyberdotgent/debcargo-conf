@@ -1,0 +1,13 @@
+Index: cargo-credential/Cargo.toml
+===================================================================
+--- cargo-credential.orig/Cargo.toml
++++ cargo-credential/Cargo.toml
+@@ -55,7 +55,7 @@ version = "1.0.116"
+ version = "1.0.59"
+ 
+ [dependencies.time]
+-version = "0.3.36"
++version = "0.3.31"
+ features = [
+     "parsing",
+     "formatting",
