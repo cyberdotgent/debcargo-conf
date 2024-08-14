@@ -1,5 +1,5 @@
 remove-terminals-not-in-debian.patch
-remove-nightly-feature.patch
 remove-ansi.patch
+drop-examples.patch
 bump-cursive-core.patch
 relax-dep.patch

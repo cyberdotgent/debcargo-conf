@@ -1,0 +1,122 @@
+Index: cursive/Cargo.toml
+===================================================================
+--- cursive.orig/Cargo.toml
++++ cursive/Cargo.toml
+@@ -117,117 +117,3 @@ toml = ["cursive_core/toml"]
+ 
+ [target."cfg(unix)".dependencies.signal-hook]
+ version = "0.3"
+-
+-[[example]]
+-name = "advanced_user_data"
+-
+-[[example]]
+-name = "autocomplete"
+-
+-[[example]]
+-name = "colors"
+-
+-[[example]]
+-name = "ctrl_c"
+-
+-[[example]]
+-name = "debug_console"
+-
+-[[example]]
+-name = "dialog"
+-
+-[[example]]
+-name = "edit"
+-
+-[[example]]
+-name = "fixed_layout"
+-
+-[[example]]
+-name = "focus"
+-
+-[[example]]
+-name = "hello_world"
+-
+-[[example]]
+-name = "key_codes"
+-
+-[[example]]
+-name = "linear"
+-
+-[[example]]
+-name = "list_view"
+-
+-[[example]]
+-name = "logs"
+-
+-[[example]]
+-name = "lorem"
+-
+-[[example]]
+-name = "markup"
+-
+-[[example]]
+-name = "menubar"
+-
+-[[example]]
+-name = "mutation"
+-
+-[[example]]
+-name = "panels"
+-
+-[[example]]
+-name = "pause"
+-
+-[[example]]
+-name = "position"
+-
+-[[example]]
+-name = "progress"
+-
+-[[example]]
+-name = "radio"
+-
+-[[example]]
+-name = "refcell_view"
+-
+-[[example]]
+-name = "scroll"
+-
+-[[example]]
+-name = "select"
+-
+-[[example]]
+-name = "select_test"
+-
+-[[example]]
+-name = "slider"
+-
+-[[example]]
+-name = "stopwatch"
+-
+-[[example]]
+-name = "tcp_server"
+-
+-[[example]]
+-name = "terminal_default"
+-
+-[[example]]
+-name = "text_area"
+-
+-[[example]]
+-name = "themed_view"
+-
+-[[example]]
+-name = "theme_editor"
+-
+-[[example]]
+-name = "theme_manual"
+-
+-[[example]]
+-name = "user_data"
+-
+-[[example]]
+-name = "vpv"
+-
+-[[example]]
+-name = "window_title"
