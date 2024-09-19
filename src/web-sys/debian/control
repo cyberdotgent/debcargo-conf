@@ -89,6 +89,7 @@ Provides:
  librust-web-sys-0.3+progressevent-dev (= ${binary:Version}),
  librust-web-sys-0.3+range-dev (= ${binary:Version}),
  librust-web-sys-0.3+readablestream-dev (= ${binary:Version}),
+ librust-web-sys-0.3+readablestreamdefaultreader-dev (= ${binary:Version}),
  librust-web-sys-0.3+referrerpolicy-dev (= ${binary:Version}),
  librust-web-sys-0.3+request-dev (= ${binary:Version}),
  librust-web-sys-0.3+requestcache-dev (= ${binary:Version}),
