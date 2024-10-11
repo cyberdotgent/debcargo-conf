@@ -6,7 +6,7 @@ uploaders = [
 
 # The auto-generated summary is too long.
 summary = "Rust bindings to libc"
-
+collapse_features = true
 
 [packages."lib+rustc-dep-of-std"]
 test_is_broken = true
