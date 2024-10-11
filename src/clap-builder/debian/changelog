@@ -1,8 +1,19 @@
-rust-clap-builder (4.4.18-1~bpo12+pve1) proxmox-rust; urgency=medium
+rust-clap-builder (4.5.15-2) unstable; urgency=medium
 
-  * Rebuild for Debian Bookworm / Proxmox
+  * Team upload.
+  * Package clap_builder 4.5.15 from crates.io using debcargo 2.6.1
+  * Upload to unstable.
 
- -- Proxmox Support Team <support@proxmox.com>  Wed, 24 Jul 2024 11:49:03 +0200
+ -- Peter Michael Green <plugwash@debian.org>  Sun, 18 Aug 2024 18:20:19 +0000
+
+rust-clap-builder (4.5.15-1) experimental; urgency=medium
+
+  * Team upload.
+  * Package clap_builder 4.5.15 from crates.io using debcargo 2.6.1
+  * Relax strsim dependency.
+  * Relax backtrace dependency.
+
+ -- Peter Michael Green <plugwash@debian.org>  Sat, 17 Aug 2024 15:47:26 +0000
 
 rust-clap-builder (4.4.18-1) unstable; urgency=medium
 
@@ -20,12 +31,6 @@ rust-clap-builder (4.4.16-1) experimental; urgency=medium
 
  -- Peter Michael Green <plugwash@debian.org>  Sat, 13 Jan 2024 16:25:28 +0000
 
-rust-clap-builder (4.4.6-1~bpo12+pve1) proxmox-rust; urgency=medium
-
-  * Rebuild for Debian Bookworm / Proxmox
-
- -- Proxmox Support Team <support@proxmox.com>  Mon, 18 Dec 2023 11:29:47 +0100
-
 rust-clap-builder (4.4.6-1) unstable; urgency=medium
 
   * Team upload.
@@ -34,16 +39,15 @@ rust-clap-builder (4.4.6-1) unstable; urgency=medium
 
  -- Peter Michael Green <plugwash@debian.org>  Tue, 10 Oct 2023 00:53:20 +0000
 
-rust-clap-builder (4.4.4-1~bpo12+pve1) proxmox-rust; urgency=medium
-
-  * Rebuild for Debian Bookworm / Proxmox
-
- -- Proxmox Support Team <support@proxmox.com>  Wed, 20 Sep 2023 11:53:16 +0200
-
 rust-clap-builder (4.4.4-1) unstable; urgency=medium
 
   * Team upload.
   * Package clap_builder 4.4.4 from crates.io using debcargo 2.6.0
+  * Remove dev-dependencies on color-print.patch and trycmd.patch, they are
+    not in Debian and do not seem to be needed by the tests that are included
+    in the crates.io release.
+  * Relax dependency on terminal_size.
+  * Establish baseline for tests.
 
   [ Fabian Grünbichler ]
   * Package clap_builder 4.3.11 from crates.io using debcargo 2.6.0
