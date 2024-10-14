@@ -1,8 +1,14 @@
-rust-libsqlite3-sys (0.25.1-1+pve1) proxmox-rust; urgency=medium
+rust-libsqlite3-sys (0.26.0-1) unstable; urgency=medium
 
-  * Rebuild for Debian Bookworm / Proxmox
+  * Package libsqlite3-sys 0.26.0 from crates.io using debcargo 2.6.0
+  * Relax bindgen dependency to ">= 0.60, < 1.0"
 
- -- Proxmox Support Team <support@proxmox.com>  Fri, 19 Apr 2024 11:03:34 +0200
+  [ Matthias Geiger ]
+  * Team upload.
+  * Package libsqlite3-sys 0.26.0 from crates.io using debcargo 2.6.0
+  * Drop patches, replace them with a single one for the bindgen update
+
+ -- Peter Michael Green <plugwash@debian.org>  Sun, 03 Sep 2023 17:13:20 +0000
 
 rust-libsqlite3-sys (0.25.1-1) unstable; urgency=medium
 
