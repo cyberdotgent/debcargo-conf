@@ -1,3 +1,9 @@
+rust-cargo-util-schemas (0.4.0-1~bpo12+pve1) proxmox-rust; urgency=medium
+
+  * Rebuild for Debian Bookworm / Proxmox
+
+ -- Proxmox Support Team <support@proxmox.com>  Tue, 15 Oct 2024 09:14:50 +0200
+
 rust-cargo-util-schemas (0.4.0-1) unstable; urgency=medium
 
   * Package cargo-util-schemas 0.4.0 from crates.io using debcargo 2.6.1
