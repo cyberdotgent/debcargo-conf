@@ -23,8 +23,8 @@ including `d/control` and, if applicable, `d/tests/control` for autopkgtests.
 
 `README.rst` contains more detailed information, including how to setup sbuild
 for proper integration into the build.sh script contained in this repository.
-These instructions can also be used to create a Debian Buster schroot for
-building (adding a the Proxmox devel repository can be done using
+These instructions can also be used to create a schroot for a specific Debian
+release for building (adding the Proxmox devel repository can be done using
 `sbuild-shell`).
 
 **Note**: crate names are *debianized* by replacing `_` with `-`, but the
