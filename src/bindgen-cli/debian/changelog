@@ -1,3 +1,9 @@
+rust-bindgen-cli (0.66.1-7~bpo12+pve1) proxmox-rust; urgency=medium
+
+  * Rebuild for Debian Bookworm / Proxmox
+
+ -- Proxmox Support Team <support@proxmox.com>  Tue, 15 Oct 2024 09:14:59 +0200
+
 rust-bindgen-cli (0.66.1-7) unstable; urgency=medium
 
   * Team upload.
