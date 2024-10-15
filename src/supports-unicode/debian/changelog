@@ -1,3 +1,9 @@
+rust-supports-unicode (3.0.0-1~bpo12+pve1) proxmox-rust; urgency=medium
+
+  * Rebuild for Debian Bookworm / Proxmox
+
+ -- Proxmox Support Team <support@proxmox.com>  Tue, 15 Oct 2024 09:14:58 +0200
+
 rust-supports-unicode (3.0.0-1) unstable; urgency=medium
 
   * Package supports-unicode 3.0.0 from crates.io using debcargo 2.6.1
