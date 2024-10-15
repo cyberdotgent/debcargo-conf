@@ -2,6 +2,15 @@ Index: openidconnect/Cargo.toml
 ===================================================================
 --- openidconnect.orig/Cargo.toml
 +++ openidconnect/Cargo.toml
+@@ -37,7 +37,7 @@ default-features = false
+ version = "0.2"
+ 
+ [dependencies.itertools]
+-version = "0.10"
++version = "0.13"
+ 
+ [dependencies.log]
+ version = "0.4"
 @@ -53,7 +53,7 @@ default-features = false
  version = "0.8"
  
