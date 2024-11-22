@@ -10,14 +10,14 @@ Files: *
 Copyright:
  2017-2019 Colin Kiegel <kiegel@gmx.de>
  2017 Florent Fayolle <florent.fayolle69@gmail.com>
- 2021-2022 Tom Milligan <code@tommilligan.net>
+ 2021-2024 Tom Milligan <code@tommilligan.net>
 License: MIT or Apache-2.0
 
 Files: debian/*
 Copyright:
- 2019-2022 Debian Rust Maintainers <pkg-rust-maintainers@alioth-lists.debian.net>
- 2019 Robin Krahl <robin.krahl@ireas.org>
- 2020 Wolfgang Silbermayr <wolfgang@silbermayr.at>
+ 2019-2024 Debian Rust Maintainers <pkg-rust-maintainers@alioth-lists.debian.net>
+ 2019-2024 Robin Krahl <robin.krahl@ireas.org>
+ 2019-2024 Wolfgang Silbermayr <wolfgang@silbermayr.at>
 License: MIT or Apache-2.0
 
 License: Apache-2.0
