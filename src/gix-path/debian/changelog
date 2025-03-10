@@ -1,8 +1,9 @@
-rust-gix-path (0.10.11-2~bpo12+pve1) proxmox-rust; urgency=medium
+rust-gix-path (0.10.13-1) unstable; urgency=medium
 
-  * Rebuild for Debian Bookworm / Proxmox
+  * Team upload.
+  * Package gix-path 0.10.13 from crates.io using debcargo 2.7.6
 
- -- Proxmox Support Team <support@proxmox.com>  Tue, 15 Oct 2024 09:14:51 +0200
+ -- Fabian Grünbichler <debian@fabian.gruenbichler.email>  Fri, 14 Feb 2025 22:53:54 +0100
 
 rust-gix-path (0.10.11-2) unstable; urgency=medium
 
@@ -22,12 +23,6 @@ rust-gix-path (0.10.11-1) unstable; urgency=medium
     + New upstream fixes RUSTSEC-2024-0371 (Closes: #1082055)
 
  -- Peter Michael Green <plugwash@debian.org>  Tue, 17 Sep 2024 21:53:54 +0000
-
-rust-gix-path (0.10.7-1~bpo12+pve1) proxmox-rust; urgency=medium
-
-  * Rebuild for Debian Bookworm / Proxmox
-
- -- Proxmox Support Team <support@proxmox.com>  Wed, 24 Jul 2024 11:49:00 +0200
 
 rust-gix-path (0.10.7-1) unstable; urgency=medium
 

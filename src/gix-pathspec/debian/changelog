@@ -1,8 +1,16 @@
-rust-gix-pathspec (0.7.5-1~bpo12+pve1) proxmox-rust; urgency=medium
+rust-gix-pathspec (0.8.1-1) unstable; urgency=medium
 
-  * Rebuild for Debian Bookworm / Proxmox
+  * Team upload.
+  * Package gix-pathspec 0.8.1 from crates.io using debcargo 2.7.6
 
- -- Proxmox Support Team <support@proxmox.com>  Wed, 24 Jul 2024 11:49:02 +0200
+ -- Fabian Grünbichler <debian@fabian.gruenbichler.email>  Fri, 14 Feb 2025 22:59:35 +0100
+
+rust-gix-pathspec (0.7.6-1) unstable; urgency=medium
+
+  * Team upload.
+  * Package gix-pathspec 0.7.6 from crates.io using debcargo 2.7.1
+
+ -- Fabian Grünbichler <debian@fabian.gruenbichler.email>  Tue, 22 Oct 2024 19:25:14 +0200
 
 rust-gix-pathspec (0.7.5-1) unstable; urgency=medium
 

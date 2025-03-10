@@ -1,0 +1,21 @@
+rust-gix-merge (0.2.0-1) unstable; urgency=medium
+
+  * Package gix-merge 0.2.0 from crates.io using debcargo 2.7.1
+
+ -- Fabian Grünbichler <debian@fabian.gruenbichler.email>  Fri, 07 Mar 2025 09:45:20 +0100
+
+rust-gix-merge (0.0.0-2) unstable; urgency=medium
+
+  * Team upload.
+  * Package gix-merge 0.0.0 from crates.io using debcargo 2.7.6
+  * Disable "integration" tests as they require gix-testtools, which is not
+    in Debian.
+
+ -- Peter Michael Green <plugwash@debian.org>  Sat, 15 Feb 2025 19:45:04 +0000
+
+rust-gix-merge (0.0.0-1) unstable; urgency=medium
+
+  * Package gix-merge 0.0.0 from crates.io using debcargo 2.7.6
+  * Needed for updating gix to 0.67 for cargo 0.85
+
+ -- Fabian Grünbichler <debian@fabian.gruenbichler.email>  Mon, 27 Jan 2025 21:29:49 +0100

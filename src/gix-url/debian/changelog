@@ -1,8 +1,16 @@
-rust-gix-url (0.27.3-1~bpo12+pve1) proxmox-rust; urgency=medium
+rust-gix-url (0.28.2-1) unstable; urgency=medium
 
-  * Rebuild for Debian Bookworm / Proxmox
+  * Team upload.
+  * Package gix-url 0.28.2 from crates.io using debcargo 2.7.6
 
- -- Proxmox Support Team <support@proxmox.com>  Wed, 24 Jul 2024 11:49:01 +0200
+ -- Fabian Grünbichler <debian@fabian.gruenbichler.email>  Fri, 14 Feb 2025 22:55:36 +0100
+
+rust-gix-url (0.27.4-1) unstable; urgency=medium
+
+  * Team upload.
+  * Package gix-url 0.27.4 from crates.io using debcargo 2.7.1
+
+ -- Fabian Grünbichler <debian@fabian.gruenbichler.email>  Tue, 22 Oct 2024 19:24:08 +0200
 
 rust-gix-url (0.27.3-1) unstable; urgency=medium
 

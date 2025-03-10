@@ -1,8 +1,24 @@
-rust-gix (0.63.0-1~bpo12+pve1) proxmox-rust; urgency=medium
+rust-gix (0.69.1-1) unstable; urgency=medium
 
-  * Rebuild for Debian Bookworm / Proxmox
+  * Team upload.
+  * Package gix 0.69.1 from crates.io using debcargo 2.7.7
+  * Downgrade insta to 1.39
 
- -- Proxmox Support Team <support@proxmox.com>  Tue, 15 Oct 2024 09:14:57 +0200
+ -- Fabian Grünbichler <debian@fabian.gruenbichler.email>  Fri, 07 Mar 2025 09:45:33 +0100
+
+rust-gix (0.67.0-1) unstable; urgency=medium
+
+  * Team upload.
+  * Package gix 0.67.0 from crates.io using debcargo 2.7.6
+
+ -- Fabian Grünbichler <debian@fabian.gruenbichler.email>  Fri, 14 Feb 2025 23:03:10 +0100
+
+rust-gix (0.64.0-1) unstable; urgency=medium
+
+  * Team upload.
+  * Package gix 0.64.0 from crates.io using debcargo 2.7.1
+
+ -- Fabian Grünbichler <debian@fabian.gruenbichler.email>  Tue, 22 Oct 2024 19:28:23 +0200
 
 rust-gix (0.63.0-1) unstable; urgency=medium
 
@@ -26,12 +42,6 @@ rust-gix (0.62.0-2) unstable; urgency=medium
   * Disable most tests on riscv64 due to timeouts.
 
  -- Peter Michael Green <plugwash@debian.org>  Thu, 01 Aug 2024 21:08:55 +0000
-
-rust-gix (0.62.0-1~bpo12+pve1) proxmox-rust; urgency=medium
-
-  * Rebuild for Debian Bookworm / Proxmox
-
- -- Proxmox Support Team <support@proxmox.com>  Wed, 24 Jul 2024 11:49:03 +0200
 
 rust-gix (0.62.0-1) unstable; urgency=medium
 

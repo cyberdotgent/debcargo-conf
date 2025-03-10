@@ -1,20 +1,26 @@
-rust-gix-worktree-state (0.11.1-1~bpo12+pve1) proxmox-rust; urgency=medium
+rust-gix-worktree-state (0.16.0-1) unstable; urgency=medium
 
-  * Rebuild for Debian Bookworm / Proxmox
+  * Package gix-worktree-state 0.16.0 from crates.io using debcargo 2.7.1
 
- -- Proxmox Support Team <support@proxmox.com>  Tue, 15 Oct 2024 09:14:56 +0200
+ -- Fabian Grünbichler <debian@fabian.gruenbichler.email>  Fri, 07 Mar 2025 09:44:33 +0100
+
+rust-gix-worktree-state (0.14.0-1) unstable; urgency=medium
+
+  * Package gix-worktree-state 0.14.0 from crates.io using debcargo 2.7.6
+
+ -- Fabian Grünbichler <debian@fabian.gruenbichler.email>  Fri, 14 Feb 2025 23:02:24 +0100
+
+rust-gix-worktree-state (0.11.1-2) unstable; urgency=medium
+
+  * Cherry-pick fix for CVE-2025-22620 (Closes: #1093883)
+
+ -- Fabian Grünbichler <debian@fabian.gruenbichler.email>  Thu, 23 Jan 2025 21:14:00 +0100
 
 rust-gix-worktree-state (0.11.1-1) unstable; urgency=medium
 
   * Package gix-worktree-state 0.11.1 from crates.io using debcargo 2.6.1
 
  -- Fabian Grünbichler <debian@fabian.gruenbichler.email>  Fri, 04 Oct 2024 19:03:56 +0200
-
-rust-gix-worktree-state (0.10.0-1~bpo12+pve1) proxmox-rust; urgency=medium
-
-  * Rebuild for Debian Bookworm / Proxmox
-
- -- Proxmox Support Team <support@proxmox.com>  Wed, 24 Jul 2024 11:49:02 +0200
 
 rust-gix-worktree-state (0.10.0-1) unstable; urgency=medium
 

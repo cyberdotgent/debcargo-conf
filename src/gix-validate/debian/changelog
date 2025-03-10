@@ -1,8 +1,9 @@
-rust-gix-validate (0.8.5-1~bpo12+pve1) proxmox-rust; urgency=medium
+rust-gix-validate (0.9.2-1) unstable; urgency=medium
 
-  * Rebuild for Debian Bookworm / Proxmox
+  * Team upload.
+  * Package gix-validate 0.9.2 from crates.io using debcargo 2.7.6
 
- -- Proxmox Support Team <support@proxmox.com>  Wed, 24 Jul 2024 11:49:00 +0200
+ -- Fabian Grünbichler <debian@fabian.gruenbichler.email>  Fri, 14 Feb 2025 22:54:17 +0100
 
 rust-gix-validate (0.8.5-1) unstable; urgency=medium
 

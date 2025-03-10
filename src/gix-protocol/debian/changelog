@@ -1,8 +1,20 @@
-rust-gix-protocol (0.45.1-3~bpo12+pve1) proxmox-rust; urgency=medium
+rust-gix-protocol (0.47.0-1) unstable; urgency=medium
 
-  * Rebuild for Debian Bookworm / Proxmox
+  * Package gix-protocol 0.47.0 from crates.io using debcargo 2.7.7
 
- -- Proxmox Support Team <support@proxmox.com>  Tue, 15 Oct 2024 09:14:56 +0200
+ -- Fabian Grünbichler <debian@fabian.gruenbichler.email>  Fri, 07 Mar 2025 09:42:24 +0100
+
+rust-gix-protocol (0.46.0-1) unstable; urgency=medium
+
+  * Package gix-protocol 0.46.0 from crates.io using debcargo 2.7.6
+
+ -- Fabian Grünbichler <debian@fabian.gruenbichler.email>  Fri, 14 Feb 2025 22:56:56 +0100
+
+rust-gix-protocol (0.45.2-1) unstable; urgency=medium
+
+  * Package gix-protocol 0.45.2 from crates.io using debcargo 2.7.1
+
+ -- Fabian Grünbichler <debian@fabian.gruenbichler.email>  Tue, 22 Oct 2024 19:27:59 +0200
 
 rust-gix-protocol (0.45.1-3) unstable; urgency=medium
 
@@ -11,12 +23,6 @@ rust-gix-protocol (0.45.1-3) unstable; urgency=medium
   * Relax dependency on futures-lite.
 
  -- Peter Michael Green <plugwash@debian.org>  Tue, 13 Aug 2024 22:26:45 +0000
-
-rust-gix-protocol (0.45.1-2~bpo12+pve1) proxmox-rust; urgency=medium
-
-  * Rebuild for Debian Bookworm / Proxmox
-
- -- Proxmox Support Team <support@proxmox.com>  Wed, 24 Jul 2024 11:49:03 +0200
 
 rust-gix-protocol (0.45.1-2) unstable; urgency=medium
 

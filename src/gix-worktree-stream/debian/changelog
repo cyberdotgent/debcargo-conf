@@ -1,20 +1,20 @@
-rust-gix-worktree-stream (0.13.1-1~bpo12+pve1) proxmox-rust; urgency=medium
+rust-gix-worktree-stream (0.18.0-1) unstable; urgency=medium
 
-  * Rebuild for Debian Bookworm / Proxmox
+  * Package gix-worktree-stream 0.18.0 from crates.io using debcargo 2.7.1
 
- -- Proxmox Support Team <support@proxmox.com>  Tue, 15 Oct 2024 09:14:52 +0200
+ -- Fabian Grünbichler <debian@fabian.gruenbichler.email>  Fri, 07 Mar 2025 09:42:59 +0100
+
+rust-gix-worktree-stream (0.16.0-1) unstable; urgency=medium
+
+  * Package gix-worktree-stream 0.16.0 from crates.io using debcargo 2.7.6
+
+ -- Fabian Grünbichler <debian@fabian.gruenbichler.email>  Fri, 14 Feb 2025 23:00:54 +0100
 
 rust-gix-worktree-stream (0.13.1-1) unstable; urgency=medium
 
   * Package gix-worktree-stream 0.13.1 from crates.io using debcargo 2.6.1
 
  -- Fabian Grünbichler <debian@fabian.gruenbichler.email>  Fri, 04 Oct 2024 18:45:05 +0200
-
-rust-gix-worktree-stream (0.12.0-1~bpo12+pve1) proxmox-rust; urgency=medium
-
-  * Rebuild for Debian Bookworm / Proxmox
-
- -- Proxmox Support Team <support@proxmox.com>  Wed, 24 Jul 2024 11:49:02 +0200
 
 rust-gix-worktree-stream (0.12.0-1) unstable; urgency=medium
 

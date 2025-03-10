@@ -1,8 +1,9 @@
-rust-gix-fs (0.11.3-1~bpo12+pve1) proxmox-rust; urgency=medium
+rust-gix-fs (0.12.1-1) unstable; urgency=medium
 
-  * Rebuild for Debian Bookworm / Proxmox
+  * Team upload.
+  * Package gix-fs 0.12.1 from crates.io using debcargo 2.7.6
 
- -- Proxmox Support Team <support@proxmox.com>  Tue, 15 Oct 2024 09:14:52 +0200
+ -- Fabian Grünbichler <debian@fabian.gruenbichler.email>  Fri, 14 Feb 2025 22:57:41 +0100
 
 rust-gix-fs (0.11.3-1) unstable; urgency=medium
 
@@ -10,12 +11,6 @@ rust-gix-fs (0.11.3-1) unstable; urgency=medium
   * Package gix-fs 0.11.3 from crates.io using debcargo 2.6.1
 
  -- Fabian Grünbichler <debian@fabian.gruenbichler.email>  Fri, 04 Oct 2024 18:42:53 +0200
-
-rust-gix-fs (0.10.2-1~bpo12+pve1) proxmox-rust; urgency=medium
-
-  * Rebuild for Debian Bookworm / Proxmox
-
- -- Proxmox Support Team <support@proxmox.com>  Wed, 24 Jul 2024 11:49:01 +0200
 
 rust-gix-fs (0.10.2-1) unstable; urgency=medium
 

@@ -1,8 +1,23 @@
-rust-gix-refspec (0.23.0-1~bpo12+pve1) proxmox-rust; urgency=medium
+rust-gix-refspec (0.27.0-1) unstable; urgency=medium
 
-  * Rebuild for Debian Bookworm / Proxmox
+  * Team upload.
+  * Package gix-refspec 0.27.0 from crates.io using debcargo 2.7.1
 
- -- Proxmox Support Team <support@proxmox.com>  Wed, 24 Jul 2024 11:49:02 +0200
+ -- Fabian Grünbichler <debian@fabian.gruenbichler.email>  Fri, 07 Mar 2025 09:42:36 +0100
+
+rust-gix-refspec (0.26.0-1) unstable; urgency=medium
+
+  * Team upload.
+  * Package gix-refspec 0.26.0 from crates.io using debcargo 2.7.6
+
+ -- Fabian Grünbichler <debian@fabian.gruenbichler.email>  Fri, 14 Feb 2025 23:00:31 +0100
+
+rust-gix-refspec (0.23.1-1) unstable; urgency=medium
+
+  * Team upload.
+  * Package gix-refspec 0.23.1 from crates.io using debcargo 2.7.1
+
+ -- Fabian Grünbichler <debian@fabian.gruenbichler.email>  Tue, 22 Oct 2024 19:26:19 +0200
 
 rust-gix-refspec (0.23.0-1) unstable; urgency=medium
 

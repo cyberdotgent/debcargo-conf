@@ -1,8 +1,16 @@
-rust-gix-prompt (0.8.7-1~bpo12+pve1) proxmox-rust; urgency=medium
+rust-gix-prompt (0.9.0-1) unstable; urgency=medium
 
-  * Rebuild for Debian Bookworm / Proxmox
+  * Team upload.
+  * Package gix-prompt 0.9.0 from crates.io using debcargo 2.7.1
 
- -- Proxmox Support Team <support@proxmox.com>  Tue, 15 Oct 2024 09:14:55 +0200
+ -- Fabian Grünbichler <debian@fabian.gruenbichler.email>  Fri, 07 Mar 2025 09:40:31 +0100
+
+rust-gix-prompt (0.8.9-1) unstable; urgency=medium
+
+  * Team upload.
+  * Package gix-prompt 0.8.9 from crates.io using debcargo 2.7.6
+
+ -- Fabian Grünbichler <debian@fabian.gruenbichler.email>  Fri, 14 Feb 2025 22:55:25 +0100
 
 rust-gix-prompt (0.8.7-1) unstable; urgency=medium
 
@@ -10,12 +18,6 @@ rust-gix-prompt (0.8.7-1) unstable; urgency=medium
   * Package gix-prompt 0.8.7 from crates.io using debcargo 2.6.1
 
  -- Fabian Grünbichler <debian@fabian.gruenbichler.email>  Fri, 04 Oct 2024 19:07:47 +0200
-
-rust-gix-prompt (0.8.4-1~bpo12+pve1) proxmox-rust; urgency=medium
-
-  * Rebuild for Debian Bookworm / Proxmox
-
- -- Proxmox Support Team <support@proxmox.com>  Wed, 24 Jul 2024 11:49:01 +0200
 
 rust-gix-prompt (0.8.4-1) unstable; urgency=medium
 
