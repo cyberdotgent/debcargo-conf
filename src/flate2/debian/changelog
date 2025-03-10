@@ -1,8 +1,9 @@
-rust-flate2 (1.0.27-2~bpo12+pve1) proxmox-rust; urgency=medium
+rust-flate2 (1.0.34-1) unstable; urgency=medium
 
-  * Rebuild for Debian Bookworm / Proxmox
+  * Team upload.
+  * Package flate2 1.0.34 from crates.io using debcargo 2.7.1
 
- -- Proxmox Support Team <support@proxmox.com>  Tue, 19 Sep 2023 14:58:25 +0200
+ -- Fabian Grünbichler <debian@fabian.gruenbichler.email>  Sun, 13 Oct 2024 16:47:05 +0200
 
 rust-flate2 (1.0.27-2) unstable; urgency=medium
 
