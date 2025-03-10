@@ -6,11 +6,32 @@
 # Envvars:
 # See also ./vars.sh.frag for its envvars, which we pass through.
 
+
+# Run this before sourcing vars.sh.frag so the user reads it first
+exec_basename="$(basename "$0")"
+case "$exec_basename" in
+new-package.sh|package.sh)
+	echo >&2
+	echo >&2 "WARNING! $exec_basename is deprecated. Please use update.sh instead."
+	echo >&2
+	# Add 1 second sleep so users read the deprecation notice,
+	# get annoyed by the wait and start using update.sh
+	sleep 1
+	;;
+esac
+
 . ./vars.sh.frag
 
 case "$(git rev-parse --abbrev-ref HEAD)" in
 pending-*)	abort 1 "You are on a pending-release branch, $0 can only be run on another branch, like master";;
 esac
+
+timeout --foreground 15 git fetch origin --prune || abort 1 "Failed to fetch upstream to check pending branches, please check network"
+pending_branches=$(git branch --all --list "*pending-$PKGNAME")
+if [ -n "$pending_branches" ]
+then
+	abort 1 "Please resolve these existing pending branches before updating this crate:$(printf "\n$pending_branches")"
+fi
 
 if [ -n "$VER" ]; then
 	if [ ! -d "$PWD/src/$PKGBASE" ]; then
@@ -24,7 +45,6 @@ if [ ! -d "$PKGDIR/debian" ]; then
 	overlay = "."
 	uploaders = ["$DEBFULLNAME <$DEBEMAIL>"]
 	eof
-	git add "$PKGDIR"
 fi
 if [ ! -f "$PKGDIR/debian/copyright" ]; then
 	cat <<-eof > "$PKGDIR/debian/copyright"
@@ -51,7 +71,6 @@ if ! grep -q uploaders "$PKGCFG"; then
 fi
 
 run_debcargo
-git add -N "$PKGDIR"
 
 if ! git diff --quiet -- "$PKGDIR_REL"; then
 	read -p "Update wrote some changes to $PKGDIR_REL, press enter to git diff..." x || true
@@ -75,7 +94,7 @@ and directly git-add without editing:
 	    src/$PKGNAME/debian/copyright.debcargo.hint
 
 When done, git-add all your changes plus any unmodified hint files, and re-run
-this command (\`./update.sh $*\`).
+this command (\`./update.sh $*\`).  Do NOT run git commit at this stage.
 
 For issues with debian/control, edit src/$PKGNAME/debian/debcargo.toml instead.
 You can find docs for that in debcargo.toml.example in the debcargo git repo.
@@ -94,6 +113,7 @@ You can test-build your package by running:
 
   cd build && ./build.sh $CRATE $VER
 
+You should not run git commit before doing this; it uses files git-added.
 This assumes that you have set up sbuild; see "Build environment" in README.rst
 for details. Try to fix any lintian errors, but note that some errors are due
 to lintian being out-of-date and/or are expected at this stage of the process
@@ -118,14 +138,18 @@ When satisfied with all of these outputs:
 - of lintian after running ./build.sh
 - of dev/list-rdeps.sh $CRATE
 
-then you can commit and push all your changes.
+then you can commit. For example:
+git commit -m "$CRATE: new upstream release" src/$PKGNAME/
+and push all your changes.
 
 Then, ask a Debian Developer to run \`./release.sh $*\`. This finalises your
 changes in the changelog, and allows them to build and upload the package. If
 you're not a Debian Developer and are unable to upload, please don't run that
 script or else you will need to revert the changes that it makes to your git.
-Instead, add an empty RFS file inside the created debian directory; see
-TODO.rst's  "Ready for upload" section for more details.
+Instead, add an empty RFS file inside the created debian directory. If there
+are other issues that need to be addressed such as missing dependencies, they
+can be addressed by adding a comment into the RFS file; see CONTRIBUTING.rst's
+"Ready for upload" section for more details.
 eof
 if [ -n "$VER" ]; then
 cat >&2 <<eof
