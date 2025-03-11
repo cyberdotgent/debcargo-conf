@@ -1,0 +1,3 @@
+overlay = "."
+uploaders = ["Sylvestre Ledru <sylvestre@debian.org>"]
+semver_suffix = true
