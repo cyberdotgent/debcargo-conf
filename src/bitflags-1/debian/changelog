@@ -1,8 +1,17 @@
-rust-bitflags-1 (1.3.2-5~bpo12+pve1) proxmox-rust; urgency=medium
+rust-bitflags-1 (1.3.2-7) unstable; urgency=medium
 
-  * Rebuild for Debian Bookworm / Proxmox
+  * Team upload.
+  * Package bitflags 1.3.2 from crates.io using debcargo 2.7.5
+  * Set test_is_broken for the compiler_builtins feature.
 
- -- Proxmox Support Team <support@proxmox.com>  Wed, 20 Sep 2023 10:31:23 +0200
+ -- Peter Michael Green <plugwash@debian.org>  Sun, 08 Dec 2024 02:01:04 +0000
+
+rust-bitflags-1 (1.3.2-6) unstable; urgency=medium
+
+  * Team upload.
+  * Regenerate bitflags 1.3.2 using debcargo 2.7.5 (Closes: #1069687)
+
+ -- Fabian Grünbichler <debian@fabian.gruenbichler.email>  Sun, 24 Nov 2024 17:50:12 +0100
 
 rust-bitflags-1 (1.3.2-5) unstable; urgency=medium
 
