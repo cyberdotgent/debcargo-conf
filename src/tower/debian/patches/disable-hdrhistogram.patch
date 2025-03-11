@@ -8,7 +8,22 @@ Last-Update: 2022-11-13
 This patch header follows DEP-3: http://dep.debian.net/deps/dep3/
 --- a/Cargo.toml
 +++ b/Cargo.toml
-@@ -61,10 +61,10 @@
+@@ -55,10 +55,10 @@
+ name = "tower"
+ path = "src/lib.rs"
+ 
+-[[example]]
+-name = "tower-balance"
+-path = "examples/tower-balance.rs"
+-required-features = ["full"]
++#[[example]]
++#name = "tower-balance"
++#path = "examples/tower-balance.rs"
++#required-features = ["full"]
+ 
+ [[test]]
+ name = "balance"
+@@ -118,10 +118,10 @@
  optional = true
  default-features = false
  
@@ -22,10 +37,10 @@ This patch header follows DEP-3: http://dep.debian.net/deps/dep3/
 +#default-features = false
  
  [dependencies.indexmap]
- version = "1.0.2"
-@@ -116,9 +116,9 @@
+ version = "2.0.2"
+@@ -168,9 +168,9 @@
  [dev-dependencies.futures]
- version = "0.3"
+ version = "0.3.22"
  
 -[dev-dependencies.hdrhistogram]
 -version = "7.0"
@@ -35,8 +50,8 @@ This patch header follows DEP-3: http://dep.debian.net/deps/dep3/
 +#default-features = false
  
  [dev-dependencies.http]
- version = "0.2"
-@@ -186,7 +186,7 @@
+ version = "1"
+@@ -249,7 +249,7 @@
      "buffer",
      "discover",
      "filter",
@@ -45,7 +60,7 @@ This patch header follows DEP-3: http://dep.debian.net/deps/dep3/
      "limit",
      "load",
      "load-shed",
-@@ -199,14 +199,14 @@
+@@ -262,14 +262,14 @@
      "timeout",
      "util",
  ]

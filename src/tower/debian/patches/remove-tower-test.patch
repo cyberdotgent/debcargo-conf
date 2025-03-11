@@ -1,0 +1,104 @@
+--- a/Cargo.toml
++++ b/Cargo.toml
+@@ -64,37 +64,37 @@
+ name = "balance"
+ path = "tests/balance/main.rs"
+ 
+-[[test]]
+-name = "buffer"
+-path = "tests/buffer/main.rs"
+-
+-[[test]]
+-name = "builder"
+-path = "tests/builder.rs"
+-
+-[[test]]
+-name = "hedge"
+-path = "tests/hedge/main.rs"
+-
+-[[test]]
+-name = "limit"
+-path = "tests/limit/main.rs"
+-
+-[[test]]
+-name = "load_shed"
+-path = "tests/load_shed/main.rs"
+-
+-[[test]]
+-name = "ready_cache"
+-path = "tests/ready_cache/main.rs"
+-
+-[[test]]
+-name = "retry"
+-path = "tests/retry/main.rs"
+-
+-[[test]]
+-name = "spawn_ready"
+-path = "tests/spawn_ready/main.rs"
++#[[test]]
++#name = "buffer"
++#path = "tests/buffer/main.rs"
++
++#[[test]]
++#name = "builder"
++#path = "tests/builder.rs"
++
++#[[test]]
++#name = "hedge"
++#path = "tests/hedge/main.rs"
++
++#[[test]]
++#name = "limit"
++#path = "tests/limit/main.rs"
++
++#[[test]]
++#name = "load_shed"
++#path = "tests/load_shed/main.rs"
++
++#[[test]]
++#name = "ready_cache"
++#path = "tests/ready_cache/main.rs"
++
++#[[test]]
++#name = "retry"
++#path = "tests/retry/main.rs"
++
++#[[test]]
++#name = "spawn_ready"
++#path = "tests/spawn_ready/main.rs"
+ 
+ [[test]]
+ name = "steer"
+@@ -203,8 +203,8 @@
+ [dev-dependencies.tokio-test]
+ version = "0.4"
+ 
+-[dev-dependencies.tower-test]
+-version = "0.4"
++#[dev-dependencies.tower-test]
++#version = "0.4"
+ 
+ [dev-dependencies.tracing]
+ version = "0.1.2"
+--- a/tests/balance/main.rs
++++ b/tests/balance/main.rs
+@@ -1,4 +1,4 @@
+-#![cfg(feature = "balance")]
++#![cfg(all(feature = "balance", feature = "tower-test"))]
+ #[path = "../support.rs"]
+ mod support;
+ 
+--- a/tests/util/call_all.rs
++++ b/tests/util/call_all.rs
+@@ -1,3 +1,4 @@
++#![cfg(feature = "tower-test")]
+ use super::support;
+ use futures_core::Stream;
+ use futures_util::{
+--- a/src/balance/p2c/test.rs
++++ b/src/balance/p2c/test.rs
+@@ -1,3 +1,4 @@
++#![cfg(feature = "tower-test")]
+ use crate::discover::ServiceList;
+ use crate::load;
+ use futures_util::pin_mut;

@@ -1,17 +1,13 @@
-diff --git a/Cargo.toml b/Cargo.toml
-index 7d427af..23721da 100644
 --- a/Cargo.toml
 +++ b/Cargo.toml
-@@ -67,10 +67,10 @@ version = "0.3"
+@@ -114,3 +114,3 @@
+ [dev-dependencies.env_logger]
+-version = "0.10"
++version = "0.11"
  default-features = false
- 
- [dependencies.http]
--version = "1"
-+version = "0.2"
- 
- [dependencies.indexmap]
--version = "2"
-+version = ">= 1.9.3"
- features = ["std"]
- 
- [dependencies.slab]
+--- a/src/hpack/test/fixture.rs
++++ b/src/hpack/test/fixture.rs
+@@ -1,2 +1,2 @@
+-#![cfg(feature = "with-test-data")]
++#![cfg(any())]
+ use crate::hpack::{Decoder, Encoder, Header};

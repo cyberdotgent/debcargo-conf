@@ -1,0 +1,16 @@
+rust-http-body-util (0.1.2-1) unstable; urgency=medium
+
+  * Team upload.
+  * Upload to unstable
+
+ -- Blair Noctis <ncts@debian.org>  Fri, 17 Jan 2025 20:16:58 +0000
+
+rust-http-body-util (0.1.2-1~exp1) experimental; urgency=medium
+
+  * Team upload.
+  * Package http-body-util 0.1.2 from crates.io using debcargo 2.7.1
+
+  [ Sylvestre Ledru ]
+  * Package http-body-util 0.1.1 from crates.io using debcargo 2.6.1
+
+ -- Blair Noctis <ncts@debian.org>  Sun, 03 Nov 2024 17:20:57 +0000

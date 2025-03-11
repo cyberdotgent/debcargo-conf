@@ -1,2 +1,4 @@
 overlay = "."
 uploaders = ["Alexander Kjäll <alexander.kjall@gmail.com>"]
+excludes = ["benches/"]
+collapse_features = true
