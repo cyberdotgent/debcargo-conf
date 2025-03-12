@@ -1,3 +1,9 @@
+rust-async-global-executor (2.4.1-5~bpo12+pve1) proxmox-rust; urgency=medium
+
+  * Rebuild for Debian Bookworm / Proxmox
+
+ -- Proxmox Support Team <support@proxmox.com>  Wed, 12 Mar 2025 12:32:46 +0100
+
 rust-async-global-executor (2.4.1-5) unstable; urgency=medium
 
   * Team upload.

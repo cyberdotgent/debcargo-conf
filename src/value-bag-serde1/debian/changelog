@@ -1,3 +1,9 @@
+rust-value-bag-serde1 (1.9.0-1~bpo12+pve1) proxmox-rust; urgency=medium
+
+  * Rebuild for Debian Bookworm / Proxmox
+
+ -- Proxmox Support Team <support@proxmox.com>  Wed, 12 Mar 2025 12:32:45 +0100
+
 rust-value-bag-serde1 (1.9.0-1) unstable; urgency=medium
 
   * Team upload.

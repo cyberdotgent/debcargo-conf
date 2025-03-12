@@ -1,3 +1,9 @@
+rust-reqwest-0.11 (0.11.27-9~bpo12+pve1) proxmox-rust; urgency=medium
+
+  * Rebuild for Debian Bookworm / Proxmox
+
+ -- Proxmox Support Team <support@proxmox.com>  Wed, 12 Mar 2025 12:34:41 +0100
+
 rust-reqwest-0.11 (0.11.27-9) unstable; urgency=medium
 
   * Team upload.

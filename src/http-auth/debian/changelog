@@ -1,3 +1,9 @@
+rust-http-auth (0.1.10-1~exp1~bpo12+pve1) proxmox-rust; urgency=medium
+
+  * Rebuild for Debian Bookworm / Proxmox
+
+ -- Proxmox Support Team <support@proxmox.com>  Wed, 12 Mar 2025 12:32:58 +0100
+
 rust-http-auth (0.1.10-1~exp1) experimental; urgency=medium
 
   * Team upload.

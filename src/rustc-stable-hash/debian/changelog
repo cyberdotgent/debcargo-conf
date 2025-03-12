@@ -1,3 +1,9 @@
+rust-rustc-stable-hash (0.1.1-1~bpo12+pve1) proxmox-rust; urgency=medium
+
+  * Rebuild for Debian Bookworm / Proxmox
+
+ -- Proxmox Support Team <support@proxmox.com>  Wed, 12 Mar 2025 12:32:43 +0100
+
 rust-rustc-stable-hash (0.1.1-1) unstable; urgency=medium
 
   * Package rustc-stable-hash 0.1.1 from crates.io using debcargo 2.7.1

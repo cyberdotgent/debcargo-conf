@@ -1,3 +1,9 @@
+rust-hickory-proto (0.24.2-1~bpo12+pve1) proxmox-rust; urgency=medium
+
+  * Rebuild for Debian Bookworm / Proxmox
+
+ -- Proxmox Support Team <support@proxmox.com>  Wed, 12 Mar 2025 12:32:52 +0100
+
 rust-hickory-proto (0.24.2-1) unstable; urgency=medium
 
   * Package hickory-proto 0.24.2 from crates.io using debcargo 2.7.6

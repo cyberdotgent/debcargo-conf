@@ -1,3 +1,9 @@
+rust-gix-diff (0.49.0-1~bpo12+pve1) proxmox-rust; urgency=medium
+
+  * Rebuild for Debian Bookworm / Proxmox
+
+ -- Proxmox Support Team <support@proxmox.com>  Wed, 12 Mar 2025 12:32:55 +0100
+
 rust-gix-diff (0.49.0-1) unstable; urgency=medium
 
   * Team upload.
