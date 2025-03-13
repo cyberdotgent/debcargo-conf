@@ -1,0 +1,13 @@
+Index: wasm-bindgen-cli-support/Cargo.toml
+===================================================================
+--- wasm-bindgen-cli-support.orig/Cargo.toml
++++ wasm-bindgen-cli-support/Cargo.toml
+@@ -28,7 +28,7 @@ resolver = "2"
+ version = "1.0"
+ 
+ [dependencies.base64]
+-version = "0.21"
++version = "0.22"
+ 
+ [dependencies.log]
+ version = "0.4"
