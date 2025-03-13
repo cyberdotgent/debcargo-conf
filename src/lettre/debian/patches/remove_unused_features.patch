@@ -1,7 +1,7 @@
-diff --git a/Cargo.toml b/Cargo.toml
-index 13e3b77..072ea3a 100644
---- a/Cargo.toml
-+++ b/Cargo.toml
+Index: lettre/Cargo.toml
+===================================================================
+--- lettre.orig/Cargo.toml
++++ lettre/Cargo.toml
 @@ -114,24 +114,6 @@ required-features = [
      "builder",
  ]
@@ -38,10 +38,32 @@ index 13e3b77..072ea3a 100644
  [dependencies.async-trait]
  version = "0.1"
  optional = true
-@@ -224,19 +202,6 @@ optional = true
- version = "0.9"
+@@ -152,17 +130,9 @@ optional = true
+ version = "0.21"
  optional = true
  
+-[dependencies.boring]
+-version = "3"
+-optional = true
+-
+ [dependencies.chumsky]
+ version = "0.9"
+ 
+-[dependencies.ed25519-dalek]
+-version = "2"
+-optional = true
+-
+ [dependencies.email-encoding]
+ version = "0.2"
+ optional = true
+@@ -220,23 +190,6 @@ optional = true
+ version = "0.5"
+ optional = true
+ 
+-[dependencies.rsa]
+-version = "0.9"
+-optional = true
+-
 -[dependencies.rustls]
 -version = "0.21"
 -features = ["dangerous_configuration"]
@@ -58,7 +80,7 @@ index 13e3b77..072ea3a 100644
  [dependencies.serde]
  version = "1"
  features = ["derive"]
-@@ -255,11 +220,6 @@ optional = true
+@@ -255,11 +208,6 @@ optional = true
  version = "0.5.1"
  optional = true
  
@@ -70,7 +92,7 @@ index 13e3b77..072ea3a 100644
  [dependencies.tokio1_crate]
  version = "1"
  optional = true
-@@ -270,11 +230,6 @@ version = "0.3"
+@@ -270,11 +218,6 @@ version = "0.3"
  optional = true
  package = "tokio-native-tls"
  
@@ -82,10 +104,14 @@ index 13e3b77..072ea3a 100644
  [dependencies.tracing]
  version = "0.1.16"
  features = ["std"]
-@@ -294,10 +249,6 @@ optional = true
- version = "0.25"
+@@ -290,14 +233,6 @@ version = "1"
+ features = ["v4"]
  optional = true
  
+-[dependencies.webpki-roots]
+-version = "0.25"
+-optional = true
+-
 -[dev-dependencies.async-std]
 -version = "1.8"
 -features = ["attributes"]
@@ -93,7 +119,7 @@ index 13e3b77..072ea3a 100644
  [dev-dependencies.criterion]
  version = "0.5"
  
-@@ -333,18 +284,6 @@ version = "0.3"
+@@ -333,18 +268,6 @@ version = "0.3"
  version = "2"
  
  [features]
@@ -112,7 +138,20 @@ index 13e3b77..072ea3a 100644
  builder = [
      "dep:httpdate",
      "dep:mime",
-@@ -377,15 +316,9 @@ file-transport-envelope = [
+@@ -359,12 +282,6 @@ default = [
+     "hostname",
+     "builder",
+ ]
+-dkim = [
+-    "dep:base64",
+-    "dep:sha2",
+-    "dep:rsa",
+-    "dep:ed25519-dalek",
+-]
+ file-transport = [
+     "dep:uuid",
+     "tokio1_crate?/fs",
+@@ -377,15 +294,9 @@ file-transport-envelope = [
  ]
  mime03 = ["dep:mime"]
  pool = ["dep:futures-util"]
@@ -128,7 +167,7 @@ index 13e3b77..072ea3a 100644
  ]
  smtp-transport = [
      "dep:base64",
-@@ -403,21 +336,11 @@ tokio1 = [
+@@ -403,21 +314,11 @@ tokio1 = [
      "dep:futures-io",
      "dep:futures-util",
  ]
@@ -150,10 +189,9 @@ index 13e3b77..072ea3a 100644
  
  [badges.is-it-maintained-issue-resolution]
  repository = "lettre/lettre"
-diff --git a/examples/asyncstd1_smtp_starttls.rs b/examples/asyncstd1_smtp_starttls.rs
-deleted file mode 100644
-index e1679d6..0000000
---- a/examples/asyncstd1_smtp_starttls.rs
+Index: lettre/examples/asyncstd1_smtp_starttls.rs
+===================================================================
+--- lettre.orig/examples/asyncstd1_smtp_starttls.rs
 +++ /dev/null
 @@ -1,33 +0,0 @@
 -use lettre::{
@@ -189,10 +227,9 @@ index e1679d6..0000000
 -        Err(e) => panic!("Could not send email: {e:?}"),
 -    }
 -}
-diff --git a/examples/asyncstd1_smtp_tls.rs b/examples/asyncstd1_smtp_tls.rs
-deleted file mode 100644
-index c0299a0..0000000
---- a/examples/asyncstd1_smtp_tls.rs
+Index: lettre/examples/asyncstd1_smtp_tls.rs
+===================================================================
+--- lettre.orig/examples/asyncstd1_smtp_tls.rs
 +++ /dev/null
 @@ -1,33 +0,0 @@
 -use lettre::{
