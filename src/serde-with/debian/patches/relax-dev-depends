@@ -29,11 +29,15 @@ Index: serde-with/Cargo.toml
  
  [dev-dependencies.serde_json]
  version = "1.0.25"
-@@ -310,3 +310,3 @@
+@@ -286,7 +286,7 @@ features = ["preserve_order"]
+ version = "1.0.124"
+ 
  [dev-dependencies.serde_yaml]
 -version = "0.9.2"
 +version = ">=0.8.26, <0.10"
  
+ [dev-dependencies.version-sync]
+ version = "0.9.1"
 Index: serde-with/tests/serde_as/enum_map.rs
 ===================================================================
 --- serde-with.orig/tests/serde_as/enum_map.rs

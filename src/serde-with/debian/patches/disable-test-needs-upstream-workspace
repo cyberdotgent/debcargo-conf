@@ -2,7 +2,7 @@ Index: serde-with/tests/version_numbers.rs
 ===================================================================
 --- serde-with.orig/tests/version_numbers.rs
 +++ serde-with/tests/version_numbers.rs
-@@ -14,14 +14,14 @@ fn test_html_root_url() {
+@@ -10,14 +10,14 @@ fn test_html_root_url() {
      assert_html_root_url_updated!("src/lib.rs");
  }
  

@@ -7,5 +7,4 @@ disable-tests-order-sensitive
 drop-old-indexmap
 fix-tests-with-serde-1.0.196
 skip-tests-big-endian
-relax-base64
 drop-jsonschema
