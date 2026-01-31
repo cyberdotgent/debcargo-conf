@@ -1,19 +1,27 @@
 Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
 Upstream-Name: libm
 Upstream-Contact: Jorge Aparicio <jorge@japaric.io>
-Source: https://github.com/rust-lang/libm
+Source: https://github.com/rust-lang/compiler-builtins
 
 Files: *
 Copyright: FIXME (overlay) UNKNOWN-YEARS Jorge Aparicio <jorge@japaric.io>
-License: MIT or Apache-2.0
+License: MIT
 Comment:
  FIXME (overlay): Since upstream copyright years are not available in
  Cargo.toml, they were extracted from the upstream Git repository. This may not
  be correct information so you should review and fix this before uploading to
  the archive.
 
-Files: LICENSE-MIT
-Copyright: 2018 Jorge Aparicio
+Files: LICENSE.txt
+Copyright:
+ 2018 Jorge Aparicio
+ 2005-2020 Rich Felker, et al.
+ 1993,2004 Sun Microsystems or
+ 2003-2011 David Schultz or
+ 2003-2009 Steven G. Kargl or
+ 2003-2009 Bruce D. Evans or
+ 2008 Stephen L. Moshier or
+ 2017-2018 Arm Limited
 License: UNKNOWN-LICENSE; FIXME (overlay)
 Comment:
  FIXME (overlay): These notices are extracted from files. Please review them
@@ -76,7 +84,7 @@ Comment:
  before uploading to the archive.
 
 Files: src/math/cbrt.rs
-Copyright: 1993 by Sun Microsystems, Inc. All rights reserved.
+Copyright: 2021-2022 Alexei Sibidanov.
 License: UNKNOWN-LICENSE; FIXME (overlay)
 Comment:
  FIXME (overlay): These notices are extracted from files. Please review them
@@ -154,13 +162,6 @@ Comment:
 
 Files: src/math/expm1f.rs
 Copyright: 1993 by Sun Microsystems, Inc. All rights reserved.
-License: UNKNOWN-LICENSE; FIXME (overlay)
-Comment:
- FIXME (overlay): These notices are extracted from files. Please review them
- before uploading to the archive.
-
-Files: src/math/fmaf.rs
-Copyright: 2005-2011 David Schultz <das@FreeBSD.ORG>
 License: UNKNOWN-LICENSE; FIXME (overlay)
 Comment:
  FIXME (overlay): These notices are extracted from files. Please review them
@@ -383,20 +384,6 @@ Comment:
  FIXME (overlay): These notices are extracted from files. Please review them
  before uploading to the archive.
 
-Files: src/math/sqrt.rs
-Copyright: 1993 by Sun Microsystems, Inc. All rights reserved.
-License: UNKNOWN-LICENSE; FIXME (overlay)
-Comment:
- FIXME (overlay): These notices are extracted from files. Please review them
- before uploading to the archive.
-
-Files: src/math/sqrtf.rs
-Copyright: 1993 by Sun Microsystems, Inc. All rights reserved.
-License: UNKNOWN-LICENSE; FIXME (overlay)
-Comment:
- FIXME (overlay): These notices are extracted from files. Please review them
- before uploading to the archive.
-
 Files: src/math/tan.rs
 Copyright: 1993 by Sun Microsystems, Inc. All rights reserved.
 License: UNKNOWN-LICENSE; FIXME (overlay)
@@ -413,13 +400,9 @@ Comment:
 
 Files: debian/*
 Copyright:
- 2020-2024 Debian Rust Maintainers <pkg-rust-maintainers@alioth-lists.debian.net>
- 2020-2024 Andrej Shadura <andrewsh@debian.org>
-License: MIT or Apache-2.0
-
-License: Apache-2.0
- Debian systems provide the Apache 2.0 license in
- /usr/share/common-licenses/Apache-2.0
+ 2020-2026 Debian Rust Maintainers <pkg-rust-maintainers@alioth-lists.debian.net>
+ 2020-2026 Andrej Shadura <andrewsh@debian.org>
+License: MIT
 
 License: MIT
  Permission is hereby granted, free of charge, to any person obtaining a copy

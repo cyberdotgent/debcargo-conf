@@ -1,7 +1,7 @@
 Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
 Upstream-Name: libm
 Upstream-Contact: Jorge Aparicio <jorge@japaric.io>
-Source: https://github.com/rust-lang/libm
+Source: https://github.com/rust-lang/compiler-builtins
 
 Files: *
 Copyright:
@@ -20,13 +20,12 @@ Comment:
 
 Files: src/math/exp2.rs
        src/math/exp2f.rs
-       src/math/fmaf.rs
 Copyright: 2005-2011, David Schultz <das@FreeBSD.ORG>
 License: BSD-2-clause
 
 Files: debian/*
 Copyright:
- 2020-2021 Debian Rust Maintainers <pkg-rust-maintainers@alioth-lists.debian.net>
+ 2020-2026 Debian Rust Maintainers <pkg-rust-maintainers@alioth-lists.debian.net>
  2020      Andrej Shadura <andrewsh@debian.org>
  2021      Peter Michael Green <plugwash@debian.org>
 License: Apache-2.0 or Expat
