@@ -1,0 +1,13 @@
+diff --git a/Cargo.toml b/Cargo.toml
+index e52ae1a..6133399 100644
+--- a/Cargo.toml
++++ b/Cargo.toml
+@@ -80,7 +80,7 @@ path = "tests/big-module.rs"
+ version = "2.4.1"
+ 
+ [dependencies.hashbrown]
+-version = "0.15.2"
++version = "0.16"
+ features = ["default-hasher"]
+ optional = true
+ default-features = false

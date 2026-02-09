@@ -1,3 +1,4 @@
 disable-benches.patch
 add-wasm-encoder.patch
 gate-tests.patch
+upgrade-hashbrown-0.16.patch
