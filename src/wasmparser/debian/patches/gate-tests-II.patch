@@ -1,0 +1,92 @@
+diff --git a/Cargo.toml b/Cargo.toml
+index 6133399..735b17b 100644
+--- a/Cargo.toml
++++ b/Cargo.toml
+@@ -75,6 +75,7 @@ path = "examples/simple.rs"
+ [[test]]
+ name = "big-module"
+ path = "tests/big-module.rs"
++required-features = ["validate"]
+ 
+ [dependencies.bitflags]
+ version = "2.4.1"
+diff --git a/src/parser.rs b/src/parser.rs
+index 0f314d2..b740095 100644
+--- a/src/parser.rs
++++ b/src/parser.rs
+@@ -519,7 +519,7 @@ impl Parser {
+     /// incrementally parsing it.
+     ///
+     /// ```
+-    /// #[cfg(feature = "std")] {
++    /// #[cfg(all(feature = "std", feature = "component-model"))] {
+     /// use std::io::Read;
+     /// use anyhow::Result;
+     /// use wasmparser::{Parser, Chunk, Payload::*};
+@@ -1013,7 +1013,7 @@ impl Parser {
+     /// a buffer and then parsing it.
+     ///
+     /// ```
+-    /// #[cfg(feature = "std")]	{
++    /// #[cfg(all(feature = "std", feature = "component-model"))]	{
+     /// use std::io::Read;
+     /// use anyhow::Result;
+     /// use wasmparser::{Parser, Chunk, Payload::*};
+@@ -1843,7 +1843,7 @@ mod tests {
+     }
+ 
+     #[test]
+-    #[cfg(feature = "std")]
++    #[cfg(all(feature = "std", feature = "component-model"))]
+     fn single_module() {
+         let mut p = parser_after_component_header();
+         assert_matches!(p.parse(&[4], false), Ok(Chunk::NeedMoreData(1)));
+@@ -1896,7 +1896,7 @@ mod tests {
+     }
+ 
+     #[test]
+-    #[cfg(feature = "std")]
++    #[cfg(all(feature = "std", feature = "component-model"))]
+     fn nested_section_too_big() {
+         let mut p = parser_after_component_header();
+ 
+diff --git a/src/validator.rs b/src/validator.rs
+index a5c345e..c8845dd 100644
+--- a/src/validator.rs
++++ b/src/validator.rs
+@@ -1459,6 +1459,7 @@ mod tests {
+     use anyhow::Result;
+ 
+     #[test]
++    #[cfg(feature = "features")]
+     fn test_module_type_information() -> Result<()> {
+         let bytes = wat::parse_str(
+             r#"
+@@ -1549,6 +1550,7 @@ mod tests {
+     }
+ 
+     #[test]
++    #[cfg(feature = "std")]
+     fn test_type_id_aliasing() -> Result<()> {
+         let bytes = wat::parse_str(
+             r#"
+@@ -1583,6 +1585,7 @@ mod tests {
+     }
+ 
+     #[test]
++    #[cfg(feature = "std")]
+     fn test_type_id_exports() -> Result<()> {
+         let bytes = wat::parse_str(
+             r#"
+diff --git a/src/validator/func.rs b/src/validator/func.rs
+index 9f21fca..ef8e701 100644
+--- a/src/validator/func.rs
++++ b/src/validator/func.rs
+@@ -319,6 +319,7 @@ arity mismatch in validation
+ }
+ 
+ #[cfg(test)]
++#[cfg(feature = "std")]
+ mod tests {
+     use super::*;
+     use crate::types::CoreTypeId;
