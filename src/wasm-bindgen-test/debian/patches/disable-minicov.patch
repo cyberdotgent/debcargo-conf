@@ -1,0 +1,15 @@
+diff --git a/Cargo.toml b/Cargo.toml
+index 465934d..8cc9dc0 100644
+--- a/Cargo.toml
++++ b/Cargo.toml
+@@ -96,8 +96,8 @@ version = "=0.3.58"
+ [dependencies.wasm-bindgen-test-shared]
+ version = "=0.2.108"
+ 
+-[target.'cfg(all(target_arch = "wasm32", wasm_bindgen_unstable_test_coverage))'.dependencies.minicov]
+-version = "0.3.8"
++#[target.'cfg(all(target_arch = "wasm32", wasm_bindgen_unstable_test_coverage))'.dependencies.minicov]
++#version = "0.3.8"
+ 
+ [lints.clippy]
+ large_enum_variant = "allow"

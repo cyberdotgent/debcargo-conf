@@ -1,7 +1,85 @@
+diff --git a/Cargo.toml b/Cargo.toml
+index 8cc9dc0..6ed8f42 100644
 --- a/Cargo.toml
 +++ b/Cargo.toml
-@@ -64,3 +64,3 @@
+@@ -70,7 +70,7 @@ features = ["libm"]
+ default-features = false
  
--[target.'cfg(all(target_arch = "wasm32", wasm_bindgen_unstable_test_coverage))'.dependencies.minicov]
-+[disabled.target.'cfg(all(target_arch = "wasm32", wasm_bindgen_unstable_test_coverage))'.dependencies.minicov]
- version = "0.3"
+ [dependencies.oorandom]
+-version = "11.1.5"
++version = "11"
+ 
+ [dependencies.serde]
+ version = "1.0"
+@@ -93,8 +93,8 @@ default-features = false
+ [dependencies.wasm-bindgen-test-macro]
+ version = "=0.3.58"
+ 
+-[dependencies.wasm-bindgen-test-shared]
+-version = "=0.2.108"
++#[dependencies.wasm-bindgen-test-shared]
++#version = "=0.2.108"
+ 
+ #[target.'cfg(all(target_arch = "wasm32", wasm_bindgen_unstable_test_coverage))'.dependencies.minicov]
+ #version = "0.3.8"
+diff --git a/src/rt/node.rs b/src/rt/node.rs
+index e6ae0cf..64e107e 100644
+--- a/src/rt/node.rs
++++ b/src/rt/node.rs
+@@ -3,7 +3,7 @@
+ //! This currently uses the same output as `libtest`, only reimplemented here
+ //! for node itself.
+ 
+-use alloc::string::String;
++use alloc::string::{String, ToString};
+ use wasm_bindgen::prelude::*;
+ 
+ /// Implementation of the `Formatter` trait for node.js
+@@ -49,5 +49,46 @@ pub fn __wbgtest_coverage_path(
+     temp_dir: &str,
+     module_signature: u64,
+ ) -> String {
+-    wasm_bindgen_test_shared::coverage_path(env.as_deref(), pid, temp_dir, module_signature)
++    coverage_path(env.as_deref(), pid, temp_dir, module_signature)
+ }
++
++/// Copied from https://github.com/wasm-bindgen/wasm-bindgen/blob/main/crates/test-shared/src/lib.rs
++pub fn coverage_path(env: Option<&str>, pid: u32, tmpdir: &str, module_signature: u64) -> String {
++    let env = env.unwrap_or("default_%m_%p.profraw");
++
++    let mut path = String::new();
++    let mut chars = env.chars().enumerate().peekable();
++
++    while let Some((index, char)) = chars.next() {
++        if char != '%' {
++            path.push(char);
++            continue;
++        }
++
++        if chars.next_if(|(_, c)| *c == 'p').is_some() {
++            path.push_str(&pid.to_string())
++        } else if chars.next_if(|(_, c)| *c == 'h').is_some() {
++            path.push_str("wbgt")
++        } else if chars.next_if(|(_, c)| *c == 't').is_some() {
++            path.push_str(tmpdir)
++        } else {
++            let mut last_index = index;
++
++            loop {
++                if let Some((index, _)) = chars.next_if(|(_, c)| c.is_ascii_digit()) {
++                    last_index = index;
++                } else if chars.next_if(|(_, c)| *c == 'm').is_some() {
++                    path.push_str(&module_signature.to_string());
++                    path.push_str("_0");
++                    break;
++                } else {
++                    path.push_str(&env[index..=last_index]);
++                    break;
++                }
++            }
++        }
++    }
++
++    path
++}
++
