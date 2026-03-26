@@ -1,0 +1,13 @@
+Index: wasm-bindgen-cli-support/Cargo.toml
+===================================================================
+--- wasm-bindgen-cli-support.orig/Cargo.toml
++++ wasm-bindgen-cli-support/Cargo.toml
+@@ -68,7 +68,7 @@ features = ["parallel"]
+ version = "=0.2.108"
+ 
+ [dependencies.wasmparser]
+-version = "0.240"
++version = "0.239"
+ 
+ [dev-dependencies.rstest]
+ version = "0.26"
