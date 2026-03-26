@@ -1,3 +1,10 @@
+rust-gloo-history (0.2.0-1~bpo13+pve2) proxmox-rust; urgency=medium
+
+  * Package gloo-history 0.2.0 from crates.io using debcargo 2.7.11
+  * Upgrade serde-wasm-bindgen to 0.6
+
+ -- Proxmox Support Team <support@proxmox.com>  Thu, 26 Mar 2026 14:10:56 +0100
+
 rust-gloo-history (0.2.0-1~bpo13+pve1) proxmox-rust; urgency=medium
 
   * Rebuild for Debian Trixie / Proxmox
