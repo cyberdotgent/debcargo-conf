@@ -1,7 +1,7 @@
 Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
 Upstream-Name: web-sys
 Upstream-Contact: The wasm-bindgen Developers
-Source: https://github.com/rustwasm/wasm-bindgen/tree/master/crates/web-sys
+Source: https://github.com/wasm-bindgen/wasm-bindgen/tree/master/crates/web-sys
 
 Files: *
 Copyright: FIXME (overlay) UNKNOWN-YEARS The wasm-bindgen Developers
@@ -21,10 +21,10 @@ Comment:
 
 Files: debian/*
 Copyright:
- 2019-2025 Debian Rust Maintainers <pkg-rust-maintainers@alioth-lists.debian.net>
- 2019-2025 kpcyrd <git@rxv.cc>
- 2019-2025 nicoo <nicoo@debian.org>
- 2019-2025 Wolfgang Silbermayr <wolfgang@silbermayr.at>
+ 2019-2026 Debian Rust Maintainers <pkg-rust-maintainers@alioth-lists.debian.net>
+ 2019-2026 kpcyrd <git@rxv.cc>
+ 2019-2026 nicoo <nicoo@debian.org>
+ 2019-2026 Wolfgang Silbermayr <wolfgang@silbermayr.at>
 License: MIT or Apache-2.0
 
 License: Apache-2.0
