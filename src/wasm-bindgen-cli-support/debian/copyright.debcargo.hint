@@ -1,7 +1,7 @@
 Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
 Upstream-Name: wasm-bindgen-cli-support
 Upstream-Contact: The wasm-bindgen Developers
-Source: https://github.com/rustwasm/wasm-bindgen/tree/master/crates/cli-support
+Source: https://github.com/wasm-bindgen/wasm-bindgen/tree/master/crates/cli-support
 
 Files: *
 Copyright: FIXME (overlay) UNKNOWN-YEARS The wasm-bindgen Developers
@@ -21,8 +21,8 @@ Comment:
 
 Files: debian/*
 Copyright:
- 2025 Debian Rust Maintainers <pkg-rust-maintainers@alioth-lists.debian.net>
- 2025 Fabian Grünbichler <f.gruenbichler@proxmox.com>
+ 2025-2026 Debian Rust Maintainers <pkg-rust-maintainers@alioth-lists.debian.net>
+ 2025-2026 Fabian Grünbichler <f.gruenbichler@proxmox.com>
 License: MIT or Apache-2.0
 
 License: Apache-2.0
