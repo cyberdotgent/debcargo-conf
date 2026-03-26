@@ -1,18 +1,16 @@
 Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
 Upstream-Name: serde-wasm-bindgen
 Upstream-Contact: Ingvar Stepanyan <me@rreverser.com>
-Source: https://github.com/cloudflare/serde-wasm-bindgen
+Source: https://github.com/RReverser/serde-wasm-bindgen
 
 Files: *
-Copyright:
- 2019-2022 Ingvar Stepanyan <me@rreverser.com>
- 2019 Cloudflare, Inc.
+Copyright: 2019-2025 Cloudflare, Inc.
 License: MIT
 
 Files: debian/*
 Copyright:
- 2022 Debian Rust Maintainers <pkg-rust-maintainers@alioth-lists.debian.net>
- 2022 Fabian Grünbichler <f.gruenbichler@proxmox.com>
+ 2025 Debian Rust Maintainers <pkg-rust-maintainers@alioth-lists.debian.net>
+ 2025 Alexander Kjäll <alexander.kjall@gmail.com>
 License: MIT
 
 License: MIT
