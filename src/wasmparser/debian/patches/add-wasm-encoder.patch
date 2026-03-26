@@ -1,7 +1,7 @@
-diff --git a/Cargo.toml b/Cargo.toml
-index f8c1a23..e52ae1a 100644
---- a/Cargo.toml
-+++ b/Cargo.toml
+Index: wasmparser/Cargo.toml
+===================================================================
+--- wasmparser.orig/Cargo.toml
++++ wasmparser/Cargo.toml
 @@ -123,6 +123,9 @@ version = "1.3"
  [dev-dependencies.wat]
  version = "1"

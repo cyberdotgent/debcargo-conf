@@ -1,7 +1,7 @@
-diff --git a/Cargo.toml b/Cargo.toml
-index b13b81e..f8c1a23 100644
---- a/Cargo.toml
-+++ b/Cargo.toml
+Index: wasmparser/Cargo.toml
+===================================================================
+--- wasmparser.orig/Cargo.toml
++++ wasmparser/Cargo.toml
 @@ -76,11 +76,6 @@ path = "examples/simple.rs"
  name = "big-module"
  path = "tests/big-module.rs"
@@ -24,10 +24,9 @@ index b13b81e..f8c1a23 100644
  [lints.clippy]
  allow_attributes_without_reason = "warn"
  clone_on_copy = "warn"
-diff --git a/benches/benchmark.rs b/benches/benchmark.rs
-deleted file mode 100644
-index 573c1fe..0000000
---- a/benches/benchmark.rs
+Index: wasmparser/benches/benchmark.rs
+===================================================================
+--- wasmparser.orig/benches/benchmark.rs
 +++ /dev/null
 @@ -1,395 +0,0 @@
 -use anyhow::Result;

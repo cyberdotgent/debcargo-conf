@@ -1,7 +1,7 @@
-diff --git a/src/parser.rs b/src/parser.rs
-index 61e6d1d..0f314d2 100644
---- a/src/parser.rs
-+++ b/src/parser.rs
+Index: wasmparser/src/parser.rs
+===================================================================
+--- wasmparser.orig/src/parser.rs
++++ wasmparser/src/parser.rs
 @@ -519,6 +519,7 @@ impl Parser {
      /// incrementally parsing it.
      ///
@@ -50,10 +50,10 @@ index 61e6d1d..0f314d2 100644
      fn nested_section_too_big() {
          let mut p = parser_after_component_header();
  
-diff --git a/tests/big-module.rs b/tests/big-module.rs
-index 9064eba..553802d 100644
---- a/tests/big-module.rs
-+++ b/tests/big-module.rs
+Index: wasmparser/tests/big-module.rs
+===================================================================
+--- wasmparser.orig/tests/big-module.rs
++++ wasmparser/tests/big-module.rs
 @@ -2,6 +2,7 @@ use std::borrow::Cow;
  use wasm_encoder::*;
  
