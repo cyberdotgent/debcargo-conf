@@ -2,7 +2,7 @@ Index: walrus/Cargo.toml
 ===================================================================
 --- walrus.orig/Cargo.toml
 +++ walrus/Cargo.toml
-@@ -55,7 +55,7 @@ harness = false
+@@ -62,7 +62,7 @@ harness = false
  version = "1.0"
  
  [dependencies.gimli]
@@ -11,39 +11,19 @@ Index: walrus/Cargo.toml
  
  [dependencies.id-arena]
  version = "2.2.1"
-@@ -74,10 +74,10 @@ optional = true
- version = "=0.22.0"
+@@ -81,10 +81,10 @@ optional = true
+ version = "=0.24.0"
  
  [dependencies.wasm-encoder]
--version = "0.214.0"
-+version = "0.217.0"
+-version = "0.240.0"
++version = "0.239.0"
  
  [dependencies.wasmparser]
--version = "0.214.0"
-+version = "0.217.0"
+-version = "0.240.0"
++version = "0.239.0"
  
  [dev-dependencies.criterion]
  version = "0.5.0"
-Index: walrus/src/module/mod.rs
-===================================================================
---- walrus.orig/src/module/mod.rs
-+++ walrus/src/module/mod.rs
-@@ -239,13 +239,13 @@ impl Module {
-                     let result =
-                         match s.name() {
-                             "producers" => wasmparser::ProducersSectionReader::new(
--                                BinaryReader::new(s.data(), s.data_offset(), wasm_features),
-+                                BinaryReader::new_features(s.data(), s.data_offset(), wasm_features),
-                             )
-                             .map_err(anyhow::Error::from)
-                             .and_then(|s| ret.parse_producers_section(s)),
-                             "name" => {
-                                 let name_section_reader = wasmparser::NameSectionReader::new(
--                                    BinaryReader::new(s.data(), s.data_offset(), wasm_features),
-+                                    BinaryReader::new_features(s.data(), s.data_offset(), wasm_features),
-                                 );
-                                 ret.parse_name_section(name_section_reader, &indices)
-                             }
 Index: walrus/src/module/debug/dwarf.rs
 ===================================================================
 --- walrus.orig/src/module/debug/dwarf.rs
