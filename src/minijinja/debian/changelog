@@ -1,3 +1,9 @@
+rust-minijinja (2.19.0-1~bpo13+pve1) proxmox-rust; urgency=medium
+
+  * Rebuild for Debian Trixie / Proxmox
+
+ -- Proxmox Support Team <support@proxmox.com>  Fri, 17 Apr 2026 10:10:02 +0200
+
 rust-minijinja (2.19.0-1) unstable; urgency=medium
 
   * Team upload.
