@@ -1,0 +1,17 @@
+rust-jiff-static (0.2.16-1~bpo13+1) trixie; urgency=medium
+
+  * Rebuild for trixie based Proxmox releases.
+
+ -- Proxmox Support Team <support@proxmox.com>  Thu, 30 Apr 2026 18:43:51 +0200
+
+rust-jiff-static (0.2.16-1) unstable; urgency=medium
+
+  * Package jiff-static 0.2.16 from crates.io using debcargo 2.7.11
+
+ -- Alexander Kjäll <alexander.kjall@gmail.com>  Sat, 13 Dec 2025 10:12:07 +0100
+
+rust-jiff-static (0.2.15-1) unstable; urgency=medium
+
+  * Package jiff-static 0.2.15 from crates.io using debcargo 2.7.10
+
+ -- Alexander Kjäll <alexander.kjall@gmail.com>  Sun, 31 Aug 2025 12:38:36 +0200

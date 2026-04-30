@@ -1,3 +1,16 @@
+rust-jiff-tzdb (0.1.4-1~bpo13+1) trixie; urgency=medium
+
+  * Rebuild for trixie based Proxmox releases.
+
+ -- Proxmox Support Team <support@proxmox.com>  Thu, 30 Apr 2026 18:44:26 +0200
+
+rust-jiff-tzdb (0.1.4-1) unstable; urgency=medium
+
+  * Team upload.
+  * Package jiff-tzdb 0.1.4 from crates.io using debcargo 2.7.8
+
+ -- Peter Michael Green <plugwash@debian.org>  Mon, 22 Sep 2025 08:16:25 +0000
+
 rust-jiff-tzdb (0.1.2-1) unstable; urgency=medium
 
   * Team upload.

@@ -1,3 +1,28 @@
+rust-jiff (0.2.15-2~bpo13+1) trixie; urgency=medium
+
+  * Rebuild for Proxmox Trixie based releases.
+
+ -- Proxmox Support Team <support@proxmox.com>  Thu, 30 Apr 2026 18:27:55 +0200
+
+rust-jiff (0.2.15-2) unstable; urgency=medium
+
+  * Team upload.
+  * Package jiff 0.2.15 from crates.io using debcargo 2.7.11
+  * Reintroduce static-tz and static features.
+
+ -- Alexander Kjäll <alexander.kjall@gmail.com>  Sat, 13 Dec 2025 09:47:31 +0100
+
+rust-jiff (0.2.15-1) unstable; urgency=medium
+
+  * Team upload.
+  * Package jiff 0.2.15 from crates.io using debcargo 2.7.8
+  * Update patches for new upstream.
+  * Disable test which relies on a "US/Eastern" timezone that
+    does not appear to exist in Debian.
+  * Disable jiff-static dependency and associated features.
+
+ -- Peter Michael Green <plugwash@debian.org>  Mon, 22 Sep 2025 08:13:49 +0000
+
 rust-jiff (0.1.28-1) unstable; urgency=medium
 
   * Team upload.
