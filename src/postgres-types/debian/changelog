@@ -1,3 +1,19 @@
+rust-postgres-types (0.2.9-1~bpo13+1) trixie; urgency=medium
+
+  * Rebuild for trixie based Proxmox releases.
+
+ -- Proxmox Support Team <support@proxmox.com>  Thu, 30 Apr 2026 19:00:25 +0200
+
+rust-postgres-types (0.2.9-1) unstable; urgency=medium
+
+  * Team upload.
+  * Package postgres-types 0.2.9 from crates.io using debcargo 2.7.8
+  * Disable jiff 0.1 support to prepare for update to jiff 0.2
+  * Remove newly added depdency/feature for cidr 0.3 as the cidr crate is not
+    in debian.
+
+ -- Peter Michael Green <plugwash@debian.org>  Tue, 23 Sep 2025 00:34:57 +0000
+
 rust-postgres-types (0.2.8-1) unstable; urgency=medium
 
   * Team upload.
