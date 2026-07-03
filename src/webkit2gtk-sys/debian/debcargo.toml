@@ -1,0 +1,7 @@
+overlay = "."
+uploaders = ["Thomas Lamprecht <t.lamprecht@proxmox.com>"]
+collapse_features = true
+summary = "Sys functions for the Rust bindings of webkit-gtk library"
+
+[packages.lib]
+depends = ["libwebkit2gtk-4.1-dev"]
