@@ -1,0 +1,8 @@
+overlay = "."
+uploaders = ["Thomas Lamprecht <t.lamprecht@proxmox.com>"]
+collapse_features = true
+whitelist = ["tests/constant.c", "tests/layout.c"]
+summary = "Sys functions for the Rust bindings of JavaScriptCore"
+
+[packages.lib]
+depends = ["libjavascriptcoregtk-4.1-dev"]

@@ -1,0 +1,18 @@
+Description: Relax system-deps build dependency to the version in Debian
+ Debian trixie ships system-deps 7, while the crate pins system-deps 6. The
+ build script only uses the stable declarative metadata interface, so building
+ against 7 works, matching how Debian's gtk-rs 0.18 -sys crates are relaxed.
+Author: Thomas Lamprecht <t.lamprecht@proxmox.com>
+Forwarded: not-needed
+---
+--- a/Cargo.toml
++++ b/Cargo.toml
+@@ -67,7 +67,7 @@ version = "1.0.0"
+ version = "3"
+ 
+ [build-dependencies.system-deps]
+-version = "6"
++version = "7"
+ 
+ [features]
+ v2_28 = []
