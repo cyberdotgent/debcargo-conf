@@ -1,0 +1,4 @@
+semver_suffix = true
+overlay = "."
+uploaders = ["Thomas Lamprecht <t.lamprecht@proxmox.com>"]
+collapse_features = true
