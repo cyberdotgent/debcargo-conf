@@ -1,0 +1,9 @@
+semver_suffix = true
+overlay = "."
+uploaders = ["Thomas Lamprecht <t.lamprecht@proxmox.com>"]
+collapse_features = true
+whitelist = ["tests/constant.c", "tests/layout.c"]
+summary = "Sys functions for the Rust bindings of libsoup3"
+
+[packages.lib]
+depends = ["libsoup-3.0-dev (>= 3.6)"]
