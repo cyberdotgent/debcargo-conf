@@ -1,3 +1,10 @@
+rust-endian-trait (0.6.0-1~bpo13+pve1+s390x1) trixie; urgency=medium
+
+  * s390x port: ignore the multi-byte enum derive tests, they exercise UB and
+    abort with rustc 1.94 (debug enum discriminant check).
+
+ -- Yvan Janssens <yvanj@cyber.gent>  Wed, 18 Nov 2026 08:44:23 +0100
+
 rust-endian-trait (0.6.0-1~bpo13+pve1) trixie; urgency=medium
 
   * Rebuild for Debian Trixie / Proxmox
