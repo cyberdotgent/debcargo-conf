@@ -1,0 +1,38 @@
+Description: ignore the multi-byte enum derive tests, they exercise undefined behaviour
+ The derived Endian impl for an integer-repr enum transmutes the byte-swapped
+ discriminant back into the enum type. For a multi-byte repr the swapped value
+ (e.g. 16 -> 0x1000) is not a valid discriminant, which is undefined behaviour.
+ Since the debug-mode enum discriminant check in recent rustc (seen with
+ 1.94.1), the test binary aborts with "panic_invalid_enum_construction":
+ to_be() trips it on little-endian hosts, to_le() on big-endian ones (s390x).
+ The 8-bit test (no swap) and all struct tests keep running. No Proxmox crate
+ derives Endian on an enum.
+Author: Yvan Janssens <yvanj@cyber.gent>
+Forwarded: no
+Last-Update: 2026-11-18
+--- a/tests/enum.rs
++++ b/tests/enum.rs
+@@ -38,6 +38,7 @@
+ }
+ 
+ #[test]
++#[ignore = "UB: the derived to_be()/to_le() transmute a byte-swapped value into the enum, which is no valid discriminant (aborts under rustc debug enum checks)"]
+ fn derive_16() {
+ 	type Raw = [u8; 2];
+ 	#[repr(i16)]
+@@ -58,6 +59,7 @@
+ }
+ 
+ #[test]
++#[ignore = "UB: the derived to_be()/to_le() transmute a byte-swapped value into the enum, which is no valid discriminant (aborts under rustc debug enum checks)"]
+ fn derive_32() {
+ 	type Raw = [u8; 4];
+ 	#[repr(u32)]
+@@ -78,6 +80,7 @@
+ }
+ 
+ #[test]
++#[ignore = "UB: the derived to_be()/to_le() transmute a byte-swapped value into the enum, which is no valid discriminant (aborts under rustc debug enum checks)"]
+ fn derive_64() {
+ 	type Raw = [u8; 8];
+ 	#[repr(i64)]
